@@ -459,22 +459,53 @@
         $(document).ready(function () {
             const $track = $(".products-track");
             const $cards = $(".product-card");
+            const $btnPrev = $(".products-nav-btn[data-dir='prev']");
+            const $btnNext = $(".products-nav-btn[data-dir='next']");
 
-            if ($track.length && $cards.length) {
-                const cardWidth = $cards.first().outerWidth(true);
+            if (!$track.length || !$cards.length) return;
 
-                $(".products-nav-btn").on("click", function () {
-                    const dir = $(this).data("dir");
-                    const currentScroll = $track.scrollLeft();
-                    const delta = dir === "next" ? cardWidth : -cardWidth;
+            const cardWidth = $cards.first().outerWidth(true);
 
-                    $track.animate({
-                            scrollLeft: currentScroll + delta
-                        },
-                        400
-                    );
-                });
+            function updateButtons() {
+                const el = $track.get(0);
+                const maxScroll = el.scrollWidth - el.clientWidth;
+                const current = el.scrollLeft;
+
+                // левая граница
+                if (current <= 1) {
+                    $btnPrev.addClass("is-disabled");
+                } else {
+                    $btnPrev.removeClass("is-disabled");
+                }
+
+                // правая граница
+                if (current >= maxScroll - 1) {
+                    $btnNext.addClass("is-disabled");
+                } else {
+                    $btnNext.removeClass("is-disabled");
+                }
             }
+
+            // при клике скроллим и потом обновляем состояние кнопок
+            $(".products-nav-btn").on("click", function () {
+                const dir = $(this).data("dir");
+                const delta = dir === "next" ? cardWidth : -cardWidth;
+
+                $track.animate({
+                        scrollLeft: $track.scrollLeft() + delta
+                    },
+                    300,
+                    updateButtons
+                );
+            });
+
+            // обновлять и при ручном скролле/свайпе
+            $track.on("scroll", function () {
+                updateButtons();
+            });
+
+            // первый вызов при загрузке
+            updateButtons();
         });
     </script>
 
