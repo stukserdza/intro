@@ -360,7 +360,7 @@ section.alt .section-title {
 .products-grid {
     display: grid;
     grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
-    gap: 40px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -370,15 +370,21 @@ section.alt .section-title {
 }
 
 .products-photo-wrap {
-    margin-top: 16px;
+    /* margin-top: 16px; */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    height: 350px;
+
 }
 
 .products-photo {
-    width: 60%;
-    max-width: 260px;
+    /* width: 60%; */
+    /* max-width: 260px; */
     border-radius: 16px;
+    height: 100%;
+    display: block;
+    width: 100%;
+    object-fit: cover;
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.4),
         0 4px 12px rgba(56, 6, 6, 0.45);
