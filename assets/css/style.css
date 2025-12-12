@@ -355,6 +355,180 @@ section.alt .section-title {
     justify-content: center;
 }
 
+/* Секция продуктов / карусель */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.products-intro p {
+    font-size: 0.96rem;
+    margin-bottom: 16px;
+}
+
+.products-photo-wrap {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.products-photo {
+    width: 60%;
+    max-width: 260px;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(56, 6, 6, 0.45);
+}
+
+/* Карусель */
+
+.products-carousel {
+    background: #111111;
+    border-radius: 18px;
+    padding: 18px 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.products-carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.products-carousel-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.products-nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.products-nav-btn:hover {
+    background: rgba(255, 201, 9, 0.12);
+    box-shadow: 0 4px 12px rgba(255, 201, 9, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Сам "карусельный" трек */
+
+.products-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    /* либо hidden — но НЕ два разных блока */
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+}
+
+.products-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome / Safari */
+}
+
+.products-track::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 999px;
+}
+
+.products-track::-webkit-scrollbar-thumb {
+    background: rgba(255, 201, 9, 0.6);
+    border-radius: 999px;
+}
+
+/* Карточки категорий */
+
+.product-card {
+    /* background: #151515; */
+    background: #181818;
+    border-radius: 14px;
+    padding: 16px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    scroll-snap-align: start;
+    flex: 0 0 60%;
+    max-width: 320px;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.product-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    /* можешь поставить 1 */
+    color: #f5f5f5;
+    /* явный светлый цвет */
+}
+
+.product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.product-link::after {
+    content: "→";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.product-link:hover::after {
+    transform: translateX(2px);
+}
+
+/* Адаптив под планшет/мобильный */
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .products-photo {
+        width: 70%;
+        max-width: 240px;
+    }
+
+    .product-card {
+        flex: 0 0 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex: 0 0 100%;
+    }
+
+    .products-carousel-header {
+        gap: 8px;
+    }
+}
+
 .testimonials-header {
     text-align: center;
     margin-bottom: 24px;
