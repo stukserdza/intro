@@ -160,6 +160,77 @@
             </div>
         </section>
 
+        <section id="products" class="alt">
+            <div class="container products-grid">
+                <div class="products-intro">
+                    <h2 class="section-title">Продукты от Сурии</h2>
+                    <p>
+                        Здесь вы можете выбрать формат работы, который лучше всего откликается вашему пути:
+                        диагностика, чистки, авторские таро-наборы и медитации.
+                    </p>
+                    <div class="products-photo-wrap">
+                        <img src="assets/images/suria-looks-to-the-right-smiling-dreaming.jpg"
+                            alt="Сурия с картами Таро и её авторскими наборами" class="products-photo">
+                    </div>
+                </div>
+
+                <div class="products-carousel">
+                    <div class="products-carousel-header">
+                        <button class="products-nav-btn" type="button" data-dir="prev"
+                            aria-label="Предыдущая категория">
+                            ‹
+                        </button>
+                        <div class="products-carousel-title">Категории продуктов</div>
+                        <button class="products-nav-btn" type="button" data-dir="next" aria-label="Следующая категория">
+                            ›
+                        </button>
+                    </div>
+
+                    <div class="products-track" aria-label="Категории продуктов">
+                        <!-- Диагностика -->
+                        <article class="product-card">
+                            <h3 class="product-title">Диагностика</h3>
+                            <p class="product-text">
+                                Глубокие расклады для прояснения ситуации, выявления причин боли и запутанных сценариев.
+                            </p>
+                            <a href="#contact" class="product-link">Выбрать диагностику</a>
+                        </article>
+
+                        <!-- Чистки -->
+                        <article class="product-card">
+                            <h3 class="product-title">Чистки</h3>
+                            <p class="product-text">
+                                Энергетические чистки и работа с кармическими узлами, чтобы освободиться от тяжёлых
+                                привязок.
+                            </p>
+                            <a href="#contact" class="product-link">Запросить чистку</a>
+                        </article>
+
+                        <!-- Авторские таро-наборы -->
+                        <article class="product-card">
+                            <h3 class="product-title">Авторские таро-наборы</h3>
+                            <p class="product-text">
+                                Уникальные таро-комплекты, созданные Сурией, для самостоятельной работы и глубинной
+                                трансформации.
+                            </p>
+                            <a href="#contact" class="product-link">Узнать о наборах</a>
+                        </article>
+
+                        <!-- Медитации -->
+                        <article class="product-card">
+                            <h3 class="product-title">Медитации</h3>
+                            <p class="product-text">
+                                Проводниковые медитации и аудио-программы для мягкого проживания боли и возвращения к
+                                себе.
+                            </p>
+                            <a href="#contact" class="product-link">Получить медитации</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section id="testimonials">
             <div class="container">
                 <div class="testimonials-header">
@@ -383,6 +454,27 @@
                 const expanded = $(this).attr("aria-expanded") === "true";
                 $(this).attr("aria-expanded", !expanded);
             });
+        });
+        // Простая навигация по карусели продуктов
+        $(document).ready(function () {
+            const $track = $(".products-track");
+            const $cards = $(".product-card");
+
+            if ($track.length && $cards.length) {
+                const cardWidth = $cards.first().outerWidth(true);
+
+                $(".products-nav-btn").on("click", function () {
+                    const dir = $(this).data("dir");
+                    const currentScroll = $track.scrollLeft();
+                    const delta = dir === "next" ? cardWidth : -cardWidth;
+
+                    $track.animate({
+                            scrollLeft: currentScroll + delta
+                        },
+                        400
+                    );
+                });
+            }
         });
     </script>
 
