@@ -1,0 +1,435 @@
+:root {
+    --deep-red: #380606;
+    --gold: #FFC909;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Header */
+
+.med-header {
+    background: var(--black);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.med-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.med-nav {
+    display: flex;
+    gap: 18px;
+    font-size: 0.92rem;
+}
+
+.med-nav a:hover {
+    color: var(--gold);
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background: #e5b706;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 201, 9, 0.12);
+}
+
+/* Hero */
+
+.med-hero {
+    padding: 64px 0 72px;
+    background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%);
+}
+
+.med-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.med-hero-badge {
+    display: inline-flex;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+}
+
+.med-hero-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.med-hero-subtitle {
+    font-size: 1.02rem;
+    max-width: 34rem;
+    opacity: 0.96;
+    margin-bottom: 22px;
+}
+
+.med-hero-photo-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.med-hero-photo-circle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    outline: 1px solid var(--white);
+    outline-offset: 6px;
+    background: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.med-hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sections */
+
+section {
+    padding: 64px 0;
+}
+
+.section-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    color: var(--gold);
+}
+
+/* Packs */
+.med-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+/* Общая карточка */
+.med-card {
+    background: #111111;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.med-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.55),
+        0 0 20px rgba(255, 201, 9, 0.18);
+    border-color: rgba(255, 201, 9, 0.7);
+}
+
+.med-card--package {
+    background: #15100a;
+}
+
+/* Плашка "Набор" / "Скоро" */
+.med-card-tag {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Картинка */
+.med-card-figure {
+    margin: 0 0 12px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.med-card-figure--blur {
+    filter: grayscale(0.3) blur(0.5px);
+}
+
+.med-card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Текст */
+.med-card-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.med-card-text {
+    font-size: 0.9rem;
+    opacity: 0.94;
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+
+/* Ссылка */
+.med-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.med-card-link::after {
+    content: "→";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.med-card-link:hover::after {
+    transform: translateX(2px);
+}
+
+/* "Скоро" карточка */
+.med-card--coming {
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.med-card--coming .med-card-title {
+    color: #ddd2a8;
+}
+
+/* Общая сетка уже есть: .med-card-grid {...} */
+
+/* Для секции с пакетами — чуть крупнее карточки и 3 в ряд на десктопе */
+.med-card-grid--packs {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Для секции одиночных можно оставить как есть или сделать плотнее */
+.med-packs--single .med-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .med-card-image {
+        height: 150px;
+    }
+}
+
+/* How */
+
+.med-how {
+    background: #080808;
+}
+
+.med-how-inner {
+    max-width: 720px;
+}
+
+.med-how-list {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    opacity: 0.94;
+}
+
+.med-how-list li+li {
+    margin-top: 6px;
+}
+
+/* Contact */
+
+.med-contact {
+    background: var(--black);
+}
+
+.med-contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+    gap: 34px;
+}
+
+.med-form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #111111;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-highlight {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+
+.med-footer {
+    background: var(--deep-red);
+    color: var(--white);
+    padding: 18px 0;
+    font-size: 0.86rem;
+}
+
+.med-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .med-hero-grid,
+    .med-pack-grid,
+    .med-contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .med-pack-grid {
+        gap: 16px;
+    }
+
+    .med-hero {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .med-hero-title {
+        font-size: 1.7rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .med-nav {
+        display: none;
+        /* если захочешь бургер — можно потом доделать */
+    }
+}
