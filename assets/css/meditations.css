@@ -482,6 +482,10 @@ textarea {
     font-size: 0.95rem;
 }
 
+.contact-highlight strong {
+    color: var(--gold);
+}
+
 /* Footer */
 
 .med-footer {
