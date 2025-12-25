@@ -363,6 +363,14 @@ section {
     flex-grow: 1;
 }
 
+.med-card-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+
 /* Ссылка */
 .med-card-link {
     display: inline-flex;
