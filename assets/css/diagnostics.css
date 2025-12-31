@@ -345,46 +345,24 @@ section {
 /* Текст */
 .diag-card-title {
     font-family: 'Lora', Georgia, serif;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    padding: 1em 2em;
     color: var(--gold);
 }
 
 .diag-card-text {
     font-size: 0.9rem;
-    opacity: 0.94;
-    margin-bottom: 14px;
+    opacity: 1;
     flex-grow: 1;
+    padding: 0 1em;
 }
 
-.diag-card-price {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 10px;
+.diag-points {
+    opacity: 0.8;
+    padding: 2em;
 }
 
-
-/* Ссылка */
-/* .diag-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--gold);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.diag-card-link::after {
-    content: "→";
-    font-size: 0.9rem;
-    transition: transform 0.2s ease;
-}
-
-.diag-card-link:hover::after {
-    transform: translateX(2px);
-} */
+/* Price & Ссылка */
 
 .diag-price {
     font-size: 0.95rem;
