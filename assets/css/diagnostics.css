@@ -300,16 +300,10 @@ section {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
 }
 
-.diag-card:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.55),
-        0 0 20px rgba(255, 201, 9, 0.18);
-    border-color: rgba(255, 201, 9, 0.7);
-}
+
 
 .diag-card--package {
     background: #15100a;
@@ -372,13 +366,14 @@ section {
 
 
 /* Ссылка */
-.diag-card-link {
+/* .diag-card-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .diag-card-link::after {
@@ -389,7 +384,33 @@ section {
 
 .diag-card-link:hover::after {
     transform: translateX(2px);
+} */
+
+.diag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
+
+.diag-link::after {
+    content: "→";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.diag-link:hover {
+    color: #ffe473;
+    transform: translateY(-1px);
+}
+
+.diag-link:hover::after {
+    transform: translateX(2px);
+}
+
 
 /* "Скоро" карточка */
 .diag-card--coming {
