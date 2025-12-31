@@ -386,6 +386,13 @@ section {
     transform: translateX(2px);
 } */
 
+.diag-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
 .diag-link {
     display: inline-flex;
     align-items: center;
