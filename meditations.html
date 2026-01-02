@@ -33,18 +33,35 @@
 </head>
 
 <body>
-
-    <header class="med-header">
+    <header>
         <div class="container med-header-inner">
             <div class="logo">Стук сердца</div>
-            <nav class="med-nav">
-                <a href="index.html#top">Главная</a>
-                <a href="#packs-list">packs</a>
-                <a href="#meditations-list">Медитации</a>
-                <a href="#contact">Контакт</a>
+
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="mobile-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#packs-list">packs</a>
+                    </li>
+                    <li>
+                        <a href="#meditations-list">Медитации</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Контакт</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
+
 
     <main>
         <!-- Hero -->
@@ -467,7 +484,99 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
 
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+        $(document).ready(function () {
+            $(".hamburger").click(function () {
+                $("nav").toggleClass("active");
+                const expanded = $(this).attr("aria-expanded") === "true";
+                $(this).attr("aria-expanded", !expanded);
+            });
+        });
+        // Простая навигация по карусели продуктов
+        $(document).ready(function () {
+            const $track = $(".products-track");
+            const $cards = $(".product-card");
+            const $btnPrev = $(".products-nav-btn[data-dir='prev']");
+            const $btnNext = $(".products-nav-btn[data-dir='next']");
+
+            if (!$track.length || !$cards.length) return;
+
+            const cardWidth = $cards.first().outerWidth(true);
+
+            function updateButtons() {
+                const el = $track.get(0);
+                const maxScroll = el.scrollWidth - el.clientWidth;
+                const current = el.scrollLeft;
+
+                // левая граница
+                if (current <= 1) {
+                    $btnPrev.addClass("is-disabled");
+                } else {
+                    $btnPrev.removeClass("is-disabled");
+                }
+
+                // правая граница
+                if (current >= maxScroll - 1) {
+                    $btnNext.addClass("is-disabled");
+                } else {
+                    $btnNext.removeClass("is-disabled");
+                }
+            }
+
+            // при клике скроллим и потом обновляем состояние кнопок
+            $(".products-nav-btn").on("click", function () {
+                const dir = $(this).data("dir");
+                const delta = dir === "next" ? cardWidth : -cardWidth;
+
+                $track.animate({
+                        scrollLeft: $track.scrollLeft() + delta
+                    },
+                    300,
+                    updateButtons
+                );
+            });
+
+            // обновлять и при ручном скролле/свайпе
+            $track.on("scroll", function () {
+                updateButtons();
+            });
+
+            // первый вызов при загрузке
+            updateButtons();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const startYear = 2008; // Change this to your actual start year
+            const years = new Date().getFullYear() - startYear;
+            const text =
+                `Я сама прошла через боль и за ${years} лет помогла тысячам женщин войти в их новую реальность, и вы тоже сможете.`;
+
+        });
+    </script>
 </body>
 
 </html>
