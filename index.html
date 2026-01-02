@@ -91,9 +91,9 @@
                 </div>
             </div>
             <div class="container">
-                <p class="hero-caption">
-                    Я знаю, как это — оказаться на самом дне и заново научиться подниматься, верить и исцеляться. Рядом
-                    с вами на этом пути.
+                <p class="hero-caption" id="typewriter">
+                    Я сама прошла через боль и за 18 лет помогла тысячам женщин войти в их новую реальность, и вы тоже
+                    сможете.
                 </p>
             </div>
         </section>
@@ -538,6 +538,13 @@
 
             // первый вызов при загрузке
             updateButtons();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const startYear = 2008; // Change this to your actual start year
+            const years = new Date().getFullYear() - startYear;
+            const text =
+                `Я сама прошла через боль и за ${years} лет помогла тысячам женщин войти в их новую реальность, и вы тоже сможете.`;
+
         });
     </script>
 
