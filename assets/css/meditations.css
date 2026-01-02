@@ -239,8 +239,9 @@ a {
 
 .med-free-image {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
+    object-position: top;
 }
 
 .med-free-quote {
@@ -303,13 +304,13 @@ section {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.med-card:hover {
+/* .med-card:hover {
     transform: translateY(-4px);
     box-shadow:
         0 12px 30px rgba(0, 0, 0, 0.55),
         0 0 20px rgba(255, 201, 9, 0.18);
     border-color: rgba(255, 201, 9, 0.7);
-}
+} */
 
 .med-card--package {
     background: #15100a;
@@ -372,6 +373,22 @@ section {
 
 
 /* Ссылка */
+/* .med-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.med-card-link::after {
+    content: "→";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+} */
+
+
 .med-card-link {
     display: inline-flex;
     align-items: center;
@@ -379,6 +396,12 @@ section {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.med-card-link:hover {
+    color: #ffe473;
+    transform: translateY(-1px);
 }
 
 .med-card-link::after {
