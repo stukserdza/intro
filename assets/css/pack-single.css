@@ -71,55 +71,85 @@
 /* Как слушать */
 .pack-single-how {
     padding: 90px 0;
-    background: rgba(8, 8, 8, 0.8);
+    background: rgba(8, 8, 8, 0.9);
+    position: relative;
 }
 
-.pack-single-how-list {
-    max-width: 700px;
+.pack-single-how-text {
+    max-width: 720px;
     margin: 40px auto 0;
 }
 
-.pack-single-how-step {
-    display: flex;
-    gap: 20px;
-    padding: 28px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 201, 9, 0.2);
-    border-radius: 20px;
-    margin-bottom: 16px;
-    transition: all 0.3s ease;
+.how-text-step {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    opacity: 0.96;
+    margin: 0 0 28px 0;
+    padding: 20px 0;
+    position: relative;
 }
 
-.pack-single-how-step:hover {
-    border-color: var(--gold);
-    box-shadow: 0 10px 30px rgba(255, 201, 9, 0.15);
+/* Магические разделители */
+.how-separator {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 201, 9, 0.4) 30%, var(--gold) 50%, rgba(255, 201, 9, 0.4) 70%, transparent 100%);
+    margin: 0 auto 32px;
+    width: 120px;
+    border-radius: 1px;
 }
 
-.pack-single-how-number {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--gold), #ffd700);
-    color: var(--black);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
-
-.pack-single-how-step p {
-    margin: 0;
-    font-size: 1rem;
-    opacity: 0.95;
-}
-
-.pack-single-how-step a {
+.how-separator::before {
+    content: '✦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--gold);
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 0.8rem;
+    text-shadow: 0 0 12px rgba(255, 201, 9, 0.6);
+    animation: glow 2s ease-in-out infinite alternate;
 }
+
+.how-link {
+    display: inline-flex;
+    /* text-decoration: noe !important; */
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.how-link:hover {
+    color: #ffe473;
+    transform: translateY(-1px);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px rgba(255, 201, 9, 0.6), 0 0 16px rgba(255, 201, 9, 0.3);
+    }
+
+    to {
+        text-shadow: 0 0 16px rgba(255, 201, 9, 0.9), 0 0 24px rgba(255, 201, 9, 0.5);
+    }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    .how-separator {
+        width: 80px;
+        margin: 0 auto 24px;
+    }
+
+    .how-text-step {
+        margin-bottom: 20px;
+        padding: 16px 0;
+    }
+}
+
 
 /* Проблема */
 .pack-single-problem {
