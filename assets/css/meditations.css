@@ -289,6 +289,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 22px;
+    padding-top: 1em;
 }
 
 /* Общая карточка */
@@ -301,6 +302,8 @@ section {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255, 201, 9, 0.4);
+    border-radius: 20px;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
