@@ -60,6 +60,16 @@
     transform: translateY(-1px);
 }
 
+main {
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
 /* Hero */
 .med-single-hero {
     padding: 80px 0 100px;
@@ -378,6 +388,58 @@
     padding: 18px 42px;
     box-shadow: 0 8px 24px rgba(255, 201, 9, 0.4);
 }
+
+/* Кнопка возврата к пакету */
+.med-pack-back {
+    padding: 20px 0;
+    background: rgba(255, 201, 9, 0.05);
+    border-bottom: 1px solid rgba(255, 201, 9, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pack-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 201, 9, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 201, 9, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(255, 201, 9, 0.1);
+    margin: 0 auto;
+}
+
+.pack-back-btn:hover {
+    background: rgba(255, 201, 9, 0.15);
+    border-color: var(--gold);
+    transform: translateX(-4px);
+    box-shadow: 0 8px 24px rgba(255, 201, 9, 0.2);
+}
+
+.pack-back-btn strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    .pack-back-btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
