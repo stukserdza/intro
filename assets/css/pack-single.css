@@ -111,7 +111,8 @@
     animation: glow 2s ease-in-out infinite alternate;
 }
 
-.how-link {
+.how-link,
+.pack-single-step-link {
     display: inline-flex;
     /* text-decoration: noe !important; */
     align-items: center;
@@ -122,7 +123,8 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.how-link:hover {
+.how-link:hover,
+.pack-single-step-link:hover {
     color: #ffe473;
     transform: translateY(-1px);
 }
@@ -242,6 +244,8 @@
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
+    border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(255, 201, 9, 0.1);
 }
 
 .pack-single-step h4 {
@@ -251,11 +255,6 @@
     font-weight: 500;
 }
 
-.pack-single-step:hover {
-    border-color: var(--gold);
-    box-shadow: 0 20px 50px rgba(255, 201, 9, 0.1);
-    transform: translateY(-8px);
-}
 
 .pack-single-step-number {
     width: 80px;
@@ -283,17 +282,6 @@
     opacity: 0.92;
     line-height: 1.6;
     margin-bottom: 24px;
-}
-
-.pack-single-step-link {
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.pack-single-step-link:hover {
-    text-decoration: underline;
 }
 
 
