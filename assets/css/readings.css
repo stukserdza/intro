@@ -10,6 +10,8 @@
     padding: 72px 0;
     background: var(--black);
     color: var(--white);
+    width: 100%;
+    display: flex;
 }
 
 .readings-section.alt {
@@ -26,72 +28,100 @@
     margin-bottom: 10px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .readings-subtitle {
     font-size: 0.96rem;
     opacity: 0.9;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
 }
 
 /* Карусель раскладов */
 .readings-carousel {
     background: #111111;
     border-radius: 18px;
-    padding: 18px 16px 20px;
+    padding: 24px 20px;
+    /* больше отступов */
     border: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    padding: 2em;
 }
 
 .readings-carousel-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .readings-carousel-title {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 0.98rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--gold);
+    background: rgba(17, 17, 17, 0.95);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 201, 9, 0.3);
 }
 
 .readings-nav-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    /* чуть больше */
+    height: 36px;
     border-radius: 50%;
     border: 1px solid var(--gold);
-    background: transparent;
+    background: rgba(255, 201, 9, 0.08);
+    /* лёгкий фон */
     color: var(--gold);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 201, 9, 0.1);
 }
 
 .readings-nav-btn:hover {
-    background: rgba(255, 201, 9, 0.12);
-    box-shadow: 0 4px 12px rgba(255, 201, 9, 0.3);
-    transform: translateY(-1px);
+    background: rgba(255, 201, 9, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 201, 9, 0.25);
 }
 
 .readings-nav-btn.is-disabled {
-    opacity: 0.35;
+    opacity: 0.3;
     cursor: default;
+    transform: none;
     box-shadow: none;
     background: transparent;
-    pointer-events: none;
 }
 
 /* "Трек" карусели */
 .readings-track {
     display: flex;
-    gap: 16px;
+    gap: 24px;
+    /* чуть больше для ощущения "скольжения" */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 6px;
     scrollbar-width: none;
+    width: 100%;
 }
 
 .readings-track::-webkit-scrollbar {
@@ -102,11 +132,15 @@
 .reading-card {
     background: #181818;
     border-radius: 14px;
-    padding: 16px 16px 18px;
+    padding: 24px 20px 24px;
+    /* больше отступов внутри */
     border: 1px solid rgba(255, 255, 255, 0.12);
     scroll-snap-align: start;
-    flex: 0 0 60%;
-    max-width: 340px;
+    flex: 0 0 100%;
+    /* ПОЛНАЯ ширина — 1 карточка видна! */
+    width: 100% !important;
+    /* убираем ограничение */
+    min-width: 320px;
 }
 
 .reading-title {
@@ -120,6 +154,26 @@
     opacity: 0.95;
     color: #f5f5f5;
     margin-bottom: 10px;
+}
+
+.reading-lead {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.reading-questions {
+    margin: 0 0 10px 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    opacity: 0.95;
+    color: #f5f5f5;
+    list-style: decimal;
+}
+
+.reading-questions li {
+    margin-bottom: 4px;
 }
 
 .reading-meta {
@@ -177,13 +231,24 @@
     }
 
     .reading-card {
-        flex: 0 0 80%;
+        flex: 0 0 95%;
+        /* чуть меньше на планшете */
+        min-width: 280px
     }
 }
+
 
 @media (max-width: 600px) {
     .reading-card {
         flex: 0 0 100%;
+        min-width: 0;
+        padding: 20px 16px;
+    }
+
+    .readings-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
     }
 
     .readings-carousel-header {
