@@ -376,22 +376,6 @@ section {
 
 
 /* Ссылка */
-/* .med-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--gold);
-}
-
-.med-card-link::after {
-    content: "→";
-    font-size: 0.9rem;
-    transition: transform 0.2s ease;
-} */
-
-
 .med-card-link {
     display: inline-flex;
     align-items: center;
