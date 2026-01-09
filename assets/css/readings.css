@@ -155,6 +155,21 @@
     transform: translateX(2px);
 }
 
+.med-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.med-card-link:hover {
+    color: #ffe473;
+    transform: translateY(-1px);
+}
+
 /* Адаптив */
 @media (max-width: 900px) {
     .readings-section {
