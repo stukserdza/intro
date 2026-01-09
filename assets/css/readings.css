@@ -1,0 +1,177 @@
+:root {
+    --deep-red: #380606;
+    --gold: #FFC909;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+/* Общий блок секции раскладов */
+.readings-section {
+    padding: 72px 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.readings-section.alt {
+    background: #080808;
+}
+
+.readings-header {
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto 28px;
+}
+
+.readings-header .section-title {
+    margin-bottom: 10px;
+}
+
+.readings-subtitle {
+    font-size: 0.96rem;
+    opacity: 0.9;
+}
+
+/* Карусель раскладов */
+.readings-carousel {
+    background: #111111;
+    border-radius: 18px;
+    padding: 18px 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+}
+
+.readings-carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.readings-carousel-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.readings-nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.readings-nav-btn:hover {
+    background: rgba(255, 201, 9, 0.12);
+    box-shadow: 0 4px 12px rgba(255, 201, 9, 0.3);
+    transform: translateY(-1px);
+}
+
+.readings-nav-btn.is-disabled {
+    opacity: 0.35;
+    cursor: default;
+    box-shadow: none;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* "Трек" карусели */
+.readings-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+}
+
+.readings-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Карточки раскладов */
+.reading-card {
+    background: #181818;
+    border-radius: 14px;
+    padding: 16px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    scroll-snap-align: start;
+    flex: 0 0 60%;
+    max-width: 340px;
+}
+
+.reading-title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.reading-text {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.reading-meta {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.reading-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.reading-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.reading-link::after {
+    content: "→";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+    color: wheat;
+}
+
+.reading-link:hover::after {
+    transform: translateX(2px);
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .readings-section {
+        padding: 56px 0;
+    }
+
+    .reading-card {
+        flex: 0 0 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .reading-card {
+        flex: 0 0 100%;
+    }
+
+    .readings-carousel-header {
+        gap: 8px;
+    }
+}
