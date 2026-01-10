@@ -163,6 +163,7 @@ main {
     margin-bottom: 10px;
 }
 
+
 .reading-questions {
     margin: 0 0 10px 0;
     padding-left: 1.2rem;
@@ -172,8 +173,20 @@ main {
     list-style: decimal;
 }
 
+.reading-questions-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+
 .reading-questions li {
     margin-bottom: 4px;
+}
+
+.reading-questions .reading-questions-with-title {
+    margin-bottom: 4px;
+    color: var(--gold);
 }
 
 .reading-meta {
