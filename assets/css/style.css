@@ -74,6 +74,20 @@ header {
     padding: 1em;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-image {
+    height: 46px;
+    width: 46px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 .logo {
     font-weight: 600;
     letter-spacing: 0.06em;
