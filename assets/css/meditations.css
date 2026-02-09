@@ -424,6 +424,24 @@ section {
     gap: 20px;
 }
 
+/* Бейдж NEW для отдельных медитаций */
+.med-card-label-new {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    padding: 4px 10px 2px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: 0 0 12px rgba(255, 201, 9, 0.4);
+}
+
+
 /* Адаптив */
 @media (max-width: 600px) {
     .med-card-image {
