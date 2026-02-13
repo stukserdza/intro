@@ -1,9 +1,13 @@
 :root {
     /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
-    --deep-red: #380606;
-    --gold: #FFC909;
+    /* --deep-red: #380606; */
+    --deep-red: #440000;
+    /* --gold: #FFC909; */
+    --gold: #FDE885;
+    --beige: #edded2;
     --black: #000000;
     --white: #FFFFFF;
+    --extra-background: #0000006a;
 }
 
 * {
@@ -38,6 +42,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, #440000, #360407, #28060a, #1a0308, #000000);
 }
 
 a {
@@ -158,9 +163,9 @@ nav a:hover {
 }
 
 .hero {
-    background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%);
+    /* background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%); */
     color: var(--white);
-    padding: 64px 0 72px;
+    padding: 2em 3em;
 }
 
 .hero-grid {
@@ -192,7 +197,7 @@ nav a:hover {
     font-size: 1.02rem;
     max-width: 34rem;
     opacity: 0.95;
-    margin-bottom: 24px;
+    margin-bottom: 2em;
 }
 
 .hero-actions {
@@ -216,7 +221,7 @@ nav a:hover {
     background: #e5b706;
 }
 
-.btn-ghost {
+/* .btn-ghost {
     padding: 11px 20px;
     border-radius: 999px;
     border: 1px solid var(--gold);
@@ -229,7 +234,7 @@ nav a:hover {
 
 .btn-ghost:hover {
     background: rgba(255, 201, 9, 0.12);
-}
+} */
 
 .hero-photo-wrap {
     display: flex;
@@ -237,7 +242,7 @@ nav a:hover {
 }
 
 .hero-photo-container {
-    width: 260px;
+    /* width: 260px;
     height: 260px;
     border-radius: 50%;
     border: 3px solid var(--gold);
@@ -249,7 +254,7 @@ nav a:hover {
     justify-content: center;
     font-size: 0.9rem;
     text-align: center;
-    padding: 16px;
+    padding: 16px; */
 }
 
 .hero-photo {
@@ -257,25 +262,31 @@ nav a:hover {
     height: 100%;
     object-position: center;
     object-fit: cover !important;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
 }
 
-.hero-caption {
+/* .hero-caption {
     margin-top: 16px;
     font-size: 0.85rem;
     text-align: center;
     opacity: 0.9;
+} */
+.section-breaker {
+    width: 100%;
+    height: 3px;
+    background: var(--beige);
 }
 
 section {
     padding: 64px 0;
-    background: var(--black);
+    /* background: var(--black); */
 }
 
-section.alt {
-    background: var(--white);
-    color: var(--black);
+section.about-section {
+    padding: 2em 3em;
+    /* background: var(--white); */
+    color: var(--white);
 }
 
 .section-title {
@@ -284,15 +295,15 @@ section.alt {
     color: var(--gold);
 }
 
-section.alt .section-title {
-    color: var(--deep-red);
-}
-
 .about-grid {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 40px;
     align-items: flex-start;
+}
+
+.about-text {
+    background-color: var(--extra-background);
 }
 
 .about-text p {
@@ -306,18 +317,18 @@ section.alt .section-title {
 }
 
 .about-photo {
-    width: 50%;
-    border-radius: 12px;
+    width: 100%;
+    /* border-radius: 12px;
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.4),
-        0 4px 12px rgba(255, 201, 9, 0.2);
+        0 4px 12px rgba(255, 201, 9, 0.2); */
 }
 
 .quote-box {
     margin-top: 12px;
     padding: 14px 16px;
     border-left: 3px solid var(--gold);
-    background: #fff8e0;
+    background: #0000006a;
     font-size: 0.95rem;
 }
 
@@ -779,7 +790,7 @@ textarea {
 }
 
 footer {
-    background: var(--deep-red);
+    /* background: var(--deep-red); */
     color: var(--white);
     padding: 18px 0;
     font-size: 0.86rem;
