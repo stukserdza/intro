@@ -279,7 +279,7 @@ nav a:hover {
 }
 
 section {
-    padding: 2em 3em;
+    padding: 3em;
 }
 
 section.about-section {
@@ -369,7 +369,6 @@ section.about-section {
 .services-header {
     text-align: center;
     margin-bottom: 28px;
-    font-family: 'Lora', Georgia, serif;
 }
 
 .services-header-subtitle {
@@ -386,7 +385,8 @@ section.about-section {
 }
 
 .service-card {
-    background: #111111;
+    /* background: #111111; */
+    background: var(--extra-background);
     border-radius: 14px;
     padding: 18px 18px 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -409,6 +409,8 @@ section.about-section {
     font-weight: 600;
     margin-bottom: 6px;
     font-size: 1rem;
+    text-align: center;
+    color: var(--gold);
 }
 
 .service-text {
@@ -857,7 +859,7 @@ footer {
 
     .hero-grid img,
     .about-grid img,
-    .services-grid img {
+    .services-grid .service-card {
         width: 70%;
         max-width: 500px;
         margin: 0 auto;
