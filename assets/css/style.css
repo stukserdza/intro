@@ -279,31 +279,58 @@ nav a:hover {
 }
 
 section {
-    padding: 64px 0;
-    /* background: var(--black); */
+    padding: 2em 3em;
 }
 
 section.about-section {
-    padding: 2em 3em;
-    /* background: var(--white); */
     color: var(--white);
 }
 
-.section-title {
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-    color: var(--gold);
-}
+
 
 .about-grid {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 4fr) minmax(0, 2fr);
     gap: 40px;
     align-items: flex-start;
 }
 
 .about-text {
     background-color: var(--extra-background);
+    padding: 2em;
+}
+
+.section-title {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+    text-align: center;
+}
+
+.section-title--lined {
+    position: relative;
+    padding: 16px 0;
+    /* место для линий */
+}
+
+.section-title--lined::before,
+.section-title--lined::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border-radius: 1px;
+}
+
+.section-title--lined::before {
+    top: 0;
+}
+
+.section-title--lined::after {
+    bottom: 0;
 }
 
 .about-text p {
@@ -316,12 +343,19 @@ section.about-section {
     justify-content: center;
 }
 
-.about-photo {
+.about-photo-container {
     width: 100%;
     /* border-radius: 12px;
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.4),
         0 4px 12px rgba(255, 201, 9, 0.2); */
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
 }
 
 .quote-box {
@@ -819,6 +853,14 @@ footer {
     .services-grid,
     .contact-grid {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-grid img,
+    .about-grid img,
+    .services-grid img {
+        width: 70%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .hero {
