@@ -292,6 +292,8 @@ nav a:hover {
     height: 100%;
     object-position: center;
     object-fit: cover !important;
+    /* -webkit-box-shadow: 0px -6px 30px 16px #000000;
+    box-shadow: 0px -6px 30px 16px #000000; */
     /* border-radius: 50%; */
 
 }
@@ -489,14 +491,14 @@ section.about-section {
 
 .products-content {
     /* background: #111111; */
-    background: var(--extra-background);
+    /* background: var(--extra-background); */
     padding: 2em;
 }
 
 /* Карусель */
 
 .products-carousel {
-    background: #111111;
+    background: var(--extra-background);
     border-radius: 18px;
     padding: 18px 16px 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -569,7 +571,7 @@ section.about-section {
 
 .product-card {
     /* background: #151515; */
-    background: #181818;
+    background: var(--extra-background);
     border-radius: 14px;
     padding: 16px 16px 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -870,6 +872,7 @@ footer {
     .hero-grid,
     .about-grid,
     .services-grid,
+    .products-grid,
     .contact-grid {
         grid-template-columns: minmax(0, 1fr);
     }
