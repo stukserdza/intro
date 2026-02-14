@@ -881,7 +881,7 @@ footer {
     .about-grid img,
     .services-grid .service-card,
     .products-grid img {
-        width: 70%;
+        width: 100%;
         max-width: 500px;
         margin: 0 auto;
     }
