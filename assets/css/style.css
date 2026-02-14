@@ -492,10 +492,10 @@ section.about-section {
 .products-content {
     /* background: #111111; */
     /* background: var(--extra-background); */
-    padding: 2em;
+    /* padding: 2em; */
 }
 
-/* Карусель */
+/* carousel */
 
 .products-carousel {
     background: var(--extra-background);
@@ -540,13 +540,12 @@ section.about-section {
     transform: translateY(-1px);
 }
 
-/* Сам "карусельный" трек */
+/* Carusel track (inside) */
 
 .products-track {
     display: flex;
     gap: 16px;
     overflow-x: auto;
-    /* либо hidden — но НЕ два разных блока */
     scroll-snap-type: x mandatory;
     padding-bottom: 6px;
     scrollbar-width: none;
@@ -576,8 +575,7 @@ section.about-section {
     padding: 16px 16px 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     scroll-snap-align: start;
-    flex: 0 0 60%;
-    max-width: 320px;
+    flex: 0 0 100%;
 }
 
 .product-title {
@@ -628,6 +626,10 @@ section.about-section {
 
     .products-carousel-header {
         gap: 8px;
+    }
+
+    .container {
+        padding: 0;
     }
 }
 
