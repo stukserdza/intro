@@ -1,3 +1,27 @@
+/* First Font - Regular */
+@font-face {
+    font-family: "MyFont";
+    src: url("fonts/SCJurere.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* First Font - Bold */
+@font-face {
+    font-family: "MyFont-Bold";
+    src: url("fonts/SCJurere.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Second Font */
+@font-face {
+    font-family: "Absurdite";
+    src: url("fonts/Absurdite-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
     /* --deep-red: #380606; */
@@ -8,7 +32,13 @@
     --black: #000000;
     --white: #FFFFFF;
     --extra-background: #0000006a;
+    /* --ff-headings: 'Lora', Georgia, serif;
+    --ff-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; */
+    --ff-headings: "MyFont-Bold", serif;
+    --ff-body: "MyFont", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
+
 
 * {
     box-sizing: border-box;
@@ -26,14 +56,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: var(--ff-headings);
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--ff-body);
     background: var(--black);
     color: var(--white);
     line-height: 1.5;
