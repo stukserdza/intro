@@ -658,13 +658,13 @@ about-photo .about-text p {
     }
 }
 
+/* testimonials */
 .testimonials-header {
     text-align: center;
     margin-bottom: 24px;
     color: var(--gold);
 }
 
-/* Базово: одна колонка на мобильном */
 .testimonials-wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -696,7 +696,7 @@ about-photo .about-text p {
 }
 
 .testimonial-card {
-    background: #111111;
+    background: var(--extra-background);
     border-radius: 16px;
     padding: 20px 20px 18px;
     border: 1px solid rgba(255, 255, 255, 0.08);
