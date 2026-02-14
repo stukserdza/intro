@@ -883,8 +883,8 @@ footer {
         margin: 0 auto;
     }
 
-    .hero {
-        padding-top: 40px;
+    .hero-photo-wrap {
+        display: none;
     }
 
     nav ul {
