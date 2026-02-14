@@ -512,7 +512,7 @@ section.about-section {
 }
 
 .products-carousel-title {
-    font-size: 0.98rem;
+    font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -579,26 +579,30 @@ section.about-section {
 }
 
 .product-title {
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 1.5em 0;
     color: var(--gold);
 }
 
 .product-text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     opacity: 0.9;
-    /* можешь поставить 1 */
-    color: #f5f5f5;
-    /* явный светлый цвет */
+    color: var(--white);
+    padding: 0 0 1em 0;
 }
 
 .product-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--gold);
+    padding: 0 0 0.5em 0;
+}
+
+.product-link:hover {
+    color: #e5b706;
 }
 
 .product-link::after {
@@ -609,6 +613,7 @@ section.about-section {
 
 .product-link:hover::after {
     transform: translateX(2px);
+    color: #e5b706;
 }
 
 .products-nav-btn.is-disabled {
