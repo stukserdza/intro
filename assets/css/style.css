@@ -87,7 +87,7 @@ img {
 
 header {
     width: 100%;
-    background: var(--black);
+    background: var(--extra-background);
     color: var(--white);
     position: sticky;
     top: 0;
