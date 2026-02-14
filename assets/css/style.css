@@ -165,37 +165,11 @@ nav a:hover {
     border-radius: 2px;
 }
 
-/* Show hamburger button on small screens */
-@media (max-width: 900px) {
-    .hamburger {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        /* Keep default for nav ul hidden */
-        flex-direction: column;
-        gap: 12px;
-        background: var(--black);
-        padding: 16px;
-        position: absolute;
-        top: 60px;
-        right: 1em;
-        border-radius: 8px;
-        border: 1px solid var(--gold);
-        width: 180px;
-        z-index: 20;
-    }
-
-    nav.active ul {
-        display: flex;
-    }
-}
 
 .hero {
     /* background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%); */
     color: var(--white);
-    padding: 2em 3em;
+    padding: 2em 3em 0;
 }
 
 .hero-grid {
@@ -673,28 +647,6 @@ about-photo .about-text p {
     gap: 18px;
 }
 
-/* Планшет/десктоп: 2 колонки + центрирование 5‑й */
-@media (min-width: 768px) {
-    .testimonials-wrapper {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* Убираем любые прошлые transform для карточек */
-    .testimonial-card {
-        transform: none;
-    }
-
-    /* Центрируем 5‑ю (последнюю) карточку —
-       она будет занимать всю строку и по ширине сжиматься до 60% */
-    /* .testimonial-card:nth-child(5) { */
-    /* grid-column: 1 / -1; */
-    /* занять всю строку */
-    /* max-width: 60%;
-        justify-self: center; */
-    /* центрировать по сетке */
-    /* } */
-}
-
 .testimonial-card {
     background: var(--extra-background);
     border-radius: 16px;
@@ -733,7 +685,6 @@ about-photo .about-text p {
     opacity: 0.8;
 }
 
-
 .social-grid {
     max-width: 640px;
     margin: 0 auto;
@@ -752,8 +703,6 @@ about-photo .about-text p {
 }
 
 .social-card:hover {
-    /* transform: translateY(-2px); */
-    /* Slight lift */
     box-shadow:
         0 8px 25px rgba(255, 201, 9, 0.2),
         0 4px 12px rgba(0, 0, 0, 0.3);
@@ -895,6 +844,29 @@ footer {
 }
 
 @media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        /* Keep default for nav ul hidden */
+        flex-direction: column;
+        gap: 12px;
+        background: var(--black);
+        padding: 16px;
+        position: absolute;
+        top: 60px;
+        right: 1em;
+        border-radius: 8px;
+        border: 1px solid var(--gold);
+        width: 180px;
+        z-index: 20;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
 
     .hero-grid,
     .about-grid,
@@ -920,6 +892,17 @@ footer {
     nav ul {
         display: none;
         /* упростить на мобильном, если нужно бургер-меню */
+    }
+}
+
+@media (min-width: 768px) {
+    .testimonials-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Убираем любые прошлые transform для карточек */
+    .testimonial-card {
+        transform: none;
     }
 }
 
