@@ -38,7 +38,8 @@ a {
 /* Header */
 
 .diag-header {
-    background: var(--black);
+    /* background: var(--black); */
+    background-image: linear-gradient(to bottom, #440000, #360407, #28060a, #1a0308, #000000);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
