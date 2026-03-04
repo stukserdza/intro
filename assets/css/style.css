@@ -1,28 +1,4 @@
-/* First Font - Regular
-@font-face {
-    font-family: "MyFont";
-    src: url("fonts/SCJurere.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* First Font - Bold */
-@font-face {
-    font-family: "MyFont-Bold";
-    src: url("fonts/SCJurere.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Second Font */
-@font-face {
-    font-family: "Absurdite";
-    src: url("fonts/Absurdite-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-*/:root {
+:root {
     /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
     /* --deep-red: #380606; */
     /* --deep-red: #440000; */
@@ -35,8 +11,6 @@
     --extra-background: #0000006a;
     --ff-headings: 'Lora', Georgia, serif;
     --ff-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    /* --ff-headings: "MyFont-Bold", serif;
-    --ff-body: "MyFont", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; */
 }
 
 
@@ -173,10 +147,12 @@ nav a:hover {
     /* background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%); */
     color: var(--white);
     padding: 2em 3em 0;
-    background-image: linear-gradient(to bottom, #1b0000, #28060a, #1a0308, #000000);
+    /* background-image: linear-gradient(to bottom, #1b0000, #28060a, #1a0308, #000000); */
+    background-image: linear-gradient(90deg, #420101, #010101),
+        url('../images/intro/bg_roses.png');
 }
 
-.hero {
+.hero2 {
     /* background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%); */
     color: var(--white);
     padding: 2em 3em 0;
