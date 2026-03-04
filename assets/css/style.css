@@ -63,7 +63,7 @@ img {
 
 header {
     width: 100%;
-    background-image: (90deg, rgba(66, 1, 1, 1), rgba(1, 1, 1, 1));
+    background: linear-gradient(109deg, rgba(66, 1, 1, 1) 0%, rgba(0, 0, 0, 1) 100%);
     color: var(--white);
     position: sticky;
     top: 0;
@@ -82,7 +82,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0 1em;
+}
+
+.logo-container {
+    width: 100px;
 }
 
 .logo-container-mobile {
@@ -90,12 +94,11 @@ header {
     align-items: center;
     padding: 0;
     margin: 0;
+    width: 100px;
 }
 
 .logo-image {
-    height: 46px;
-    width: 58px;
-    margin-right: 8px;
+    width: 100%;
     vertical-align: middle;
 }
 
@@ -198,6 +201,12 @@ nav a:hover {
     color: var(--gold-light);
     font-size: 0.8rem;
     margin-bottom: 16px;
+}
+
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-title {
