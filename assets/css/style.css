@@ -106,11 +106,24 @@ header {
     color: var(--white);
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 24px;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: pink; */
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 3em;
 }
 
 nav a {
@@ -137,7 +150,7 @@ nav a:hover {
     display: block;
     width: 25px;
     height: 3px;
-    background: var(--gold-light);
+    background: var(--white);
     border-radius: 2px;
 }
 
@@ -879,6 +892,23 @@ footer {
 
     .hamburger {
         display: flex;
+    }
+
+    nav {
+        all: unset;
+    }
+
+    nav .logo-container {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end !important;
+        width: 100%;
     }
 
     nav ul {
