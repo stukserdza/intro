@@ -211,19 +211,14 @@ nav a:hover {
 
 .hero-title {
     font-size: 2.2rem;
-    /* font-size: calc(60% + 0.8vmin); */
     font-weight: 300;
     margin-bottom: 2em;
-    /* color: var(--gold-light); */
-
 }
 
 .hero-subtitle-1,
 .hero-subtitle-2 {
-    /* font-size: 1.02rem; */
     font-size: calc(60% + 0.8vmin);
     max-width: 34rem;
-
     margin-bottom: 2em;
 }
 
