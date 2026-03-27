@@ -63,7 +63,8 @@ img {
 
 header {
     width: 100%;
-    background: linear-gradient(109deg, rgba(66, 1, 1, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background-color: var(--extra-background);
+    /* background: linear-gradient(109deg, rgba(66, 1, 1, 1) 0%, rgba(0, 0, 0, 1) 100%); */
     color: var(--white);
     position: sticky;
     top: 0;
