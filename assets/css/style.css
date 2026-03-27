@@ -75,8 +75,6 @@ header {
 
 main {
     width: 100%;
-    max-width: 1200px;
-    padding: 0 1em;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -442,6 +440,7 @@ section.services {
 section.products {
     padding: 3em 0;
     background: var(--deep-red);
+    width: 100%;
 }
 
 .products-intro {
