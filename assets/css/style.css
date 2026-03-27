@@ -292,9 +292,6 @@ nav a:hover {
     }
 }
 
-/* end hero  */
-
-
 
 section {
     padding: 3em;
@@ -362,11 +359,6 @@ section.about-section {
 
 .quote-box {
     margin-top: 2em;
-    /* margin-top: 12px;
-    padding: 14px 16px;
-    border-left: 3px solid var(--gold-light);
-    background: #0000006a;
-    font-size: 0.95rem; */
 }
 
 section.services {
@@ -399,7 +391,6 @@ section.services {
 }
 
 .service-card {
-    /* background: #111111; */
     background: var(--black);
     border-radius: 14px;
     padding: 18px 18px 20px;
@@ -426,26 +417,12 @@ section.services {
     transition: transform 0.3s ease;
 }
 
-/* .service-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 999px;
-    border: 1px solid var(--gold-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: var(--gold-light);
-} */
-
 .service-title {
     font-weight: 400;
     margin-bottom: 1em;
     font-size: 24px;
     text-align: center;
     color: var(--beige);
-    /* max-width: 400px; */
 }
 
 .service-text {
@@ -461,7 +438,7 @@ section.services {
     justify-content: center;
 }
 
-/* Секция продуктов / карусель */
+/* Секция продуктов */
 section.products {
     padding: 3em 0;
     background: var(--deep-red);
