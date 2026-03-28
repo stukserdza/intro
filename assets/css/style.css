@@ -1036,6 +1036,12 @@ textarea {
     color: inherit;
 }
 
+.contact-form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
 footer {
     /* background: var(--deep-red); */
     color: var(--white);
