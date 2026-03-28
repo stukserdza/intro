@@ -500,7 +500,7 @@
                     </a>
                 </div>
 
-                <div>
+                <div class="contact-form-container">
                     <form action="https://formspree.io/f/mgowdgyd" method="POST">
                         <div>
                             <label for="name">Имя</label>
@@ -516,6 +516,34 @@
                                 required></textarea>
                         </div>
 
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <span class="checkbox__underline">Политикой
+                                        конфиденциальности</span>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
                         <div>
                             <button type="submit" class="btn-primary">Отправить запрос</button>
                         </div>

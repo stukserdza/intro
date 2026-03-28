@@ -910,7 +910,7 @@ section.contact {
     color: var(--deep-red);
 }
 
-.social-sofia {
+/* .social-sofia {
     display: inline;
 }
 
@@ -918,7 +918,7 @@ section.contact {
     font-weight: 600;
     color: var(--gold-light);
     transition: all 0.3s ease;
-}
+} */
 
 .contact-highlight:hover {
     transform: translateY(-1px);
@@ -933,31 +933,107 @@ section.contact {
     transform: scale(1.02);
 }
 
+.contact-form-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 1em;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 form {
     display: grid;
     gap: 12px;
+    width: 100%;
 }
 
 label {
-    font-size: 0.85rem;
-    opacity: 0.9;
+    font-size: 18px;
+    color: var(--beige);
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: #111111;
-    color: var(--white);
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    border: 1px solid var(--beige);
+    background: var(--deep-red);
+    color: var(--beige);
+    font-size: 18px;
+}
+
+/* input placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: var(--beige);
+    font-size: 14px;
 }
 
 textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+.checkbox__container {
+    margin-bottom: 18px;
+}
+
+.checkbox__label {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    column-gap: 14px;
+    align-items: start;
+    color: #f2dfd8;
+    font-size: 18px;
+    line-height: 1.35;
+    cursor: pointer;
+    /* max-width: 100%; */
+}
+
+.checkbox__label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    box-sizing: border-box;
+    border: 1.5px solid #f2dfd8;
+    background: transparent;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+    align-self: start;
+}
+
+.checkbox__label input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: transform 0.15s ease-in-out;
+    background: #f2dfd8;
+}
+
+.checkbox__label input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.checkbox__text {
+    margin-left: 1em;
+    display: inline;
+    max-width: 980px;
+}
+
+.checkbox__underline {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: inherit;
 }
 
 footer {
