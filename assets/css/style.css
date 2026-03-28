@@ -1013,8 +1013,7 @@ textarea {
     margin: 0.5em 0;
 }
 
-.contact-form-disclaimer p a,
-.checkbox__container a {
+.link__legal {
     color: var(--beige);
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -1115,8 +1114,7 @@ textarea {
     align-items: start;
 }
 
-.footer-nav a,
-.footer-legal a {
+.footer-nav a {
     color: var(--beige);
     text-decoration: none;
     font-size: 18px;
