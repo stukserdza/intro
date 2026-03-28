@@ -1019,6 +1019,28 @@ textarea {
     text-underline-offset: 2px;
 }
 
+/* privacy */
+.legal__page {
+    background-color: var(--deep-red);
+}
+
+.disclaimer-section {
+    max-width: 1200px;
+    width: 100%;
+    color: var(--beige);
+    padding: 3em 2em;
+}
+
+.disclaimer-text-intro {
+    text-align: center;
+}
+
+.disclaimer-title {
+    margin: 2em;
+}
+
+/* footer */
+
 .site-footer {
     background: var(--deepest-red);
     color: #e8d6cf;
