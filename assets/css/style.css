@@ -1039,6 +1039,10 @@ textarea {
     margin: 2em;
 }
 
+.disclaimer-text-only {
+    padding: 2em 0;
+}
+
 /* footer */
 
 .site-footer {
@@ -1073,7 +1077,7 @@ textarea {
 .footer-text {
     max-width: 620px;
     margin: 0 0 48px;
-    font-size: 18px;
+    font-size: var(--fs-20-text);
     line-height: 1.35;
     color: var(--beige);
 }
