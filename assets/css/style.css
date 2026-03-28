@@ -143,16 +143,16 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 24px;
-    font-size: 1rem;
+    font-size: var(--fs-little-text);
     align-items: center;
     justify-content: space-between;
-    /* background-color: pink; */
     width: 100%;
     max-width: 1200px;
     padding: 0 3em;
 }
 
 nav a {
+    color: var(--beige);
     opacity: 0.9;
 }
 
