@@ -37,39 +37,6 @@ a {
 
 /* Header */
 
-.diag-header {
-    /* background: var(--black); */
-    background-image: linear-gradient(to bottom, #440000, #360407, #28060a, #1a0308, #000000);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.diag-header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 0;
-}
-
-.logo {
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--gold);
-}
-
-.diag-nav {
-    display: flex;
-    gap: 18px;
-    font-size: 0.92rem;
-}
-
-.diag-nav a:hover {
-    color: var(--gold);
-}
-
 /* Buttons */
 
 .btn-primary,
@@ -549,10 +516,5 @@ textarea {
 
     .section-title {
         font-size: 1.5rem;
-    }
-
-    .diag-nav {
-        display: none;
-        /* если захочешь бургер — можно потом доделать */
     }
 }
