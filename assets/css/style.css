@@ -703,7 +703,7 @@ section.testimonials {
     font-size: clamp(28px, 2.6vw, 44px);
     line-height: 1.05;
     font-weight: 400;
-    font-size: 28px;
+    font-size: var(--fs-card-text);
     line-height: 1.25;
     color: var(--beige);
 }
@@ -734,7 +734,7 @@ section.testimonials {
     margin: 0;
     padding: 0 18px 24px;
     max-width: 900px;
-    font-size: 18px;
+    font-size: var(--fs-20-text);
     line-height: 1.5;
     color: rgba(231, 209, 200, 0.92);
 }
@@ -862,7 +862,7 @@ section.contact {
     text-align: center;
     color: var(--beige);
     max-width: 600px;
-    font-size: 18px;
+    font-size: var(--fs-20-text);
 }
 
 .contact-text p {
