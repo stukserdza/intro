@@ -246,7 +246,7 @@
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="testimonials-header">
-                    <h2 class="section-title section-title--lined">Истории тех, кто уже пошёл этим путём</h2>
+                    <h2 class="section-title">Истории тех, кто уже пошёл этим путём</h2>
                 </div>
 
                 <div class="testimonials-carousel">
@@ -363,7 +363,65 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="faq-head">
+                    <h2 class="faq-title section-title">Пространство ваших вопросов</h2>
+                    <p class="faq-subtitle">
+                        Я знаю, как важно, чтобы на пути не осталось сомнений
+                        или недомолвок. Здесь я собрала ответы на самые частые
+                        вопросы, которые рождаются в сердце перед началом пути
+                    </p>
+                </div>
 
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>С чего начать, если я совсем новичок и чувствую лёгкое волнение?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Вы можете начать с диагностики или короткого сообщения, чтобы я подсказала, какая
+                                практика подойдет именно вам.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Как понять, какая практика отзовётся именно мне?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Я помогу подобрать вариант по вашему запросу, состоянию и цели — мягко и без давления.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Мне нужен совет, но я не знаю, как сформулировать запрос. Это нормально?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, это абсолютно нормально. Можно написать как чувствуете — я помогу уточнить запрос в
+                                процессе.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Мне нужна не консультация, а просто поддержка и направление. Куда написать?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Напишите в мессенджер или форму обратной связи — я отвечу и подскажу, с чего лучше
+                                начать.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
         <!-- social -->
         <section id="social">
             <div class="container">
@@ -562,6 +620,34 @@
                 updateButtons();
             });
         });
+
+        $(document).ready(function () {
+            $(".faq-question").on("click", function () {
+                const $item = $(this).closest(".faq-item");
+                const $answer = $item.find(".faq-answer");
+                const $icon = $(this).find(".faq-icon");
+
+                if ($item.hasClass("is-open")) {
+                    $item.removeClass("is-open");
+                    $(this).attr("aria-expanded", "false");
+                    $icon.text("+");
+                    $answer.css("max-height", "0");
+                } else {
+                    $(".faq-item.is-open").each(function () {
+                        $(this).removeClass("is-open");
+                        $(this).find(".faq-question").attr("aria-expanded", "false");
+                        $(this).find(".faq-icon").text("+");
+                        $(this).find(".faq-answer").css("max-height", "0");
+                    });
+
+                    $item.addClass("is-open");
+                    $(this).attr("aria-expanded", "true");
+                    $icon.text("–");
+                    $answer.css("max-height", $answer[0].scrollHeight + "px");
+                }
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', function () {
             const startYear = 2008; // Change this to your actual start year
             const years = new Date().getFullYear() - startYear;
