@@ -248,7 +248,8 @@ nav a:hover {
 
 /* btn-primary */
 
-.btn-primary {
+.btn-primar,
+.product-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -257,19 +258,21 @@ nav a:hover {
     border: none;
     cursor: pointer;
     font-size: var(--fs-btn-text);
-    font-weight: 600;
+    font-weight: 800;
     background: linear-gradient(90deg, rgba(253, 232, 133, 1) 0%, rgba(255, 201, 9, 1) 100%);
     color: #2b1a00;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, filter 0.15s ease-out;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.product-link:hover {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
     filter: brightness(1.05);
 }
 
-.btn-primary:active {
+.btn-primary:active,
+.product-link:active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -384,7 +387,7 @@ section.services {
 .services-header-subtitle {
     max-width: 520px;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: var(--fs-20-text);
     color: var(--beige);
 }
 
@@ -421,13 +424,13 @@ section.services {
 .service-title {
     font-weight: 400;
     margin-bottom: 1em;
-    font-size: 24px;
+    font-size: var(--fs-card-text);
     text-align: center;
     color: var(--beige);
 }
 
 .service-text {
-    font-size: 14px;
+    font-size: var(--fs-14-text);
     color: var(--beige);
     opacity: 0.9;
     text-align: center;
@@ -454,19 +457,13 @@ section.products {
 }
 
 .products-intro p {
-    font-size: 18px;
-}
-
-.container {
-    width: min(1200px, 100% - 32px);
-    margin-inline: auto;
+    font-size: var(--fs-20-text);
 }
 
 .products-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    /* border: 1px solid rgba(120, 0, 10, 0.35); */
 }
 
 .product-card {
@@ -484,7 +481,7 @@ section.products {
 
 .product-title {
     font-weight: 400;
-    font-size: 36px;
+    font-size: var(--fs-36-text);
     line-height: 1.25;
     color: var(--beige);
     text-align: center;
@@ -493,27 +490,9 @@ section.products {
 .product-text {
     margin: 0;
     max-width: 400px;
-    font-size: 18px;
+    font-size: var(--fs-20-text);
     line-height: 1.35;
     color: var(--beige);
-}
-
-.product-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 170px;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #ffe57a 0%, #f7c93c 100%);
-    color: #140002;
-    text-decoration: none;
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-    transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
 }
 
 .product-link:hover {
@@ -542,7 +521,6 @@ section.products {
 
 }
 
-/* testimonials */
 /* testimonials */
 section.testimonials {
     padding: 3em 0;
@@ -596,15 +574,9 @@ section.testimonials {
     color: var(--beige);
 }
 
-.testimonial-text {
-    margin: 0;
-    line-height: 1.45;
-    font-size: 16px;
-}
-
 .testimonial-author {
     font-weight: 400;
-    font-size: 36px;
+    font-size: var(--fs-card-text);
     line-height: 1.25;
     color: var(--beige);
     text-align: center;
@@ -612,7 +584,13 @@ section.testimonials {
     font-family: var(--ff-headings);
 }
 
-/* nav */
+.testimonial-text {
+    margin: 0;
+    line-height: 1.45;
+    font-size: var(--fs-20-text);
+}
+
+/* nav testimonials-carousel*/
 .testimonials-carousel-header {
     display: flex;
     align-items: center;
@@ -622,21 +600,18 @@ section.testimonials {
 }
 
 .testimonials-nav-btn {
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 1px solid var(--gold);
-    background: rgba(255, 201, 9, 0.08);
     color: var(--gold);
-    /* font-size: 1.4rem; */
-    font-weight: 600;
+    font-weight: 300;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid var(--gold-light);
-    padding: 2em;
+    background-color: var(--deepest-red);
 }
 
 .testimonials-nav-btn span {
