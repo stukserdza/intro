@@ -49,6 +49,10 @@
     width: 50%;
 }
 
+.med-hero-badge {
+    font-size: var(--fs-20-text);
+}
+
 .med-hero-subtitle {
     font-size: var(--fs-20-text);
     max-width: 530px;

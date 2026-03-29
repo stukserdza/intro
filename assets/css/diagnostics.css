@@ -48,6 +48,10 @@
     width: 50%;
 }
 
+.diag-hero-badge {
+    font-size: var(--fs-20-text);
+}
+
 .diag-hero-subtitle {
     font-size: var(--fs-20-text);
     max-width: 530px;
