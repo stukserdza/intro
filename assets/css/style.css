@@ -793,55 +793,6 @@ section.testimonials {
 
 
 
-
-.social-grid {
-    max-width: 640px;
-    margin: 0 auto;
-    display: grid;
-    gap: 16px;
-}
-
-.social-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--gold-light);
-    background: var(--black);
-}
-
-.social-card:hover {
-    box-shadow: 0 8px 25px rgba(255, 201, 9, 0.2),
-        0 4px 12px rgba(0, 0, 0, 0.3);
-    border-color: var(--gold-light);
-    background: rgba(255, 201, 9, 0.05);
-}
-
-.social-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold-light);
-    font-size: 0.9rem;
-    border: 1px solid var(--gold-light);
-}
-
-.social-label {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-.social-handle {
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-
 /* Contact */
 section.contact {
     padding: 3em 0;
