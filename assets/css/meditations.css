@@ -26,61 +26,41 @@
     --fs-14-text: 14px;
 }
 
-/* Hero */
 
+/* Hero */
 .med-hero {
-    padding: 64px 0 72px;
-    background: radial-gradient(circle at top left, #5b1111 0, var(--deep-red) 40%, var(--black) 100%);
+    background-color: var(--deepest-red);
+    width: 100%;
 }
 
 .med-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
     gap: 40px;
     align-items: center;
 }
 
-.med-hero-badge {
-    display: inline-flex;
-    padding: 4px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 0.8rem;
-    margin-bottom: 14px;
-}
-
-.med-hero-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: var(--gold);
+.med-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 .med-hero-subtitle {
-    font-size: 1.02rem;
-    max-width: 34rem;
-    opacity: 0.96;
-    margin-bottom: 22px;
+    font-size: var(--fs-20-text);
+    max-width: 530px;
+    opacity: 0.8;
+    padding: 1em 0 2em 0;
+    text-align: center;
 }
 
 .med-hero-photo-wrap {
     display: flex;
     justify-content: center;
-}
-
-.med-hero-photo-circle {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    border: 3px solid var(--gold);
-    outline: 1px solid var(--white);
-    outline-offset: 6px;
-    background: #1f1f1f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    width: 50%;
 }
 
 .med-hero-photo {
