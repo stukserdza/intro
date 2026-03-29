@@ -564,33 +564,43 @@
             </div>
         </section>
         <!-- Контакты -->
-        <section id="contact">
-            <div class="container contact-grid">
+        <section id="contact" class="alt contact">
+            <div class="container contact-wrapper">
                 <div class="contact-text" id="sofia-contact">
-                    <h2 class="section-title">Готовы сделать первый шаг?</h2>
+                    <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
                     <p>
                         Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в
                         одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.
                     </p>
                     <p>
-                        Для консультации или понимания, с чего лучше начать, напишите моей ассистентке Софии в Telegram
-                        или моей ассистентке Марии в VK.
+                        Для консультации или понимания, с чего лучше начать,
+                        напишите моей ассистентке Софии в Telegram и Мария в VK,
+                        они с теплотой откликнутся, поддержат и мягко направят,
+                        подсказав, с чего лучше начать ваше знакомство с практикой
                     </p>
                     <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
-                        Telegram для связи:
-                        <div class="social-sofia">
+                        TG
+                        <!-- <div class="social-sofia">
                             <strong>София </strong>
-                        </div>
+                        </div> -->
                     </a>
                     <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener"
                         style="margin-top: 8px;">
-                        ВКонтакте для связи:
-                        <div class="social-sofia">
+                        ВК
+                        <!-- <div class="social-sofia">
                             <strong>Мария </strong>
-                        </div>
+                        </div> -->
+                    </a>
+                    <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+                        rel="noopener">
+                        WA
+                        <!-- <div class="social-sofia">
+                            <strong>Мария </strong>
+                        </div> -->
                     </a>
                 </div>
-                <div>
+
+                <div class="contact-form-container">
                     <form action="https://formspree.io/f/mgowdgyd" method="POST">
                         <div>
                             <label for="name">Имя</label>
@@ -605,126 +615,124 @@
                             <textarea id="message" name="message" placeholder="Кратко опишите свою ситуацию или вопрос"
                                 required></textarea>
                         </div>
-                        <div>
+
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <a href="privacy.html" target="_blank" rel="noopener"
+                                        class="link__legal">
+                                        Политикой
+                                        конфиденциальности</a>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
+                        <div class="contact-form-button-container">
                             <button type="submit" class="btn-primary">Отправить запрос</button>
                         </div>
                     </form>
+                    <div class="contact-form-disclaimer">
+                        <p>
+                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
+                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
+                                href="terms-of-service.html" target="_blank" rel="noopener"
+                                class="link__legal">условиями
+                                использования сайта</a>
+                            использования сайта
+                        </p>
+                        <p>
+                            Мы не даем гарантий результата. Все рекомендации носят субъективный характер
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="med-footer">
-        <div class="container med-footer-inner">
-            <div>© 2025 Стук сердца by Suria</div>
-            <div class="footer-nav">
-                <a href="index.html" aria-label="Go to homepage">
-                    Главная
-                </a>
-                <a href="#packs-list" aria-label="Go to meditations packs">
-                    packs
-                </a>
-                <a href="#meditations.html" aria-label="Go to all meditations">
-                    Медитации
-                </a>
-                <a href="#contact" aria-label="Go to contact section">
-                    Контакт
-                </a>
+
+    <footer class=" site-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
+                </h2>
+
+                <p class="footer-text">
+                    Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
+                    кто проходит сложные периоды и ищет выход
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">IG</span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+
+                    <a href="https://vk.ru/stukserdzavk" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">vk</span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.t.me/tarotmystic" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">TG</span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">TT</span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+                    <a href="https://boosty.to/stukserdza" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">Boosty</span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://www.youtube.com/@stukserdzayt" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">YT</span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#top">Наверх</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#products">Что вас ждет</a>
+                    <a href="#products">Категории продуктов</a>
+                    <a href="#reviews">Отзывы</a>
+                </nav>
+
+                <div class="footer-legal">
+                    <a href="privacy.html" target="_blank" class="link__legal" rel=" noopener">Политикой
+                        конфиденциальности</a>
+                    <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal">Условия
+                        использования сайта</a>
+                    <a href="disclaimer.html" target="_blank" rel="noopener" class="link__legal">Дисклеймер</a>
+                </div>
+
+                <p class="footer-copy">© 2025 Стук сердца by Suria</p>
             </div>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-        $(document).ready(function () {
-            $(".hamburger").click(function () {
-                $("nav").toggleClass("active");
-                const expanded = $(this).attr("aria-expanded") === "true";
-                $(this).attr("aria-expanded", !expanded);
-            });
-        });
-        // Простая навигация по карусели продуктов
-        $(document).ready(function () {
-            const $track = $(".products-track");
-            const $cards = $(".product-card");
-            const $btnPrev = $(".products-nav-btn[data-dir='prev']");
-            const $btnNext = $(".products-nav-btn[data-dir='next']");
-
-            if (!$track.length || !$cards.length) return;
-
-            const cardWidth = $cards.first().outerWidth(true);
-
-            function updateButtons() {
-                const el = $track.get(0);
-                const maxScroll = el.scrollWidth - el.clientWidth;
-                const current = el.scrollLeft;
-
-                // левая граница
-                if (current <= 1) {
-                    $btnPrev.addClass("is-disabled");
-                } else {
-                    $btnPrev.removeClass("is-disabled");
-                }
-
-                // правая граница
-                if (current >= maxScroll - 1) {
-                    $btnNext.addClass("is-disabled");
-                } else {
-                    $btnNext.removeClass("is-disabled");
-                }
-            }
-
-            // при клике скроллим и потом обновляем состояние кнопок
-            $(".products-nav-btn").on("click", function () {
-                const dir = $(this).data("dir");
-                const delta = dir === "next" ? cardWidth : -cardWidth;
-
-                $track.animate({
-                        scrollLeft: $track.scrollLeft() + delta
-                    },
-                    300,
-                    updateButtons
-                );
-            });
-
-            // обновлять и при ручном скролле/свайпе
-            $track.on("scroll", function () {
-                updateButtons();
-            });
-
-            // первый вызов при загрузке
-            updateButtons();
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const startYear = 2008; // Change this to your actual start year
-            const years = new Date().getFullYear() - startYear;
-            const text =
-                `Я сама прошла через боль и за ${years} лет помогла тысячам женщин войти в их новую реальность, и вы тоже сможете.`;
-
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
