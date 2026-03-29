@@ -1,106 +1,29 @@
 :root {
-    --deep-red: #380606;
-    --gold: #FFC909;
+    /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
+    /* --deep-red: #380606; */
+    /* --deep-red: #440000; */
+    --beige: #EDDED2;
+    --gold-light: #FDE885;
+    --gold-bright: #FFC909;
+    --deep-red: #210202;
+    --deepest-red: #110205;
     --black: #000000;
     --white: #FFFFFF;
-}
+    --extra-background: #0000006a;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.5;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
-
-/* Header */
-
-.med-header {
-    background: var(--black);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.med-header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-}
-
-.logo {
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--gold);
-}
-
-.med-nav {
-    display: flex;
-    gap: 18px;
-    font-size: 0.92rem;
-}
-
-.med-nav a:hover {
-    color: var(--gold);
-}
-
-/* Buttons */
-
-.btn-primary,
-.btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 22px;
-    border-radius: 999px;
-    border: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: var(--gold);
-    color: var(--black);
-}
-
-.btn-primary:hover {
-    background: #e5b706;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 201, 9, 0.12);
+    --ff-headings: 'Lora', Georgia, serif;
+    --ff-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --faq-line: rgba(240, 220, 210, 0.85);
+    --faq-text: #e7d1c8;
+    --faq-accent: #f2e2d7;
+    --fs-section-title: 45px;
+    --fs-main-text: 20px;
+    --fs-little-text: 16px;
+    --fs-btn-text: 16px;
+    --fs-card-text: 30px;
+    --fs-36-text: 36px;
+    --fs-20-text: 20px;
+    --fs-14-text: 14px;
 }
 
 /* Hero */
@@ -522,28 +445,6 @@ textarea {
     color: var(--gold);
 }
 
-/* Footer */
-
-.med-footer {
-    background: var(--deep-red);
-    color: var(--white);
-    padding: 18px 0;
-    font-size: 0.86rem;
-}
-
-.med-footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.footer-nav {
-    display: flex;
-    gap: 12px;
-}
-
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -570,10 +471,5 @@ textarea {
 
     .section-title {
         font-size: 1.5rem;
-    }
-
-    .med-nav {
-        display: none;
-        /* если захочешь бургер — можно потом доделать */
     }
 }
