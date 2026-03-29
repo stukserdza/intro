@@ -100,370 +100,166 @@ a {
 }
 
 /* Sections */
-
-.diag-free {
-    padding: 64px 0 72px;
-    background: radial-gradient(circle at top right, #4b1016 0, #1a0608 38%, #000000 100%);
-}
-
-.diag-free-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-    gap: 36px;
-    align-items: center;
-}
-
-.diag-free-badge {
-    display: inline-flex;
-    padding: 4px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.diag-free-lead {
-    font-size: 0.98rem;
-    opacity: 0.96;
-    margin-bottom: 10px;
-}
-
-.diag-free-body {
-    font-size: 0.94rem;
-    opacity: 0.94;
-    margin-bottom: 18px;
-}
-
-.diag-free-card {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    padding: 18px 18px 20px;
-    border: 1px solid rgba(255, 201, 9, 0.4);
-    box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.7),
-        0 0 22px rgba(255, 201, 9, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.diag-free-label {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid var(--gold);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--gold);
-}
-
-.diag-free-figure {
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 14px;
-    background: #1a1a1a;
-}
-
-.diag-free-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.diag-free-quote {
-    font-size: 0.9rem;
-    opacity: 0.95;
-    font-style: italic;
-    margin-bottom: 12px;
-}
-
-.diag-free-audio {
-    width: 100%;
-}
-
-/* Адаптив */
-@media (max-width: 900px) {
-    .diag-free-inner {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .diag-free {
-        padding-top: 48px;
-    }
-}
-
-@media (max-width: 600px) {
-    .diag-free-image {
-        height: 500px;
-    }
-}
-
-/* Packs */
-.diag-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 22px;
-}
-
-/* Общая карточка */
-.diag-card {
-    background: #111111;
-    border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 16px 16px 18px;
+.diag-section {
+    background-color: var(--deep-red);
+    padding: 2em 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--beige);
+    opacity: 0.8;
+}
+
+.diag-section-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.diag-section-intro {
+    font-size: var(--fs-20-text);
+    max-width: 600px;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.diag-container-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 2em;
+}
+
+.diag-card {
+    display: grid;
+    grid-template-columns: 424px 1fr;
+    gap: 2em;
+    padding: 1.8em;
+    background-color: var(--deepest-red);
+    align-items: stretch;
+}
+
+.diag-card-img-wrap {
+    position: relative;
+}
+
+.diag-card-figure {
+    margin: 0;
+    height: 100%;
     position: relative;
     overflow: hidden;
-
-}
-
-
-
-.diag-card--package {
-    background: #15100a;
-}
-
-/* Плашка "Набор" / "Скоро" */
-.diag-card-tag {
-    position: absolute;
-    top: 12px;
-    left: 14px;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-/* Картинка */
-.diag-card-figure {
-    margin: 0 0 12px 0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #1a1a1a;
-}
-
-.diag-card-figure--blur {
-    filter: grayscale(0.3) blur(0.5px);
 }
 
 .diag-card-image {
+    display: block;
     width: 100%;
-    height: 3%;
+    height: 100%;
+    min-height: 310px;
     object-fit: cover;
 }
 
-/* Текст */
+.diag-card-tag {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 2;
+    margin: 0;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--beige);
+    background: rgba(42, 9, 14, 0.55);
+    backdrop-filter: blur(2px);
+    color: #f0e1d6;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.diag-card-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
+    column-gap: 20px;
+    row-gap: 10px;
+    color: var(--beige);
+    min-width: 0;
+}
+
 .diag-card-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.5rem;
-    padding: 1em 2em;
-    color: var(--gold);
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: var(--fs-card-text);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--gold-light);
 }
 
 .diag-card-text {
-    font-size: 0.9rem;
-    opacity: 1;
-    flex-grow: 1;
-    padding: 0 1em;
+    grid-column: 1 / -1;
+    margin: 0;
+    max-width: 100%;
+    font-size: var(--fs-20-text);
+    line-height: 1.35;
 }
 
 .diag-points {
-    opacity: 0.8;
-    padding: 2em;
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 1em;
+
+    line-height: 1.45;
 }
 
-/* Price & Ссылка */
-
-.diag-price {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 10px;
+.diag-points li+li {
+    margin-top: 4px;
 }
 
-.diag-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--gold);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-}
-
-.diag-link::after {
-    content: "→";
-    font-size: 0.9rem;
-    transition: transform 0.2s ease;
-}
-
-.diag-link:hover {
-    color: #ffe473;
-    transform: translateY(-1px);
-}
-
-.diag-link:hover::after {
-    transform: translateX(2px);
-}
-
-
-/* "Скоро" карточка */
-.diag-card--coming {
-    border-style: dashed;
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-.diag-card--coming .diag-card-title {
-    color: #ddd2a8;
-}
-
-/* Общая сетка уже есть: .diag-card-grid {...} */
-
-/* Для секции с пакетами — чуть крупнее карточки и 3 в ряд на десктопе */
-.diag-card-grid--packs {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-/* Для секции одиночных можно оставить как есть или сделать плотнее */
-.diag-packs--single .diag-card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-/* Адаптив */
-@media (max-width: 600px) {
-    .diag-card-image {
-        height: 150px;
-    }
-}
-
-/* How */
-
-.diag-how {
-    background: #080808;
-}
-
-.diag-how-inner {
-    max-width: 720px;
-}
-
-.diag-how-list {
-    list-style: disc;
-    padding-left: 20px;
-    font-size: 0.95rem;
-    opacity: 0.94;
-}
-
-.diag-how-list li+li {
-    margin-top: 6px;
-}
-
-/* Contact */
-
-.diag-contact {
-    background: var(--black);
-}
-
-.diag-contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-    gap: 34px;
-}
-
-.diag-form {
-    display: grid;
-    gap: 12px;
-}
-
-label {
-    font-size: 0.85rem;
-    opacity: 0.9;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: #111111;
-    color: var(--white);
-    font-size: 0.9rem;
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-highlight {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 16px;
-    border-radius: 10px;
-    background: #111111;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    font-size: 0.95rem;
-}
-
-.contact-highlight strong {
-    color: var(--gold);
-}
-
-/* Footer */
-
-.diag-footer {
-    background: var(--deep-red);
-    color: var(--white);
-    padding: 18px 0;
-    font-size: 0.86rem;
-}
-
-.diag-footer-inner {
+.diag-card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
-.footer-nav {
+.diag-price {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    margin: 0;
+    align-self: end;
+    font-size: var(--fs-card-text);
+    line-height: 1;
+    color: var(--gold-light);
+    font-family: var(--ff-headings);
 }
 
-/* Responsive */
 
 @media (max-width: 900px) {
-
-    .diag-hero-grid,
-    .diag-pack-grid,
-    .diag-contact-grid {
-        grid-template-columns: minmax(0, 1fr);
+    .diag-card {
+        grid-template-columns: 1fr;
     }
 
-    .diag-pack-grid {
-        gap: 16px;
+    .diag-card-image {
+        min-height: 260px;
     }
 
-    .diag-hero {
-        padding-top: 40px;
+    .diag-card-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
-}
 
-@media (max-width: 600px) {
-    .diag-hero-title {
-        font-size: 1.7rem;
+    .diag-link {
+        justify-self: start;
+        min-width: 100%;
+    }
+
+    .diag-price {
+        margin-top: 8px;
     }
 }

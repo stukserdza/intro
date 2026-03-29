@@ -314,7 +314,7 @@ section {
 }
 
 section.about-section {
-    color: var(--white);
+    color: var(--beige);
     background-color: var(--deepest-red);
     padding: 2em 0;
     display: flex;
