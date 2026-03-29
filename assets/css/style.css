@@ -25,6 +25,7 @@
     --fs-20-text: 20px;
     --fs-14-text: 14px;
     --fs-slogan: 70px;
+    --card-border: 1px solid #edded2cf
 }
 
 
@@ -601,7 +602,7 @@ section.testimonials {
     /* background: #181818; */
     /* border-radius: 14px; */
     padding: 35px 20px 24px;
-    border: 0.1px solid var(--beige);
+    border: var(--card-border);
     scroll-snap-align: start;
     box-sizing: border-box;
     flex: 0 0 calc(50% - 12px);
