@@ -200,9 +200,12 @@
 
 
 /* Packs */
-.med-packs-wrap {
+.med-packs-wrap,
+.med-single-wrap {
     width: 100%;
     max-width: 1200px;
+    width: min(1280px, calc(100% - 48px));
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,7 +264,9 @@
 }
 
 .med-packs-card-content,
-.med-packs-card-action {
+.med-packs-card-action,
+.med-card-content,
+.med-card-action {
     width: 100%;
 }
 
@@ -322,14 +327,16 @@
     text-align: center;
 }
 
-.med-packs-card-price {
+.med-packs-card-price,
+.med-card-price {
     font-size: var(--fs-36-text);
     color: var(--gold-light);
     font-family: var(--ff-headings);
     margin-bottom: 0.5em;
 }
 
-.med-packs-card-btn {
+.med-packs-card-btn,
+.med-card-btn {
     width: 100% !important;
 }
 
@@ -389,7 +396,7 @@
 
 .med-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 22px;
     padding-top: 1em;
 }
@@ -397,11 +404,20 @@
 /* Общая карточка */
 .med-card {
     background-color: var(--deepest-red);
-    padding: 16px 16px 18px;
+    padding: 1em;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+.med-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -409,10 +425,13 @@
 
 /* Текст */
 .med-card-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.05rem;
+    font-size: var(--fs-card-text);
     margin-bottom: 8px;
-    color: var(--gold);
+    color: var(--beige);
+    text-align: center;
+    width: 100%;
+    max-width: 302px;
+    font-weight: 100;
 }
 
 .med-card-text {
@@ -420,51 +439,16 @@
     opacity: 0.94;
     margin-bottom: 14px;
     flex-grow: 1;
+    text-align: center;
 }
 
-.med-card-price {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 10px;
-}
-
-
-/* Ссылка */
-.med-card-link {
-    display: inline-flex;
+.med-card-action {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--gold);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    width: 100%;
 }
 
-.med-card-link:hover {
-    color: #ffe473;
-    transform: translateY(-1px);
-}
-
-.med-card-link::after {
-    content: "→";
-    font-size: 0.9rem;
-    transition: transform 0.2s ease;
-}
-
-.med-card-link:hover::after {
-    transform: translateX(2px);
-}
-
-/* "Скоро" карточка */
-.med-card--coming {
-    border-style: dashed;
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-.med-card--coming .med-card-title {
-    color: #ddd2a8;
-}
 
 /* Общая сетка уже есть: .med-card-grid {...} */
 
@@ -491,24 +475,59 @@
 /* How */
 
 .med-how {
-    background: #080808;
+    background: var(--deepest-red);
+    width: 100%;
 }
 
 .med-how-inner {
     max-width: 720px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .med-how-list {
-    list-style: disc;
-    padding-left: 20px;
-    font-size: 0.95rem;
-    opacity: 0.94;
+    list-style: none;
+    font-size: var(--fs-20-text);
+    opacity: 0.8;
+    max-width: 518px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.med-how-list-accent {
+    opacity: 1;
 }
 
 .med-how-list li+li {
-    margin-top: 6px;
+    margin-top: 1em;
 }
 
+li.sparkle {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sparkle {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sparkle svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(255, 219, 120, 0.35));
+}
+
+.sparkle path {
+    fill: var(--gold-light);
+}
 
 /* Responsive */
 
