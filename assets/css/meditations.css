@@ -73,42 +73,56 @@
     object-fit: cover;
 }
 
-/* Sections */
-
+/* Section free med */
 .med-free {
-    padding: 64px 0 72px;
-    background: radial-gradient(circle at top right, #4b1016 0, #1a0608 38%, #000000 100%);
+    width: 100;
+    background-color: var(--deepest-red);
 }
 
 .med-free-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.med-free-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: var(--fs-20-text);
+    color: var(--beige);
+    opacity: 1;
 }
 
 .med-free-badge {
-    display: inline-flex;
-    padding: 4px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+    padding: 0.5em;
 }
 
 .med-free-lead {
-    font-size: 0.98rem;
-    opacity: 0.96;
-    margin-bottom: 10px;
+    font-size: var(--fs-20-text);
+    opacity: 0.8;
+    width: 100%;
+    max-width: 780px;
+    padding: 1em 0;
+}
+
+.med-free-lead-accent {
+    opacity: 1;
 }
 
 .med-free-body {
-    font-size: 0.94rem;
-    opacity: 0.94;
-    margin-bottom: 18px;
+    font-size: var(--fs-20-text);
+    max-width: 712px;
+    opacity: 0.8;
+    padding-bottom: 1.5em;
 }
 
 .med-free-card {
@@ -179,17 +193,6 @@
     }
 }
 
-
-section {
-    padding: 64px 0;
-}
-
-.section-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.8rem;
-    margin-bottom: 18px;
-    color: var(--gold);
-}
 
 /* Packs */
 .med-card-grid {
