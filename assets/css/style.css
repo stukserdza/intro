@@ -368,6 +368,7 @@ section.about-section {
 section.services {
     padding: 3em 0;
     background: var(--deepest-red);
+    width: 100%;
 }
 
 /* services */
