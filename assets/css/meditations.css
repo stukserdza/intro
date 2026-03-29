@@ -245,14 +245,94 @@
 }
 
 .med-packs-card {
-    padding: 35px 20px 24px;
+    padding: 1.875em;
     scroll-snap-align: start;
     box-sizing: border-box;
     flex: 0 0 calc(50% - 12px);
     max-width: calc(50% - 12px);
     text-align: center;
     color: var(--beige);
+    background-color: var(--deepest-red);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.med-packs-card-content,
+.med-packs-card-action {
+    width: 100%;
+}
+
+.med-card-figure {
+    margin: 0 0 12px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a1a1a;
+    position: relative;
+}
+
+.med-card-figure--blur {
+    filter: grayscale(0.3) blur(0.5px);
+}
+
+.med-card-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* label "Набор" / "new" */
+.med-card-tag {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 2;
+    margin: 0;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--beige);
+    background: rgba(42, 9, 14, 0.55);
+    backdrop-filter: blur(2px);
+    color: #f0e1d6;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.med-card-tag-new {
+    right: 16px !important;
+    left: unset
+}
+
+
+.med-packs-card-title {
+    font-weight: 400;
+    margin: 1em;
+    font-size: var(--fs-card-text);
+    text-align: center;
+    color: var(--beige);
+}
+
+.med-packs-card-text {
+    font-size: var(--fs-20-text);
+    color: var(--beige);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.med-packs-card-price {
+    font-size: var(--fs-36-text);
+    color: var(--gold-light);
+    font-family: var(--ff-headings);
+    margin-bottom: 0.5em;
+}
+
+.med-packs-card-btn {
+    width: 100% !important;
+}
+
 
 .med-packs-track::-webkit-scrollbar {
     display: none;
@@ -326,46 +406,6 @@
 
 
 /* Картинка */
-.med-card-figure {
-    margin: 0 0 12px 0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #1a1a1a;
-    position: relative;
-}
-
-.med-card-figure--blur {
-    filter: grayscale(0.3) blur(0.5px);
-}
-
-.med-card-image {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-}
-
-/* Плашка "Набор" / "Скоро" */
-.med-card-tag {
-    position: absolute;
-    top: 14px;
-    left: 16px;
-    z-index: 2;
-    margin: 0;
-    padding: 7px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--beige);
-    background: rgba(42, 9, 14, 0.55);
-    backdrop-filter: blur(2px);
-    color: #f0e1d6;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-.med-card-tag-new {
-    right: 16px !important;
-    left: unset
-}
 
 /* Текст */
 .med-card-title {
