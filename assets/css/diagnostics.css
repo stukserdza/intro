@@ -26,38 +26,7 @@
     --fs-14-text: 14px;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.5;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
-
 /* Hero */
-
 .diag-hero {
     background-color: var(--deepest-red);
     width: 100%;
