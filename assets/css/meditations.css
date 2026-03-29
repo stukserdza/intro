@@ -200,6 +200,117 @@
 
 
 /* Packs */
+.med-packs-wrap {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--deep-red);
+}
+
+.med-section-intro {
+    color: var(--beige);
+    opacity: 0.8;
+    font-size: var(--fs-20-text);
+    text-align: center;
+    max-width: 573px;
+    padding: 0.5em;
+}
+
+
+/* packs */
+
+.med-packs-carousel {
+    border-radius: 18px;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* track */
+.med-packs-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.med-packs-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* card */
+.med-packs-card {
+    /* background: #181818; */
+    /* border-radius: 14px; */
+    padding: 35px 20px 24px;
+    border: var(--card-border);
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    text-align: center;
+    color: var(--beige);
+}
+
+/* nav med-packs-carousel*/
+.med-packs-carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.med-packs-nav-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--gold);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--gold-light);
+    background-color: var(--deepest-red);
+}
+
+.med-packs-nav-btn span {
+    color: var(--gold-light);
+    font-size: 30px;
+
+}
+
+.med-packs-nav-btn:hover {
+    background: rgba(255, 201, 9, 0.2);
+    transform: scale(1.05);
+}
+
+.med-packs-nav-btn.is-disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none;
+    background: transparent;
+}
+
+/* desktop: 2 visible */
+@media (min-width: 769px) {
+    .med-packs-carousel {
+        max-width: 1240px;
+    }
+}
+
 .med-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -208,7 +319,7 @@
 }
 
 /* Общая карточка */
-.med-card {
+/* .med-card {
     background: #111111;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -220,14 +331,6 @@
     border: 1px solid rgba(255, 201, 9, 0.4);
     border-radius: 20px;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-/* .med-card:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.55),
-        0 0 20px rgba(255, 201, 9, 0.18);
-    border-color: rgba(255, 201, 9, 0.7);
 } */
 
 .med-card--package {
