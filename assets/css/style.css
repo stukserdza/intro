@@ -185,7 +185,6 @@ nav a:hover {
 
 
 /* HERO */
-
 .hero {
     position: relative;
     background-image: url("../images/intro/bg_roses.png");
@@ -251,7 +250,6 @@ nav a:hover {
 }
 
 /* btn-primary */
-
 .btn-primary,
 .product-link {
     display: inline-flex;
@@ -302,11 +300,6 @@ nav a:hover {
         width: 100%;
         max-width: 320px;
     }
-}
-
-
-section {
-    padding: 3em;
 }
 
 .section-title {
@@ -567,6 +560,15 @@ section.testimonials {
     width: 100%;
 }
 
+.testimonials-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
 .testimonials-header {
     text-align: center;
     margin-bottom: 24px;
@@ -574,11 +576,8 @@ section.testimonials {
 }
 
 .testimonials-carousel {
-    border-radius: 18px;
-    padding: 2em;
     position: relative;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -601,9 +600,7 @@ section.testimonials {
 
 /* card */
 .testimonial-card {
-    /* background: #181818; */
-    /* border-radius: 14px; */
-    padding: 35px 20px 24px;
+    padding: 1.875em;
     border: var(--card-border);
     scroll-snap-align: start;
     box-sizing: border-box;
@@ -637,6 +634,7 @@ section.testimonials {
     justify-content: center;
     gap: 16px;
     margin-top: 18px;
+    width: 100%;
 }
 
 .testimonials-nav-btn {
