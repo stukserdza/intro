@@ -581,31 +581,7 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script>
-        // Все скрипты из оригинала (hamburger, smooth scroll)
-        $(document).ready(function () {
-            // smooth scrolling
-            $("a").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-
-            // hamburger menu
-            $(".hamburger").click(function () {
-                $("nav").toggleClass("active");
-                const expanded = $(this).attr("aria-expanded") === "true";
-                $(this).attr("aria-expanded", !expanded);
-            });
-        });
-    </script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
