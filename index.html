@@ -768,11 +768,15 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-            const startYear = 2008; // Change this to your actual start year
-            const years = new Date().getFullYear() - startYear;
-            const text =
-                `Я сама прошла через боль и за ${years} лет помогла тысячам женщин войти в их новую реальность, и вы тоже сможете.`;
+            const startYear = 2008;
+            const currentYear = new Date().getFullYear();
+            const years = currentYear - startYear;
 
+            const yearsElement = document.getElementById('years-since-tracker');
+
+            if (yearsElement) {
+                yearsElement.textContent = years;
+            }
         });
     </script>
 
