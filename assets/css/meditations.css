@@ -541,6 +541,26 @@ li.sparkle {
     fill: var(--gold-light);
 }
 
+.med-how-inner-steps {
+    max-width: 1000px !important;
+    width: 100%;
+    background-color: green;
+}
+
+.med-how-inner-steps {
+    background-color: orange;
+    width: 100%;
+    text-align: center;
+    font-size: var(--fs-section-title);
+    color: var(--beige);
+    font-weight: 100;
+    font-family: var(--ff-headings);
+}
+
+.med-how-inner-steps.accent {
+    color: var(--gold-light);
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
