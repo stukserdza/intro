@@ -30,8 +30,13 @@
 <body>
     <header>
         <div class="container header-inner">
+            <div class="logo-container logo-container-desktop">
+                <img src="assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
+                <!-- <p class="logo">Стук сердца</p> -->
+            </div>
             <div class="logo-container-mobile">
                 <img src="assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
+                <!-- <p class="logo">Стук сердца</p> -->
             </div>
 
             <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -48,16 +53,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="meditations.html" aria-label="Go to meditations">
-                            Медитации
-                        </a>
-                    </li>
-                    <li class="logo-container">
-                        <img src="assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
+                        <a href="meditations.html" aria-label="Go to all meditations">
+                            Нейромедитации</a>
                     </li>
                     <li>
                         <a href="diagnostics.html" aria-label="Go to diagnostics">
                             Диагностики
+                        </a>
+                    </li>
+                    <li>
+                        <a href="readings.html" aria-label="Go to Расклады">
+                            Расклады
                         </a>
                     </li>
                     <li>
@@ -67,6 +73,7 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
     </header>
     <main>
@@ -1546,79 +1553,190 @@
                 </div>
             </div>
         </section>
-        <!-- Контакты (можешь взять из index) -->
-        <section id="contact">
-            <div class="container contact-grid">
-                <!-- левый текст и форма — скопируй из index.html -->
+        <!-- contact -->
+        <section id="contact" class="alt contact">
+            <div class="container contact-wrapper">
+                <div class="contact-text" id="sofia-contact">
+                    <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
+                    <p>
+                        Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в
+                        одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.
+                    </p>
+                    <p>
+                        Для консультации или понимания, с чего лучше начать,
+                        напишите моей ассистентке Софии в Telegram и Мария в VK,
+                        они с теплотой откликнутся, поддержат и мягко направят,
+                        подсказав, с чего лучше начать ваше знакомство с практикой
+                    </p>
+                    <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
+                        <img src="assets/images/icons/tg_form.svg" alt="Contact Sofia TG">
+                    </a>
+                    <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener">
+                        <img src="assets/images/icons/vk_form.svg" alt="Contact Maria VK">
+                    </a>
+                    <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+                        rel="noopener">
+                        <img src="assets/images/icons/wa_form.svg" alt="Contact Maria What's up">
+                    </a>
+                </div>
+
+                <div class="contact-form-container">
+                    <form action="https://formspree.io/f/mgowdgyd" method="POST">
+                        <div>
+                            <label for="name">Имя</label>
+                            <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message">Ваш запрос</label>
+                            <textarea id="message" name="message" placeholder="Кратко опишите свою ситуацию или вопрос"
+                                required></textarea>
+                        </div>
+
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <a href="privacy.html" target="_blank" rel="noopener"
+                                        class="link__legal">
+                                        Политикой
+                                        конфиденциальности</a>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
+                        <div class="contact-form-button-container">
+                            <button type="submit" class="btn-primary">Отправить запрос</button>
+                        </div>
+                    </form>
+                    <div class="contact-form-disclaimer">
+                        <p>
+                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
+                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
+                                href="terms-of-service.html" target="_blank" rel="noopener"
+                                class="link__legal">условиями
+                                использования сайта</a>
+                            использования сайта
+                        </p>
+                        <p>
+                            Мы не даем гарантий результата. Все рекомендации носят субъективный характер
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <div class="container footer-inner">
-            <div>© 2025 Стук сердца by Suria</div>
-            <div class="footer-nav">
-                <a href="#top">Вверх</a>
-                <a href="index.html#about">Обо мне</a>
-                <a href="#diagnostics">Расклады</a>
-                <a href="#contact">Контакт</a>
+    <footer class=" site-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
+                </h2>
+
+                <p class="footer-text">
+                    Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
+                    кто проходит сложные периоды и ищет выход
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/inst_footer.svg" alt="instagram icon">
+                        </span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+
+                    <a href="https://vk.ru/stukserdzavk" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/vk_footer.svg" alt="vk icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.t.me/tarotmystic" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/tg_footer.svg" alt="tg icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/tt_footer.svg" alt="tiktok icon">
+                        </span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+                    <a href="https://boosty.to/stukserdza" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/bst_footer.svg" alt="boosty icon">
+                        </span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://www.youtube.com/@stukserdzayt" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="assets/images/icons/yt_footer.svg" alt="youtube icon">
+                        </span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#top">Наверх</a>
+                    <a href="index.html" aria-label="Go to homepage">
+                        Главная
+                    </a>
+                    <a href="meditations.html" aria-label="Go to all meditations">
+                        Нейромедитации
+                    </a>
+                    <a href="diagnostics.html" aria-label="Go to diagnostics">
+                        Диагностики
+                    </a>
+                    <a href="readings.html" aria-label="Go to Расклады">
+                        Расклады
+                    </a>
+                </nav>
+
+                <div class="line"></div>
+
+                <div class="footer-legal">
+                    <a href="privacy.html" target="_blank" class="link__legal" rel=" noopener">Политикой
+                        конфиденциальности</a>
+                    <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal">Условия
+                        использования сайта</a>
+                    <a href="disclaimer.html" target="_blank" rel="noopener" class="link__legal">Дисклеймер</a>
+                </div>
+                <div class="line"></div>
+
+                <p class="footer-copy">© 2025 Стук сердца by Suria</p>
             </div>
         </div>
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        // бургер и плавный скролл можешь взять как в index.html
-
-        // Универсальная карусель для всех блоков раскладов
-        $(document).ready(function () {
-            $('.readings-carousel').each(function () {
-                const $carousel = $(this);
-                const $track = $carousel.find('.readings-track');
-                const $cards = $carousel.find('.reading-card');
-                const $btnPrev = $carousel.find(".readings-nav-btn[data-dir='prev']");
-                const $btnNext = $carousel.find(".readings-nav-btn[data-dir='next']");
-
-                if (!$track.length || !$cards.length) return;
-
-                const cardWidth = $cards.first().outerWidth(true);
-
-                function updateButtons() {
-                    const el = $track.get(0);
-                    const maxScroll = el.scrollWidth - el.clientWidth;
-                    const current = el.scrollLeft;
-
-                    if (current <= 1) {
-                        $btnPrev.addClass("is-disabled");
-                    } else {
-                        $btnPrev.removeClass("is-disabled");
-                    }
-
-                    if (current >= maxScroll - 1) {
-                        $btnNext.addClass("is-disabled");
-                    } else {
-                        $btnNext.removeClass("is-disabled");
-                    }
-                }
-
-                $carousel.find(".readings-nav-btn").on("click", function () {
-                    const dir = $(this).data("dir");
-                    const delta = dir === "next" ? cardWidth : -cardWidth;
-
-                    $track.animate({
-                            scrollLeft: $track.scrollLeft() + delta
-                        },
-                        300,
-                        updateButtons
-                    );
-                });
-
-                $track.on("scroll", updateButtons);
-                updateButtons();
-            });
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 
 </html>
