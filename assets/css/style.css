@@ -1063,6 +1063,8 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    padding: 1.8em;
 }
 
 .footer-title {
@@ -1124,8 +1126,15 @@ textarea {
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
-    padding-top: 8px;
+    padding: 1.8em;
     height: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 0.5px;
+    background: var(--beige);
+    opacity: 0.3 !important;
 }
 
 .footer-nav {
@@ -1133,6 +1142,7 @@ textarea {
     flex-direction: column;
     gap: 12px;
     align-items: start;
+    padding-left: 2em;
 }
 
 .footer-nav a {
@@ -1155,6 +1165,7 @@ textarea {
     gap: 10px;
     font-size: var(--fs-little-text);
     opacity: 0.8;
+    padding-left: 2em;
 }
 
 .footer-copy {
@@ -1163,6 +1174,7 @@ textarea {
     line-height: 1.3;
     color: var(--beige);
     opacity: 0.8;
+    padding-left: 2em;
 }
 
 @media (max-width: 900px) {
