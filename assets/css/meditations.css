@@ -213,6 +213,14 @@
     background-color: var(--deep-red);
 }
 
+.pack-single-problem-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .med-section-intro {
     color: var(--beige);
     opacity: 0.8;
@@ -222,6 +230,9 @@
     padding: 0.5em;
 }
 
+.med-section-intro.problem {
+    max-width: 670px;
+}
 
 /* packs */
 
