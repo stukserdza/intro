@@ -512,6 +512,11 @@
     opacity: 1;
 }
 
+.how-text-step a {
+    opacity: 1;
+    font-weight: 600;
+}
+
 .med-how-list li+li {
     margin-top: 1em;
 }
