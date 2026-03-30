@@ -269,56 +269,183 @@
             </div>
         </section>
         <!-- Контакты -->
-        <section id="contact">
-            <div class="container contact-grid">
+        <section id="contact" class="alt contact">
+            <div class="container contact-wrapper">
                 <div class="contact-text" id="sofia-contact">
-                    <h2 class="section-title">Готовы сделать перезагрузку?</h2>
-                    <p>Если чувствуете, что нужна полная перезагрузка энергии, напишите моей ассистентке. Получите все
-                        три аудиопрограммы и план на 21 день.</p>
+                    <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
+                    <p>
+                        Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в
+                        одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.
+                    </p>
+                    <p>
+                        Для консультации или понимания, с чего лучше начать,
+                        напишите моей ассистентке Софии в Telegram и Мария в VK,
+                        они с теплотой откликнутся, поддержат и мягко направят,
+                        подсказав, с чего лучше начать ваше знакомство с практикой
+                    </p>
                     <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
-                        Telegram: <strong>София</strong>
+                        TG
+                        <!-- <div class="social-sofia">
+                            <strong>София </strong>
+                        </div> -->
                     </a>
                     <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener"
                         style="margin-top: 8px;">
-                        ВКонтакте: <strong>Мария</strong>
+                        ВК
+                        <!-- <div class="social-sofia">
+                            <strong>Мария </strong>
+                        </div> -->
+                    </a>
+                    <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+                        rel="noopener">
+                        WA
+                        <!-- <div class="social-sofia">
+                            <strong>Мария </strong>
+                        </div> -->
                     </a>
                 </div>
-                <form action="https://formspree.io/f/mgowdgyd" method="POST">
-                    <div>
-                        <label for="name">Имя</label>
-                        <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+
+                <div class="contact-form-container">
+                    <form action="https://formspree.io/f/mgowdgyd" method="POST">
+                        <div>
+                            <label for="name">Имя</label>
+                            <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message">Ваш запрос</label>
+                            <textarea id="message" name="message" placeholder="Кратко опишите свою ситуацию или вопрос"
+                                required></textarea>
+                        </div>
+
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <a href="privacy.html" target="_blank" rel="noopener"
+                                        class="link__legal">
+                                        Политикой
+                                        конфиденциальности</a>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
+                        <div class="contact-form-button-container">
+                            <button type="submit" class="btn-primary">Отправить запрос</button>
+                        </div>
+                    </form>
+                    <div class="contact-form-disclaimer">
+                        <p>
+                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
+                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
+                                href="terms-of-service.html" target="_blank" rel="noopener"
+                                class="link__legal">условиями
+                                использования сайта</a>
+                            использования сайта
+                        </p>
+                        <p>
+                            Мы не даем гарантий результата. Все рекомендации носят субъективный характер
+                        </p>
                     </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div>
-                        <label for="message">Ваш запрос</label>
-                        <textarea id="message" name="message" placeholder="Интересует ПАКЕТ ПЕРЕЗАГРУЗКА"
-                            required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn-primary">Получить пакет</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="pack-footer">
-        <div class="container pack-footer-inner">
-            <div>© 2025 Стук сердца by Suria</div>
-            <div class="footer-nav">
-                <a href="#hero">Вверх</a>
-                <a href="../index.html">Главная</a>
-                <a href="../meditations.html">Аудиопрограммы</a>
-                <a href="#contact">Контакт</a>
+    <footer class=" site-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
+                </h2>
+
+                <p class="footer-text">
+                    Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
+                    кто проходит сложные периоды и ищет выход
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">IG</span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+
+                    <a href="https://vk.ru/stukserdzavk" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">vk</span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.t.me/tarotmystic" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">TG</span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">TT</span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+                    <a href="https://boosty.to/stukserdza" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">Boosty</span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://www.youtube.com/@stukserdzayt" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">YT</span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#top">Наверх</a>
+                    <a href="index.html" aria-label="Go to homepage">
+                        Главная
+                    </a>
+                    <a href="meditations.html" aria-label="Go to all meditations">
+                        Нейромедитации
+                    </a>
+                    <a href="diagnostics.html" aria-label="Go to diagnostics">
+                        Диагностики
+                    </a>
+                    <a href="readings.html" aria-label="Go to Расклады">
+                        Расклады
+                    </a>
+                </nav>
+
+                <div class="footer-legal">
+                    <a href="privacy.html" target="_blank" class="link__legal" rel=" noopener">Политикой
+                        конфиденциальности</a>
+                    <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal">Условия
+                        использования сайта</a>
+                    <a href="disclaimer.html" target="_blank" rel="noopener" class="link__legal">Дисклеймер</a>
+                </div>
+
+                <p class="footer-copy">© 2025 Стук сердца by Suria</p>
             </div>
         </div>
     </footer>
-
-    <!-- Scripts остаются те же -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         // Все скрипты из оригинала (hamburger, smooth scroll)
         $(document).ready(function () {
