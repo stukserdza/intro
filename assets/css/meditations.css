@@ -333,6 +333,7 @@
     color: var(--gold-light);
     font-family: var(--ff-headings);
     margin-bottom: 0.5em;
+    text-align: center;
 }
 
 .med-packs-card-btn,
