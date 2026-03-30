@@ -25,7 +25,8 @@
     --fs-20-text: 20px;
     --fs-14-text: 14px;
     --fs-slogan: 70px;
-    --card-border: 1px solid #edded2cf
+    --card-border: 1px solid #edded2cf;
+    --card-border-red: 1px solid rgba(75, 0, 8, 0.7)
 }
 
 
@@ -410,6 +411,7 @@ section.services {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: var(--card-border-red);
 }
 
 .service-image-wrap {
@@ -506,7 +508,7 @@ section.products {
     min-height: 320px;
     padding: 56px 42px 48px;
     background: #140002;
-    border: 1px solid rgba(75, 0, 8, 0.7);
+    border: var(--card-border-red);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -24,7 +24,8 @@
     --fs-36-text: 36px;
     --fs-20-text: 20px;
     --fs-14-text: 14px;
-    --card-border: 1px solid #edded2cf
+    --card-border: 1px solid #edded2cf;
+    --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
 }
 
 
@@ -272,6 +273,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: var(--card-border-red);
 }
 
 .med-packs-card-content,
@@ -422,6 +424,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    border: var(--card-border-red);
 }
 
 .med-card-content {
