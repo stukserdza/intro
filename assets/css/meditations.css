@@ -43,12 +43,34 @@
     align-items: center;
 }
 
+
+
+.med-hero-photo-wrap {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.med-single-hero-photo-wrap {
+    width: 40% !important;
+}
+
+.med-hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .med-hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
+}
+
+.med-single-hero-content {
+    width: 60% !important;
 }
 
 .med-hero-badge {
@@ -63,17 +85,9 @@
     text-align: center;
 }
 
-.med-hero-photo-wrap {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-}
-
-.med-hero-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* .med-single-hero-subtitle {
+    max-width: 100% !important;
+} */
 
 /* Section free med */
 .med-free {
@@ -220,6 +234,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.med-section-finish {
+    opacity: 1;
+    text-align: center;
+    color: var(--beige);
+    font-size: var(--fs-20-text);
+    padding: 1.8em 0;
 }
 
 .med-section-intro {
@@ -509,6 +531,10 @@
     max-width: 518px;
     text-align: center;
     margin-top: 1em;
+}
+
+.med-single-how-list {
+    max-width: 100% !important;
 }
 
 .med-how-list-accent {
