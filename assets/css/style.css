@@ -16,15 +16,22 @@
     --faq-line: rgba(240, 220, 210, 0.85);
     --faq-text: #e7d1c8;
     --faq-accent: #f2e2d7;
-    --fs-section-title: 45px;
-    --fs-main-text: 20px;
-    --fs-little-text: 16px;
-    --fs-btn-text: 16px;
-    --fs-card-text: 30px;
-    --fs-36-text: 36px;
-    --fs-20-text: 20px;
-    --fs-14-text: 14px;
-    --fs-slogan: 70px;
+    --fs-section-title: clamp(2rem, 1.4rem + 2vw, 2.8125rem);
+    /* 32px → 45px */
+    --fs-main-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-little-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-btn-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-card-text: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+    /* 20px → 30px */
+    --fs-36-text: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    /* 24px → 36px */
+    --fs-20-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
+    /* 14px fixed */
     --card-border: 1px solid #edded26d;
     --card-border-red: 1px solid rgba(75, 0, 8, 0.7)
 }
@@ -893,7 +900,7 @@ section.contact {
 .contact-form-container {
     width: 100%;
     max-width: 750px;
-    padding: 1em 0;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
