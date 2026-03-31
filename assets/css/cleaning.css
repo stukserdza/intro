@@ -164,11 +164,13 @@ li.sparkle {
     font-family: var(--ff-headings);
 }
 
-.cleaning-what-is-it {
+.cleaning-what-is-it,
+.cleaning-after {
     background-color: var(--deep-red);
 }
 
-.cleaning-what-is-it-wrap {
+.cleaning-what-is-it-wrap,
+.cleaning-after-wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -177,7 +179,8 @@ li.sparkle {
     text-align: center;
 }
 
-.cleaning-what-is-it-subtitle {
+.cleaning-what-is-it-subtitle,
+.cleaning-after-subtitle {
     width: 100%;
     max-width: 670px;
     color: var(--beige);
@@ -189,7 +192,17 @@ li.sparkle {
     background-color: var(--deepest-red);
 }
 
+.cleaning-after-wrap {
+    /* max-width: 700px; */
+}
 
+.cleaning-after-subtitle {
+    padding-bottom: 1em;
+}
+
+.cleaning-after-wrap a {
+    margin-top: 1.87em;
+}
 
 
 
