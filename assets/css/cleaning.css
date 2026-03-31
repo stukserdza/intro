@@ -68,7 +68,6 @@
 
 .cleaning-hero-subtitle {
     font-size: var(--fs-20-text);
-
     opacity: 0.8;
     padding: 1em 0 1.875em 0;
     text-align: center;
@@ -87,19 +86,11 @@
 }
 
 /* Sections */
-.cleaning-section {
+.cleaning-here-if-section {
     background-color: var(--deep-red);
-    padding: 2em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: var(--beige);
-    opacity: 0.8;
 }
 
-.cleaning-section-wrap {
+.cleaning-here-if-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,30 +99,65 @@
     max-width: 1200px;
 }
 
-.cleaning-section-intro {
+.cleaning-here-if-content {
+    list-style: none;
     font-size: var(--fs-20-text);
-    max-width: 600px;
+    opacity: 0.8;
+    max-width: 518px;
     text-align: center;
-    padding-bottom: 2em;
+    margin-top: 1em;
 }
 
-.cleaning-container-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.cleaning-list {
+    list-style: none;
+    font-size: var(--fs-20-text);
+    opacity: 0.8;
+    max-width: 518px;
+    text-align: center;
+    margin-top: 1em;
+    max-width: 100% !important;
+}
+
+.cleaning-list li+li {
+    margin-top: 1em;
+}
+
+li.sparkle {
     width: 100%;
-    padding: 0 2em;
+    margin: 0 auto;
 }
 
-.cleaning-card {
-    display: grid;
-    grid-template-columns: 424px 1fr;
-    gap: 2em;
-    padding: 1.8em;
-    background-color: var(--deepest-red);
-    align-items: stretch;
-    border: var(--card-border-red);
+.sparkle {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sparkle svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(255, 219, 120, 0.35));
+}
+
+.sparkle path {
+    fill: var(--gold-light);
+}
+
+.cleaning-step-steps {
+    max-width: 1000px !important;
+    width: 100%;
+}
+
+.cleaning-step-steps {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fs-section-title);
+    color: var(--beige);
+    font-weight: 100;
+    font-family: var(--ff-headings);
 }
 
 .cleaning-card-img-wrap {
