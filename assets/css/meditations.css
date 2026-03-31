@@ -306,7 +306,6 @@
 }
 
 .med-packs-card-content,
-.med-packs-card-action,
 .med-card-content,
 .med-card-action {
     width: 100%;
@@ -429,8 +428,17 @@
     background: transparent;
 }
 
-/* desktop: 2 visible */
+
 @media (max-width: 900px) {
+    .med-single-hero-photo-wrap {
+        width: 100% !important;
+        max-width: 400px;
+    }
+
+    .med-single-hero-content {
+        width: 100% !important;
+    }
+
     .med-packs-carousel {
         padding-bottom: 0;
     }
