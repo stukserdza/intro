@@ -16,14 +16,22 @@
     --faq-line: rgba(240, 220, 210, 0.85);
     --faq-text: #e7d1c8;
     --faq-accent: #f2e2d7;
-    --fs-section-title: 45px;
-    --fs-main-text: 20px;
-    --fs-little-text: 16px;
-    --fs-btn-text: 16px;
-    --fs-card-text: 30px;
-    --fs-36-text: 36px;
-    --fs-20-text: 20px;
-    --fs-14-text: 14px;
+    --fs-section-title: clamp(2rem, 1.4rem + 2vw, 2.8125rem);
+    /* 32px → 45px */
+    --fs-main-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-little-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-btn-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-card-text: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+    /* 20px → 30px */
+    --fs-36-text: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    /* 24px → 36px */
+    --fs-20-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
+    /* 14px fixed */
     --card-border: 1px solid #edded2cf;
     --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
 }
@@ -58,7 +66,7 @@
     font-size: var(--fs-20-text);
     max-width: 530px;
     opacity: 0.8;
-    padding: 1em 0 2em 0;
+    padding: 1em 0 1.875em 0;
     text-align: center;
 }
 
@@ -162,7 +170,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto auto 1fr auto;
-    column-gap: 20px;
     row-gap: 10px;
     color: var(--beige);
     min-width: 0;
@@ -217,6 +224,14 @@
 
 
 @media (max-width: 900px) {
+    .diag-hero-grid {
+        gap: 20px;
+    }
+
+    .diag-hero-subtitle {
+        padding: 0.2em 0 1em 0;
+    }
+
     .diag-card {
         grid-template-columns: 1fr;
     }
@@ -238,4 +253,25 @@
     .diag-price {
         margin-top: 8px;
     }
+}
+
+@media (max-width: 800px) {
+    .diag-hero-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .diag-hero-content {
+        width: 100%;
+    }
+
+    .diag-hero-subtitle {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .diag-hero-photo-wrap {
+        width: 100%;
+    }
+
 }
