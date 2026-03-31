@@ -276,16 +276,59 @@
 }
 
 /* Адаптив */
+
 @media (max-width: 900px) {
-    .readings-section {
-        padding: 56px 0;
+    .read-hero-grid {
+        gap: 20px;
     }
 
-    .reading-card {
-        flex: 0 0 95%;
-        /* чуть меньше на планшете */
-        min-width: 280px
+    .read-hero-subtitle {
+        padding: 0.2em 0 1em 0;
     }
+
+    .read-card {
+        grid-template-columns: 1fr;
+    }
+
+    .read-card-image {
+        min-height: 260px;
+    }
+
+    .read-card-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .read-link {
+        justify-self: start;
+        min-width: 100%;
+    }
+
+    .read-price {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 800px) {
+    .read-hero-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .read-hero-content {
+        width: 100%;
+    }
+
+    .read-hero-subtitle {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .read-hero-photo-wrap {
+        width: 100%;
+        max-width: 400px;
+    }
+
 }
 
 
