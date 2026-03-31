@@ -146,12 +146,12 @@ li.sparkle {
     fill: var(--gold-light);
 }
 
-.cleaning-step-steps {
+.cleaning-steps {
     max-width: 1000px !important;
     width: 100%;
 }
 
-.cleaning-step-steps {
+.cleaning-steps {
     width: 100%;
     text-align: center;
     font-size: var(--fs-section-title);
@@ -160,112 +160,42 @@ li.sparkle {
     font-family: var(--ff-headings);
 }
 
-.cleaning-card-img-wrap {
-    position: relative;
+.cleaning-what-is-it {
+    background-color: var(--deep-red);
 }
 
-.cleaning-card-figure {
-    margin: 0;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.cleaning-card-image {
-    display: block;
+.cleaning-what-is-it-wrap {
     width: 100%;
-    height: 100%;
-    min-height: 310px;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.cleaning-card-tag {
-    position: absolute;
-    top: 14px;
-    left: 16px;
-    z-index: 2;
-    margin: 0;
-    padding: 7px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--beige);
-    background: rgba(42, 9, 14, 0.55);
-    backdrop-filter: blur(2px);
-    color: #f0e1d6;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-.cleaning-card-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto 1fr auto;
-    column-gap: 20px;
-    row-gap: 10px;
+.cleaning-what-is-it-subtitle {
+    width: 100%;
+    max-width: 670px;
     color: var(--beige);
-    min-width: 0;
-}
-
-.cleaning-card-title {
-    grid-column: 1 / -1;
-    margin: 0;
-    font-size: var(--fs-card-text);
-    line-height: 1.15;
-    font-weight: 400;
-    color: var(--gold-light);
-}
-
-.cleaning-card-text {
-    grid-column: 1 / -1;
-    margin: 0;
-    max-width: 100%;
     font-size: var(--fs-20-text);
-    line-height: 1.35;
+    opacity: 0.8;
 }
 
-.cleaning-points {
-    grid-column: 1 / -1;
-    margin: 0;
-    padding: 1em;
 
-    line-height: 1.45;
-}
 
-.cleaning-points li+li {
-    margin-top: 4px;
-}
 
-.cleaning-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 
-.cleaning-price {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    align-self: end;
-    font-size: var(--fs-card-text);
-    line-height: 1;
-    color: var(--gold-light);
-    font-family: var(--ff-headings);
-}
 
-@media (max-width: 1100px) {
-    .cleaning-card-content {
-        column-gap: 1px;
-    }
 
-    .cleaning-card-footer {
-        flex-direction: column;
-    }
 
-    .cleaning-price {
-        margin-bottom: 1em;
-    }
-}
+
+
+
+
+
+
+
+
 
 @media (max-width: 900px) {
     .cleaning-hero-grid {
