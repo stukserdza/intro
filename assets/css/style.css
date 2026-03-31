@@ -224,6 +224,11 @@ nav a:hover {
     text-align: center;
 }
 
+section.hero,
+section.main__page {
+    padding: 4.375em 1em 0 1em !important;
+}
+
 .hero__image-wrapper {
     position: relative;
 }
