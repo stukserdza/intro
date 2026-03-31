@@ -32,6 +32,10 @@
     /* 16px → 20px */
     --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
     /* 14px fixed */
+    --fs-slogan: clamp(3.125rem, 2.2rem + 3.2vw, 4.375rem);
+    /* 50px → 70px */
+    /* --fs-slogan: clamp(3.5rem, 2.6rem + 2.8vw, 4.375rem); */
+    /* 56px → 70px */
     --card-border: 1px solid #edded26d;
     --card-border-red: 1px solid rgba(75, 0, 8, 0.7)
 }
@@ -478,7 +482,7 @@ section.slogan {
 .slogan-title {
     font-size: var(--fs-slogan) !important;
     text-align: center;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 
