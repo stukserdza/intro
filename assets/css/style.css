@@ -1309,9 +1309,15 @@ textarea {
         margin: 0 auto;
     }
 
+    .about-text {
+        text-align: center;
+    }
+
     .hero-photo-wrap {
         display: none;
     }
+
+
 
     nav ul {
         display: none;

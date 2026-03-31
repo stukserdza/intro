@@ -146,6 +146,10 @@ li.sparkle {
     fill: var(--gold-light);
 }
 
+.cleaning-accent {
+    opacity: 1;
+}
+
 .cleaning-steps {
     max-width: 1000px !important;
     width: 100%;
@@ -181,7 +185,9 @@ li.sparkle {
     opacity: 0.8;
 }
 
-
+.cleaning-include-section {
+    background-color: var(--deepest-red);
+}
 
 
 
