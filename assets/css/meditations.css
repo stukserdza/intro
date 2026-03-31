@@ -36,7 +36,6 @@
     --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
 }
 
-
 /* Hero */
 .med-hero {
     background-color: var(--deepest-red);
@@ -431,7 +430,33 @@
 }
 
 /* desktop: 2 visible */
-@media (min-width: 769px) {
+@media (max-width: 900px) {
+    .med-packs-carousel {
+        padding-bottom: 0;
+    }
+
+    .med-packs-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .med-packs-track {
+        gap: 16px;
+    }
+
+    .med-card-image {
+        max-height: 250px;
+    }
+}
+
+@media (min-width: 901px) {
+    .med-packs-card {
+        flex: 0 0 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+@media (min-width: 900px) {
     .med-packs-carousel {
         max-width: 1240px;
     }
@@ -464,10 +489,6 @@
     justify-content: space-between;
 }
 
-
-/* Картинка */
-
-/* Текст */
 .med-card-title {
     font-size: var(--fs-card-text);
     margin-bottom: 8px;
@@ -712,6 +733,74 @@ li.sparkle {
 
 .boosty-float-btn:active {
     transform: translateY(0);
+}
+
+
+@media (max-width: 1100px) {
+    .diag-card-content {
+        column-gap: 1px;
+    }
+
+    .diag-card-footer {
+        flex-direction: column;
+    }
+
+    .diag-price {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 900px) {
+    .med-hero-grid {
+        gap: 20px;
+    }
+
+    .med-hero-subtitle {
+        padding: 0.2em 0 1em 0;
+    }
+
+    .diag-card {
+        grid-template-columns: 1fr;
+    }
+
+    .diag-card-image {
+        min-height: 260px;
+    }
+
+    .diag-card-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .diag-link {
+        justify-self: start;
+        min-width: 100%;
+    }
+
+    .diag-price {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 800px) {
+    .med-hero-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .med-hero-content {
+        width: 100%;
+    }
+
+    .med-hero-subtitle {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .med-hero-photo-wrap {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 768px) {

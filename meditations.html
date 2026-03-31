@@ -859,57 +859,86 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        // Простая навигация по карусели продуктов
-        $(document).ready(function () {
-            $('.med-packs-carousel').each(function () {
-                const $carousel = $(this);
-                const $track = $carousel.find('.med-packs-track');
-                const $cards = $carousel.find('.med-packs-card');
-                const $btnPrev = $carousel.find(
-                    ".med-packs-nav-btn[data-dir='prev']");
-                const $btnNext = $carousel.find(
-                    ".med-packs-nav-btn[data-dir='next']");
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.med-packs-carousel').forEach((carousel) => {
+                const track = carousel.querySelector('.med-packs-track');
+                const cards = Array.from(carousel.querySelectorAll('.med-packs-card'));
+                const btnPrev = carousel.querySelector(".med-packs-nav-btn[data-dir='prev']");
+                const btnNext = carousel.querySelector(".med-packs-nav-btn[data-dir='next']");
 
-                if (!$track.length || !$cards.length) return;
+                if (!track || !cards.length || !btnPrev || !btnNext) return;
 
-                const cardWidth = $cards.first().outerWidth(true);
+                let cardStep = 0;
 
-                function updateButtons() {
-                    const el = $track.get(0);
-                    const maxScroll = el.scrollWidth - el.clientWidth;
-                    const current = el.scrollLeft;
+                const getStep = () => {
+                    const firstCard = cards[0];
+                    if (!firstCard) return 0;
 
-                    if (current <= 1) {
-                        $btnPrev.addClass("is-disabled");
-                    } else {
-                        $btnPrev.removeClass("is-disabled");
-                    }
+                    const cardWidth = firstCard.getBoundingClientRect().width;
+                    const styles = getComputedStyle(track);
+                    const gap = parseFloat(styles.gap || styles.columnGap || 0);
 
-                    if (current >= maxScroll - 1) {
-                        $btnNext.addClass("is-disabled");
-                    } else {
-                        $btnNext.removeClass("is-disabled");
-                    }
-                }
+                    return cardWidth + gap;
+                };
 
-                $carousel.find(".med-packs-nav-btn").on("click",
-                    function () {
-                        console.log("Button clicked");
-                        const dir = $(this).data("dir");
-                        const delta = dir === "next" ? cardWidth : -
-                            cardWidth;
+                const updateButtons = () => {
+                    const maxScroll = track.scrollWidth - track.clientWidth;
+                    const current = track.scrollLeft;
 
-                        $track.animate({
-                                scrollLeft: $track.scrollLeft() +
-                                    delta
-                            },
-                            300,
-                            updateButtons
-                        );
+                    btnPrev.classList.toggle('is-disabled', current <= 1);
+                    btnNext.classList.toggle('is-disabled', current >= maxScroll - 1);
+                };
+
+                const scrollToDirection = (dir) => {
+                    cardStep = getStep();
+                    const delta = dir === 'next' ? cardStep : -cardStep;
+
+                    track.scrollBy({
+                        left: delta,
+                        behavior: 'smooth'
                     });
+                };
 
-                $track.on("scroll", updateButtons);
+                btnPrev.addEventListener('click', () => {
+                    if (!btnPrev.classList.contains('is-disabled')) scrollToDirection('prev');
+                });
+
+                btnNext.addEventListener('click', () => {
+                    if (!btnNext.classList.contains('is-disabled')) scrollToDirection('next');
+                });
+
+                track.addEventListener('scroll', updateButtons, {
+                    passive: true
+                });
+                window.addEventListener('resize', updateButtons);
+
                 updateButtons();
+
+                const mq = window.matchMedia('(max-width: 900px)');
+
+                const applyLayout = () => {
+                    if (mq.matches) {
+                        cards.forEach((card) => {
+                            card.style.flex = '0 0 100%';
+                            card.style.maxWidth = '100%';
+                        });
+                    } else {
+                        cards.forEach((card) => {
+                            card.style.flex = '0 0 calc(50% - 12px)';
+                            card.style.maxWidth = 'calc(50% - 12px)';
+                        });
+                    }
+
+                    updateButtons();
+                };
+
+                applyLayout();
+
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', applyLayout);
+                } else {
+                    mq.addListener(applyLayout);
+                }
             });
         });
     </script>
