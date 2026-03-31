@@ -1,47 +1,77 @@
 :root {
-    --deep-red: #380606;
-    --gold: #FFC909;
+    /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
+    /* --deep-red: #380606; */
+    /* --deep-red: #440000; */
+    --beige: #EDDED2;
+    --gold-light: #FDE885;
+    --gold-bright: #FFC909;
+    --deep-red: #210202;
+    --deepest-red: #110205;
     --black: #000000;
     --white: #FFFFFF;
+    --extra-background: #0000006a;
+
+    --ff-headings: 'Lora', Georgia, serif;
+    --ff-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --faq-line: rgba(240, 220, 210, 0.85);
+    --faq-text: #e7d1c8;
+    --faq-accent: #f2e2d7;
+    --fs-section-title: 45px;
+    --fs-main-text: 20px;
+    --fs-little-text: 16px;
+    --fs-btn-text: 16px;
+    --fs-card-text: 30px;
+    --fs-36-text: 36px;
+    --fs-20-text: 20px;
+    --fs-14-text: 14px;
+    --card-border: 1px solid #edded2cf;
+    --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
 }
 
-/* Общий блок секции раскладов */
-.readings-section {
-    padding: 72px 0;
-    background: var(--black);
-    color: var(--white);
+/* Hero */
+.reading-hero {
+    background-color: var(--deepest-red);
     width: 100%;
+}
+
+.reading-hero-grid {
     display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    align-items: center;
 }
 
-.readings-section.alt {
-    background: #080808;
-}
-
-.readings-header {
-    text-align: left;
-    max-width: 640px;
-    margin: 0 auto 28px;
-}
-
-.readings-header .section-title {
-    margin-bottom: 10px;
-}
-
-main {
+.reading-hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }
 
-.readings-subtitle {
-    font-size: 0.96rem;
-    opacity: 0.9;
-    flex-direction: column;
-    align-self: center;
+.reading-hero-badge {
+    font-size: var(--fs-20-text);
+}
+
+.reading-hero-subtitle {
+    font-size: var(--fs-20-text);
+    max-width: 530px;
+    opacity: 0.8;
+    padding: 1em 0 2em 0;
+    text-align: center;
+}
+
+.reading-hero-photo-wrap {
+    display: flex;
     justify-content: center;
+    width: 50%;
+}
+
+.reading-hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Карусель раскладов */
