@@ -92,9 +92,23 @@
     text-align: center;
 }
 
-/* .med-single-hero-subtitle {
-    max-width: 100% !important;
-} */
+.med-hero-included-in-pack {
+    padding-top: 1em;
+    font-size: var(--fs-16-text);
+    opacity: 0.8;
+    color: var(--beige);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.med-hero-included-in-pack a {
+    color: var(--gold-light);
+    margin-left: 0.3em;
+}
+
 
 /* Section free med */
 .med-free {
