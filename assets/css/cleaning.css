@@ -44,9 +44,12 @@
 
 .cleaning-hero-grid {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
-    align-items: center;
+    background-color: var(--deepest-red);
 }
 
 .cleaning-hero-content {
@@ -54,7 +57,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+    text-align: center;
+    max-width: 800px;
 }
 
 .cleaning-hero-badge {
@@ -63,7 +68,7 @@
 
 .cleaning-hero-subtitle {
     font-size: var(--fs-20-text);
-    max-width: 530px;
+
     opacity: 0.8;
     padding: 1em 0 1.875em 0;
     text-align: center;
