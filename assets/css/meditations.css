@@ -835,7 +835,8 @@ li.sparkle {
     justify-content: center;
     padding: 16px 16px 18px;
     background: var(--deepest-red);
-    border: var(--card-border-red);
+    /* border: var(--card-border-red); */
+    border: 0.3px solid #f6ca388f;
     text-align: center;
 }
 
