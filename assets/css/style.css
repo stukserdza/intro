@@ -285,14 +285,17 @@ section.main__page {
 
 .btn-primary:hover,
 .product-link:hover {
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
     filter: brightness(1.05);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
 }
 
 .btn-primary:active,
 .product-link:active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(1px);
 }
+
 
 /* RESPONSIVE HERO*/
 @media (max-width: 768px) {
@@ -543,15 +546,7 @@ section.products {
     opacity: 0.8;
 }
 
-.product-link:hover {
-    transform: translateY(-1px);
-    filter: brightness(1.05);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
-}
 
-.product-link:active {
-    transform: translateY(1px);
-}
 
 @media (max-width: 768px) {
     .products-grid {
