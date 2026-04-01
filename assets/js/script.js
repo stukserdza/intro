@@ -1,31 +1,63 @@
-$(document).ready(function () {
-    // Add smooth scrolling to all links
-    $("a").on('click', function (event) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            const hash = this.hash;
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+            if (hash && document.querySelector(hash)) {
+                event.preventDefault();
 
-            // Store hash
-            var hash = this.hash;
+                document.querySelector(hash).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
+                history.pushState(null, '', hash);
+            }
+        });
     });
+
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function () {
+            nav.classList.toggle('active');
+
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+        });
+    }
 });
-$(document).ready(function () {
-    $(".hamburger").click(function () {
-        $("nav").toggleClass("active");
-        const expanded = $(this).attr("aria-expanded") === "true";
-        $(this).attr("aria-expanded", !expanded);
+
+// boosty on scroll
+
+document.addEventListener('DOMContentLoaded', function () {
+    const aside = document.querySelector('.boosty-float');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('footer');
+
+    if (!aside || !main || !footer) return;
+
+    function toggleBoostyVisibility() {
+        const mainRect = main.getBoundingClientRect();
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        const isAboveMain = mainRect.top > viewportHeight;
+        const isBelowMain = mainRect.bottom <= 0;
+        const footerVisible = footerRect.top < viewportHeight;
+
+        if (isAboveMain || isBelowMain || footerVisible) {
+            console.log(" if (isAboveMain || isBelowMain || footerVisible) ")
+            aside.classList.add('is-hidden');
+        } else {
+            aside.classList.remove('is-hidden');
+        }
+    }
+
+    toggleBoostyVisibility();
+    window.addEventListener('scroll', toggleBoostyVisibility, {
+        passive: true
     });
+    window.addEventListener('resize', toggleBoostyVisibility);
 });
