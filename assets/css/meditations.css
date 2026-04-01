@@ -789,43 +789,46 @@ li.sparkle {
 /* boosty aside */
 .boosty-float {
     position: fixed;
-    /* top: 50%;
-    right: 32px;
-    transform: translateY(-50%); */
+    right: 12px;
+    bottom: 16px;
     z-index: 1000;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-
-    right: 12px;
-    bottom: 16px;
-    top: auto;
-    transform: none;
     align-items: flex-end;
+    gap: 0.7em;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.boosty-float.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(12px);
 }
 
 .boosty-float-icon {
-    width: 56px;
-    height: 56px;
+    width: 36%;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.boosty-float-icon svg {
-    width: 26px;
-    height: 26px;
+.boosty-float-icon img {
+    width: 36px;
+    height: 36px;
     display: block;
-    opacity: 1;
-    filter:
-        brightness(0.68) contrast(1.3) drop-shadow(0 1px 0 rgba(255, 248, 210, 0.25));
+    object-fit: contain;
 }
 
 .boosty-float-box {
-    width: 235px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -839,7 +842,7 @@ li.sparkle {
 .boosty-float-text {
     margin: 1em 0;
     color: var(--beige);
-    font-size: 14px;
+    font-size: clamp(14px, 0.9rem + 0.2vw, 16px);
     line-height: 1.3;
 }
 
@@ -851,10 +854,9 @@ li.sparkle {
     padding: 12px 20px;
     border-radius: 999px;
     text-decoration: none;
-
     background: linear-gradient(180deg, #ffe878 0%, #f6ca38 100%);
     color: #2a1700;
-    font-size: 13px;
+    font-size: clamp(13px, 0.82rem + 0.18vw, 16px);
     font-weight: 700;
     line-height: 1;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
@@ -870,6 +872,17 @@ li.sparkle {
     transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+    .boosty-float {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .boosty-float-box {
+        width: 210px;
+        padding: 14px;
+    }
+}
 
 @media (max-width: 1100px) {
     .diag-card-content {

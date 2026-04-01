@@ -353,7 +353,7 @@
                     <img src="../assets/images/icons/bst_footer.svg" alt="">
                 </div>
                 <p class="boosty-float-text">
-                    Ещё больше медитаций<br>
+                    Ещё больше медитаций
                     вы можете найти на boosty
                 </p>
 
@@ -362,9 +362,11 @@
                 </a>
             </div>
         </aside>
+
+
     </main>
 
-    <footer class=" site-footer">
+    <footer id="siteFooter class=" site-footer">
         <div class="container footer-grid">
             <div class="footer-left">
                 <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
@@ -451,7 +453,39 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aside = document.querySelector('.boosty-float');
+            const main = document.querySelector('main');
+            const footer = document.querySelector('footer');
+
+            if (!aside || !main || !footer) return;
+
+            function toggleBoostyVisibility() {
+                const mainRect = main.getBoundingClientRect();
+                const footerRect = footer.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+
+                const isAboveMain = mainRect.top > viewportHeight;
+                const isBelowMain = mainRect.bottom <= 0;
+                const footerVisible = footerRect.top < viewportHeight;
+
+                if (isAboveMain || isBelowMain || footerVisible) {
+                    console.log(" if (isAboveMain || isBelowMain || footerVisible) ")
+                    aside.classList.add('is-hidden');
+                } else {
+                    aside.classList.remove('is-hidden');
+                }
+            }
+
+            toggleBoostyVisibility();
+            window.addEventListener('scroll', toggleBoostyVisibility, {
+                passive: true
+            });
+            window.addEventListener('resize', toggleBoostyVisibility);
+        });
+    </script>
 </body>
 
 </html>
