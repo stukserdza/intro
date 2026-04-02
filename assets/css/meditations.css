@@ -593,6 +593,7 @@
 @media (min-width: 900px) {
     .med-packs-carousel {
         max-width: 1240px;
+
     }
 }
 
@@ -947,6 +948,10 @@ li.sparkle {
 
     .med-hero-photo-wrap {
         width: 100%;
+    }
+
+    .med-packs-carousel {
+        padding-bottom: 0;
     }
 
 }
