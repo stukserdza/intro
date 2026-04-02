@@ -270,6 +270,7 @@ section.main__page {
 /* btn-primary */
 .btn-primary,
 .product-link {
+    text-align: center;
     display: inline-flex;
     align-items: center;
     justify-content: center;
