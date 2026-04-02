@@ -216,7 +216,7 @@
 /* Section free med */
 .med-free {
     width: 100;
-    background-color: var(--deep-red);
+    background-color: var(--deepest-red);
 }
 
 .med-free-inner {
