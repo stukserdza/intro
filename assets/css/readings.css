@@ -85,8 +85,8 @@
 
 .readings-section {
     padding: 80px 0;
-    background: #2a0408;
-    color: #eadfd6;
+    background: var(--deepest-red);
+    color: var(--beige);
 }
 
 .individual-questions-wrap {
@@ -112,19 +112,10 @@
     justify-content: center;
 }
 
-.section-title {
-    margin: 0 0 12px;
-    color: #f1dd94;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(34px, 4vw, 54px);
-    font-weight: 400;
-    line-height: 1.08;
-}
-
 .readings-subtitle {
     margin: 0 auto;
     max-width: 640px;
-    color: #d7c3bc;
+    color: var(--beige);
     font-size: 15px;
     line-height: 1.45;
 }
@@ -147,7 +138,7 @@
     margin-inline: auto;
     border: 0;
     background: transparent;
-    color: #cdbb92;
+    color: var(--gold-light);
     font-size: 20px;
     line-height: 1;
     cursor: pointer;
@@ -202,13 +193,15 @@
     min-height: 46px;
     border: 0;
     background: transparent;
-    color: #8f7a72;
+    color: var(--gold-light);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
+    font-size: var(--fs-20-text);
     line-height: 1;
     cursor: pointer;
     transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     opacity: 0.55;
+
+
 }
 
 .readings-roll-item.is-active {
