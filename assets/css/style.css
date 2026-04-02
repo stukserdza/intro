@@ -290,6 +290,8 @@ section.main__page {
     transform: translateY(-1px);
     filter: brightness(1.05);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+    color: #330606;
+    background: linear-gradient(90deg, #C8A012 100%, #C2B36E 100%);
 }
 
 .btn-primary:active,
