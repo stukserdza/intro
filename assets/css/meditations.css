@@ -369,13 +369,7 @@
     justify-content: center;
 }
 
-.med-section-finish {
-    opacity: 1;
-    text-align: center;
-    color: var(--beige);
-    font-size: var(--fs-20-text);
-    padding: 1.8em 0;
-}
+
 
 .med-section-intro {
     color: var(--beige);
@@ -756,6 +750,31 @@ li.sparkle {
     color: var(--gold-light);
 }
 
+.med-how-final {
+    background: var(--deep-red);
+    width: 100%;
+}
+
+.med-how-final-wrapper {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--deepest-red);
+    border: var(--card-border-red);
+    padding: 1em 3em;
+}
+
+.med-section-final {
+    opacity: 1;
+    text-align: center;
+    color: var(--beige);
+    font-size: var(--fs-20-text);
+    padding: 1em 0;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -772,6 +791,11 @@ li.sparkle {
 
     .med-hero {
         padding-top: 40px;
+    }
+
+    .med-section-final {
+        padding-top: 0;
+        font-size: var(--fs-14-text);
     }
 }
 
