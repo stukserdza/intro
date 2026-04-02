@@ -285,6 +285,10 @@ section.main__page {
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, filter 0.15s ease-out;
 }
 
+.product-link {
+    margin-top: 1.5em;
+}
+
 .btn-primary:hover,
 .product-link:hover {
     transform: translateY(-1px);
@@ -1047,7 +1051,7 @@ textarea {
 
 .site-footer {
     background: var(--deepest-red);
-    color: #e8d6cf;
+    color: var(--beige);
     padding: 60px 0 34px;
     width: 100%;
 }
