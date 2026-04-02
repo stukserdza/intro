@@ -34,6 +34,12 @@
     /* 14px fixed */
     --card-border: 1px solid #edded2cf;
     --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
+    --item-height: 44px;
+    --gold: #c9a84c;
+    --gold-glow: rgba(201, 168, 76, 0.6);
+    --gold-dim: rgba(201, 168, 76, 0.12);
+    --gold-border: rgba(201, 168, 76, 0.22);
+    --bg-dark: #1a1208;
 }
 
 /* Hero */
@@ -82,6 +88,283 @@
     object-fit: cover;
 }
 
+.readings-section-demo {
+    background: var(--deepest-red);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem 2.5rem;
+    width: 100%;
+}
+
+.individual-questions-wrap {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 780px;
+}
+
+/* ── CYLINDER SWITCHER ─────────────────────── */
+.readings-switcher {
+    position: relative;
+    width: 160px;
+    flex-shrink: 0;
+    height: calc(var(--item-height) * 7);
+    user-select: none;
+}
+
+.highlight-band {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: var(--item-height);
+    background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.13) 20%, rgba(201, 168, 76, 0.22) 50%, rgba(201, 168, 76, 0.13) 80%, transparent);
+    border-top: 1px solid rgba(201, 168, 76, 0.35);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.35);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fade-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            var(--bg-dark) 0%,
+            transparent 22%,
+            transparent 78%,
+            var(--bg-dark) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.readings-roll-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(201, 168, 76, 0.4);
+    font-size: 0.8rem;
+    z-index: 5;
+    padding: 4px 14px;
+    line-height: 1;
+    transition: color 0.18s;
+}
+
+.readings-roll-btn[data-dir="up"] {
+    top: 2px;
+}
+
+.readings-roll-btn[data-dir="down"] {
+    bottom: 2px;
+}
+
+.readings-roll-btn:hover {
+    color: var(--gold);
+}
+
+.cylinder-viewport {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.readings-roll-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--item-height);
+    top: 50%;
+    margin-top: calc(var(--item-height) / -2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+.readings-roll-item.is-active {
+    color: #d4a830;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(201, 168, 76, 0.7), 0 0 24px rgba(201, 168, 76, 0.3);
+    font-size: 0.95rem;
+}
+
+.readings-roll-item.near-1 {
+    color: #7a6030;
+    font-weight: 400;
+}
+
+.readings-roll-item.near-2 {
+    color: #3d2e14;
+    font-weight: 300;
+}
+
+.readings-roll-item.far {
+    color: #1e1508;
+    font-weight: 300;
+}
+
+/* ── PANELS ────────────────────────────────── */
+.readings-panels {
+    flex: 1;
+    min-width: 0;
+}
+
+.readings-panel {
+    display: none;
+}
+
+.readings-panel.is-active {
+    display: block;
+}
+
+.readings-panel-head {
+    margin-bottom: 1.2rem;
+}
+
+.readings-panel-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e8d5b0;
+    margin: 0 0 0.3rem;
+}
+
+.readings-panel-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    color: #8a7055;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+
+.readings-panel-category {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-border);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.readings-carousel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.readings-nav-btn {
+    background: none;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.18s;
+}
+
+.readings-nav-btn:hover {
+    background: var(--gold-dim);
+}
+
+.readings-nav-btn:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.readings-viewport {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.readings-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.reading-card {
+    flex: 0 0 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--gold-border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    box-sizing: border-box;
+}
+
+.reading-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1rem;
+    color: #e8d5b0;
+    margin: 0 0 0.4rem;
+    font-weight: 600;
+}
+
+.reading-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    color: #8a7055;
+    line-height: 1.55;
+    margin: 0 0 0.5rem;
+}
+
+.reading-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #5a4030;
+    margin: 0 0 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.reading-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.reading-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 0;
+}
+
+.reading-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--gold-border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    transition: background 0.18s;
+    letter-spacing: 0.04em;
+}
+
+.reading-link:hover {
+    background: var(--gold-dim);
+}
 
 .readings-section {
     padding: 80px 0;
