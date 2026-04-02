@@ -1270,6 +1270,7 @@ textarea {
 
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .footer-left {
@@ -1277,7 +1278,14 @@ textarea {
     }
 
     .footer-right {
-        padding-top: 20px;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .footer-nav {
+        align-items: center;
+        padding-left: 0;
+        padding-bottom: 1em;
     }
 
     .footer-title {
@@ -1292,6 +1300,9 @@ textarea {
     }
 
 
+    .line {
+        margin: 1.5em 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1342,8 +1353,8 @@ textarea {
 
     .footer-socials {
         grid-template-columns: 1fr;
-        max-width: 100%;
         width: 100%;
+        max-width: 300px;
     }
 }
 
