@@ -1121,34 +1121,33 @@
         </section>
 
         <!-- Контакты -->
-        <section id="contact">
-            <div class="container contact-grid">
+        <section id="contact" class="alt contact">
+            <div class="container contact-wrapper">
                 <div class="contact-text" id="sofia-contact">
-                    <h2 class="section-title">Готовы сделать первый шаг?</h2>
+                    <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
                     <p>
                         Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в
                         одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.
                     </p>
                     <p>
-                        Для консультации или понимания, с чего лучше начать, напишите моей ассистентке Софии в Telegram
-                        или моей ассистентке Марии в VK.
+                        Для консультации или понимания, с чего лучше начать,
+                        напишите моей ассистентке Софии в Telegram и Мария в VK,
+                        они с теплотой откликнутся, поддержат и мягко направят,
+                        подсказав, с чего лучше начать ваше знакомство с практикой
                     </p>
                     <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
-                        Telegram для связи:
-                        <div class="social-sofia">
-                            <strong>София </strong>
-                        </div>
+                        <img src="assets/images/icons/tg_form.svg" alt="Contact Sofia TG">
                     </a>
-                    <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener"
-                        style="margin-top: 8px;">
-                        ВКонтакте для связи:
-                        <div class="social-sofia">
-                            <strong>Мария </strong>
-                        </div>
+                    <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener">
+                        <img src="assets/images/icons/vk_form.svg" alt="Contact Maria VK">
+                    </a>
+                    <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+                        rel="noopener">
+                        <img src="assets/images/icons/wa_form.svg" alt="Contact Maria What's up">
                     </a>
                 </div>
 
-                <div>
+                <div class="contact-form-container">
                     <form action="https://formspree.io/f/mgowdgyd" method="POST">
                         <div>
                             <label for="name">Имя</label>
@@ -1163,10 +1162,54 @@
                             <textarea id="message" name="message" placeholder="Кратко опишите свою ситуацию или вопрос"
                                 required></textarea>
                         </div>
-                        <div>
+
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <a href="privacy.html" target="_blank" rel="noopener"
+                                        class="link__legal">
+                                        Политикой
+                                        конфиденциальности</a>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
+                        <div class="contact-form-button-container">
                             <button type="submit" class="btn-primary">Отправить запрос</button>
                         </div>
                     </form>
+                    <div class="contact-form-disclaimer">
+                        <p>
+                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
+                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
+                                href="terms-of-service.html" target="_blank" rel="noopener"
+                                class="link__legal">условиями
+                                использования сайта</a>
+                            использования сайта
+                        </p>
+                        <p>
+                            Мы не даем гарантий результата. Все рекомендации носят субъективный характер
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
