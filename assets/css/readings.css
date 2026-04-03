@@ -277,6 +277,7 @@
     flex: 1;
     min-width: 0;
     width: 100%;
+
 }
 
 .readings-panel {
@@ -284,31 +285,34 @@
 }
 
 .readings-panel.is-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .readings-panel-head {
     margin-bottom: 1.2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 520px;
 }
 
 .readings-panel-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #e8d5b0;
     margin: 0 0 0.3rem;
+    font-weight: 100;
 }
 
 .readings-panel-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.78rem;
-    color: #8a7055;
+    color: var(--beige);
+    font-size: var(--fs-20-text);
     line-height: 1.5;
-    margin: 0 0 0.5rem;
+    margin: 1em 0 0.5rem;
+    opacity: 0.8;
 }
 
 .readings-panel-category {
-    display: inline-block;
+    /* display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.68rem;
     letter-spacing: 0.1em;
@@ -316,7 +320,10 @@
     color: var(--gold);
     border: 1px solid rgba(201, 168, 76, 0.22);
     border-radius: 20px;
-    padding: 2px 10px;
+    padding: 2px 10px; */
+    font-size: var(--fs-card-text);
+    font-family: var(--ff-headings);
+    padding: 1em 0.8em 0.1em;
 }
 
 .readings-carousel {
@@ -568,6 +575,16 @@
 
 
 
+@media (max-width: 900px) {
+    .readings-panel-subtitle {
+        font-size: var(--fs-14-text);
+    }
+
+    .readings-panel-category {
+        font-size: var(--fs-14-text);
+        padding: 0.8em 0.6em 0.1em;
+    }
+}
 
 
 
