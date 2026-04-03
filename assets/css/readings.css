@@ -242,13 +242,19 @@
 
 /* tablet/mobile: 1 visible */
 @media (max-width: 768px) {
-    .readings-card {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .readings-carousel {
+        padding: 1em;
+        /* reduce padding on small screens */
     }
 
-    .readings-carousel {
-        padding: 1.25rem;
+    .individual-questions-wrap {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .readings-switcher {
+        width: 100%;
+        /* full width on mobile */
     }
 }
 
@@ -258,6 +264,7 @@
 .readings-panels {
     flex: 1;
     min-width: 0;
+    width: 100%;
 }
 
 .readings-panel {
@@ -307,7 +314,9 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* removed overflow: hidden — viewport handles clipping */
+    overflow: hidden;
+    /* re-add this — clips the sliding track */
+    box-sizing: border-box;
 }
 
 .reading-card {
@@ -406,27 +415,26 @@
     display: block;
     overflow: hidden;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .readings-track {
     display: flex;
-    gap: 12px;
+    gap: 0;
+    /* remove gap — with 100% cards, any gap pushes card 2 partially into view */
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .reading-card {
-    padding: 1.875em;
     flex: 0 0 100%;
-    /* each card = full track width */
     max-width: 100%;
-    text-align: center;
-    /* keep your center alignment */
-    align-items: center;
+    width: 100%;
     box-sizing: border-box;
+    padding: 1.875em;
     text-align: center;
     color: var(--beige);
     background-color: var(--deepest-red);
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
