@@ -463,6 +463,62 @@
     margin: 0 0 0.5rem;
 }
 
+/* list hidden by default */
+.reading-questions {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.reading-questions--hidden {
+    display: none;
+}
+
+.reading-questions li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    color: #8a7055;
+    line-height: 1.7;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.reading-questions li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+/* toggle button */
+.reading-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    margin: 0.4rem auto 0.6rem;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.reading-toggle-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* rotated state */
+.reading-toggle-btn.is-open .reading-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.reading-toggle-btn {
+    /* turn svg */
+
+}
 
 .reading-footer {
     width: 100%;
