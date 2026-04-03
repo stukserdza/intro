@@ -187,6 +187,8 @@
 
 .readings-roll-btn[data-dir="down"] {
     bottom: 0;
+    /* turn the arrow */
+    transform: translateX(-50%) rotate(180deg);
 }
 
 .readings-roll-btn:hover {
