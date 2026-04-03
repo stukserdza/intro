@@ -240,6 +240,18 @@
     font-size: 0.82rem;
 }
 
+/* tablet/mobile: 1 visible */
+@media (max-width: 768px) {
+    .readings-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .readings-carousel {
+        padding: 1.25rem;
+    }
+}
+
 /* ── PANELS ────────────────────────────────── */
 
 /* ── PANELS ── */
@@ -295,7 +307,49 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
+    /* removed overflow: hidden — viewport handles clipping */
+}
+
+.reading-card {
+    padding: 1.875em;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    /* was calc(50% - 12px) — now full width */
+    max-width: 100%;
+    /* was calc(50% - 12px) */
+    text-align: left;
+    /* was center */
+    color: var(--beige);
+    background-color: var(--deepest-red);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* was center */
+    justify-content: space-between;
+    border: var(--card-border-red);
+}
+
+.reading-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.reading-detail-list li {
+    font-size: 0.78rem;
+    color: #8a7055;
+    line-height: 1.7;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.reading-detail-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
 }
 
 /* nav med-packs-carousel*/
@@ -349,16 +403,8 @@
 }
 
 .readings-viewport {
+    display: block;
     overflow: hidden;
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding-bottom: 6px;
-    scrollbar-width: none;
     width: 100%;
 }
 
@@ -370,10 +416,13 @@
 
 .reading-card {
     padding: 1.875em;
-    scroll-snap-align: start;
+    flex: 0 0 100%;
+    /* each card = full track width */
+    max-width: 100%;
+    text-align: center;
+    /* keep your center alignment */
+    align-items: center;
     box-sizing: border-box;
-    flex: 0 0 calc(50% - 12px);
-    max-width: calc(50% - 12px);
     text-align: center;
     color: var(--beige);
     background-color: var(--deepest-red);
@@ -386,30 +435,24 @@
 }
 
 .reading-title {
-    font-size: 1rem;
-    color: #e8d5b0;
+    font-size: var(--fs-36-text);
+    color: var(--beige);
     margin: 0 0 0.4rem;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .reading-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.78rem;
-    color: #8a7055;
+    font-size: var(--fs-20-text);
+    color: var(--beige);
+    opacity: 0.8;
     line-height: 1.55;
     margin: 0 0 0.5rem;
 }
 
-.reading-meta {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    color: #5a4030;
-    margin: 0 0 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-}
 
 .reading-footer {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -417,11 +460,11 @@
 }
 
 .reading-price {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin: 0;
+    font-size: var(--fs-36-text);
+    color: var(--gold-light);
+    font-family: var(--ff-headings);
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 
 .reading-link {
