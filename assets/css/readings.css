@@ -87,25 +87,13 @@
     object-fit: cover;
 }
 
-.readings-section-demo {
-    background: var(--deepest-red);
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem 2.5rem;
-    width: 100%;
-}
 
 
-.individual-questions-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 780px;
+
+
+
+.readings-switcher-section {
+    background-color: var(--deepest-red);
 }
 
 /* ── SWITCHER SHELL ── */
@@ -252,7 +240,7 @@
         /* reduce padding on small screens */
     }
 
-    .individual-questions-wrap {
+    .readings-all-section-wrap {
         flex-direction: column;
         gap: 1.5rem;
     }
@@ -264,6 +252,25 @@
 }
 
 /* ── PANELS ────────────────────────────────── */
+.readings-all-section {
+    background: var(--deep-red);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem 2.5rem;
+    width: 100%;
+}
+
+.readings-all-section-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 780px;
+}
 
 /* ── PANELS ── */
 .readings-panels {
