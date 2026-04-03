@@ -171,9 +171,6 @@
     border: none;
     cursor: pointer;
     color: var(--gold);
-    background-color: rgba(201, 168, 76, 0.12);
-    border: 1px solid rgba(201, 168, 76, 0.22);
-
     font-size: 0.75rem;
     z-index: 5;
     padding: 4px 16px;
@@ -187,8 +184,9 @@
 
 .readings-roll-btn[data-dir="down"] {
     bottom: 0;
-    /* turn the arrow */
+    /* turn the arrow    */
     transform: translateX(-50%) rotate(180deg);
+
 }
 
 .readings-roll-btn:hover {
