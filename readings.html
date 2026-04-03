@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="readings-panels" id="readingsPanels">
-                    <div class="readings-panel is-active" data-panel="individual-basic">
+                    <div class="readings-panel is-active" data-panel="current-partner">
                         <div class="readings-panel-head">
                             <h3 class="readings-panel-title">Расклады про любовь</h3>
                             <p class="readings-panel-subtitle">Для тех, кто устал от качелей, хочет понять партнёра или
@@ -158,7 +158,7 @@
                         </div>
                     </div>
 
-                    <div class="readings-panel" data-panel="current-partner">
+                    <div class="readings-panel" data-panel="previous-partner">
                         <div class="readings-panel-head">
                             <h3 class="readings-panel-title">Расклады на бывшего</h3>
                             <p class="readings-panel-subtitle">Для тех, кто не может отпустить прошлое и хочет понять
@@ -227,6 +227,91 @@
                                 </div>
                             </div>
                             <button class="readings-nav-btn" type="button" data-dir="next">→</button>
+                        </div>
+                    </div>
+                    <div class="readings-panel" data-panel="individual-questions">
+                        <div class="readings-panel-head">
+                            <h3 class="readings-panel-title">Индивидуальные вопросы</h3>
+                            <p class="readings-panel-subtitle"></p>
+                            <div class="readings-panel-category">Индивидуальные вопросы для ...</div>
+                        </div>
+                        <div class="readings-carousel" data-carousel>
+
+
+                            <div class="readings-track">
+                                <article class="reading-card">
+                                    <h3 class="reading-title">1 вопрос</h3>
+                                    <p class="reading-text">
+                                        Подробный разбор вашей ситуации или вопроса с рекомендациями по работе с
+                                        энергией.
+                                    </p>
+                                    <p class="reading-meta">Формат: аудио-разбор / текст</p>
+                                    <div class="reading-footer">
+                                        <p class="reading-price">2 000 ₽</p>
+                                        <a href="#contact" class="reading-link"
+                                            aria-label="Запросить расклад на индивидуальный вопрос">
+                                            Запросить расклад
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="reading-card">
+                                    <h3 class="reading-title">3 вопроса</h3>
+                                    <p class="reading-text">
+                                        Подробный разбор вашей ситуации или 3 вопросов с рекомендациями по работе с
+                                        энергией.
+                                    </p>
+                                    <p class="reading-meta">Формат: аудио-разбор</p>
+                                    <div class="reading-footer">
+                                        <p class="reading-price">3 000 ₽</p>
+                                        <a href="#contact" class="reading-link"
+                                            aria-label="Запросить расклад на 3 индивидуальных вопроса">
+                                            Запросить расклад
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="reading-card">
+                                    <h3 class="reading-title">6 вопросов</h3>
+                                    <p class="reading-text">
+                                        Подробный разбор вашей ситуации или 6 вопросов с рекомендациями по работе с
+                                        энергией.
+                                    </p>
+                                    <p class="reading-meta">Формат: аудио-разбор</p>
+                                    <div class="reading-footer">
+                                        <p class="reading-price">5 000 ₽</p>
+                                        <a href="#contact" class="reading-link"
+                                            aria-label="Запросить расклад на 6 индивидуальных вопросов">
+                                            Запросить расклад
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="reading-card">
+                                    <h3 class="reading-title">10 вопросов</h3>
+                                    <p class="reading-text">
+                                        Подробный разбор вашей ситуации или 10 вопросов с рекомендациями по работе с
+                                        энергией.
+                                    </p>
+                                    <p class="reading-meta">Формат: аудио-разбор</p>
+                                    <div class="reading-footer">
+                                        <p class="reading-price">7 000 ₽</p>
+                                        <a href="#contact" class="reading-link"
+                                            aria-label="Запросить расклад на 10 индивидуальных вопросов">
+                                            Запросить расклад
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="readings-carousel-header">
+                                <button class="readings-nav-btn" type="button" data-dir="prev"
+                                    aria-label="Предыдущий расклад">
+                                    <img src="assets/images/icons/arrow_left.svg" alt="Предыдущий расклад (arrow left)">
+                                </button>
+
+                                <button class="readings-nav-btn" type="button" data-dir="next"
+                                    aria-label="Следующий расклад">
+                                    <img src="assets/images/icons/arrow_right.svg"
+                                        alt="Следующий расклад (arrow right)">
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -374,15 +459,19 @@
     <script>
         const MENU_DATA = [{
                 label: 'На бывшего',
-                target: 'current-partner'
+                target: 'previous-partner'
             },
             {
                 label: 'На нынешнего',
-                target: 'individual-basic'
+                target: 'current-partner'
             },
             {
                 label: 'На измену',
                 target: 'betrayal-reading'
+            },
+            {
+                label: 'Индивидуальные вопросы',
+                target: 'individual-questions'
             },
         ];
 

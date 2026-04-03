@@ -109,6 +109,10 @@
     margin-left: 0.3em;
 }
 
+.med-hero-included-in-pack a:hover {
+    text-decoration: underline;
+}
+
 /* personal med */
 .med-personal {
     width: 100;
@@ -385,7 +389,6 @@
 }
 
 /* packs */
-
 .med-packs-carousel {
     border-radius: 18px;
     padding: 2em;
