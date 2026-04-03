@@ -876,31 +876,30 @@ section.contact {
 
 .contact-highlight {
     display: inline-block;
-    /* Makes link block-level but inline */
-    padding: 12px 16px;
+    /* padding: 12px 16px; */
     border-radius: 50%;
     background: var(--gold-light);
     border: 1px solid var(--gold-light);
     font-size: 0.95rem;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
     margin-top: 10px;
     color: var(--deep-red);
 }
 
 .contact-highlight:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(255, 201, 9, 0.15),
+    /* transform: translateY(-1px); */
+    /* box-shadow: 0 6px 20px rgba(255, 201, 9, 0.15),
         0 2px 8px rgba(0, 0, 0, 0.25);
     border-color: rgba(255, 201, 9, 0.4);
-    background: rgba(255, 201, 9, 0.03);
+    background: rgba(255, 201, 9, 0.03); */
+    color: #330606;
+    background: linear-gradient(90deg, #C8A012 100%, #C2B36E 100%);
+    /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55); */
+    border: var(--card-border-red);
 }
 
-.contact-highlight:hover .social-sofia strong {
-    text-shadow: 0 0 8px rgba(255, 201, 9, 0.5);
-    transform: scale(1.02);
-}
 
 .contact-form-container {
     width: 100%;
