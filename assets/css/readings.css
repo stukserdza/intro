@@ -193,6 +193,11 @@
     color: var(--gold);
 }
 
+.readings-roll-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
 /* items are laid out linearly — no cylinder math needed for 3 visible slots */
 .cylinder-viewport {
     position: absolute;
