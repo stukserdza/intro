@@ -116,12 +116,22 @@
     height: var(--item-height);
     border: 1px solid rgba(201, 168, 76, 0.55);
     border-radius: 4px;
-    background: linear-gradient(to right,
+    /* background: linear-gradient(to right,
             transparent,
             rgba(201, 168, 76, 0.10) 30%,
             rgba(201, 168, 76, 0.18) 50%,
             rgba(201, 168, 76, 0.10) 70%,
-            transparent);
+            transparent); */
+    background: radial-gradient(ellipse at center,
+            rgba(157, 116, 2, 0.28) 0%,
+            rgba(201, 168, 76, 0.18) 30%,
+            rgba(201, 168, 76, 0.08) 60%,
+            transparent 100%);
+    box-shadow:
+        0 0 18px 8px rgba(201, 168, 76, 0.15),
+        /* spreads all sides */
+        0 0 40px 12px rgba(201, 168, 76, 0.08);
+    /* wider outer glow */
     pointer-events: none;
     z-index: 2;
 }
