@@ -482,3 +482,48 @@
 .reading-link:hover {
     background: var(--gold-dim);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .reading-hero-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .reading-hero-content {
+        width: 100%;
+    }
+
+    .reading-hero-subtitle {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .reading-hero-photo-wrap {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .reading-card-title {
+        text-align: center;
+    }
+
+}
