@@ -492,6 +492,10 @@
     list-style: none;
     padding: 0;
     margin: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
 }
 
 .reading-questions--hidden {
@@ -499,9 +503,8 @@
 }
 
 .reading-questions li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.78rem;
-    color: #8a7055;
+    font-size: var(--fs-20-text);
+    color: var(--beige);
     line-height: 1.7;
     padding-left: 1.2rem;
     position: relative;
@@ -560,25 +563,6 @@
     text-align: center;
 }
 
-.reading-link {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.72rem;
-    color: var(--gold);
-    text-decoration: none;
-    border: 1px solid rgba(201, 168, 76, 0.22);
-    border-radius: 20px;
-    padding: 4px 12px;
-    transition: background 0.18s;
-    letter-spacing: 0.04em;
-}
-
-.reading-link:hover {
-    background: var(--gold-dim);
-}
-
-
-
-
 
 
 
@@ -594,6 +578,11 @@
         font-size: var(--fs-14-text);
         padding: 0.8em 0.6em 0.1em;
     }
+
+    .reading-questions li {
+        font-size: var(--fs-14-text);
+    }
+
 }
 
 
