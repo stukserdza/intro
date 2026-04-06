@@ -49,11 +49,13 @@
 
 </head>
 
-
-
 <body>
     <header>
         <div class="container header-inner">
+            <div class="logo-container logo-container-desktop">
+                <img src="../assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
+                <!-- <p class="logo">Стук сердца</p> -->
+            </div>
             <div class="logo-container-mobile">
                 <img src="../assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
                 <!-- <p class="logo">Стук сердца</p> -->
@@ -73,14 +75,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#hero" aria-label="Вернуться в начало страницы">Вверх</a>
-                    </li>
-                    <li class="logo-container">
-                        <img src="../assets/images/logo-white.png" alt="Стук сердца logo" class="logo-image">
+                        <a href="../meditations.html" aria-label="Go to all meditations">
+                            Нейромедитации</a>
                     </li>
                     <li>
-                        <a href="../meditations.html" aria-label="Go to all meditations">
-                            нейромедитации</a>
+                        <a href="../diagnostics.html" aria-label="Go to diagnostics">
+                            Диагностики
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../readings.html" aria-label="Go to Расклады">
+                            Расклады
+                        </a>
                     </li>
                     <li>
                         <a href="#contact" aria-label="Go to contact section">
@@ -89,177 +95,148 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
     </header>
     <main>
-        <!-- Hero с аудио -->
-        <section class="med-single-hero" id="hero">
-            <div class="container med-single-hero-inner">
-                <div class="med-single-hero-main">
-                    <p class="med-single-badge">Аудиопрограмма Сурии</p>
-                    <h1 class="med-single-hero-title">Исполнение желания </h1>
-                    <p class="med-single-hero-text">
-                        Медитация для работы с конкретным желанием в любой сфере: любовь, деньги, проекты, перемены.
-                        Помогает убрать внутренние «хочу, но не получится» и выстроить четкое намерение. Желание
-                        перестаёт быть мечтой и становится внутренним решением, которое запускает реализацию.
-                    </p>
-                    <p class="med-single-price">3 000 ₽</p>
-                    <a href="#contact" aria-lable="Go to contact section" class="btn-primary med-single-cta">
-                        Получить полную версию
-                    </a>
+        <!-- Hero -->
+        <section class="med-hero" id="hero">
+            <div class="container pack-single-hero-inner">
+                <div class="container med-hero-grid">
+
+                    <div class="med-hero-content med-single-hero-content">
+                        <p class="med-hero-badge">Аудиопрограмма Сурии</p>
+                        <h1 class="section-title">
+                            Исполнение желания
+                        </h1>
+                        <p class="med-hero-subtitle med-single-hero-subtitle">
+                            Медитация для работы с конкретным желанием в любой сфере: любовь, деньги, проекты, перемены.
+                            Помогает убрать внутренние «хочу, но не получится» и выстроить четкое намерение. Желание
+                            перестаёт быть мечтой и становится внутренним решением, которое запускает реализацию.
+                        </p>
+                        <div class="med-packs-card-action">
+                            <p class="med-packs-card-price">3 000 ₽</p>
+                            <a href="#contact" class="btn-primary med-packs-card-btn"
+                                aria-label="Подробнее о получении медитации Разрыв кармической связи">
+                                Получить полную версию
+                            </a>
+                        </div>
+                    </div>
+                    <figure class="med-hero-photo-wrap med-single-hero-photo-wrap">
+                        <img src="../assets/images/meditations-images/wish-fulfillment-meditation-image-focus.png"
+                            alt="Изображение для медитации 'Исполнение желания'" class="med-hero-photo">
+                    </figure>
                 </div>
-                <figure class="med-single-hero-figure">
-                    <img src="../assets/images/meditations-images/wish-fulfillment-meditation-image-focus.png"
-                        class="med-single-hero-image" alt="Исполнение желания — аудиопрограмма Сурии">
-                </figure>
             </div>
         </section>
-        <!-- Секция "Проблема + решение" — один столбец -->
-        <section class="med-single-problem">
-            <div class="container">
-                <div class="med-single-problem-content">
-                    <h2 class="med-single-problem-title ">
+        <section class="med-single-section">
+            <div class="med-single-wrap">
+                <div class="pack-single-problem-content">
+                    <h2 class="section-title">
                         Исполнение желания:<br>
-                    </h2>
-                    <p class="med-single-problem-text extra-golden-line-after">
                         превратите «хочу» в «будет»
-                    </p>
-                    <p class="med-single-problem-text extra-golden-line-after">
+                        </p>
+                    </h2>
+                    <p class="med-section-intro problem">
                         Представьте что вы точно знаете, чего хотите. Отношения, деньги, переезд, новая работа, неважно.
                         Желание есть. Но где-то внутри тихий голос: «Ну да, хотеть не вредно», «А вдруг не получится?»,
                         «Это не для таких как я».
                     </p>
-                    <p class="med-single-problem-text extra-golden-line-after">
+                    <p class="med-section-intro problem">
                         И желание так и остаётся мечтой, красивой картинкой, в которую вы сами не верите. Знакомо?
                     </p>
                 </div>
             </div>
         </section>
-        <!-- Как помогает -->
-        <section class="med-single-benefits">
-            <div class="container">
-                <h2 class="section-title">Что обычно мешает желаниям сбываться:</h2>
-                <div class="med-single-benefits-grid">
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Вы хотите отношений, но внутри сидит «все нормальные мужики заняты» или «меня такую не
-                            выберут».
-                        </p>
-                    </div>
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Хотите больше денег, но фоном крутится «деньги это зло», «богатые все сволочи», «в нашей
-                            семье богатых не было»
-                        </p>
-                    </div>
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Мечтаете о переменах, но страшно: «а вдруг станет хуже?», «лучше синица в руках».
-                        </p>
-                    </div>
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Загадываете желание, а сами не верите, как будто для галочки.
-                        </p>
-                    </div>
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Хотите одно, а внутри чувствуете, что «не заслужили», «не время», «сначала надо...».
-                        </p>
-                    </div>
-                    <div class="med-single-benefit">
-                        <div class="med-single-benefit-icon">✦</div>
-                        <p>
-                            Желание вроде есть, но оно размытое, нечеткое, сами не можете сформулировать, чего конкретно
-                            хотите.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Секция "Проблема + решение" — один столбец -->
-        <section class="med-single-problem">
-            <div class="container">
-                <div class="med-single-problem-content">
-                    <p class="med-single-problem-text  extra-golden-line-after">
-                        Эта медитация не про «визуализируйте и оно придёт». Она про то, чтобы убрать внутренний раздрай
-                        между «хочу» и «не верю». Когда желание и внутреннее состояние совпадают, запускается
-                        реализация.
-                    </p>
-                    <p class="med-single-problem-text extra-golden-line-after">
-                        В процессе медитации вы выбираете конкретный запрос, удерживаете фокус на результате и создаете
-                        внутри состояние, где это уже возможно. Желание перестаёт быть мечтой и становится решением.
-                    </p>
-                </div>
-            </div>
-        </section>
         <!-- Эффект после -->
-        <section class="med-single-effect">
-            <div class="container">
+        <section class="med-single-section">
+            <div class="med-how-inner">
                 <h2 class="section-title">Что реально чувствуется потом:</h2>
-                <ul class="med-single-effect-list">
-                    <li>
+                <ul class="med-how-list med-single-how-list">
+                    <li class="how-text-step">
                         Ясность. Вы точно понимаете, чего хотите, без «ну, может быть» и «было бы неплохо».
                     </li>
-                    <li>
+                    <li class="sparkle">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M32 6
+             C34 18, 38 26, 58 32
+             C38 38, 34 46, 32 58
+             C30 46, 26 38, 6 32
+             C26 26, 30 18, 32 6Z" />
+                        </svg>
+                    </li>
+                    <li class="how-text-step">
                         Внутреннее разрешение. Уходит ощущение «мне нельзя», «не для меня». Становится: можно, и я хочу.
                     </li>
-                    <li>
+                    <li class="sparkle">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M32 6
+             C34 18, 38 26, 58 32
+             C38 38, 34 46, 32 58
+             C30 46, 26 38, 6 32
+             C26 26, 30 18, 32 6Z" />
+                        </svg>
+                    </li>
+                    <li class="how-text-step">
                         Спокойная уверенность вместо тревожного «хоть бы, хоть бы». Вы знаете, что это ваше.
                     </li>
-                    <li>
-                        Желание начинает двигаться. Приходят идеи, возможности, нужные люди, как будто процесс
-                        запустился.
+                    <li class="sparkle">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M32 6
+             C34 18, 38 26, 58 32
+             C38 38, 34 46, 32 58
+             C30 46, 26 38, 6 32
+             C26 26, 30 18, 32 6Z" />
+                        </svg>
                     </li>
+                    <li class="how-text-step">
+                        Желание начинает двигаться. Приходят идеи, возможности, нужные люди, как будто процесс
+                        запустился
+                    </li>
+
                 </ul>
             </div>
         </section>
-        <!-- Секция "Проблема + решение" — один столбец -->
-        <section class="med-single-problem">
-            <div class="container">
-                <div class="med-single-problem-content">
-                    <p class="med-single-problem-text extra-golden-line-after">
-                        Попробуйте. Выберите один конкретный запрос в любой сфере. Пройдите медитацию как точку выбора.
-                        Можно один раз, можно возвращаться и усиливать намерение. Это та самая практика, которая раньше
-                        выходила как «медитация на новую любовь», но она работает с любым желанием.
-                    </p>
-                </div>
+        <!-- Как помогает -->
+        <section class="med-how-final">
+            <div class="med-how-final-wrapper">
+                <h2 class="section-title">Как это помогает</h2>
+                <p class="med-section-final">
+                    new content
+                </p>
+                <p class="med-section-final">
+                    new content
+                </p>
             </div>
         </section>
         <!-- Контакты -->
-        <section id="contact">
-            <div class="container contact-grid">
+        <section id="contact" class="alt contact">
+            <div class="container contact-wrapper">
                 <div class="contact-text" id="sofia-contact">
-                    <h2 class="section-title">Готовы сделать первый шаг?</h2>
+                    <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
                     <p>
                         Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в
                         одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.
                     </p>
                     <p>
-                        Для консультации или понимания, с чего лучше начать, напишите моей ассистентке Софии в Telegram
-                        или моей ассистентке Марии в VK.
+                        Для консультации или понимания, с чего лучше начать,
+                        напишите моей ассистентке Софии в Telegram и Мария в VK,
+                        они с теплотой откликнутся, поддержат и мягко направят,
+                        подсказав, с чего лучше начать ваше знакомство с практикой
                     </p>
                     <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
-                        Telegram для связи:
-                        <div class="social-sofia">
-                            <strong>София </strong>
-                        </div>
+                        <img src="../assets/images/icons/tg_form.svg" alt="Contact Sofia TG">
                     </a>
-                    <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener"
-                        style="margin-top: 8px;">
-                        ВКонтакте для связи:
-                        <div class="social-sofia">
-                            <strong>Мария </strong>
-                        </div>
+                    <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener">
+                        <img src="../assets/images/icons/vk_form.svg" alt="Contact Maria VK">
+                    </a>
+                    <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+                        rel="noopener">
+                        <img src="../assets/images/icons/wa_form.svg" alt="Contact Maria What's up">
                     </a>
                 </div>
 
-                <div>
+                <div class="contact-form-container">
                     <form action="https://formspree.io/f/mgowdgyd" method="POST">
                         <div>
                             <label for="name">Имя</label>
@@ -274,127 +251,163 @@
                             <textarea id="message" name="message" placeholder="Кратко опишите свою ситуацию или вопрос"
                                 required></textarea>
                         </div>
-                        <div>
+
+                        <!-- add 3 required checkboxes -->
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkbox__text">Я согласен(на) на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="contact" required>
+                                <span class="checkbox__text">
+                                    Я ознакомлен(а) с <a href="privacy.html" target="_blank" rel="noopener"
+                                        class="link__legal">
+                                        Политикой
+                                        конфиденциальности</a>
+                                    и даю согласие на связь по указанному email
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox__container">
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="newsletter" required>
+                                <span class="checkbox__text">
+                                    Я понимаю, что информация носит информационный и развлекательный характер и не
+                                    является профессиональной консультацией
+                                </span>
+                            </label>
+                        </div>
+                        <div class="contact-form-button-container">
                             <button type="submit" class="btn-primary">Отправить запрос</button>
                         </div>
                     </form>
+                    <div class="contact-form-disclaimer">
+                        <p>
+                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
+                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
+                                href="terms-of-service.html" target="_blank" rel="noopener"
+                                class="link__legal">условиями
+                                использования сайта</a>
+                            использования сайта
+                        </p>
+                        <p>
+                            Мы не даем гарантий результата. Все рекомендации носят субъективный характер
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+        <aside class="boosty-float">
+            <div class="boosty-float-box">
+                <div class="boosty-float-icon">
+                    <img src="../assets/images/icons/bst_footer.svg" alt="">
+                </div>
+                <p class="boosty-float-text">
+                    Ещё больше медитаций
+                    вы можете найти на boosty
+                </p>
+
+                <a href="https://boosty.to/stukserdza" class="boosty-float-btn" target="_blank" rel="noopener">
+                    Узнать подробнее
+                </a>
+            </div>
+        </aside>
+
+
     </main>
 
-    <footer class="med-footer">
-        <div class="container med-footer-inner">
-            <div>© 2025 Стук сердца by Suria</div>
-            <div class="footer-nav">
-                <a href="#hero" aria-label="Вернуться в начало страницы">
-                    Вверх
-                </a>
-                <a href="../index.html" aria-label="Go to homepage">
-                    Главная
-                </a>
-                <a href="meditations.html" aria-label="Go to all meditations">
-                    Медитации & аудиопрограммы
-                </a>
-                <a href="#contact" aria-label="Go to contact section">
-                    Контакт
-                </a>
+    <footer id="siteFooter class=" site-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
+                </h2>
+
+                <p class="footer-text">
+                    Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
+                    кто проходит сложные периоды и ищет выход
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/inst_footer.svg" alt="instagram icon">
+                        </span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+
+                    <a href="https://vk.ru/stukserdzavk" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/vk_footer.svg" alt="vk icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.t.me/tarotmystic" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/tg_footer.svg" alt="tg icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@true_suria" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/tt_footer.svg" alt="tiktok icon">
+                        </span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+                    <a href="https://boosty.to/stukserdza" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/bst_footer.svg" alt="boosty icon">
+                        </span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://www.youtube.com/@stukserdzayt" target="_blank" rel="noopener" class="social-btn">
+                        <span class="social-icon">
+                            <img src="../assets/images/icons/yt_footer.svg" alt="youtube icon">
+                        </span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#top">Наверх</a>
+                    <a href="../index.html" aria-label="Go to homepage">
+                        Главная
+                    </a>
+                    <a href="../meditations.html" aria-label="Go to all meditations">
+                        Нейромедитации
+                    </a>
+                    <a href="../diagnostics.html" aria-label="Go to diagnostics">
+                        Диагностики
+                    </a>
+                    <a href="../readings.html" aria-label="Go to Расклады">
+                        Расклады
+                    </a>
+                </nav>
+
+                <div class="line"></div>
+
+                <div class="footer-legal">
+                    <a href="../privacy.html" target="_blank" class="link__legal" rel=" noopener">Политикой
+                        конфиденциальности</a>
+                    <a href="../terms-of-service.html" target="_blank" rel="noopener" class="link__legal">Условия
+                        использования сайта</a>
+                    <a href="../disclaimer.html" target="_blank" rel="noopener" class="link__legal">Дисклеймер</a>
+                </div>
+                <div class="line"></div>
+
+                <p class="footer-copy">© 2025 Стук сердца by Suria</p>
             </div>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-        $(document).ready(function () {
-            $(".hamburger").click(function () {
-                $("nav").toggleClass("active");
-                const expanded = $(this).attr("aria-expanded") === "true";
-                $(this).attr("aria-expanded", !expanded);
-            });
-        });
-        // Простая навигация по карусели продуктов
-        $(document).ready(function () {
-            const $track = $(".products-track");
-            const $cards = $(".product-card");
-            const $btnPrev = $(".products-nav-btn[data-dir='prev']");
-            const $btnNext = $(".products-nav-btn[data-dir='next']");
-
-            if (!$track.length || !$cards.length) return;
-
-            const cardWidth = $cards.first().outerWidth(true);
-
-            function updateButtons() {
-                const el = $track.get(0);
-                const maxScroll = el.scrollWidth - el.clientWidth;
-                const current = el.scrollLeft;
-
-                // левая граница
-                if (current <= 1) {
-                    $btnPrev.addClass("is-disabled");
-                } else {
-                    $btnPrev.removeClass("is-disabled");
-                }
-
-                // правая граница
-                if (current >= maxScroll - 1) {
-                    $btnNext.addClass("is-disabled");
-                } else {
-                    $btnNext.removeClass("is-disabled");
-                }
-            }
-
-            // при клике скроллим и потом обновляем состояние кнопок
-            $(".products-nav-btn").on("click", function () {
-                const dir = $(this).data("dir");
-                const delta = dir === "next" ? cardWidth : -cardWidth;
-
-                $track.animate({
-                        scrollLeft: $track.scrollLeft() + delta
-                    },
-                    300,
-                    updateButtons
-                );
-            });
-
-            // обновлять и при ручном скролле/свайпе
-            $track.on("scroll", function () {
-                updateButtons();
-            });
-
-            // первый вызов при загрузке
-            updateButtons();
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const startYear = 2008; // Change this to your actual start year
-            const years = new Date().getFullYear() - startYear;
-            const text =
-                `Я сама прошла через боль и за ${years} лет помогла тысячам женщин войти в их новую реальность, и вы тоже сможете.`;
-
-        });
-    </script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
