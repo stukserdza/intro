@@ -323,15 +323,6 @@
 }
 
 .readings-panel-category {
-    /* display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid rgba(201, 168, 76, 0.22);
-    border-radius: 20px;
-    padding: 2px 10px; */
     font-size: var(--fs-card-text);
     font-family: var(--ff-headings);
     padding: 1em 0.8em 0.1em;
