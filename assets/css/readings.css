@@ -473,7 +473,7 @@
 
 .reading-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: var(--fs-20-text);
+    font-size: var(--fs-1-text);
     color: var(--beige);
     opacity: 0.8;
     line-height: 1.55;
@@ -503,12 +503,8 @@
     margin: 0 0 1rem;
 }
 
-/* .reading-questions--hidden {
-    display: none;
-} */
-
 .reading-questions li {
-    font-size: var(--fs-20-text);
+    font-size: var(--fs-14-text);
     color: var(--beige);
     line-height: 1.7;
     padding-left: 1.2rem;
@@ -520,6 +516,12 @@
     position: absolute;
     left: 0;
     color: var(--gold);
+}
+
+.reading-questions-accent {
+    font-weight: 300;
+    color: var(--gold-light) !important;
+    list-style: none;
 }
 
 /* toggle button */
