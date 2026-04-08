@@ -2857,6 +2857,7 @@
         panels.forEach(setupCarousel);
         render();
         updatePanels();
+
         document.addEventListener('click', function (e) {
             const btn = e.target.closest('.reading-toggle-btn');
             if (!btn) return;
@@ -2865,9 +2866,10 @@
             const list = card.querySelector('.reading-questions');
             if (!list) return;
 
-            const isOpen = btn.classList.toggle('is-open');
+            const isOpen = !btn.classList.contains('is-open');
+            btn.classList.toggle('is-open', isOpen);
             btn.setAttribute('aria-expanded', isOpen);
-            list.classList.toggle('reading-questions--hidden', !isOpen);
+            list.classList.toggle('is-open', isOpen); // was: reading-questions--hidden
         });
     </script>
 

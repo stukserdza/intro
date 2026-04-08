@@ -480,20 +480,31 @@
     margin: 0 0 0.5rem;
 }
 
-/* list hidden by default */
 .reading-questions {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: start;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
 }
 
-.reading-questions--hidden {
-    display: none;
+/* remove the --hidden class entirely — open state is default OFF */
+.reading-questions.is-open {
+    max-height: 1200px;
+    /* large enough for any list */
+    opacity: 1;
+    margin: 0 0 1rem;
 }
+
+/* .reading-questions--hidden {
+    display: none;
+} */
 
 .reading-questions li {
     font-size: var(--fs-20-text);
