@@ -623,19 +623,20 @@
 
 .med-card-title {
     font-size: var(--fs-card-text);
-    margin-bottom: 8px;
     color: var(--beige);
     text-align: center;
     width: 100%;
     max-width: 350px;
     font-weight: 100;
+    padding-top: 0.5em;
 }
 
-.med-card-text {
-    font-size: 0.9rem;
+.med-card .med-card-text {
+    font-size: var(--fs-16-text);
     opacity: 0.94;
-    margin-bottom: 14px;
     flex-grow: 1;
+    text-align: center;
+    padding: 0.5em;
     text-align: center;
 }
 
