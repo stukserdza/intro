@@ -549,10 +549,6 @@
     transform: rotate(180deg);
 }
 
-.reading-toggle-btn {
-    /* turn svg */
-
-}
 
 .reading-footer {
     width: 100%;
@@ -623,6 +619,10 @@
 
     .reading-card-title {
         text-align: center;
+    }
+
+    .reading-footer {
+        flex-direction: column;
     }
 
 }
