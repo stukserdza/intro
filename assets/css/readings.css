@@ -99,7 +99,7 @@
 /* ── SWITCHER SHELL ── */
 .readings-switcher {
     position: relative;
-    width: 170px;
+    width: 250px;
     flex-shrink: 0;
     /* exactly 3 items tall: frame in middle, one item above, one below, plus button room */
     height: calc(var(--item-height) * 3 + 32px);
@@ -226,7 +226,8 @@
     padding: 0 10px;
     will-change: transform, opacity;
     transition: color 0.22s, text-shadow 0.22s, font-size 0.18s;
-    color: #3a2c10;
+    color: #7a6030;
+    /* nearly invisible on dark background */
 }
 
 .readings-roll-item.is-active {
