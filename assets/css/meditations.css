@@ -901,6 +901,30 @@ li.sparkle {
     transform: translateY(0);
 }
 
+.boosty-float-box {
+    position: relative;
+    /* needed so close btn can position against it */
+}
+
+.boosty-float-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--beige);
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 1;
+    padding: 2px 4px;
+    transition: opacity 0.18s;
+}
+
+.boosty-float-close:hover {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .boosty-float {
         right: 12px;
