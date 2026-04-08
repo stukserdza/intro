@@ -2707,12 +2707,19 @@
             rafId = requestAnimationFrame(tick);
         }
 
-        function goTo(idx) {
-            // clamp: don't go below 0 or above last item
-            idx = Math.max(0, Math.min(N - 1, idx));
-            if (idx === current) return; // already there, do nothing
 
-            const delta = idx - current;
+
+        function goTo(idx) {
+            // wrap around: last → first, first → last
+            idx = ((idx % N) + N) % N;
+            if (idx === current) return;
+
+            const delta = (() => {
+                let d = idx - current;
+                if (d > N / 2) d -= N;
+                if (d < -N / 2) d += N;
+                return d;
+            })();
             current = idx;
             startAnim(animTarget - delta * ITEM_H);
             updatePanels();
@@ -2722,33 +2729,46 @@
             const vpH = vp.offsetHeight || (ITEM_H * 3);
             const center = vpH / 2;
 
+            // normalize offsetY to prevent infinite drift
+            // keep it within one full loop worth of pixels
+            const loopHeight = N * ITEM_H;
+            offsetY = ((offsetY % loopHeight) + loopHeight) % loopHeight;
+            if (offsetY > loopHeight / 2) offsetY -= loopHeight;
+            animTarget = offsetY; // keep animTarget in sync
+
             for (let i = 0; i < N; i++) {
-                const naturalY = center + (i * ITEM_H) + offsetY;
-                const top = naturalY - ITEM_H / 2;
-                els[i].style.top = top + 'px';
+                // logical distance from current (shortest path)
+                const rawDist = ((i - current) % N + N) % N;
+                const logicalDist = Math.min(rawDist, N - rawDist);
 
-                const distPx = Math.abs(naturalY - center);
-                const distSlots = distPx / ITEM_H;
-
-                els[i].classList.remove('is-active', 'prev', 'next');
-                if (i === current) {
-                    els[i].classList.add('is-active');
+                // position based on logical distance, not raw offsetY
+                // slot -1 = above center, 0 = center, +1 = below center
+                let slotOffset;
+                if (logicalDist === 0) {
+                    slotOffset = 0;
                 } else {
-                    const slotDelta = i - current;
-                    const wrapped = ((slotDelta % N) + N) % N;
-                    if (wrapped === N - 1 || slotDelta === -1) els[i].classList.add('prev');
-                    else els[i].classList.add('next');
+                    const wrapped = ((i - current) % N + N) % N;
+                    // is it the item above (-1) or below (+1)?
+                    slotOffset = wrapped === N - 1 ? -1 : 1;
+                    if (logicalDist === 2) slotOffset *= 2;
                 }
 
-                const opacity = Math.max(0, 1 - Math.max(0, distSlots - 0.5) * 1.4);
-                els[i].style.opacity = opacity.toFixed(3);
-            }
+                const itemY = center + slotOffset * ITEM_H;
+                els[i].style.top = (itemY - ITEM_H / 2) + 'px';
 
-            // disable arrows at the boundaries
-            const upBtn = document.querySelector('.readings-roll-btn[data-dir="up"]');
-            const downBtn = document.querySelector('.readings-roll-btn[data-dir="down"]');
-            if (upBtn) upBtn.disabled = current === 0;
-            if (downBtn) downBtn.disabled = current === N - 1;
+                const opacity = logicalDist === 0 ? 1 :
+                    logicalDist === 1 ? 0.6 :
+                    logicalDist === 2 ? 0.2 :
+                    0;
+                els[i].style.opacity = opacity;
+
+                els[i].classList.remove('is-active', 'prev', 'next');
+                if (logicalDist === 0) els[i].classList.add('is-active');
+                else if (logicalDist === 1) {
+                    const wrapped = ((i - current) % N + N) % N;
+                    els[i].classList.add(wrapped === N - 1 ? 'prev' : 'next');
+                }
+            }
         }
 
         function updatePanels() {
