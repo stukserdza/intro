@@ -488,6 +488,7 @@
     flex-direction: column;
     width: 100%;
     align-items: start;
+    text-align: left;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
