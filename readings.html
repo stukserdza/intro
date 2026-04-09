@@ -123,7 +123,7 @@
         <section class="readings-switcher-section" id="readings-switcher-section">
             <div class="readings-switcher" id="readingsSwitcher">
                 <div class="highlight-band"></div>
-                <div class="cylinder-viewport" id="cylinderViewport"></div>
+                <div class="cylinder-viewport" id="cylinder-viewport"></div>
                 <div class="fade-mask"></div>
                 <button class="readings-roll-btn" type="button" data-dir="up">
                     <img src="assets/images/icons/arrow.svg" alt="Arrow up icon">
@@ -135,7 +135,7 @@
         </section>
         <section class="readings-all-section">
             <div class="readings-all-section-wrap">
-                <div class="readings-panels" id="readingsPanels">
+                <div class="readings-panels" id="readings-panels">
                     <!-- panels injected by JS from readings.json -->
                 </div>
             </div>
@@ -341,8 +341,8 @@
         let current = START_INDEX;
         let offsetY = 0;
         let animTarget = 0;
-        const vp = document.getElementById('cylinderViewport');
-        const panelsWrap = document.getElementById('readingsPanels');
+        const vp = document.getElementById('cylinder-viewport');
+        const panelsWrap = document.getElementById('readings-panels');
         let els = [];
         let panels = [];
         const ANIM_MS = 280;
