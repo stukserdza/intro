@@ -566,12 +566,6 @@
     text-align: center;
 }
 
-
-
-
-
-
-
 @media (max-width: 900px) {
     .readings-panel-subtitle {
         font-size: var(--fs-14-text);
@@ -585,17 +579,7 @@
     .reading-questions li {
         font-size: var(--fs-14-text);
     }
-
 }
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 800px) {
     .reading-hero-grid {
