@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
- document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     const FAQ_JSON_PATH = "assets/data/faq.json";
 
     const startYear = 2008;
@@ -57,39 +57,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const faqList = document.getElementById("faq-list");
     if (!faqList) return;
 
-    try {
-        const res = await fetch(FAQ_JSON_PATH);
+    fetch(FAQ_JSON_PATH)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Failed to load FAQ: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            // Replace {{years}}
+            const processedData = data.map(item => ({
+                ...item,
+                answer: item.answer.replace(/{{years}}/g, years)
+            }));
 
-        if (!res.ok) {
-            throw new Error(`Failed to load FAQ: ${res.status}`);
-        }
-
-        let data = await res.json();
-
-        // Replace {{years}} placeholder
-        data = data.map(item => ({
-            ...item,
-            answer: item.answer.replace(/{{years}}/g, years)
-        }));
-
-        // Render FAQ
-        faqList.innerHTML = data.map(item => `
-            <article class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>${item.question}</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>${item.answer}</p>
-                </div>
-            </article>
-        `).join("");
-
-    } catch (err) {
-        console.error(err);
-        faqList.innerHTML = `<p class="faq-error">Не удалось загрузить FAQ</p>`;
-        return;
-    }
+            // Render
+            faqList.innerHTML = processedData.map(item => `
+                <article class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>${item.question}</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>${item.answer}</p>
+                    </div>
+                </article>
+            `).join("");
+        })
+        .catch((err) => {
+            console.error(err);
+            faqList.innerHTML = `<p class="faq-error">Не удалось загрузить FAQ</p>`;
+        });
 
     // Accordion (event delegation)
     faqList.addEventListener("click", function (e) {
