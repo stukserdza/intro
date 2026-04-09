@@ -650,111 +650,11 @@
                     </a>
                 </div>
                 <div class="line"></div>
-
                 <p class="footer-copy">© 2025 Стук сердца by Suria</p>
             </div>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        // Простая навигация по карусели продуктов
-        $(document).ready(function () {
-            $('.testimonials-carousel').each(function () {
-                const $carousel = $(this);
-                const $track = $carousel.find('.testimonials-track');
-                const $cards = $carousel.find('.testimonial-card');
-                const $btnPrev = $carousel.find(
-                    ".testimonials-nav-btn[data-dir='prev']");
-                const $btnNext = $carousel.find(
-                    ".testimonials-nav-btn[data-dir='next']");
-
-                if (!$track.length || !$cards.length) return;
-
-                const cardWidth = $cards.first().outerWidth(true);
-
-                function updateButtons() {
-                    const el = $track.get(0);
-                    const maxScroll = el.scrollWidth - el.clientWidth;
-                    const current = el.scrollLeft;
-
-                    if (current <= 1) {
-                        $btnPrev.addClass("is-disabled");
-                    } else {
-                        $btnPrev.removeClass("is-disabled");
-                    }
-
-                    if (current >= maxScroll - 1) {
-                        $btnNext.addClass("is-disabled");
-                    } else {
-                        $btnNext.removeClass("is-disabled");
-                    }
-                }
-
-                $carousel.find(".testimonials-nav-btn").on("click",
-                    function () {
-                        console.log("Button clicked");
-                        const dir = $(this).data("dir");
-                        const delta = dir === "next" ? cardWidth : -
-                            cardWidth;
-
-                        $track.animate({
-                                scrollLeft: $track.scrollLeft() +
-                                    delta
-                            },
-                            300,
-                            updateButtons
-                        );
-                    });
-
-                $track.on("scroll", updateButtons);
-                updateButtons();
-            });
-        });
-
-        $(document).ready(function () {
-            $(".faq-question").on("click", function () {
-                const $item = $(this).closest(".faq-item");
-                const $answer = $item.find(".faq-answer");
-                const $icon = $(this).find(".faq-icon");
-
-                if ($item.hasClass("is-open")) {
-                    $item.removeClass("is-open");
-                    $(this).attr("aria-expanded", "false");
-                    $icon.text("+");
-                    $answer.css("max-height", "0");
-                } else {
-                    $(".faq-item.is-open").each(function () {
-                        $(this).removeClass("is-open");
-                        $(this).find(".faq-question").attr(
-                            "aria-expanded", "false");
-                        $(this).find(".faq-icon").text("+");
-                        $(this).find(".faq-answer").css(
-                            "max-height", "0");
-                    });
-
-                    $item.addClass("is-open");
-                    $(this).attr("aria-expanded", "true");
-                    $icon.text("–");
-                    $answer.css("max-height", $answer[0].scrollHeight +
-                        "px");
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const startYear = 2008;
-            const currentYear = new Date().getFullYear();
-            const years = currentYear - startYear;
-
-            const yearsElement = document.getElementById('years-since-tracker');
-
-            if (yearsElement) {
-                yearsElement.textContent = years;
-            }
-        });
-    </script>
-
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
