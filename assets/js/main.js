@@ -1,53 +1,89 @@
-// Простая навигация по карусели продуктов
+/**
+ * LOADING DOMContentLoaded
+ */
 document.addEventListener("DOMContentLoaded", function () {
+    const REVIEWS_JSON_PATH = "assets/data/reviews.json";
+
     document.querySelectorAll(".testimonials-carousel").forEach((carousel) => {
         const track = carousel.querySelector(".testimonials-track");
-        const cards = carousel.querySelectorAll(".testimonial-card");
         const btnPrev = carousel.querySelector(".testimonials-nav-btn[data-dir='prev']");
         const btnNext = carousel.querySelector(".testimonials-nav-btn[data-dir='next']");
 
-        if (!track || !cards.length) return;
+        if (!track) return;
 
-        const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(cards[0]).marginRight);
-
-        function updateButtons() {
-            const maxScroll = track.scrollWidth - track.clientWidth;
-            const current = track.scrollLeft;
-
-            if (current <= 1) {
-                btnPrev?.classList.add("is-disabled");
-            } else {
-                btnPrev?.classList.remove("is-disabled");
+        // Fisher–Yates shuffle
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
             }
-
-            if (current >= maxScroll - 1) {
-                btnNext?.classList.add("is-disabled");
-            } else {
-                btnNext?.classList.remove("is-disabled");
-            }
+            return array;
         }
 
-        carousel.querySelectorAll(".testimonials-nav-btn").forEach((btn) => {
-            btn.addEventListener("click", function () {
-                console.log("Button clicked");
-                const dir = this.dataset.dir;
-                const delta = dir === "next" ? cardWidth : -cardWidth;
+        fetch(REVIEWS_JSON_PATH)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`Failed to load reviews: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                const randomized = shuffle([...data]);
 
-                track.scrollTo({
-                    left: track.scrollLeft + delta,
-                    behavior: "smooth"
+                // Render reviews
+                track.innerHTML = randomized.map(item => `
+                    <article class="testimonial-card">
+                        <div class="testimonial-author">${item.author}</div>
+                        <p class="testimonial-text">${item.text}</p>
+                    </article>
+                `).join("");
+
+                const cards = track.querySelectorAll(".testimonial-card");
+                if (!cards.length) return;
+
+                const cardWidth = cards[0].offsetWidth +
+                    parseFloat(getComputedStyle(cards[0]).marginRight);
+
+                function updateButtons() {
+                    const maxScroll = track.scrollWidth - track.clientWidth;
+                    const current = track.scrollLeft;
+
+                    if (current <= 1) {
+                        btnPrev?.classList.add("is-disabled");
+                    } else {
+                        btnPrev?.classList.remove("is-disabled");
+                    }
+
+                    if (current >= maxScroll - 1) {
+                        btnNext?.classList.add("is-disabled");
+                    } else {
+                        btnNext?.classList.remove("is-disabled");
+                    }
+                }
+
+                carousel.querySelectorAll(".testimonials-nav-btn").forEach((btn) => {
+                    btn.addEventListener("click", function () {
+                        const dir = this.dataset.dir;
+                        const delta = dir === "next" ? cardWidth : -cardWidth;
+
+                        track.scrollTo({
+                            left: track.scrollLeft + delta,
+                            behavior: "smooth"
+                        });
+
+                        setTimeout(updateButtons, 300);
+                    });
                 });
 
-                setTimeout(updateButtons, 300); // mimic jQuery animate callback
+                track.addEventListener("scroll", updateButtons);
+                updateButtons();
+            })
+            .catch((err) => {
+                console.error(err);
+                track.innerHTML = `<p class="testimonial-error">Не удалось загрузить отзывы</p>`;
             });
-        });
-
-        track.addEventListener("scroll", updateButtons);
-        updateButtons();
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const FAQ_JSON_PATH = "assets/data/faq.json";
 
     const startYear = 2008;
