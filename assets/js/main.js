@@ -2,87 +2,76 @@
  * LOADING DOMContentLoaded
  */
 document.addEventListener("DOMContentLoaded", function () {
-    const REVIEWS_JSON_PATH = "assets/data/reviews.json";
+        const REVIEWS_JSON_PATH = "assets/data/reviews.json";
 
-    document.querySelectorAll(".testimonials-carousel").forEach((carousel) => {
-        const track = carousel.querySelector(".testimonials-track");
-        const btnPrev = carousel.querySelector(".testimonials-nav-btn[data-dir='prev']");
-        const btnNext = carousel.querySelector(".testimonials-nav-btn[data-dir='next']");
+    const carousel = document.querySelector(".testimonials-carousel");
+    if (!carousel) return;
 
-        if (!track) return;
+    const track = carousel.querySelector("#testimonials-track");
+    const btnPrev = carousel.querySelector("[data-dir='prev']");
+    const btnNext = carousel.querySelector("[data-dir='next']");
 
-        // Fisher–Yates shuffle
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
+    if (!track) return;
+
+    // Fisher–Yates shuffle
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
+        return array;
+    }
 
-        fetch(REVIEWS_JSON_PATH)
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error(`Failed to load reviews: ${res.status}`);
-                }
-                return res.json();
-            })
-            .then((data) => {
-                const randomized = shuffle([...data]);
+    fetch(REVIEWS_JSON_PATH)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Failed to load reviews: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            const randomized = shuffle([...data]);
 
-                // Render reviews
-                track.innerHTML = randomized.map(item => `
-                    <article class="testimonial-card">
-                        <div class="testimonial-author">${item.author}</div>
-                        <p class="testimonial-text">${item.text}</p>
-                    </article>
-                `).join("");
+            // Render
+            track.innerHTML = randomized.map(item => `
+                <article class="testimonial-card">
+                    <div class="testimonial-author">${item.author}</div>
+                    <p class="testimonial-text">${item.text}</p>
+                </article>
+            `).join("");
 
-                const cards = track.querySelectorAll(".testimonial-card");
-                if (!cards.length) return;
+            const cards = track.querySelectorAll(".testimonial-card");
+            if (!cards.length) return;
 
-                const cardWidth = cards[0].offsetWidth +
-                    parseFloat(getComputedStyle(cards[0]).marginRight);
+            const cardWidth =
+                cards[0].offsetWidth +
+                parseFloat(getComputedStyle(cards[0]).marginRight);
 
-                function updateButtons() {
-                    const maxScroll = track.scrollWidth - track.clientWidth;
-                    const current = track.scrollLeft;
+            function updateButtons() {
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                const current = track.scrollLeft;
 
-                    if (current <= 1) {
-                        btnPrev?.classList.add("is-disabled");
-                    } else {
-                        btnPrev?.classList.remove("is-disabled");
-                    }
+                btnPrev?.classList.toggle("is-disabled", current <= 1);
+                btnNext?.classList.toggle("is-disabled", current >= maxScroll - 1);
+            }
 
-                    if (current >= maxScroll - 1) {
-                        btnNext?.classList.add("is-disabled");
-                    } else {
-                        btnNext?.classList.remove("is-disabled");
-                    }
-                }
-
-                carousel.querySelectorAll(".testimonials-nav-btn").forEach((btn) => {
-                    btn.addEventListener("click", function () {
-                        const dir = this.dataset.dir;
-                        const delta = dir === "next" ? cardWidth : -cardWidth;
-
-                        track.scrollTo({
-                            left: track.scrollLeft + delta,
-                            behavior: "smooth"
-                        });
-
-                        setTimeout(updateButtons, 300);
-                    });
-                });
-
-                track.addEventListener("scroll", updateButtons);
-                updateButtons();
-            })
-            .catch((err) => {
-                console.error(err);
-                track.innerHTML = `<p class="testimonial-error">Не удалось загрузить отзывы</p>`;
+            btnPrev?.addEventListener("click", () => {
+                track.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                setTimeout(updateButtons, 300);
             });
-    });
+
+            btnNext?.addEventListener("click", () => {
+                track.scrollBy({ left: cardWidth, behavior: "smooth" });
+                setTimeout(updateButtons, 300);
+            });
+
+            track.addEventListener("scroll", updateButtons);
+            updateButtons();
+        })
+        .catch((err) => {
+            console.error(err);
+            track.innerHTML = `<p class="testimonial-error">Не удалось загрузить отзывы</p>`;
+        });
 
     const FAQ_JSON_PATH = "assets/data/faq.json";
 
