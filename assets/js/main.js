@@ -47,49 +47,80 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+ document.addEventListener("DOMContentLoaded", async function () {
+    const FAQ_JSON_PATH = "assets/data/faq.json";
 
-// FAQ
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".faq-question").forEach((question) => {
-        question.addEventListener("click", function () {
-            const item = this.closest(".faq-item");
-            const answer = item.querySelector(".faq-answer");
-            const icon = this.querySelector(".faq-icon");
-
-            if (item.classList.contains("is-open")) {
-                item.classList.remove("is-open");
-                this.setAttribute("aria-expanded", "false");
-                if (icon) icon.textContent = "+";
-                answer.style.maxHeight = "0";
-            } else {
-                document.querySelectorAll(".faq-item.is-open").forEach((openItem) => {
-                    openItem.classList.remove("is-open");
-                    openItem.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
-                    const openIcon = openItem.querySelector(".faq-icon");
-                    if (openIcon) openIcon.textContent = "+";
-                    const openAnswer = openItem.querySelector(".faq-answer");
-                    if (openAnswer) openAnswer.style.maxHeight = "0";
-                });
-
-                item.classList.add("is-open");
-                this.setAttribute("aria-expanded", "true");
-                if (icon) icon.textContent = "–";
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
-        });
-    });
-});
-
-
-// year control in FAQ
-document.addEventListener("DOMContentLoaded", function () {
     const startYear = 2008;
     const currentYear = new Date().getFullYear();
     const years = currentYear - startYear;
 
-    const yearsElement = document.getElementById("years-since-tracker");
+    const faqList = document.getElementById("faq-list");
+    if (!faqList) return;
 
-    if (yearsElement) {
-        yearsElement.textContent = years;
+    try {
+        const res = await fetch(FAQ_JSON_PATH);
+
+        if (!res.ok) {
+            throw new Error(`Failed to load FAQ: ${res.status}`);
+        }
+
+        let data = await res.json();
+
+        // Replace {{years}} placeholder
+        data = data.map(item => ({
+            ...item,
+            answer: item.answer.replace(/{{years}}/g, years)
+        }));
+
+        // Render FAQ
+        faqList.innerHTML = data.map(item => `
+            <article class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>${item.question}</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>${item.answer}</p>
+                </div>
+            </article>
+        `).join("");
+
+    } catch (err) {
+        console.error(err);
+        faqList.innerHTML = `<p class="faq-error">Не удалось загрузить FAQ</p>`;
+        return;
     }
+
+    // Accordion (event delegation)
+    faqList.addEventListener("click", function (e) {
+        const question = e.target.closest(".faq-question");
+        if (!question) return;
+
+        const item = question.closest(".faq-item");
+        const answer = item.querySelector(".faq-answer");
+        const icon = question.querySelector(".faq-icon");
+
+        const isOpen = item.classList.contains("is-open");
+
+        // Close all
+        faqList.querySelectorAll(".faq-item.is-open").forEach(openItem => {
+            openItem.classList.remove("is-open");
+
+            const q = openItem.querySelector(".faq-question");
+            const a = openItem.querySelector(".faq-answer");
+            const i = openItem.querySelector(".faq-icon");
+
+            q?.setAttribute("aria-expanded", "false");
+            if (i) i.textContent = "+";
+            if (a) a.style.maxHeight = "0";
+        });
+
+        // Open clicked
+        if (!isOpen) {
+            item.classList.add("is-open");
+            question.setAttribute("aria-expanded", "true");
+            if (icon) icon.textContent = "–";
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
 });
