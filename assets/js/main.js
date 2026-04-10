@@ -56,40 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       function scrollTo(index) {
-        const cardWidth = getCardWidth();
-
-        // Going forward from last → go to first
-        if (index >= cards.length) {
-          // jump instantly without animation
-          track.style.scrollBehavior = "auto";
-          track.scrollLeft = 0;
-
-          // force reflow (important!)
-          track.offsetHeight;
-
-          // restore smooth
-          track.style.scrollBehavior = "smooth";
-
-          currentIndex = 0;
-          return;
-        }
-
-        // Going backward from first → go to last
-        if (index < 0) {
-          track.style.scrollBehavior = "auto";
-          currentIndex = cards.length - 1;
-          track.scrollLeft = currentIndex * cardWidth;
-
-          track.offsetHeight;
-
-          track.style.scrollBehavior = "smooth";
-          return;
-        }
-
-        // Normal movement
-        currentIndex = index;
+        // wrap around
+        currentIndex = ((index % cards.length) + cards.length) % cards.length;
         track.scrollTo({
-          left: currentIndex * cardWidth,
+          left: currentIndex * getCardWidth(),
           behavior: "smooth",
         });
       }
@@ -101,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(err);
       track.innerHTML = `<p class="testimonial-error">Не удалось загрузить отзывы</p>`;
     });
+
+  // ================= FAQ =================
 
   const FAQ_JSON_PATH = "assets/data/faq.json";
 
@@ -119,26 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
       return res.json();
     })
     .then((data) => {
-      // Replace {{years}}
       const processedData = data.map((item) => ({
         ...item,
         answer: item.answer.replace(/{{years}}/g, years),
       }));
 
-      // Render
       faqList.innerHTML = processedData
         .map(
           (item) => `
-                <article class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>${item.question}</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>${item.answer}</p>
-                    </div>
-                </article>
-            `,
+          <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                  <span>${item.question}</span>
+                  <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                  <p>${item.answer}</p>
+              </div>
+          </article>
+        `,
         )
         .join("");
     })
@@ -147,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
       faqList.innerHTML = `<p class="faq-error">Не удалось загрузить FAQ</p>`;
     });
 
-  // Accordion (event delegation)
+  // Accordion
   faqList.addEventListener("click", function (e) {
     const question = e.target.closest(".faq-question");
     if (!question) return;
