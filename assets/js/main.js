@@ -54,18 +54,49 @@ document.addEventListener("DOMContentLoaded", function () {
           parseFloat(getComputedStyle(cards[0]).marginRight || 0)
         );
       }
+      function getVisibleCount() {
+        const carouselWidth = carousel.offsetWidth;
+        const cardWidth = getCardWidth();
+        return Math.round(carouselWidth / cardWidth);
+      }
 
+      //   function scrollTo(index) {
+      //     console.log(index);
+      //     // wrap around
+      //     currentIndex = ((index % cards.length) + cards.length) % cards.length;
+      //     console.log(currentIndex);
+      //     track.scrollTo({
+      //       left: currentIndex * getCardWidth(),
+      //       behavior: "smooth",
+      //     });
+      //   }
       function scrollTo(index) {
-        // wrap around
-        currentIndex = ((index % cards.length) + cards.length) % cards.length;
+        const visible = getVisibleCount();
+
+        const maxIndex = cards.length - visible;
+
+        if (index < 0) {
+          currentIndex = maxIndex;
+        } else if (index > maxIndex) {
+          currentIndex = 0;
+        } else {
+          currentIndex = index;
+        }
+
         track.scrollTo({
           left: currentIndex * getCardWidth(),
           behavior: "smooth",
         });
       }
+      //   btnPrev?.addEventListener("click", () => scrollTo(currentIndex - 1));
+      //   btnNext?.addEventListener("click", () => scrollTo(currentIndex + 1));
+      btnPrev?.addEventListener("click", () => {
+        scrollTo(currentIndex - getVisibleCount());
+      });
 
-      btnPrev?.addEventListener("click", () => scrollTo(currentIndex - 1));
-      btnNext?.addEventListener("click", () => scrollTo(currentIndex + 1));
+      btnNext?.addEventListener("click", () => {
+        scrollTo(currentIndex + getVisibleCount());
+      });
     })
     .catch((err) => {
       console.error(err);
