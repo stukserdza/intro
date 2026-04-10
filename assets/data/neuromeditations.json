@@ -1061,6 +1061,65 @@
       "releaseDate": "2026-04-10",
       "isNew": false
     }
+  ],
+  "packs": [{
+      "id": "recharge",
+      "type": "pack",
+      "title": "ПЕРЕЗАГРУЗКА",
+      "price": 7000,
+      "image": "assets/images/meditations-images/meditation-pack-recharge.png",
+      "shortDescription": "Почисти, восстанови, защити.",
+      "fullDescription": "Трёхэтапный курс: сначала убираем чужое и накопленное, потом собираем себя обратно, потом строим защиту чтобы не налипало снова. Три медитации — три слоя работы с энергетикой.",
+      "meditations": [
+        "free-head-and-body",
+        "energy-balance",
+        "protection-of-kin"
+      ],
+      "timeline": [{
+          "dayRange": "1-6",
+          "meditationId": "free-head-and-body"
+        },
+        {
+          "dayRange": "7-13",
+          "meditationId": "energy-balance"
+        },
+        {
+          "dayRange": "14+",
+          "meditationId": "protection-of-kin"
+        }
+      ],
+      "page": "meditations/packs-recharge.html",
+      "isNew": false
+    },
+    {
+      "id": "star",
+      "type": "pack",
+      "title": "ЗВЕЗДА",
+      "price": 7000,
+      "image": "assets/images/meditations-images/meditation-pack-star.jpg",
+      "shortDescription": "От страха осуждения к своему месту в мире.",
+      "fullDescription": "Три медитации которые убирают страх чужого мнения, останавливают внутреннюю войну с собой и ставят вас на своё место в мире — чтобы нужные люди и возможности начали находить вас сами.",
+      "meditations": [
+        "freedom-from-sb-opinion",
+        "let-yourself-be",
+        "attract-mine"
+      ],
+      "timeline": [{
+          "dayRange": "1-6",
+          "meditationId": "freedom-from-sb-opinion"
+        },
+        {
+          "dayRange": "7-13",
+          "meditationId": "let-yourself-be"
+        },
+        {
+          "dayRange": "14+",
+          "meditationId": "attract-mine"
+        }
+      ],
+      "page": "meditations/packs-star.html",
+      "isNew": true
+    }
   ]
 
 
