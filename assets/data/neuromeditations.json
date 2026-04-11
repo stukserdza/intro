@@ -1,11 +1,11 @@
 {
   "common": "Это не медитации с ютуба под расслабляющую музыку. Каждая аудиопрограмма специально создана под конкретный запрос: отпустить человека, убрать тревогу, разблокировать деньги, вернуть энергию, открыться любви. Точечная работа с подсознанием там, где голова бессильна. Слушаете, и меняйте свою жизнь",
 
-  "meditations": [
+  "neuromeditations": [
     {
       "id": 1,
       "slug": "free-head-and-body",
-      "title": "Освободи голову и тело",
+      "title": "Освободи <br> голову и тело",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "9:23",
@@ -52,7 +52,7 @@
     {
       "id": 2,
       "slug": "energy-balance",
-      "title": "Баланс энергий",
+      "title": "Баланс <br> энергий",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "9:27",
@@ -98,7 +98,7 @@
     {
       "id": 3,
       "slug": "protection-of-kin",
-      "title": "Защита рода",
+      "title": "Защита <br> рода",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "12:05",
@@ -144,7 +144,7 @@
     {
       "id": 4,
       "slug": "wish-fulfillment",
-      "title": "Исполнение желания",
+      "title": "Исполнение<br>  желания",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "12:00",
@@ -191,7 +191,7 @@
     {
       "id": 5,
       "slug": "femininity-awakening",
-      "title": "Пробуждение женственности",
+      "title": "Пробуждение <br> женственности",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "8:00",
@@ -238,7 +238,7 @@
     {
       "id": 6,
       "slug": "money-meditation",
-      "title": "Медитация на деньги",
+      "title": "Медитация <br> на деньги",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "6:06",
@@ -284,7 +284,7 @@
     {
       "id": 7,
       "slug": "body-meditation",
-      "title": "Медитация на тело",
+      "title": "Медитация <br> на тело",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "11:29",
@@ -331,7 +331,7 @@
     {
       "id": 8,
       "slug": "release-past-pain",
-      "title": "Отпустить боль прошлого",
+      "title": "Отпустить<br>  боль прошлого",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "13:59",
@@ -378,7 +378,7 @@
     {
       "id": 9,
       "slug": "inner-harmony",
-      "title": "Гармония внутри себя",
+      "title": "Гармония<br>  внутри себя",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "14:14",
@@ -425,7 +425,7 @@
     {
       "id": 11,
       "slug": "break-karmic-bond",
-      "title": "Разрыв кармической связи",
+      "title": "Разрыв <br> кармической связи",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "17:10",
@@ -472,7 +472,7 @@
     {
       "id": 12,
       "slug": "release-anxiety",
-      "title": "Отпустить тревожность и навязчивые мысли",
+      "title": "Отпустить тревожность<br>  и навязчивые мысли",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "12:35",
@@ -519,7 +519,7 @@
     {
       "id": 13,
       "slug": "release-control",
-      "title": "Отпускаю контроль",
+      "title": "Отпускаю<br>  контроль",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "13:28",
@@ -566,7 +566,7 @@
     {
       "id": 14,
       "slug": "inner-support",
-      "title": "Опора внутри меня",
+      "title": "Опора <br> внутри меня",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "13:02",
@@ -613,7 +613,7 @@
     {
       "id": 15,
       "slug": "love-magnet",
-      "title": "Магнит твоей любви",
+      "title": "Магнит <br> твоей любви",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "13:43",
@@ -663,7 +663,7 @@
     {
       "id": 16,
       "slug": "morning-energy",
-      "title": "Утро с энергией",
+      "title": "Утро <br> с энергией",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "5:39",
@@ -710,7 +710,7 @@
     {
       "id": 17,
       "slug": "clean-space",
-      "title": "Чистое пространство",
+      "title": "Чистое <br> пространство",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "14:52",
@@ -752,7 +752,7 @@
     {
       "id": 18,
       "slug": "sync-between-you",
-      "title": "Синхронизация между вами",
+      "title": "Синхронизация <br> между вами",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "14:35",
@@ -793,7 +793,7 @@
     {
       "id": 19,
       "slug": "fall-in-love-again",
-      "title": "Заново влюбиться",
+      "title": "Заново <br> влюбиться",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "13:06",
@@ -835,7 +835,7 @@
     {
       "id": 20,
       "slug": "sexuality-awakening",
-      "title": "Пробуждение сексуальности",
+      "title": "Пробуждение<br>  сексуальности",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "5881",
       "duration": "11:30",
@@ -876,7 +876,7 @@
     {
       "id": 21,
       "slug": "freedom-from-sb-opinion",
-      "title": "Свобода от чужого мнения",
+      "title": "Свобода <br> от чужого мнения",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "10:45",
@@ -923,14 +923,14 @@
     {
       "id": 22,
       "slug": "let-yourself-be",
-      "title": "Разреши себе быть",
+      "title": "Разреши<br>  себе быть",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "9:24",
       "boostyLink": "https://boosty.to/stukserdza/posts/1ce36427-7623-4be6-b4ea-f5b782071373",
       "type": "single",
       "price": 3000,
-      "image": "assets/images/meditations-images/let-yourself-be.jpg",
+      "image": "assets/images/meditations-images/let-yourself-be.png",
       "shortDescriptionCommon": "Внутренняя война с собой, самокритика, сопротивление, которое растёт, чем больше на себя давите. Эта нейронастройка останавливает самосаботаж на уровне подсознания и убирает конфликт между «хочу» и «не могу». После прослушивания вы перестаёте воевать с собой и начинаете двигаться легко и без усилий.",
       "shortDescriptionHero": "Внутренняя война с собой, самокритика, сопротивление которое растёт чем больше на себя давите. Эта нейронастройка останавливает самосаботаж на уровне подсознания и убирает конфликт между «хочу» и «не могу». После прослушивания вы перестаёте воевать с собой и начинаете двигаться, легко и без усилий над собой.",
       "problemSectionTitle": "Разреши себе быть",
@@ -970,7 +970,7 @@
     {
       "id": 23,
       "slug": "attract-mine",
-      "title": "Притягиваю своё",
+      "title": "Притягиваю<br>  своё",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "12:32",
@@ -1017,7 +1017,7 @@
     {
       "id": 24,
       "slug": "intuition-awakening",
-      "title": "Раскрытие интуиции",
+      "title": "Раскрытие<br> интуиции",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
       "duration": "16:08",
