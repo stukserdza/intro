@@ -276,8 +276,9 @@ section.main__page {
   border-radius: 999px;
   border: none;
   cursor: pointer;
+  font-family: var(--ff-body);
   font-size: var(--fs-btn-text);
-  font-weight: 800;
+  font-weight: 800 !important;
   background: linear-gradient(
     90deg,
     rgba(253, 232, 133, 1) 0%,
