@@ -1031,50 +1031,7 @@ textarea {
   padding: 2em 0;
 }
 
-/* 404 */
-.section__404 {
-  max-width: 500px;
-  width: 100%;
-  color: var(--beige);
-  padding: 3em 2em;
-  text-align: center;
-}
 
-.med-404-subtitle {
-  font-size: var(--fs-20-text);
-  opacity: 1;
-}
-
-.med-404-text {
-  opacity: 0.8;
-  padding: 2em 0;
-}
-
-.med-404-actions {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 2em 0;
-}
-
-.med-404-countdown {
-  font-size: 14px;
-  opacity: 0.9;
-  color: var(--gold-light);
-}
-
-/* Glow effect */
-.med-404-glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(40px);
-}
 
 /* footer */
 
