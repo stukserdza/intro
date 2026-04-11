@@ -153,6 +153,51 @@
             align-items: center;
         }
 
+        /* btn-primary */
+        .btn-primary,
+        .product-link {
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 35px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-family: var(--ff-body);
+            font-size: var(--fs-btn-text);
+            font-weight: 800 !important;
+            background: linear-gradient(90deg,
+                    rgba(253, 232, 133, 1) 0%,
+                    rgba(255, 201, 9, 1) 100%);
+            color: #2b1a00;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+            transition:
+                transform 0.15s ease-out,
+                box-shadow 0.15s ease-out,
+                filter 0.15s ease-out;
+        }
+
+        .product-link {
+            margin-top: 1.5em;
+        }
+
+        .btn-primary:hover,
+        .product-link:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+            color: #330606;
+            background: linear-gradient(90deg, #c8a012 100%, #c2b36e 100%);
+        }
+
+        .btn-primary:active,
+        .product-link:active {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transform: translateY(1px);
+        }
+
+
         .section-title {
             font-weight: 400;
             font-size: var(--fs-section-title);
@@ -254,7 +299,7 @@
 
             if (seconds <= 0) {
                 clearInterval(timer);
-                window.location.href = "/";
+                window.location.href = "https://stukserdza.github.io/intro/";
             }
         }, 1000);
     </script>
