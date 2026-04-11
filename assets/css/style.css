@@ -386,6 +386,8 @@ section.about-section {
 }
 
 .quote-box {
+  font-size: var(--fs-20-text);
+  color: var(--beige);
   margin-top: 2em;
   opacity: 1;
 }
@@ -1332,6 +1334,10 @@ textarea {
   .hero__subtitle {
     margin: 0 0 22px;
     font-size: var(--fx-20-to-14-mobile);
+  }
+
+  .about-text {
+    padding: 0;
   }
 
   .services-grid {
