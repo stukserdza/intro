@@ -1,30 +1,29 @@
+/**
+ * check release date
+ */
+function isNew(releaseDate) {
+  if (!releaseDate) return false;
+  const now = new Date();
+  const release = new Date(releaseDate);
+  const diffMs = now - release;
+  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  return diffDays <= 30;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const MEDITATIONS_JSON = "assets/data/neuromeditations.json";
-
   fetch(MEDITATIONS_JSON)
     .then((res) => {
       if (!res.ok) throw new Error(`Failed to load meditations: ${res.status}`);
       return res.json();
     })
     .then((data) => {
-      /**
-       * check release date
-       */
-      function isNew(releaseDate) {
-        if (!releaseDate) return false;
-
-        const now = new Date();
-        const release = new Date(releaseDate);
-
-        const diffMs = now - release;
-        const diffDays = diffMs / (1000 * 60 * 60 * 24);
-
-        return diffDays <= 30;
-      }
+      // ────── get data conts, filter and reverse ─────────────────────────
       const packs = [...data.packs].filter((pack) => pack.price > 0).reverse();
       const neuromeditations = [...data.neuromeditations]
         .filter((neuromeditations) => neuromeditations.price > 0)
         .reverse();
+      // ────── update neuromeditations section ────────────────────────────
       const medCardsContainer = document.getElementById("med-cards-container");
       medCardsContainer.innerHTML = neuromeditations
         .map((neuromeditation) => {
@@ -32,34 +31,34 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
             : "";
           return `
-                <article class="med-card">
-                    <figure class="med-card-figure">
-                        ${newLabel}
-                        <img 
-                            src="${neuromeditation.image}"
-                            alt="${neuromeditation.title}" 
-                            class="med-card-image"
-                            loading="lazy"
-                        >
-                    </figure>
-                            <h3 class="med-card-title">${neuromeditation.title}</h3>
-                            <p class="med-card-text">
-                                ${neuromeditation.shortDescriptionCommon}
-                            </p>
-                            <div class="med-card-action">
-                                <p class="med-card-price"
-                                    ${neuromeditation.price.toLocaleString("ru-RU")} ₽
-                                </p>
-                                <a href="${neuromeditation.page}" class="btn-primary"
-                                    aria-label="Подробнее о ${neuromeditation.title}">
-                                    Подробнее
-                                </a>
-                            </div>
-                        </article>
-                `;
+<article class="med-card">
+    <figure class="med-card-figure">
+        ${newLabel}
+        <img 
+            src="${neuromeditation.image}"
+            alt="${neuromeditation.title}" 
+            class="med-card-image"
+            loading="lazy"
+        >
+    </figure>
+    <h3 class="med-card-title">${neuromeditation.title}</h3>
+    <p class="med-card-text">
+        ${neuromeditation.shortDescriptionCommon}
+    </p>
+    <div class="med-card-action">
+        <p class="med-card-price"
+            ${neuromeditation.price.toLocaleString("ru-RU")} ₽
+        </p>
+        <a href="${neuromeditation.page}" class="btn-primary"
+            aria-label="Подробнее о ${neuromeditation.title}">
+            Подробнее
+        </a>
+    </div>
+</article>
+`;
         })
         .join("");
-
+      // update packs section   ─────────────────────────────────────
       document.querySelectorAll(".med-packs-carousel").forEach((carousel) => {
         const track = carousel.querySelector(".med-packs-track");
         const btnPrev = carousel.querySelector(
