@@ -1,1061 +1,1049 @@
 :root {
-    /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
-    /* --deep-red: #380606; */
-    /* --deep-red: #440000; */
-    --beige: #EDDED2;
-    --gold-light: #FDE885;
-    --gold-bright: #FFC909;
-    --deep-red: #210202;
-    --deepest-red: #110205;
-    --black: #000000;
-    --white: #FFFFFF;
-    --extra-background: #0000006a;
+  /* Цвета: #380606, #FFC909, #000000, #FFFFFF */
+  /* --deep-red: #380606; */
+  /* --deep-red: #440000; */
+  --beige: #edded2;
+  --gold-light: #fde885;
+  --gold-bright: #ffc909;
+  --deep-red: #210202;
+  --deepest-red: #110205;
+  --black: #000000;
+  --white: #ffffff;
+  --extra-background: #0000006a;
 
-    --ff-headings: 'Lora', Georgia, serif;
-    --ff-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --faq-line: rgba(240, 220, 210, 0.85);
-    --faq-text: #e7d1c8;
-    --faq-accent: #f2e2d7;
-    --fs-section-title: clamp(2rem, 1.4rem + 2vw, 2.8125rem);
-    /* 32px → 45px */
-    --fs-main-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
-    /* 16px → 20px */
-    --fs-little-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
-    /* 14px → 16px */
-    --fs-btn-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
-    /* 14px → 16px */
-    --fs-card-text: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
-    /* 20px → 30px */
-    --fs-36-text: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
-    /* 24px → 36px */
-    --fs-20-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
-    /* 16px → 20px */
-    --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
-    /* 14px fixed */
-    --card-border: 1px solid #edded26d;
-    --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
+  --ff-headings: "Lora", Georgia, serif;
+  --ff-body:
+    "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --faq-line: rgba(240, 220, 210, 0.85);
+  --faq-text: #e7d1c8;
+  --faq-accent: #f2e2d7;
+  --fs-section-title: clamp(2rem, 1.4rem + 2vw, 2.8125rem);
+  /* 32px → 45px */
+  --fs-main-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  /* 16px → 20px */
+  --fs-little-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+  /* 14px → 16px */
+  --fs-btn-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+  /* 14px → 16px */
+  --fs-card-text: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+  /* 20px → 30px */
+  --fs-36-text: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  /* 24px → 36px */
+  --fs-20-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  /* 16px → 20px */
+  --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
+  /* 14px fixed */
+  --card-border: 1px solid #edded26d;
+  --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
 }
 
 /* Hero */
 .med-hero {
-    background-color: var(--deepest-red);
-    width: 100%;
+  background-color: var(--deepest-red);
+  width: 100%;
 }
 
 .med-hero-grid {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center;
 }
 
-
-
 .med-hero-photo-wrap {
-    display: flex;
-    justify-content: center;
-    width: 50%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 .med-single-hero-photo-wrap {
-    width: 40% !important;
+  width: 40% !important;
 }
 
 .med-hero-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .med-hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
 .med-single-hero-content {
-    width: 60% !important;
+  width: 60% !important;
 }
 
 .med-hero-badge {
-    font-size: var(--fs-20-text);
+  font-size: var(--fs-20-text);
 }
 
 .med-hero-subtitle {
-    font-size: var(--fs-20-text);
-    max-width: 530px;
-    opacity: 0.8;
-    padding: 1em 0 2em 0;
-    text-align: center;
+  font-size: var(--fs-20-text);
+  max-width: 530px;
+  opacity: 0.8;
+  padding: 1em 0 2em 0;
+  text-align: center;
 }
 
 .med-hero-included-in-pack {
-    padding-top: 1em;
-    font-size: var(--fs-16-text);
-    opacity: 0.8;
-    color: var(--beige);
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding-top: 1em;
+  font-size: var(--fs-16-text);
+  opacity: 0.8;
+  color: var(--beige);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .med-hero-included-in-pack a {
-    color: var(--gold-light);
-    margin-left: 0.3em;
+  color: var(--gold-light);
+  margin-left: 0.3em;
 }
 
 .med-hero-included-in-pack a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* personal med */
 .med-personal {
-    width: 100;
-    background-color: var(--deepest-red);
+  width: 100;
+  background-color: var(--deepest-red);
 }
 
 .med-personal-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .med-personal-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    font-size: var(--fs-20-text);
-    color: var(--beige);
-    opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  font-size: var(--fs-20-text);
+  color: var(--beige);
+  opacity: 1;
 }
 
-
 .med-personal-lead {
-    font-size: var(--fs-20-text);
-    opacity: 0.8;
-    width: 100%;
-    max-width: 780px;
-    padding: 1em 0;
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  width: 100%;
+  max-width: 780px;
+  padding: 1em 0;
 }
 
 .med-personal-lead-accent {
-    opacity: 1;
+  opacity: 1;
 }
 
 .med-personal-body {
-    font-size: var(--fs-20-text);
-    max-width: 712px;
-    opacity: 0.8;
-    padding-bottom: 1.5em;
+  font-size: var(--fs-20-text);
+  max-width: 712px;
+  opacity: 0.8;
+  padding-bottom: 1.5em;
 }
 
 .med-personal-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--deepest-red);
-    max-width: 454px;
-    border: var(--card-border);
-    padding: 1.875em;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--deepest-red);
+  max-width: 454px;
+  border: var(--card-border);
+  padding: 1.875em;
 }
 
 .med-personal-card-img-wrap {
-    position: relative;
+  position: relative;
 }
 
 .med-personal-label {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    z-index: 2;
-    margin: 0;
-    padding: 7px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--beige);
-    background: rgba(42, 9, 14, 0.55);
-    backdrop-filter: blur(2px);
-    color: #f0e1d6;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--beige);
+  background: rgba(42, 9, 14, 0.55);
+  backdrop-filter: blur(2px);
+  color: #f0e1d6;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .med-personal-figure {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .med-personal-image {
-    width: 100%;
-    height: 394px;
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  height: 394px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .med-personal-quote {
-    font-size: var(--fs-14-text);
-    opacity: 0.8;
-    padding: 1.875em 0;
+  font-size: var(--fs-14-text);
+  opacity: 0.8;
+  padding: 1.875em 0;
 }
 
 .btn-med-personal {
-    width: 100%;
+  width: 100%;
 }
 
 /* Section free med */
 .med-free {
-    width: 100;
-    background-color: var(--deepest-red);
+  width: 100;
+  background-color: var(--deepest-red);
 }
 
 .med-free-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .med-free-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    font-size: var(--fs-20-text);
-    color: var(--beige);
-    opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  font-size: var(--fs-20-text);
+  color: var(--beige);
+  opacity: 1;
 }
 
 .med-free-badge {
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .med-free-lead {
-    font-size: var(--fs-20-text);
-    opacity: 0.8;
-    width: 100%;
-    max-width: 780px;
-    padding: 1em 0;
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  width: 100%;
+  max-width: 780px;
+  padding: 1em 0;
 }
 
 .med-free-lead-accent {
-    opacity: 1;
+  opacity: 1;
 }
 
 .med-free-body {
-    font-size: var(--fs-20-text);
-    max-width: 712px;
-    opacity: 0.8;
-    padding-bottom: 1.5em;
+  font-size: var(--fs-20-text);
+  max-width: 712px;
+  opacity: 0.8;
+  padding-bottom: 1.5em;
 }
 
 .med-free-card {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    width: 100%;
-    background-color: var(--deepest-red);
-    max-width: 800px;
-    border: var(--card-border-red);
-    padding: 1.875em;
-
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+  background-color: var(--deepest-red);
+  max-width: 800px;
+  border: var(--card-border-red);
+  padding: 1.875em;
 }
 
 .med-free-card-img-wrap {
-    position: relative;
-    width: 50%;
+  position: relative;
+  width: 50%;
 }
 
 .med-free-label {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    z-index: 2;
-    margin: 0;
-    padding: 7px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--beige);
-    background: rgba(42, 9, 14, 0.55);
-    backdrop-filter: blur(2px);
-    color: #f0e1d6;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--beige);
+  background: rgba(42, 9, 14, 0.55);
+  backdrop-filter: blur(2px);
+  color: #f0e1d6;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .med-free-figure {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .med-free-image {
-    width: 100%;
-    /* height: 394px; */
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  /* height: 394px; */
+  object-fit: cover;
+  object-position: top;
 }
 
 .med-free-card-content-wrap {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .med-free-quote {
-    font-size: var(--fs-14-text);
-    opacity: 0.8;
-    padding: 1.875em 0;
+  font-size: var(--fs-14-text);
+  opacity: 0.8;
+  padding: 1.875em 0;
 }
 
 .med-free-audio {
-    width: 100%;
+  width: 100%;
 }
 
 /* Адаптив */
 @media (max-width: 900px) {
-    .med-free-inner {
-        grid-template-columns: minmax(0, 1fr);
-    }
+  .med-free-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-    .med-free {
-        padding-top: 48px;
-    }
+  .med-free {
+    padding-top: 48px;
+  }
 }
 
 @media (max-width: 600px) {
-    .med-free-image {
-        height: 500px;
-    }
+  .med-free-image {
+    height: 500px;
+  }
 }
-
 
 /* Packs */
 .med-packs-wrap,
 .med-single-wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--deep-red);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deep-red);
 }
 
 .pack-single-problem-content {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
 .med-section-intro {
-    color: var(--beige);
-    opacity: 0.8;
-    font-size: var(--fs-20-text);
-    text-align: center;
-    max-width: 573px;
-    padding: 0.5em;
+  color: var(--beige);
+  opacity: 0.8;
+  font-size: var(--fs-20-text);
+  text-align: center;
+  max-width: 573px;
+  padding: 0.5em;
 }
 
 .med-section-intro.problem {
-    max-width: 670px;
+  max-width: 670px;
 }
 
 /* packs */
 .med-packs-carousel {
-    border-radius: 18px;
-    padding: 2em;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
+  border-radius: 18px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /* track */
 .med-packs-track {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding-bottom: 6px;
-    scrollbar-width: none;
-    width: 100%;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  width: 100%;
 }
 
 .med-packs-card {
-    padding: 1.875em;
-    scroll-snap-align: start;
-    box-sizing: border-box;
-    flex: 0 0 calc(50% - 12px);
-    max-width: calc(50% - 12px);
-    text-align: center;
-    color: var(--beige);
-    background-color: var(--deepest-red);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: var(--card-border-red);
+  padding: 1.875em;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  flex: 0 0 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+  text-align: center;
+  color: var(--beige);
+  background-color: var(--deepest-red);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: var(--card-border-red);
 }
 
 .med-packs-card-content,
 .med-card-content,
 .med-card-action {
-    width: 100%;
+  width: 100%;
 }
 
 .med-card-figure {
-    margin: 0 0 12px 0;
-    overflow: hidden;
-    background: #1a1a1a;
-    position: relative;
+  margin: 0 0 12px 0;
+  overflow: hidden;
+  background: #1a1a1a;
+  position: relative;
 }
 
 .med-card-figure--blur {
-    filter: grayscale(0.3) blur(0.5px);
+  filter: grayscale(0.3) blur(0.5px);
 }
 
 .med-card-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 /* label "Набор" / "new" */
 .med-card-tag {
-    position: absolute;
-    top: 14px;
-    left: 16px;
-    z-index: 2;
-    margin: 0;
-    padding: 7px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--beige);
-    background: rgba(42, 9, 14, 0.55);
-    backdrop-filter: blur(2px);
-    color: #f0e1d6;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--beige);
+  background: rgba(42, 9, 14, 0.55);
+  backdrop-filter: blur(2px);
+  color: #f0e1d6;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .med-card-tag-new {
-    right: 16px !important;
-    left: unset
+  right: 16px !important;
+  left: unset;
 }
 
-
 .med-packs-card-title {
-    font-weight: 400;
-    margin: 1em;
-    font-size: var(--fs-card-text);
-    text-align: center;
-    color: var(--beige);
+  font-weight: 400;
+  margin: 1em;
+  font-size: var(--fs-card-text);
+  text-align: center;
+  color: var(--beige);
 }
 
 .med-packs-card-text {
-    font-size: var(--fs-20-text);
-    color: var(--beige);
-    opacity: 0.8;
-    text-align: center;
+  font-size: var(--fs-20-text);
+  color: var(--beige);
+  opacity: 0.8;
+  text-align: center;
 }
 
 .med-packs-card-price,
 .med-card-price {
-    font-size: var(--fs-36-text);
-    color: var(--gold-light);
-    font-family: var(--ff-headings);
-    margin-bottom: 0.5em;
-    text-align: center;
+  font-size: var(--fs-36-text);
+  color: var(--gold-light);
+  font-family: var(--ff-headings);
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .med-packs-card-btn,
 .med-card-btn {
-    width: 100% !important;
+  width: 100% !important;
 }
 
-
 .med-packs-track::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* nav med-packs-carousel*/
 .med-packs-carousel-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .med-packs-nav-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: var(--gold);
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid var(--gold-light);
-    background-color: var(--deepest-red);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--gold);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--gold-light);
+  background-color: var(--deepest-red);
 }
 
 .med-packs-nav-btn span {
-    color: var(--gold-light);
-    font-size: 30px;
-
+  color: var(--gold-light);
+  font-size: 30px;
 }
 
 .med-packs-nav-btn:hover {
-    background: rgba(255, 201, 9, 0.2);
-    transform: scale(1.05);
+  background: rgba(255, 201, 9, 0.2);
+  transform: scale(1.05);
 }
 
 .med-packs-nav-btn.is-disabled {
-    opacity: 0.3;
-    cursor: default;
-    transform: none;
-    background: transparent;
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+  background: transparent;
 }
 
-
 @media (max-width: 900px) {
-    .med-single-hero-photo-wrap {
-        width: 100% !important;
-        max-width: 400px;
-    }
+  .med-single-hero-photo-wrap {
+    width: 100% !important;
+    max-width: 400px;
+  }
 
-    .med-single-hero-content {
-        width: 100% !important;
-    }
+  .med-single-hero-content {
+    width: 100% !important;
+  }
 
-    .med-packs-carousel {
-        padding-bottom: 0;
-    }
+  .med-packs-carousel {
+    padding-bottom: 0;
+  }
 
-    .med-packs-card {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+  .med-packs-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-    .med-packs-track {
-        gap: 16px;
-    }
+  .med-packs-track {
+    gap: 16px;
+  }
 
-    .med-card-image {
-        max-height: 250px;
-    }
+  .med-card-image {
+    max-height: 250px;
+  }
 }
 
 @media (min-width: 901px) {
-    .med-packs-card {
-        flex: 0 0 calc(50% - 12px);
-        max-width: calc(50% - 12px);
-    }
+  .med-packs-card {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
 }
 
 @media (min-width: 900px) {
-    .med-packs-carousel {
-        max-width: 1240px;
-
-    }
+  .med-packs-carousel {
+    max-width: 1240px;
+  }
 }
 
 .med-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 22px;
-    padding-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 22px;
+  padding-top: 1em;
 }
 
 /* Общая карточка */
 .med-card {
-    background-color: var(--deepest-red);
-    padding: 1em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border: var(--card-border-red);
+  background-color: var(--deepest-red);
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: var(--card-border-red);
 }
 
 .med-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .med-card-title {
-    font-size: var(--fs-card-text);
-    color: var(--beige);
-    text-align: center;
-    width: 100%;
-    max-width: 350px;
-    font-weight: 100;
-    padding-top: 0.5em;
+  font-size: var(--fs-card-text);
+  color: var(--beige);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  font-weight: 100;
+  padding-top: 0.5em;
 }
 
 .med-card .med-card-text {
-    font-size: var(--fs-16-text);
-    opacity: 0.94;
-    flex-grow: 1;
-    text-align: center;
-    padding: 0.5em;
-    text-align: center;
+  font-size: var(--fs-16-text);
+  opacity: 0.94;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0.5em;
+  text-align: center;
 }
 
 .med-card-action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .med-title-accent {
-    font-weight: 100;
-    max-width: 700px;
-    font-size: var(--fs-36-text);
+  font-weight: 100;
+  max-width: 700px;
+  font-size: var(--fs-36-text);
 }
 
 /* Для секции с пакетами — чуть крупнее карточки и 3 в ряд на десктопе */
 .med-card-grid--packs {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 /* Для секции одиночных можно оставить как есть или сделать плотнее */
 .med-packs--single .med-card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
 }
-
-
 
 /* Адаптив */
 @media (max-width: 600px) {
-    .med-card-image {
-        height: 150px;
-    }
+  .med-card-image {
+    height: 150px;
+  }
 }
 
 /* How */
 
 .med-how {
-    background: var(--deepest-red);
-    width: 100%;
+  background: var(--deepest-red);
+  width: 100%;
 }
 
 .med-how-inner {
-    max-width: 720px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .med-how-list {
-    list-style: none;
-    font-size: var(--fs-20-text);
-    opacity: 0.8;
-    max-width: 518px;
-    text-align: center;
-    margin-top: 1em;
+  list-style: none;
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  max-width: 518px;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .med-single-how-list {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
 .med-how-list-accent {
-    opacity: 1;
+  opacity: 1;
 }
 
 .how-text-step a {
-    opacity: 1;
-    font-weight: 600;
+  opacity: 1;
+  font-weight: 600;
 }
 
-.med-how-list li+li {
-    margin-top: 1em;
+.med-how-list li + li {
+  margin-top: 1em;
 }
 
 li.sparkle {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .sparkle {
-    width: 28px;
-    height: 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sparkle svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    filter: drop-shadow(0 0 6px rgba(255, 219, 120, 0.35));
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(255, 219, 120, 0.35));
 }
 
 .sparkle path {
-    fill: var(--gold-light);
+  fill: var(--gold-light);
 }
 
 .med-how-inner-steps {
-    max-width: 1000px !important;
-    width: 100%;
+  max-width: 1000px !important;
+  width: 100%;
 }
 
 .med-how-inner-steps {
-    width: 100%;
-    text-align: center;
-    font-size: var(--fs-section-title);
-    color: var(--beige);
-    font-weight: 100;
-    font-family: var(--ff-headings);
+  width: 100%;
+  text-align: center;
+  font-size: var(--fs-section-title);
+  color: var(--beige);
+  font-weight: 100;
+  font-family: var(--ff-headings);
 }
 
 .med-how-inner-steps.accent {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
 
 .med-how-final {
-    background: var(--deep-red);
-    width: 100%;
+  background: var(--deep-red);
+  width: 100%;
 }
 
 .med-how-final-wrapper {
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--deepest-red);
-    border: var(--card-border-red);
-    padding: 1em 3em;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deepest-red);
+  border: var(--card-border-red);
+  padding: 1em 3em;
 }
 
 .med-section-final {
-    opacity: 1;
-    text-align: center;
-    color: var(--beige);
-    font-size: var(--fs-20-text);
-    padding: 1em 0;
+  opacity: 1;
+  text-align: center;
+  color: var(--beige);
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
 }
 
 /* Responsive */
 
 @media (max-width: 900px) {
+  .med-hero-grid,
+  .med-pack-grid,
+  .med-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-    .med-hero-grid,
-    .med-pack-grid,
-    .med-contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
+  .med-pack-grid {
+    gap: 16px;
+  }
 
-    .med-pack-grid {
-        gap: 16px;
-    }
+  .med-hero {
+    padding-top: 40px;
+  }
 
-    .med-hero {
-        padding-top: 40px;
-    }
-
-    .med-section-final {
-        padding-top: 0;
-        font-size: var(--fs-14-text);
-    }
+  .med-section-final {
+    padding-top: 0;
+    font-size: var(--fs-14-text);
+  }
 }
 
 @media (max-width: 600px) {
-    .med-hero-title {
-        font-size: 1.7rem;
-    }
+  .med-hero-title {
+    font-size: 1.7rem;
+  }
 
-    .section-title {
-        font-size: 1.5rem;
-    }
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
-
 
 /* boosty aside */
 .boosty-float {
-    position: fixed;
-    right: 12px;
-    bottom: 16px;
-    z-index: 1000;
+  position: fixed;
+  right: 12px;
+  bottom: 16px;
+  z-index: 1000;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.7em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.7em;
 
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
 }
 
 .boosty-float.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(12px);
 }
 
 .boosty-float-icon {
-    width: 36%;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 36%;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boosty-float-icon img {
-    width: 36px;
-    height: 36px;
-    display: block;
-    object-fit: contain;
+  width: 36px;
+  height: 36px;
+  display: block;
+  object-fit: contain;
 }
 
 .boosty-float-box {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 16px 18px;
-    background: var(--deepest-red);
-    /* border: var(--card-border-red); */
-    border: 0.3px solid #f6ca388f;
-    text-align: center;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 16px 18px;
+  background: var(--deepest-red);
+  /* border: var(--card-border-red); */
+  border: 0.3px solid #f6ca388f;
+  text-align: center;
 }
 
 .boosty-float-text {
-    margin: 1em 0;
-    color: var(--beige);
-    font-size: clamp(14px, 0.9rem + 0.2vw, 16px);
-    line-height: 1.3;
+  margin: 1em 0;
+  color: var(--beige);
+  font-size: clamp(14px, 0.9rem + 0.2vw, 16px);
+  line-height: 1.3;
 }
 
 .boosty-float-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 160px;
-    padding: 12px 20px;
-    border-radius: 999px;
-    text-decoration: none;
-    background: linear-gradient(180deg, #ffe878 0%, #f6ca38 100%);
-    color: #2a1700;
-    font-size: clamp(13px, 0.82rem + 0.18vw, 16px);
-    font-weight: 700;
-    line-height: 1;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-    transition: transform 0.18s ease, filter 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffe878 0%, #f6ca38 100%);
+  color: #2a1700;
+  font-size: clamp(13px, 0.82rem + 0.18vw, 16px);
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease;
 }
 
 .boosty-float-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.03);
+  transform: translateY(-2px);
+  filter: brightness(1.03);
 }
 
 .boosty-float-btn:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .boosty-float-box {
-    position: relative;
-    /* needed so close btn can position against it */
+  position: relative;
+  /* needed so close btn can position against it */
 }
 
 .boosty-float-close {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--beige);
-    opacity: 0.5;
-    font-size: 14px;
-    line-height: 1;
-    padding: 2px 4px;
-    transition: opacity 0.18s;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--beige);
+  opacity: 0.5;
+  font-size: 14px;
+  line-height: 1;
+  padding: 2px 4px;
+  transition: opacity 0.18s;
 }
 
 .boosty-float-close:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-    .boosty-float {
-        right: 12px;
-        bottom: 12px;
-    }
+  .boosty-float {
+    right: 12px;
+    bottom: 12px;
+  }
 
-    .boosty-float-box {
-        width: 210px;
-        padding: 14px;
-    }
+  .boosty-float-box {
+    width: 210px;
+    padding: 14px;
+  }
 }
 
 @media (max-width: 1100px) {
-    .diag-card-content {
-        column-gap: 1px;
-    }
+  .diag-card-content {
+    column-gap: 1px;
+  }
 
-    .diag-card-footer {
-        flex-direction: column;
-    }
+  .diag-card-footer {
+    flex-direction: column;
+  }
 
-    .diag-price {
-        margin-bottom: 1em;
-    }
+  .diag-price {
+    margin-bottom: 1em;
+  }
 }
 
 @media (max-width: 900px) {
-    .med-hero-grid {
-        gap: 20px;
-    }
+  .med-hero-grid {
+    gap: 20px;
+  }
 
-    .med-hero-subtitle {
-        padding: 0.2em 0 1em 0;
-    }
+  .med-hero-subtitle {
+    padding: 0.2em 0 1em 0;
+  }
 
-    .diag-card {
-        grid-template-columns: 1fr;
-    }
+  .diag-card {
+    grid-template-columns: 1fr;
+  }
 
-    .diag-card-image {
-        min-height: 260px;
-    }
+  .diag-card-image {
+    min-height: 260px;
+  }
 
-    .diag-card-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
+  .diag-card-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
-    .diag-link {
-        justify-self: start;
-        min-width: 100%;
-    }
+  .diag-link {
+    justify-self: start;
+    min-width: 100%;
+  }
 
-    .diag-price {
-        margin-top: 8px;
-    }
+  .diag-price {
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 800px) {
-    .med-hero-grid {
-        flex-direction: column;
-        gap: 40px;
-    }
+  .med-hero-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .med-hero-content {
-        width: 100%;
-    }
+  .med-hero-content {
+    width: 100%;
+  }
 
-    .med-hero-subtitle {
-        width: 100%;
-        max-width: unset;
-    }
+  .med-hero-subtitle {
+    width: 100%;
+    max-width: unset;
+  }
 
-    .med-hero-photo-wrap {
-        width: 100%;
-    }
+  .med-hero-photo-wrap {
+    width: 100%;
+  }
 
-    .med-packs-carousel {
-        padding-bottom: 0;
-    }
-
+  .med-packs-carousel {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 768px) {
-    .boosty-float {
-        right: 12px;
-        bottom: 16px;
-        top: auto;
-        transform: none;
-        align-items: flex-end;
-    }
+  .boosty-float {
+    right: 12px;
+    bottom: 16px;
+    top: auto;
+    transform: none;
+    align-items: flex-end;
+  }
 
-    .boosty-float-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
+  .boosty-float-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 
-    .boosty-float-box {
-        width: 200px;
-        padding: 14px;
-    }
+  .boosty-float-box {
+    width: 200px;
+    padding: 14px;
+  }
 
-    .boosty-float-text {
-        font-size: 13px;
-    }
+  .boosty-float-text {
+    font-size: 13px;
+  }
 
-    .boosty-float-btn {
-        min-width: 145px;
-        padding: 11px 16px;
-        font-size: 12px;
-    }
+  .boosty-float-btn {
+    min-width: 145px;
+    padding: 11px 16px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 610px) {
-    .med-free-card {
-        flex-direction: column;
-        gap: 0.5em;
-    }
+  .med-free-card {
+    flex-direction: column;
+    gap: 0.5em;
+  }
 
-    .med-free-card-img-wrap,
-    .med-free-card-content-wrap {
-        width: 100%;
-        max-width: 400px;
-    }
+  .med-free-card-img-wrap,
+  .med-free-card-content-wrap {
+    width: 100%;
+    max-width: 400px;
+  }
 
-    .med-free-figure {
-        max-height: 300px;
-        width: 100%;
-    }
+  .med-free-figure {
+    max-height: 300px;
+    width: 100%;
+  }
 }
