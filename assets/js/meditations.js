@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return res.json();
     })
     .then((data) => {
-      const packs = data.packs;
-      console.log(packs);
+      const packs = [...data.packs].reverse();
 
       document.querySelectorAll(".med-packs-carousel").forEach((carousel) => {
         const track = carousel.querySelector(".med-packs-track");
