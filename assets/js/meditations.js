@@ -19,34 +19,56 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (!track || !btnPrev || !btnNext) return;
+        /**
+         * check release date
+         */
+        function isNew(releaseDate) {
+          if (!releaseDate) return false;
 
+          const now = new Date();
+          const release = new Date(releaseDate);
+
+          const diffMs = now - release;
+          const diffDays = diffMs / (1000 * 60 * 60 * 24);
+
+          return diffDays <= 30;
+        }
         // ── BUILD CARDS FROM JSON ──────────────────────────────
         track.innerHTML = packs
-          .map(
-            (pack) => `
-          <article class="med-packs-card" data-pack-id="${pack.id}">
-            <div class="med-packs-card-img-wrap">
-              <img
-                src="${pack.image}"
-                alt="${pack.title}"
-                class="med-packs-card-img"
-                loading="lazy"
-              >
-            </div>
-            <div class="med-packs-card-content">
-              <p class="med-packs-card-badge">Пакет нейромедитаций</p>
-              <h3 class="med-packs-card-title">${pack.title}</h3>
-              <p class="med-packs-card-desc">${pack.shortDescription}</p>
-              <div class="med-packs-card-footer">
-                <p class="med-packs-card-price">${pack.price.toLocaleString("ru-RU")} ₽</p>
-                <a href="${pack.page}" class="btn-primary med-packs-card-link">
-                  Подробнее
-                </a>
-              </div>
-            </div>
-          </article>
-        `,
-          )
+          .map((pack) => {
+            const newLabel = isNew(pack.releaseDate)
+              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
+              : "";
+
+            return `
+    <article class="med-packs-card" data-pack-id="${pack.id}">
+      
+    
+    <div class="med-packs-card-content">
+        <figure class=" med-card-figure">
+            <div class="med-card-tag">Пакет нейромедитаций</div>
+        ${newLabel}
+        <img
+            src="${pack.image}"
+            alt="${pack.title}"
+            class="med-packs-card-img"
+            loading="lazy"
+        >
+        </figure>
+        <h3 class="med-packs-card-title">${pack.title}</h3>
+        <p class="med-packs-card-desc">${pack.shortDescriptionCommon}</p>
+        <div class="med-packs-card-footer">
+          <p class="med-packs-card-price">
+            ${pack.price.toLocaleString("ru-RU")} ₽
+          </p>
+          <a href="${pack.page}" class="btn-primary med-packs-card-link">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </article>
+  `;
+          })
           .join("");
 
         let cards = Array.from(track.querySelectorAll(".med-packs-card"));
