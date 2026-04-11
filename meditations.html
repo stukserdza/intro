@@ -288,7 +288,7 @@
                                 <div class="med-packs-card-content">
                                     <figure class="med-card-figure">
                                         <div class="med-card-tag">Набор медитаций</div>
-                                        <img src="assets/images/meditations-images/meditation-pack-hearts.png"
+                                        <img src="assets/images/meditations-images/meditation-pack-love.png"
                                             alt="Медитации для исцеления прошлого и притяжения новой любви"
                                             class="med-card-image">
                                     </figure>
@@ -1044,107 +1044,7 @@
     </footer>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/boosty-float.js"></script>
-        <script src="assets/js/meditations.js"></script>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.med-packs-carousel').forEach((carousel) => {
-                const track = carousel.querySelector('.med-packs-track');
-                const cards = Array.from(carousel.querySelectorAll('.med-packs-card'));
-                const btnPrev = carousel.querySelector(".med-packs-nav-btn[data-dir='prev']");
-                const btnNext = carousel.querySelector(".med-packs-nav-btn[data-dir='next']");
-
-                if (!track || !cards.length || !btnPrev || !btnNext) return;
-
-                let cardStep = 0;
-
-                const getStep = () => {
-                    const firstCard = cards[0];
-                    if (!firstCard) return 0;
-
-                    const cardWidth = firstCard.getBoundingClientRect().width;
-                    const styles = getComputedStyle(track);
-                    const gap = parseFloat(styles.gap || styles.columnGap || 0);
-
-                    return cardWidth + gap;
-                };
-
-                const updateButtons = () => {
-                    const maxScroll = track.scrollWidth - track.clientWidth;
-                    const current = track.scrollLeft;
-
-                    btnPrev.classList.toggle('is-disabled', current <= 1);
-                    btnNext.classList.toggle('is-disabled', current >= maxScroll - 1);
-                };
-
-                // const scrollToDirection = (dir) => {
-                //     cardStep = getStep();
-                //     const delta = dir === 'next' ? cardStep : -cardStep;
-
-                //     track.scrollBy({
-                //         left: delta,
-                //         behavior: 'smooth'
-                //     });
-                // };
-                const getVisibleCount = () => {
-                    const trackWidth = track.clientWidth;
-                    const step = getStep();
-                    return Math.round(trackWidth / step);
-                };
-
-                const scrollToDirection = (dir) => {
-                    const step = getStep();
-                    const visible = getVisibleCount();
-
-                    const delta = (dir === 'next' ? 1 : -1) * step * visible;
-
-                    track.scrollBy({
-                        left: delta,
-                        behavior: 'smooth'
-                    });
-                };
-                btnPrev.addEventListener('click', () => {
-                    if (!btnPrev.classList.contains('is-disabled')) scrollToDirection('prev');
-                });
-
-                btnNext.addEventListener('click', () => {
-                    if (!btnNext.classList.contains('is-disabled')) scrollToDirection('next');
-                });
-
-                track.addEventListener('scroll', updateButtons, {
-                    passive: true
-                });
-                window.addEventListener('resize', updateButtons);
-
-                updateButtons();
-
-                const mq = window.matchMedia('(max-width: 900px)');
-
-                const applyLayout = () => {
-                    if (mq.matches) {
-                        cards.forEach((card) => {
-                            card.style.flex = '0 0 100%';
-                            card.style.maxWidth = '100%';
-                        });
-                    } else {
-                        cards.forEach((card) => {
-                            card.style.flex = '0 0 calc(50% - 12px)';
-                            card.style.maxWidth = 'calc(50% - 12px)';
-                        });
-                    }
-
-                    updateButtons();
-                };
-
-                applyLayout();
-
-                if (mq.addEventListener) {
-                    mq.addEventListener('change', applyLayout);
-                } else {
-                    mq.addListener(applyLayout);
-                }
-            });
-        });
-    </script> -->
+    <script src="assets/js/meditations.js"></script>
 </body>
 
 </html>
