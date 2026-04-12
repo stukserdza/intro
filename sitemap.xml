@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://stukserdza.com/</loc>
-      <lastmod>2026-04-11</lastmod>
-      <priority>1.0</priority>
-   </url>
+
+  <!-- Main pages -->
+  <url>
+    <loc>https://stukserdza.com/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/diagnostics.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/readings.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/meditations.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/cleaning.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://stukserdza.com/privacy.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/terms-of-service.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://stukserdza.com/disclaimer.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Meditations -->
+  <url><loc>https://stukserdza.com/meditations/meditaciya-prityagivat-svoe.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/break-karmic-bond.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/clean-space.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/energy-balance.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/fall-in-love-again.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/free-head-and-body.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/freedom-from-sb-opinion.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/inner-harmony.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/inner-support.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/intuition-awakening.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/let-yourself-be.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/love-magnet.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-freedom.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-goddess.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-love.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-recharge.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-reunion.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/packs-star.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/protection-of-kin.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/release-anxiety.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/release-control.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/release-past-pain.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/sexuality-awakening.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/sync-between-you.html</loc></url>
+  <url><loc>https://stukserdza.com/meditations/wish-fulfillment.html</loc></url>
+
 </urlset>
