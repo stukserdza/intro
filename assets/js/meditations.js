@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (medCardsContainer) {
         medCardsContainer.innerHTML = neuromeditations
           .map((m) => {
-            const newLabel = isNew(m.releaseDate)
-              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
-              : "";
+            const newLabel = isNew(m.releaseDate) ?
+              `<div class="med-card-tag med-card-tag-new">NEW</div>` :
+              "";
             return `
               <article class="med-card">
                 <figure class="med-card-figure">
                   ${newLabel}
                   <img src="${m.image}" alt="${m.title}" class="med-card-image" loading="lazy">
                 </figure>
-                <h3 class="med-card-title">${m.title}</h3>
+                <h3 class="med-card-title">${m.titleForCards}</h3>
                 <p class="med-card-text">${m.shortDescriptionCommon}</p>
                 <div class="med-card-action">
                   <p class="med-card-price">${m.price.toLocaleString("ru-RU")} ₽</p>
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // build pack cards
         track.innerHTML = packs
           .map((pack) => {
-            const newLabel = isNew(pack.releaseDate)
-              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
-              : "";
+            const newLabel = isNew(pack.releaseDate) ?
+              `<div class="med-card-tag med-card-tag-new">NEW</div>` :
+              "";
             return `
             <article class="med-packs-card" data-pack-id="${pack.id}">
               <div class="med-packs-card-content">
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   ${newLabel}
                   <img src="${pack.image}" alt="${pack.title}" class="med-packs-card-img" loading="lazy">
                 </figure>
-                <h3 class="med-packs-card-title">${pack.title}</h3>
+                <h3 class="med-packs-card-title">${pack.titleForCards}</h3>
                 <p class="med-packs-card-desc">${pack.shortDescriptionCommon}</p>
                 <div class="med-packs-card-footer">
                   <p class="med-packs-card-price">${pack.price.toLocaleString("ru-RU")} ₽</p>
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const cardWidth = card.getBoundingClientRect().width;
           const gap = parseFloat(
             getComputedStyle(track).gap ||
-              getComputedStyle(track).columnGap ||
-              0,
+            getComputedStyle(track).columnGap ||
+            0,
           );
           return cardWidth + gap;
         };
