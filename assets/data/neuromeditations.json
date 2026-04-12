@@ -44,7 +44,7 @@
         "Нейромедитация через работу с подсознанием помогает отделить своё от чужого и вернуть телу и голове их естественное лёгкое состояние."
       ],
       "instructions": "Ложитесь в кровать, включаете медитацию и через 15 минут почувствуете, как всё это гуано дня тихо уходит. Утром проснётесь легче и спокойнее. Как будто кто-то ночью открыл окно и проветрил вас изнутри.",
-      "includedInPacks": ["recharge"],
+      "includedInPacks": ["meditaciya-paket-perezagruzka"],
       "page": "meditations/meditaciya-osvobozhdenie-golovy-i-tela.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -92,7 +92,7 @@
         "Нейромедитация через определённые образы и частоты голоса собирает это состояние обратно, возвращает целостность и внутреннюю устойчивость. Вы снова чувствуете себя собой."
       ],
       "instructions": "Включите утром перед началом дня и почувствуете, как возвращаетесь в себя. Не пустая оболочка, а вы настоящая и собранная.",
-      "includedInPacks": ["recharge"],
+      "includedInPacks": ["meditaciya-paket-perezagruzka"],
       "page": "meditations/meditaciya-energeticheskiy-balans.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -139,7 +139,7 @@
         "Нейромедитация восстанавливает эту связь и включает защитный ресурс, который есть в каждом человеке от рождения, но часто ослаблен. С каждым прослушиванием защита усиливается и становится устойчивее."
       ],
       "instructions": "Слушайте регулярно — днём или перед сном. С каждым разом защита будет крепче. Как забор вокруг дома: вы внутри в безопасности, а чужое остаётся снаружи.",
-      "includedInPacks": ["recharge"],
+      "includedInPacks": ["meditaciya-paket-perezagruzka"],
       "page": "meditations/meditaciya-zashchita-roda.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -187,7 +187,7 @@
         "Нейромедитация убирает это внутреннее противоречие и выстраивает чёткое намерение. Подсознание начинает работать в сторону реализации, а не против неё."
       ],
       "instructions": "Выберите один конкретный запрос в любой сфере. Можно один раз, можно возвращаться и усиливать намерение.",
-      "includedInPacks": ["love"],
+      "includedInPacks": ["meditaciya-paket-lyubov"],
       "page": "meditations/meditaciya-ispolnenie-zhelaniy.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -378,7 +378,7 @@
         "Нейромедитация прорабатывает эти зажимы на глубинном уровне, не заставляя вас снова переживать болезненные ситуации. Просто слушаете, и подсознание делает работу само."
       ],
       "instructions": "Дайте себе время прожить и отпустить. Вы заслуживаете жить без этого груза.",
-      "includedInPacks": ["love"],
+      "includedInPacks": ["meditaciya-paket-lyubov"],
       "page": "meditations/meditaciya-osvobozhdenie-ot-proshloy-boli.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -426,7 +426,7 @@
         "Нейромедитация восстанавливает этот контакт через глубокую работу с образами и голосом, возвращает состояние внутреннего равновесия. В этом состоянии меняется то, как вы себя держите, как говорите, как двигаетесь — и это считывают другие."
       ],
       "instructions": "Это не про то, чтобы стать кем-то другим. Это про то, чтобы наконец стать собой и перестать за это извиняться.",
-      "includedInPacks": ["love", "goddess"],
+      "includedInPacks": ["meditaciya-paket-lyubov", "meditaciya-paket-boginya"],
       "page": "meditations/meditaciya-vnutrennyaya-garmoniya.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -522,7 +522,7 @@
         "Нейромедитация прерывает эту петлю на уровне, где она живёт, успокаивает нервную систему и перепрограммирует подсознание на состояние покоя. Карусель мыслей останавливается не потому, что вы себя заставили, а потому что внутри что-то изменилось."
       ],
       "instructions": "Особенно если вы устали от собственных мыслей и хотите наконец почувствовать тишину внутри.",
-      "includedInPacks": ["freedom"],
+      "includedInPacks": ["meditaciya-paket-svoboda"],
       "page": "meditations/meditaciya-osvobozhdenie-ot-trevogi.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -570,7 +570,7 @@
         "Нейромедитация убирает саму тревогу на глубинном уровне, и потребность контролировать уходит сама, без борьбы с собой."
       ],
       "instructions": "Если вы устали всё контролировать и хотите наконец выдохнуть — отпустите то, что не можете изменить, и почувствуйте, как становится легче.",
-      "includedInPacks": ["freedom"],
+      "includedInPacks": ["meditaciya-paket-svoboda"],
       "page": "meditations/meditaciya-otpuskanie-kontrolya.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -618,7 +618,7 @@
         "Нейромедитация формирует устойчивость изнутри через образы и звук, которые подсознание воспринимает как реальный опыт. После прослушивания это ощущение опоры остаётся как новая точка отсчёта."
       ],
       "instructions": "Особенно если сейчас трудно и кажется, что не на что опереться. Эта медитация напомнит вам, что самая надёжная опора уже есть. Она внутри вас.",
-      "includedInPacks": ["freedom", "goddess"],
+      "includedInPacks": ["meditaciya-paket-svoboda", "meditaciya-paket-boginya"],
       "page": "meditations/meditaciya-vnutrennyaya-opora.html",
       "releaseDate": "2025-06-01",
       "isNew": false
@@ -760,7 +760,7 @@
         "Эта нейромедитация работает напрямую с этими записями, перепрограммирует реакции и стирает эмоциональный заряд старых ситуаций. Вы не забываете, что было — просто это перестаёт болеть и управлять вами."
       ],
       "instructions": "Слушай каждый день, подсознание запомнит новое состояние, пространство между вами очистится, вы сможете строить отношения заново.",
-      "includedInPacks": ["reunion"],
+      "includedInPacks": ["meditaciya-paket-vossoedinenie"],
       "page": "meditations/meditaciya-chistoe-prostranstvo.html",
       "releaseDate": "2026-03-11",
       "isNew": false
@@ -802,7 +802,7 @@
         "Нейромедитация меняет эту программу, вы перестаёте излучать нужду и начинаете излучать наполненность. Он это чувствует и начинает двигаться сам."
       ],
       "instructions": "Слушай каждый день — подсознание запомнит баланс, ты вернёшься в свою силу, между вами установится равновесие.",
-      "includedInPacks": ["reunion"],
+      "includedInPacks": ["meditaciya-paket-vossoedinenie"],
       "page": "meditations/meditaciya-sinhronizaciya-mezhdu-vami.html",
       "releaseDate": "2026-03-11",
       "isNew": false
@@ -845,7 +845,7 @@
         "Нейромедитация возвращает подсознание к тому моменту, когда впервые почувствовали к нему что-то особенное, и переносит это ощущение в настоящее. Ваша энергия меняется, он это считывает на подсознательном уровне и откликается."
       ],
       "instructions": "Слушай каждый день — подсознание запомнит состояние влюблённости, чувство вернётся, вы откроетесь друг другу заново.",
-      "includedInPacks": ["reunion"],
+      "includedInPacks": ["meditaciya-paket-vossoedinenie"],
       "page": "meditations/meditaciya-vlyubis-snova.html",
       "releaseDate": "2026-03-11",
       "isNew": false
@@ -886,7 +886,7 @@
         "Нейромедитация снимает эти блоки на глубинном уровне и возвращает доступ к вашей природной силе. Тело начинает откликаться, энергия меняется, и это считывают окружающие."
       ],
       "instructions": "12 минут на изменение состояния. Слушай 21 день подряд, твоё тело запомнит это ощущение и начнёт жить в нём.",
-      "includedInPacks": ["goddess"],
+      "includedInPacks": ["meditaciya-paket-boginya"],
       "page": "meditations/meditaciya-probuzhdenie-seksualnosti.html",
       "releaseDate": "2026-03-07",
       "isNew": false
@@ -934,7 +934,7 @@
         "Нейронастройка работает именно там — не убеждает вас быть смелее, а убирает сам механизм, который заставляет сжиматься."
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
-      "includedInPacks": ["star"],
+      "includedInPacks": ["meditaciya-paket-zvezda"],
       "page": "meditations/meditaciya-svoboda-ot-chuzhogo-mneniya.html",
       "releaseDate": "2026-04-02",
       "isNew": false
@@ -982,7 +982,7 @@
         "Нейронастройка работает с этим конфликтом напрямую — не заставляет вас стараться сильнее, а убирает то, что мешает изнутри. Внутренняя война затихает, и появляются силы на настоящее."
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
-      "includedInPacks": ["star"],
+      "includedInPacks": ["meditaciya-paket-zvezda"],
       "page": "meditations/meditaciya-pozvol-sebe-byt-soboy.html",
       "releaseDate": "2026-04-02",
       "isNew": false
@@ -1030,7 +1030,7 @@
         "Нейронастройка ставит вас на своё место. Не убеждает, что вы достаточно хороши, а меняет само состояние изнутри. Вопрос «а может не моё» просто исчезает, и нужные люди начинают тянуться к вам сами."
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
-      "includedInPacks": ["star"],
+      "includedInPacks": ["meditaciya-paket-zvezda"],
       "page": "meditations/meditaciya-prityagivat-svoe.html",
       "releaseDate": "2026-04-02",
       "isNew": true
@@ -1086,7 +1086,7 @@
   ],
   "packs": [{
       "id": 1,
-      "slug": "recharge",
+      "slug": "meditaciya-paket-perezagruzka",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/24d9d92a-bd09-4b27-b885-dcd83fdba893?share=bundle_link",
@@ -1133,13 +1133,13 @@
       "effectsTitle": "",
       "effectsBooletPoints": ["", "", "", "", ""],
       "instructions": "Можно повторять цикл, когда чувствуете, что снова нахватали лишнего. Это ваша энергетическая гигиена.",
-      "page": "meditations/packs-recharge.html",
+      "page": "meditations/meditaciya-paket-perezagruzka.html",
       "releaseDate": "2025-09-01",
       "isNew": false
     },
     {
       "id": 2,
-      "slug": "love",
+      "slug": "meditaciya-paket-lyubov",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/f94c252f-a198-4b51-99ff-778558ec72ed?share=bundle_link",
@@ -1186,13 +1186,13 @@
       "effectsTitle": "",
       "effectsBooletPoints": ["", "", "", "", ""],
       "instructions": "Проходите по порядку. Не перескакивайте. Дайте себе время на каждый этап. Это не гонка, это путь к отношениям, которые вы заслуживаете.",
-      "page": "meditations/packs-love.html",
+      "page": "meditations/meditaciya-paket-lyubov.html",
       "releaseDate": "2025-09-01",
       "isNew": false
     },
     {
       "id": 3,
-      "slug": "freedom",
+      "slug": "meditaciya-paket-svoboda",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/9a0464de-1211-4a25-a32d-a8c5890fd92f?share=bundle_link",
@@ -1235,13 +1235,13 @@
       "effectsTitle": "",
       "effectsBooletPoints": ["", "", "", "", ""],
       "instructions": "Проходите по порядку: тревога → контроль → опора. Это путь от измотанности к спокойной силе внутри.",
-      "page": "meditations/packs-freedom.html",
+      "page": "meditations/meditaciya-paket-svoboda.html",
       "releaseDate": "2025-09-01",
       "isNew": false
     },
     {
       "id": 4,
-      "slug": "reunion",
+      "slug": "meditaciya-paket-vossoedinenie",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/16403e98-5e95-4517-9bee-4bba3ae04278?share=bundle_link",
@@ -1284,13 +1284,13 @@
       "effectsTitle": "",
       "effectsBooletPoints": ["", "", "", "", ""],
       "instructions": "Проходите по порядку: очищение → баланс → влюблённость. Это путь от тяжести и усталости к лёгким живым отношениям, в которых хочется быть.",
-      "page": "meditations/packs-reunion.html",
+      "page": "meditations/meditaciya-paket-vossoedinenie.html",
       "releaseDate": "2025-09-01",
       "isNew": false
     },
     {
       "id": 5,
-      "slug": "goddess",
+      "slug": "meditaciya-paket-boginya",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/0a06601d-5395-409c-a130-3ed74176d50b?share=bundle_link",
@@ -1347,13 +1347,13 @@
         "Вы снова себе нравитесь. Не потому что похудели или что-то изменили, а потому что вернулись к себе."
       ],
       "instructions": "Проходите по порядку: сексуальность → опора → гармония. Это путь от усталой женщины, которая всё тянет, к богине, которая просто есть.",
-      "page": "meditations/packs-goddess.html",
+      "page": "meditations/meditaciya-paket-boginya.html",
       "releaseDate": "2026-03-15",
       "isNew": false
     },
     {
       "id": 6,
-      "slug": "star",
+      "slug": "meditaciya-paket-zvezda",
       "meditationHeroBadge": "Пакет Аудиопрограмм",
       "numerologicalCode": "",
       "boostyLink": "https://boosty.to/stukserdza/bundle/e18760ae-4bfd-4392-ab85-dabed5c7abdf?share=bundle_link",
@@ -1413,7 +1413,7 @@
         "Деньги приходят легче, и жизнь начинает складываться как будто она всегда и должна была быть вашей."
       ],
       "instructions": "Проходите по порядку: свобода от осуждения, разрешение себе быть, притяжение своего. Это путь от страха к своему месту в этом мире ",
-      "page": "meditations/packs-star.html",
+      "page": "meditations/meditaciya-paket-zvezda.html",
       "releaseDate": "2026-04-01",
       "isNew": true
     }

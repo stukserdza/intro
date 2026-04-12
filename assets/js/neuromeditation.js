@@ -118,7 +118,7 @@
            .map(packId => {
                const pack = allPacks.find(p => p.slug === packId);
                if (!pack) return '';
-               return `<a href="packs-${pack.slug}.html" aria-label="Перейти к пакету ${pack.title}">${pack.title}</a>`;
+               return `<a href="${pack.slug}.html" aria-label="Перейти к пакету ${pack.title}">${pack.title}</a>`;
            })
            .filter(Boolean)
            .join(', ');
