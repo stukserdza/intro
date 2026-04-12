@@ -308,10 +308,10 @@ function buildPanel(panelData) {
   carousel.innerHTML += `
     <div class="readings-carousel-header">
       <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
-        <img src="assets/images/icons/arrow_left.svg" alt="Предыдущий расклад">
+        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
       </button>
       <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
-        <img src="assets/images/icons/arrow_right.svg" alt="Следующий расклад">
+        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
       </button>
     </div>`;
 
