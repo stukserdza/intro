@@ -97,7 +97,7 @@
     },
     {
       "id": 3,
-      "slug": "protection-of-kin",
+      "slug": "meditaciya-zashchita-roda",
       "title": "Защита <br> рода",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -137,7 +137,7 @@
       ],
       "instructions": "Слушайте регулярно — днём или перед сном. С каждым разом защита будет крепче. Как забор вокруг дома: вы внутри в безопасности, а чужое остаётся снаружи.",
       "includedInPacks": ["recharge"],
-      "page": "meditations/protection-of-kin.html",
+      "page": "meditations/meditaciya-zashchita-roda.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
@@ -471,7 +471,7 @@
     },
     {
       "id": 12,
-      "slug": "release-anxiety",
+      "slug": "meditaciya-osvobozhdenie-ot-trevogi",
       "title": "Отпустить тревожность<br>  и навязчивые мысли",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -512,13 +512,13 @@
       ],
       "instructions": "Особенно если вы устали от собственных мыслей и хотите наконец почувствовать тишину внутри.",
       "includedInPacks": ["freedom"],
-      "page": "meditations/release-anxiety.html",
+      "page": "meditations/meditaciya-osvobozhdenie-ot-trevogi.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
     {
       "id": 13,
-      "slug": "release-control",
+      "slug": "meditaciya-otpuskanie-kontrolya",
       "title": "Отпускаю<br>  контроль",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -559,13 +559,13 @@
       ],
       "instructions": "Если вы устали всё контролировать и хотите наконец выдохнуть — отпустите то, что не можете изменить, и почувствуйте, как становится легче.",
       "includedInPacks": ["freedom"],
-      "page": "meditations/release-control.html",
+      "page": "meditations/meditaciya-otpuskanie-kontrolya.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
     {
       "id": 14,
-      "slug": "inner-support",
+      "slug": "meditaciya-vnutrennyaya-opora",
       "title": "Опора <br> внутри меня",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -606,13 +606,13 @@
       ],
       "instructions": "Особенно если сейчас трудно и кажется, что не на что опереться. Эта медитация напомнит вам, что самая надёжная опора уже есть. Она внутри вас.",
       "includedInPacks": ["freedom", "goddess"],
-      "page": "meditations/inner-support.html",
+      "page": "meditations/meditaciya-vnutrennyaya-opora.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
     {
       "id": 15,
-      "slug": "love-magnet",
+      "slug": "meditaciya-magnit-lyubvi",
       "title": "Магнит <br> твоей любви",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -656,7 +656,7 @@
       ],
       "instructions": "Включаешь вечером перед сном, ложишься с наушниками, закрываешь глаза. Утром просыпаешься другой: легче, светлее, с ощущением что встреча уже близко.",
       "includedInPacks": [],
-      "page": "meditations/love-magnet.html",
+      "page": "meditations/meditaciya-magnit-lyubvi.html",
       "releaseDate": "2026-02-18",
       "isNew": false
     },
@@ -834,7 +834,7 @@
     },
     {
       "id": 20,
-      "slug": "sexuality-awakening",
+      "slug": "meditaciya-probuzhdenie-seksualnosti",
       "title": "Пробуждение<br>  сексуальности",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "5881",
@@ -869,13 +869,13 @@
       ],
       "instructions": "12 минут на изменение состояния. Слушай 21 день подряд, твоё тело запомнит это ощущение и начнёт жить в нём.",
       "includedInPacks": ["goddess"],
-      "page": "meditations/sexuality-awakening.html",
+      "page": "meditations/meditaciya-probuzhdenie-seksualnosti.html",
       "releaseDate": "2026-03-07",
       "isNew": false
     },
     {
       "id": 21,
-      "slug": "freedom-from-sb-opinion",
+      "slug": "meditaciya-svoboda-ot-chuzhogo-mneniya",
       "title": "Свобода <br> от чужого мнения",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -916,13 +916,13 @@
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
       "includedInPacks": ["star"],
-      "page": "meditations/freedom-from-sb-opinion.html",
+      "page": "meditations/meditaciya-svoboda-ot-chuzhogo-mneniya.html",
       "releaseDate": "2026-04-02",
       "isNew": false
     },
     {
       "id": 22,
-      "slug": "let-yourself-be",
+      "slug": "meditaciya-pozvol-sebe-byt-soboy",
       "title": "Разреши<br>  себе быть",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -963,7 +963,7 @@
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
       "includedInPacks": ["star"],
-      "page": "meditations/let-yourself-be.html",
+      "page": "meditations/meditaciya-pozvol-sebe-byt-soboy.html",
       "releaseDate": "2026-04-02",
       "isNew": false
     },
@@ -1016,7 +1016,7 @@
     },
     {
       "id": 24,
-      "slug": "intuition-awakening",
+      "slug": "meditaciya-probuzhdenie-intuicii",
       "title": "Раскрытие<br> интуиции",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -1057,7 +1057,7 @@
       ],
       "instructions": "Слушайте 21 день. Подсознание запомнит новое состояние и оно останется.",
       "includedInPacks": [],
-      "page": "meditations/intuition-awakening.html",
+      "page": "meditations/meditaciya-probuzhdenie-intuicii.html",
       "releaseDate": "2026-04-10",
       "isNew": false
     }
@@ -1179,7 +1179,7 @@
       "shortDescriptionCommon": "Страх чужого мнения мешает говорить то, что думаете, называть свою цену, делать то, что давно хотели. Эта нейронастройка убирает этот страх на уровне подсознания, не через убеждение, а через перепрограммирование. После прослушивания вы просто говорите, действуете и не оглядываетесь на чужую реакцию.",
       "shortDescriptionHero": "Три аудиопрограммы для тех, кого накрывает тревога и бесконечные мысли. Сначала успокаиваете голову, потом отпускаете контроль над тем, что не изменить, и затем находите опору внутри себя. После прохождения вы спокойны, устойчивы и больше не тратите силы на то, что не в ваших руках.",
       "fullDescription": "Знаете это состояние, когда голова не выключается? Мысли крутятся по кругу, вы анализируете прошлое, тревожитесь о будущем, пытаетесь всё контролировать. Устали, измотаны, но остановиться не можете. А когда что-то идёт не по плану, вас сносит, потому что внутри нет опоры. Вы держитесь на внешнем: на людях, на обстоятельствах, на том, чтобы всё было «под контролем». И когда это рушится, рушитесь и вы.",
-      "meditations": ["release-anxiety", "release-control", "inner-support"],
+      "meditations": ["meditaciya-osvobozhdenie-ot-trevogi", "meditaciya-otpuskanie-kontrolya", "meditaciya-vnutrennyaya-opora"],
       "howToListen": [
         "Дни 1-7: слушаете «Отпустить тревожность и навязчивые мысли»",
         "С 7 дня добавляете «Отпускаю контроль»",
@@ -1275,16 +1275,17 @@
       "shortDescriptionCommon": "Три нейромедитации для женщины, которая забыла, что она БОГИНЯ. <br>Сначала пробуждаете сексуальность и ощущение своей силы, потом находите внутреннюю опору, и затем возвращаете гармонию с собой. После прохождения вы снова чувствуете себя желанной, устойчивой и целой.",
       "shortDescriptionHero": "Три нейромедитации для женщины, которая забыла, что она БОГИНЯ. Сначала пробуждаете сексуальность и ощущение своей силы, потом находите внутреннюю опору, и затем возвращаете гармонию с собой. После прохождения вы снова чувствуете себя желанной, устойчивой и целой.",
       "fullDescription": "Представьте: вы смотрите на себя в зеркало и не видите богиню. Видите усталую женщину, которая всё тащит на себе, всем улыбается и давно не помнит, когда последний раз чувствовала себя желанной, сильной, живой. Когда это вообще было? Вы не можете вспомнить. Знакомо?",
-      "meditations": ["release-anxiety", "release-control", "inner-support"],
+      "meditations": ["meditaciya-probuzhdenie-seksualnosti", "meditaciya-vnutrennyaya-opora", "meditaciya-vnutrennyaya-garmoniya"],
       "howToListen": [
-        "Дни 1-7: слушаете «Отпустить тревожность и навязчивые мысли»",
-        "С 7 дня добавляете «Отпускаю контроль»",
-        "С 14 дня добавляете «Опора внутри меня»",
+        "Дни 1-7: слушаете «Сексуальность»",
+        "С 7 дня добавляете «Опора внутри меня»",
+        "С 14 дня добавляете «Гармония внутри себя»",
         "К 21 дню слушаете все три, и цикл завершён"
       ],
-      "problemSectionTitle": "Свобода",
-      "problemSectionTitleAccent": "от тревоги к устойчивости",
+      "problemSectionTitle": "Богиня",
+      "problemSectionTitleAccent": "от забытой к живой",
       "problemSectionDescription": [
+        "Представьте: вы смотрите на себя в зеркало и не видите богиню. Видите усталую женщину, которая всё тащит на себе, всем улыбается и давно не помнит, когда последний раз чувствовала себя желанной, сильной, живой. Когда это вообще было? Вы не можете вспомнить. Знакомо?",
         "Это не про внешность и не про возраст. Это про энергию. Богиня это состояние, а не картинка. И это состояние можно вернуть.",
         "Этот пакет построен так, чтобы провести вас от «я устала быть сильной» к «я и есть сила». Три нейромедитации, три шага, определённый порядок."
       ],
@@ -1337,9 +1338,9 @@
       "shortDescriptionHero": "3 нейронастройки для тех, кто устал бояться чужого мнения, воевать с собой и чувствовать себя невидимкой. Сначала освобождаетесь от страха осуждения, потом останавливаете внутреннюю войну с собой, и затем начинаете притягивать нужных людей, возможности и деньги. После прохождения вы просто занимаете своё место в этом мире.",
       "fullDescription": "Вы знаете это состояние, когда внутри есть что-то настоящее, своё, важное, но оно как будто заперто. Вы молчите когда надо говорить, соглашаетесь когда хотите отказать, делаете меньше чем могли бы потому что страшно как это воспримут. И при этом смотрите на других и думаете «ну почему у них получается, почему их замечают, выбирают, а я как будто невидимка». И давите на себя, говорите «ну соберись уже», и чем больше давите тем сильнее внутри что-то упирается. И от этого такая усталость.",
       "meditations": [
-        "freedom-from-sb-opinion",
-        "let-yourself-be",
-        "meditaciya-prityagivat-svoe.html"
+        "meditaciya-svoboda-ot-chuzhogo-mneniya",
+        "meditaciya-pozvol-sebe-byt-soboy",
+        "meditaciya-prityagivat-svoe"
       ],
       "howToListen": [
         "Дни 1-7: слушаете «Свобода от чужого мнения»",
