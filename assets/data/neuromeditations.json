@@ -3,7 +3,7 @@
 
   "neuromeditations": [{
       "id": 1,
-      "slug": "free-head-and-body",
+      "slug": "meditaciya-osvobozhdenie-golovy-i-tela",
       "title": "Освободи <br> голову и тело",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -44,13 +44,13 @@
       ],
       "instructions": "Ложитесь в кровать, включаете медитацию и через 15 минут почувствуете, как всё это гуано дня тихо уходит. Утром проснётесь легче и спокойнее. Как будто кто-то ночью открыл окно и проветрил вас изнутри.",
       "includedInPacks": ["recharge"],
-      "page": "meditations/free-head-and-body.html",
+      "page": "meditations/meditaciya-osvobozhdenie-golovy-i-tela.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
     {
       "id": 2,
-      "slug": "energy-balance",
+      "slug": "meditaciya-energeticheskiy-balans",
       "title": "Баланс <br> энергий",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -91,6 +91,7 @@
       ],
       "instructions": "Включите утром перед началом дня и почувствуете, как возвращаетесь в себя. Не пустая оболочка, а вы настоящая и собранная.",
       "includedInPacks": ["recharge"],
+      "page": "meditations/meditaciya-energeticheskiy-balans.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
@@ -1075,9 +1076,9 @@
       "shortDescriptionHero": "Три аудиопрограммы, которые работают вместе: сначала убираете всё чужое и налипшее, потом восстанавливаете свою энергию, и затем ставите защиту, чтобы больше не цеплялось. Именно в таком порядке. Полный цикл: очистить, наполнить, защитить. После него вы как новая.",
       "fullDescription": "Знаете это ощущение, когда вы вроде ничего особенного не делали, а сил нет? Когда после общения с некоторыми людьми хочется лечь и не вставать? Когда внутри тяжесть, раздражение, тревога, и непонятно откуда это вообще взялось? Это не ваше. Это то, что вы нахватали извне и носите на себе.",
       "meditations": [
-        "free-head-and-body",
-        "energy-balance",
-        "protection-of-kin"
+        "meditaciya-osvobozhdenie-golovy-i-tela",
+        "meditaciya-energeticheskiy-balans",
+        "meditaciya-zashchita-roda"
       ],
       "howToListen": [
         "Дни 1-7: слушаете «Освободи голову и тело»",
