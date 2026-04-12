@@ -1,5 +1,4 @@
-[
-  {
+[{
     "id": "basic-negative",
     "tag": "Что вам мешает",
     "image": "assets/images/diagnostics-images/red-gold-star-dust.jpg",
@@ -178,7 +177,7 @@
   {
     "id": "full-cup",
     "tag": "Как увеличить доход",
-    "image": "assets/images/diagnostics-images/cup1-diag.jpg",
+    "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1775964686/full-cup-diagnosis_gzhof4.jpg",
     "imageAlt": "Диагностика Полная чаша",
     "title": "Диагностика: «Полная чаша»",
     "text": "Деньги как будто утекают сквозь пальцы. Зарабатываете, но накопить не получается, или доход стоит на месте и непонятно почему. Таро диагностика денег находит главную причину застоя, показывает ситуацию которая поможет улучшить благосостояние, и что конкретно для этого сделать.",
