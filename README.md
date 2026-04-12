@@ -12,7 +12,7 @@ The site presents services, products, and content focused on:
 
 ## ✨ Live Website
 
-👉 https://stukserdza.github.io/intro/
+👉 https://stukserdza.com/
 
 ---
 
