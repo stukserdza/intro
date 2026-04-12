@@ -143,7 +143,7 @@
     },
     {
       "id": 4,
-      "slug": "wish-fulfillment",
+      "slug": "meditaciya-ispolnenie-zhelaniy",
       "title": "Исполнение<br>  желания",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -184,7 +184,7 @@
       ],
       "instructions": "Выберите один конкретный запрос в любой сфере. Можно один раз, можно возвращаться и усиливать намерение.",
       "includedInPacks": ["love"],
-      "page": "meditations/wish-fulfillment.html",
+      "page": "meditations/meditaciya-ispolnenie-zhelaniy.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
@@ -330,7 +330,7 @@
     },
     {
       "id": 8,
-      "slug": "release-past-pain",
+      "slug": "meditaciya-osvobozhdenie-ot-proshloy-boli",
       "title": "Отпустить<br>  боль прошлого",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -371,13 +371,13 @@
       ],
       "instructions": "Дайте себе время прожить и отпустить. Вы заслуживаете жить без этого груза.",
       "includedInPacks": ["love"],
-      "page": "meditations/release-past-pain.html",
+      "page": "meditations/meditaciya-osvobozhdenie-ot-proshloy-boli.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
     {
       "id": 9,
-      "slug": "inner-harmony",
+      "slug": "meditaciya-vnutrennyaya-garmoniya",
       "title": "Гармония<br>  внутри себя",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "",
@@ -418,7 +418,7 @@
       ],
       "instructions": "Это не про то, чтобы стать кем-то другим. Это про то, чтобы наконец стать собой и перестать за это извиняться.",
       "includedInPacks": ["love", "goddess"],
-      "page": "meditations/inner-harmony.html",
+      "page": "meditations/meditaciya-vnutrennyaya-garmoniya.html",
       "releaseDate": "2025-06-01",
       "isNew": false
     },
@@ -1127,7 +1127,11 @@
       "shortDescriptionCommon": "Три медитации, которые работают вместе: сначала отпускаете боль прошлого, потом восстанавливаете уверенность и внутреннюю гармонию, и только потом открываетесь новой любви. Именно в таком порядке. Потому что пока внутри старые раны и неуверенность, настоящая любовь не приходит.",
       "shortDescriptionHero": "Три аудиопрограммы, которые работают вместе: сначала отпускаете боль прошлого, потом восстанавливаете уверенность и внутреннюю гармонию, и только потом открываетесь новой любви. Именно в таком порядке. Потому что пока внутри старые раны и неуверенность, настоящая любовь не приходит.",
       "fullDescription": "Знаете, почему у многих не получается с отношениями? Они пытаются найти любовь, не разобравшись с тем, что внутри. Ходят на свидания с открытыми ранами от прошлого. Ищут мужчину, чтобы он заполнил пустоту. Надеются, что новые отношения исправят старую боль. Но так не работает.",
-      "meditations": ["release-past-pain", "inner-harmony", "wish-fulfillment"],
+      "meditations": [
+        "meditaciya-osvobozhdenie-ot-proshloy-boli",
+        "meditaciya-vnutrennyaya-garmoniya",
+        "meditaciya-ispolnenie-zhelaniy"
+      ],
       "howToListen": [
         "Дни 1-7: слушаете «Освободи голову и тело»",
         "С 7 дня добавляете «Баланс энергий»",
