@@ -328,7 +328,7 @@ function buildCard(card) {
   const questionsHTML = hasQuestions
     ? `
     <button class="reading-toggle-btn" type="button" aria-expanded="false">
-      <img src="assets/images/icons/arrow.svg" alt="Показать список" class="reading-toggle-icon">
+      <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_cnfjpu.svg" alt="Показать список" class="reading-toggle-icon">
     </button>
     <ul class="reading-questions">
       ${card.questions.map((q) => `<li>${q}</li>`).join("")}
