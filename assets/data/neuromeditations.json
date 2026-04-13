@@ -853,7 +853,8 @@
     {
       "id": 20,
       "slug": "meditaciya-probuzhdenie-seksualnosti",
-      "title": "Пробуждение<br>  сексуальности",
+      "title": "Пробуждение сексуальности",
+      "titleForCards": "Пробуждение<br>сексуальности",
       "meditationHeroBadge": "Аудиопрограмма Сурии",
       "numerologicalCode": "5881",
       "duration": "11:30",
