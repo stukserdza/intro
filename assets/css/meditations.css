@@ -577,11 +577,6 @@
   }
 }
 
-@media (min-width: 900px) {
-  .med-packs-carousel {
-    max-width: 1240px;
-  }
-}
 
 .med-card-grid {
   display: grid;
@@ -644,7 +639,7 @@
 
 /* Для секции с пакетами — чуть крупнее карточки и 3 в ряд на десктопе */
 .med-card-grid--packs {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
 /* Для секции одиночных можно оставить как есть или сделать плотнее */
@@ -655,7 +650,9 @@
 
 /* Адаптив */
 @media (max-width: 600px) {
-  .med-card-image {
+
+  .med-card-image,
+  .med-packs-card-img {
     height: 150px;
   }
 }
@@ -698,7 +695,7 @@
   font-weight: 600;
 }
 
-.med-how-list li + li {
+.med-how-list li+li {
   margin-top: 1em;
 }
 
@@ -772,14 +769,19 @@ li.sparkle {
 /* Responsive */
 
 @media (max-width: 900px) {
+
   .med-hero-grid,
   .med-pack-grid,
   .med-contact-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0px, 1fr);
   }
 
   .med-pack-grid {
     gap: 16px;
+  }
+
+  .med-packs-carousel {
+    max-width: 500px;
   }
 
   .med-hero {
