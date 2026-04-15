@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  /* ── SPARKLE SVG ─────────────────────────────────────────── */
+  const SPARKLE = `
+      <span class="sparkle" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <path d="M32 6 C34 18, 38 26, 58 32 C38 38, 34 46, 32 58 C30 46, 26 38, 6 32 C26 26, 30 18, 32 6Z"/>
+        </svg>
+      </span>`;
+
   const startYear = 2008;
   const currentYear = new Date().getFullYear();
   const years = currentYear - startYear;
@@ -136,19 +144,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     // =========================
     const tagsContainer = document.querySelector(".article-tags");
     tagsContainer.innerHTML = "";
-    const span = document.createElement("span");
-    span.className = "tag-dot";
-    span.textContent = "•";
-    tagsContainer.appendChild(span);
-    article.tags.forEach((tag) => {
+    article.tags.forEach((tag, index) => {
+      const isLast = index === article.tags.length - 1;
       const tagH2 = document.createElement("h2");
       tagH2.className = "tag";
       tagH2.textContent = tag;
       tagsContainer.appendChild(tagH2);
-      const span = document.createElement("span");
-      span.className = "tag-dot";
-      span.textContent = "•";
-      tagsContainer.appendChild(span);
+      if (!isLast) {
+        const span = document.createElement("span");
+        span.className = "tag-dot";
+        span.innerHTML = SPARKLE;
+        tagsContainer.appendChild(span);
+      }
     });
   } catch (err) {
     console.error("Error loading article:", err);
