@@ -198,6 +198,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  display: none;
 }
 
 .article-tags h2 {
