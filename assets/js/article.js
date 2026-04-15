@@ -70,7 +70,7 @@ async function init() {
 
     DOM.label.textContent = article.label;
     DOM.title.textContent = article.title;
-    DOM.meta.textContent = `${article.readTime} чтения`;
+    // DOM.meta.textContent = `${article.readTime} чтения`;
 
     DOM.time.dateTime = article.releaseDate;
     DOM.time.textContent = formatDate(article.releaseDate);
