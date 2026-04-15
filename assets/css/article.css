@@ -7,8 +7,7 @@
   --white: #ffffff;
   --extra-background: #0000006a;
   --ff-headings: "Lora", Georgia, serif;
-  --ff-body:
-    "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ff-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --faq-line: rgba(240, 220, 210, 0.85);
   --faq-text: #e7d1c8;
   --faq-accent: #f2e2d7;
@@ -180,11 +179,9 @@
 ========================= */
 
 .article-signature {
-  max-width: 800px;
-  margin: 60px auto 0;
-  padding: 30px 20px;
+  max-width: 500px;
+  font-family: var(--ff-body) !important;
   text-align: center;
-  border-top: var(--card-border);
 }
 
 .article-signature h2 {
@@ -202,18 +199,36 @@
 }
 
 .article-tags h2 {
-  padding: 7px 16px;
-  /* border-radius: 999px;
-  border: 1px solid var(--beige);
-  background: rgba(42, 9, 14, 0.55); */
+  padding: 16px;
   color: var(--beige);
   font-size: var(--fs-20-text);
   line-height: 1;
-  /* margin: 0.5em 0; */
+  margin-bottom: 0.6rem;
 }
 
-.article-tags span {
-  color: var(--gold-light);
+
+.sparkle {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sparkle {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sparkle svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(255, 219, 120, 0.35));
+}
+
+.sparkle path {
+  fill: var(--gold-light);
 }
 
 /* =========================
