@@ -179,9 +179,10 @@
 ========================= */
 
 .article-signature {
-  max-width: 500px;
+  max-width: 600px;
   font-family: var(--ff-body) !important;
   text-align: center;
+  padding-top: 0 !important;
 }
 
 .article-signature h2 {
