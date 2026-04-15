@@ -38,7 +38,8 @@
 
 .blog-hero,
 .section-blog-filters,
-.section-blog-filters-container {
+.section-blog-filters-container,
+.blog-section {
     text-align: center;
     width: 100%;
     max-width: 1200px;
@@ -101,10 +102,6 @@
 }
 
 /* ── GRID ── */
-.blog-section {
-    padding: 0 0 80px;
-}
-
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
