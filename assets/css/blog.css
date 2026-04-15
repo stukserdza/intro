@@ -123,11 +123,6 @@
     text-decoration: none;
 }
 
-.blog-card:hover {
-    border-color: rgba(253, 232, 133, 0.35);
-    transform: translateY(-3px);
-}
-
 .blog-card-img {
     width: 100%;
     aspect-ratio: 16/9;
@@ -218,8 +213,8 @@
     transition: transform 0.2s ease;
 }
 
-.blog-card:hover .blog-card-link::after {
-    transform: translateX(4px);
+.blog-card-link:hover {
+    color: var(--gold-bright);
 }
 
 /* ── FEATURED (first card, full width) ── */
