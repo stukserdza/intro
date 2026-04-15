@@ -1,0 +1,269 @@
+{
+    "blogTags": [{
+            "tag": "таро",
+            "count": 4,
+            "category": "tarot"
+        },
+        {
+            "tag": "расклады",
+            "count": 2,
+            "category": "tarot"
+        },
+        {
+            "tag": "диагностика",
+            "count": 1,
+            "category": "tarot"
+        },
+        {
+            "tag": "гадание на картах",
+            "count": 1,
+            "category": "tarot"
+        },
+        {
+            "tag": "кармическая связь",
+            "count": 1,
+            "category": "relationships"
+        },
+        {
+            "tag": "токсичные отношения",
+            "count": 1,
+            "category": "relationships"
+        },
+        {
+            "tag": "нейромедитации",
+            "count": 2,
+            "category": "meditations"
+        },
+        {
+            "tag": "подсознание",
+            "count": 4,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "тревожность",
+            "count": 1,
+            "category": "selfdevelopment"
+        },
+        {
+            "tag": "энергетическая защита",
+            "count": 1,
+            "category": "energy"
+        },
+        {
+            "tag": "чувства мужчины",
+            "count": 1,
+            "category": "relationships"
+        },
+        {
+            "tag": "предсказание",
+            "count": 1,
+            "category": "tarot"
+        },
+        {
+            "tag": "любовь",
+            "count": 1,
+            "category": "relationships"
+        },
+        {
+            "tag": "одиночество",
+            "count": 2,
+            "category": "relationships"
+        },
+        {
+            "tag": "лень",
+            "count": 1,
+            "category": "selfdevelopment"
+        },
+        {
+            "tag": "депрессия",
+            "count": 2,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "почему я плачу",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "ничего не хочется",
+            "count": 1,
+            "category": "selfdevelopment"
+        },
+        {
+            "tag": "родовое проклятие",
+            "count": 1,
+            "category": "energy"
+        },
+        {
+            "tag": "порча на род",
+            "count": 1,
+            "category": "energy"
+        },
+        {
+            "tag": "семейные неудачи",
+            "count": 1,
+            "category": "energy"
+        },
+        {
+            "tag": "как привлечь деньги",
+            "count": 1,
+            "category": "money"
+        },
+        {
+            "tag": "женственность",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "сексуальность",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "как стать красивой",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "привлекательность",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "как нравиться мужчинам",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "усталость",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "выгорание",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "как восстановиться",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "нет сил",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "женское здоровье",
+            "count": 1,
+            "category": "feminine"
+        },
+        {
+            "tag": "что мешает жить",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "психологические блоки",
+            "count": 2,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "почему не получается",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "внутренние барьеры",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "почему мне плохо",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "плохо на душе",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "грустно",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "мне тяжело",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "негативные установки",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "детские травмы",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "я плохая",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "низкая самооценка",
+            "count": 1,
+            "category": "subconsciousness"
+        },
+        {
+            "tag": "комплексы",
+            "count": 1,
+            "category": "subconsciousness"
+        }
+    ],
+    "categories": [{
+            "slug": "tarot",
+            "name": "Таро и расклады",
+            "count": 3
+        },
+        {
+            "slug": "meditations",
+            "name": "Нейромедитации",
+            "count": 2
+        },
+        {
+            "slug": "relationships",
+            "name": "Отношения и любовь",
+            "count": 2
+        },
+        {
+            "slug": "energy",
+            "name": "Энергетика и защита",
+            "count": 2
+        },
+        {
+            "slug": "selfdevelopment",
+            "name": "Саморазвитие",
+            "count": 2
+        },
+        {
+            "slug": "subconsciousness",
+            "name": "Подсознание",
+            "count": 3
+        },
+        {
+            "slug": "feminine",
+            "name": "Женская энергия",
+            "count": 2
+        },
+        {
+            "slug": "money",
+            "name": "Деньги и блоки",
+            "count": 1
+        }
+    ]
+}
