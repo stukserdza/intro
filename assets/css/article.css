@@ -1,0 +1,189 @@
+:root {
+    --gold-light: #fde885;
+    --gold-bright: #ffc909;
+    --deep-red: #210202;
+    --deepest-red: #110205;
+    --black: #000000;
+    --white: #ffffff;
+    --extra-background: #0000006a;
+
+    --ff-headings: "Lora", Georgia, serif;
+    --ff-body:
+        "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --faq-line: rgba(240, 220, 210, 0.85);
+    --faq-text: #e7d1c8;
+    --faq-accent: #f2e2d7;
+    --fs-section-title: clamp(2rem, 1.4rem + 2vw, 2.8125rem);
+    /* 32px → 45px */
+    --fs-main-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-little-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-btn-text: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    /* 14px → 16px */
+    --fs-card-text: clamp(1.25rem, 1rem + 1.2vw, 1.875rem);
+    /* 20px → 30px */
+    --fs-36-text: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    /* 24px → 36px */
+    --fs-20-text: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    /* 16px → 20px */
+    --fs-14-text: clamp(0.875rem, 0.8rem + 0.15vw, 0.875rem);
+    /* 14px fixed */
+    --fs-slogan: clamp(3.125rem, 2.2rem + 3.2vw, 4.375rem);
+    /* 50px → 70px */
+    /* --fs-slogan: clamp(3.5rem, 2.6rem + 2.8vw, 4.375rem); */
+    /* 56px → 70px */
+    --ff-section-mobile: 24px;
+    --fx-20-to-14-mobile: 14px;
+    --card-border: 1px solid #edded26d;
+    --card-border-red: 1px solid rgba(75, 0, 8, 0.7);
+}
+
+
+/* =========================
+   ARTICLE PAGE
+========================= */
+.article {
+    background-color: var(--deepest-red);
+}
+
+.article-img__wrapper {
+    width: 100%;
+    height: 260px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-hero__image {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.article-hero__content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-hero__label {
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--gold-light);
+    background: rgba(42, 9, 14, 0.55);
+    backdrop-filter: blur(2px);
+    color: var(--gold-light);
+    font-size: 12px;
+    line-height: 1;
+    margin: 1em 0;
+}
+
+
+.article-meta {
+    font-size: var(--fs-little-text);
+    opacity: 0.7;
+}
+
+.article-hero__description {
+    font-size: var(--fs-main-text);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.article-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.75;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    font-size: var(--fs-main-text);
+}
+
+/* Headings */
+.article-content h2 {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-36-text);
+    color: var(--gold-light);
+    margin: 50px 0 20px;
+}
+
+/* Quotes */
+.article-content blockquote {
+    border-left: 3px solid var(--gold-light);
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--faq-accent);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    margin-top: 40px;
+    border-top: 1px solid var(--faq-line);
+}
+
+.faq-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--faq-line);
+}
+
+.faq-item h3 {
+    font-size: var(--fs-20-text);
+    color: var(--gold-light);
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    font-size: var(--fs-main-text);
+    opacity: 0.9;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.article-signature {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: var(--card-border);
+}
+
+.article-signature p {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-20-text);
+    color: var(--gold-light);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+
+
+    .article-content {
+        margin-top: 20px;
+    }
+
+    .article-content h2 {
+        font-size: var(--ff-section-mobile);
+    }
+}
