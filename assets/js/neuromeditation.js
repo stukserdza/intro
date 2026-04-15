@@ -1,7 +1,7 @@
-   /* ── CONFIG ──────────────────────────────────────────────── */
-   const JSON_PATH = '../assets/data/neuromeditations.json';
-   const BASE_URL = 'https://stukserdza.com/meditations/';
-   const CONTACT_HTML = `
+/* ── CONFIG ──────────────────────────────────────────────── */
+const JSON_PATH = "../assets/data/neuromeditations.json";
+const BASE_URL = "https://stukserdza.com/meditations/";
+const CONTACT_HTML = `
               <section id="contact" class="alt contact">
             <div class="container contact-wrapper">
                 <div class="contact-text" id="sofia-contact">
@@ -83,11 +83,16 @@
                     </form>
                     <div class="contact-form-disclaimer">
                         <p>
-                            Отправляя форму, вы подтверждаете согласие с <a href="privacy.html" target="_blank"
-                                class="link__legal" rel=" noopener">Политикой конфиденциальности</a> и <a
-                                href="terms-of-service.html" target="_blank" rel="noopener"
-                                class="link__legal">условиями
-                                использования сайта</a>
+Отправляя форму, вы подтверждаете согласие с
+                            <a href="privacy.html" target="_blank" class="link__legal" rel=" noopener"
+                                aria-label="Перейти к нашей политике конфиденциальности">
+                                Политикой конфиденциальности
+                            </a>
+                            и
+                            <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal"
+                                aria-label="Перейти к нашим условиям использования">
+                                условиями использования сайта
+                            </a>
                             использования сайта
                         </p>
                         <p>
@@ -98,111 +103,116 @@
             </div>
         </section>`;
 
-   /* ── SPARKLE SVG ─────────────────────────────────────────── */
-   const SPARKLE = `
+/* ── SPARKLE SVG ─────────────────────────────────────────── */
+const SPARKLE = `
       <li class="sparkle" aria-hidden="true">
         <svg viewBox="0 0 64 64">
           <path d="M32 6 C34 18, 38 26, 58 32 C38 38, 34 46, 32 58 C30 46, 26 38, 6 32 C26 26, 30 18, 32 6Z"/>
         </svg>
       </li>`;
 
-   /* ── HELPERS ─────────────────────────────────────────────── */
-   function getSlugFromURL() {
-       // filename without .html  →  e.g. "attract-mine"
-       return location.pathname.split('/').pop().replace('.html', '');
-   }
+/* ── HELPERS ─────────────────────────────────────────────── */
+function getSlugFromURL() {
+  // filename without .html  →  e.g. "attract-mine"
+  return location.pathname.split("/").pop().replace(".html", "");
+}
 
-   function buildPackLinks(packs, allPacks) {
-       if (!packs || !packs.length) return '';
-       const links = packs
-           .map(packId => {
-               const pack = allPacks.find(p => p.slug === packId);
-               if (!pack) return '';
-               return `<a href="${pack.slug}.html" aria-label="Перейти к пакету ${pack.title}">${pack.title}</a>`;
-           })
-           .filter(Boolean)
-           .join(', ');
-       if (!links) return '';
-       return `
+function buildPackLinks(packs, allPacks) {
+  if (!packs || !packs.length) return "";
+  const links = packs
+    .map((packId) => {
+      const pack = allPacks.find((p) => p.slug === packId);
+      if (!pack) return "";
+      return `<a href="${pack.slug}.html" aria-label="Перейти к пакету ${pack.title}">${pack.title}</a>`;
+    })
+    .filter(Boolean)
+    .join(", ");
+  if (!links) return "";
+  return `
         <div class="med-hero-included-in-pack">
           <p>Входит в состав пакета</p>
           ${links}
         </div>`;
-   }
+}
 
-   function buildBulletList(items) {
-       if (!items || !items.length) return '';
-       return items
-           .flatMap((item, i) => [
-               `<li class="how-text-step">${item}</li>`,
-               i < items.length - 1 ? SPARKLE : ''
-           ])
-           .join('');
-   }
+function buildBulletList(items) {
+  if (!items || !items.length) return "";
+  return items
+    .flatMap((item, i) => [
+      `<li class="how-text-step">${item}</li>`,
+      i < items.length - 1 ? SPARKLE : "",
+    ])
+    .join("");
+}
 
-   /* ── BUILD PAGE ──────────────────────────────────────────── */
-   function buildPage(med, allPacks) {
-       const price = med.price ?
-           `${med.price.toLocaleString('ru-RU')} ₽` :
-           'Бесплатно';
-       const pageUrl = `${BASE_URL}${med.slug}.html`;
+/* ── BUILD PAGE ──────────────────────────────────────────── */
+function buildPage(med, allPacks) {
+  const price = med.price
+    ? `${med.price.toLocaleString("ru-RU")} ₽`
+    : "Бесплатно";
+  const pageUrl = `${BASE_URL}${med.slug}.html`;
 
-       /* ── SEO ── */
-       document.title = `Сурия | Стук сердца | Нейромедитация | ${med.title.replace(/<br\s*\/?>/gi, ' ')}`;
-       document.querySelector('meta[name="description"]').content = med.shortDescriptionCommon;
-       document.querySelector('meta[property="og:title"]').content = document.title;
-       document.querySelector('meta[property="og:description"]').content = med.shortDescriptionCommon;
-       document.querySelector('meta[property="og:url"]').content = pageUrl;
-       document.querySelector('meta[name="twitter:title"]').content = document.title;
-       document.querySelector('meta[name="twitter:description"]').content = med.shortDescriptionCommon;
-       document.querySelector('link[rel="canonical"]').href = pageUrl;
+  /* ── SEO ── */
+  document.title = `Сурия | Стук сердца | Нейромедитация | ${med.title.replace(/<br\s*\/?>/gi, " ")}`;
+  document.querySelector('meta[name="description"]').content =
+    med.shortDescriptionCommon;
+  document.querySelector('meta[property="og:title"]').content = document.title;
+  document.querySelector('meta[property="og:description"]').content =
+    med.shortDescriptionCommon;
+  document.querySelector('meta[property="og:url"]').content = pageUrl;
+  document.querySelector('meta[name="twitter:title"]').content = document.title;
+  document.querySelector('meta[name="twitter:description"]').content =
+    med.shortDescriptionCommon;
+  document.querySelector('link[rel="canonical"]').href = pageUrl;
 
-       /* ── problemSectionDescription paragraphs ── */
-       const problemParas = (med.problemSectionDescription || [])
-           .map(p => `<p class="med-section-intro problem">${p}</p>`)
-           .join('');
+  /* ── problemSectionDescription paragraphs ── */
+  const problemParas = (med.problemSectionDescription || [])
+    .map((p) => `<p class="med-section-intro problem">${p}</p>`)
+    .join("");
 
-       /* ── howItLooks bullets (optional section) ── */
-       //     For LATER
-       const howItLooksSection = (med.howItLooksBooletPoints && med.howItLooksBooletPoints.length) ?
-           `<section class="med-single-section">
+  /* ── howItLooks bullets (optional section) ── */
+  //     For LATER
+  const howItLooksSection =
+    med.howItLooksBooletPoints && med.howItLooksBooletPoints.length
+      ? `<section class="med-single-section">
             <div class="med-how-inner">
               <h2 class="section-title">${med.howItLooksTitle}</h2>
               <ul class="med-how-list med-single-how-list">
                 ${buildBulletList(med.howItLooksBooletPoints)}
               </ul>
             </div>
-          </section>` :
-           '';
+          </section>`
+      : "";
 
-       /* ── effectsBooletPoints ── */
-       const effectsSection = (med.effectsBooletPoints && med.effectsBooletPoints.length) ?
-           `<section class="med-single-section">
+  /* ── effectsBooletPoints ── */
+  const effectsSection =
+    med.effectsBooletPoints && med.effectsBooletPoints.length
+      ? `<section class="med-single-section">
             <div class="med-how-inner">
               <h2 class="section-title">${med.effectsTitle}</h2>
               <ul class="med-how-list med-single-how-list">
                 ${buildBulletList(med.effectsBooletPoints)}
               </ul>
             </div>
-          </section>` :
-           '';
+          </section>`
+      : "";
 
-       /* ── howItHelps paragraphs ── */
-       const howItHelpsParas = (med.howItHelpsBooletPoints || [])
-           .map(p => `<p class="med-section-final">${p}</p>`)
-           .join('');
+  /* ── howItHelps paragraphs ── */
+  const howItHelpsParas = (med.howItHelpsBooletPoints || [])
+    .map((p) => `<p class="med-section-final">${p}</p>`)
+    .join("");
 
-       /* ── instructions ── */
-       const instructionsSection = med.instructions ?
-           `<section class="med-single-section">
+  /* ── instructions ── */
+  const instructionsSection = med.instructions
+    ? `<section class="med-single-section">
             <div class="med-how-inner">
               <p class="med-section-intro">${med.instructions}</p>
             </div>
-          </section>` :
-           '';
+          </section>`
+    : "";
 
-       /* ── full HTML ── */
-       const html = `
+  /* ── full HTML ── */
+  const html = `
         <!-- Hero -->
         <section class="med-hero" id="hero">
           <div class="container pack-single-hero-inner">
@@ -214,7 +224,7 @@
                 <div class="med-packs-card-action">
                   <p class="med-packs-card-price">${price}</p>
                   <a href="#contact" class="btn-primary med-packs-card-btn"
-                     aria-label="Получить медитацию ${med.title.replace(/<br\s*\/?>/gi, ' ')}">
+                     aria-label="Получить медитацию ${med.title.replace(/<br\s*\/?>/gi, " ")}">
                     Получить полную версию
                   </a>
                 </div>
@@ -222,7 +232,7 @@
               </div>
               <figure class="med-hero-photo-wrap med-single-hero-photo-wrap">
                 <img src="${med.image}" class="med-hero-photo"
-                     alt="${med.title.replace(/<br\s*\/?>/gi, ' ')} — медитация Сурии">
+                     alt="${med.title.replace(/<br\s*\/?>/gi, " ")} — медитация Сурии">
               </figure>
             </div>
           </div>
@@ -257,41 +267,41 @@
         <!-- Contact -->
         ${CONTACT_HTML}`;
 
-       document.getElementById('med-main').innerHTML = html;
-   }
+  document.getElementById("med-main").innerHTML = html;
+}
 
+//    FOR LATER:
 
-   //    FOR LATER:
+// <!-- How it looks (optional) -->
+//  ${howItLooksSection}
+/* ── INIT ────────────────────────────────────────────────── */
+const slug = getSlugFromURL();
 
-   // <!-- How it looks (optional) -->
-   //  ${howItLooksSection}
-   /* ── INIT ────────────────────────────────────────────────── */
-   const slug = getSlugFromURL();
+fetch(JSON_PATH)
+  .then((r) => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then((data) => {
+    const med = (data.neuromeditations || data.meditations || []).find(
+      (m) => m.slug === slug,
+    );
 
-   fetch(JSON_PATH)
-       .then(r => {
-           if (!r.ok) throw new Error(`HTTP ${r.status}`);
-           return r.json();
-       })
-       .then(data => {
-           const med = (data.neuromeditations || data.meditations || [])
-               .find(m => m.slug === slug);
-
-           if (!med) {
-               document.getElementById('med-main').innerHTML =
-                   `<section class="med-single-section"><div class="med-single-wrap">
+    if (!med) {
+      document.getElementById("med-main").innerHTML =
+        `<section class="med-single-section"><div class="med-single-wrap">
                <p>Медитация не найдена.</p>
                <a href="../meditations.html">← Все медитации</a>
              </div></section>`;
-               return;
-           }
+      return;
+    }
 
-           buildPage(med, data.packs || []);
-       })
-       .catch(err => {
-           console.error('Failed to load meditation data:', err);
-           document.getElementById('med-main').innerHTML =
-               `<section class="med-single-section"><div class="med-single-wrap">
+    buildPage(med, data.packs || []);
+  })
+  .catch((err) => {
+    console.error("Failed to load meditation data:", err);
+    document.getElementById("med-main").innerHTML =
+      `<section class="med-single-section"><div class="med-single-wrap">
              <p>Не удалось загрузить данные. Попробуйте обновить страницу.</p>
            </div></section>`;
-       });
+  });
