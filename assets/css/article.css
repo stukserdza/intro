@@ -187,6 +187,8 @@
 .article-signature h2 {
   font-size: var(--fs-20-text);
   color: var(--gold-light);
+  font-family: var(--ff-body) !important;
+  font-weight: 100;
 }
 
 .article-tags {
@@ -204,6 +206,8 @@
   font-size: var(--fs-20-text);
   line-height: 1;
   margin-bottom: 0.6rem;
+  font-weight: 100 !important;
+  font-family: var(--ff-body) !important;
 }
 
 
