@@ -69,7 +69,6 @@
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-category">${categoryLabel}</span>
-            <span class="blog-card-read-time">${article.readTime || ""}</span>
             ${newBadge}
           </div>
           <h2 class="blog-card-title" itemprop="headline">${article.title}</h2>
