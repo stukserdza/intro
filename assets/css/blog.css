@@ -177,6 +177,18 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
+.blog-card-new {
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--beige);
+    background: rgba(42, 9, 14, 0.55);
+    backdrop-filter: blur(2px);
+    color: #f0e1d6;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
 .blog-card-title {
     font-family: var(--ff-headings);
     font-size: 1.1rem;
