@@ -796,7 +796,7 @@ li.sparkle {
 }
 
 .how-to-buy-issues {
-  padding: 2em 0;
+  padding: 1em 0;
   color: var(--beige);
   max-width: 600px;
   font-size: var(--fs-20-text);
@@ -807,11 +807,16 @@ li.sparkle {
   color: var(--beige);
 }
 
+.how-to-buy-contact-links {
+  padding-top: 0.5em;
+}
+
 .how-to-buy-note {
   opacity: 0.8;
   color: var(--beige);
-  padding: 0.5em 0 2em;
+  padding: 0.1em 0 2em;
   font-size: var(--fs-20-text);
+  max-width: 600px;
 }
 
 /* Responsive */
