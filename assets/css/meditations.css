@@ -766,6 +766,54 @@ li.sparkle {
   padding: 1em 0;
 }
 
+.how-to-buy {
+  background-color: var(--deepest-red);
+  padding: 4em 1em !important;
+}
+
+.how-to-buy-wrapper,
+.how-to-buy-lead,
+.how-to-buy-issues,
+.how-to-buy-note {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.how-to-buy-lead {
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
+  color: var(--beige);
+}
+
+.how-to-buy-btn-container {
+  padding: 1em 0;
+  color: var(--beige);
+}
+
+.how-to-buy-issues {
+  padding: 2em 0;
+  color: var(--beige);
+  max-width: 600px;
+  font-size: var(--fs-20-text);
+}
+
+.how-to-buy-issues p {
+  opacity: 0.8;
+  color: var(--beige);
+}
+
+.how-to-buy-note {
+  opacity: 0.8;
+  color: var(--beige);
+  padding: 0.5em 0 2em;
+  font-size: var(--fs-20-text);
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
