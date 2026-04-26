@@ -236,7 +236,7 @@ function buildPage(med, allPacks) {
       <p>
         В таком случае просто напишите моим помощницам — мы поможем вам получить доступ вручную:
       </p>
-      <div class="contact-links">
+      <div class="how-to-buy-contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
             <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg"
                 alt="Contact Sofia TG">
