@@ -16,7 +16,7 @@ const CONTACT_HTML = `
                         они с теплотой откликнутся, поддержат и мягко направят,
                         подсказав, с чего лучше начать ваше знакомство с практикой
                     </p>
-                                        <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
+                    <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
                         <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg"
                             alt="Contact Sofia TG">
                     </a>
@@ -211,6 +211,55 @@ function buildPage(med, allPacks) {
           </section>`
     : "";
 
+  /* ── how to buy ── */
+  const howToBuy = `
+  <section class="how-to-buy" id="how-to-buy">
+  <div class="how-to-buy-wrapper">
+    <h2 class="section-title">Как приобрести нейромедитацию</h2>
+
+    <p class="how-to-buy-lead">
+      Готовы начать прямо сейчас?
+      <br>
+      Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
+    </p>
+    <div class="how-to-buy-btn-container">
+      <a href="${med.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
+        Приобрести сейчас
+      </a>
+    </div>
+
+    <div class="how-to-buy-issues">
+      <p>
+        Если ссылка не открывается или возникают сложности с оплатой — это нормально.
+        В некоторых странах (например, США) Boosty может работать нестабильно.
+      </p>
+      <p>
+        В таком случае просто напишите моим помощницам — мы поможем вам получить доступ вручную:
+      </p>
+      <div class="contact-links">
+        <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg"
+                alt="Contact Sofia TG">
+        </a>
+        <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener" aria-label="Перейти в Вконтакте и написать Марии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/vk_form_z0dx2b.svg"
+                alt="Contact Maria VK">
+        </a>
+        <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+            rel="noopener"  aria-label="Перейти в What's up и написать Марии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964727/wa_form_ecbrn5.svg"
+                alt="Contact Maria What's up">
+        </a>
+      </div>
+    </div>
+    <p class="how-to-buy-note">
+      Мы ответим, подскажем удобный способ оплаты и мягко проведём вас к практике
+    </p>
+  </>
+</section>
+  
+  `;
+
   /* ── full HTML ── */
   const html = `
         <!-- Hero -->
@@ -223,7 +272,7 @@ function buildPage(med, allPacks) {
                 <p class="med-hero-subtitle med-single-hero-subtitle">${med.shortDescriptionHero}</p>
                 <div class="med-packs-card-action">
                   <p class="med-packs-card-price">${price}</p>
-                  <a href="#contact" class="btn-primary med-packs-card-btn"
+                  <a href="#how-to-buy" class="btn-primary med-packs-card-btn"
                      aria-label="Получить медитацию ${med.title.replace(/<br\s*\/?>/gi, " ")}">
                     Получить полную версию
                   </a>
@@ -263,6 +312,9 @@ function buildPage(med, allPacks) {
 
         <!-- Instructions -->
         ${instructionsSection}
+
+        <!-- howToBuy -->
+        ${howToBuy}
 
         <!-- Contact -->
         ${CONTACT_HTML}`;
