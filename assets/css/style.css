@@ -858,11 +858,11 @@ section.contact {
   color: var(--beige);
   max-width: 650px;
   font-size: var(--fs-20-text);
-  opacity: 0.8;
 }
 
 .contact-text p {
   margin-bottom: 1em;
+  opacity: 0.8;
 }
 
 .contact-highlight {
