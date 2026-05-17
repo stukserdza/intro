@@ -264,7 +264,7 @@ function buildPage(med, allPacks) {
     <p class="how-to-buy-note">
       Мы поможем найти удобный способ и мягко проведём вас к практике.
     </p>
-  </p>
+  </div>
 </section>
   
   `;
