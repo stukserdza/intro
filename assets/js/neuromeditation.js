@@ -220,21 +220,30 @@ function buildPage(med, allPacks) {
     <p class="how-to-buy-lead">
       Готовы начать прямо сейчас?
       <br>
-      Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
+      Выберите удобный способ оплаты:
     </p>
+
+    <p>
+      Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
+    <p>
     <div class="how-to-buy-btn-container">
       <a href="${med.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
-        Приобрести сейчас
+        Приобрести через Boosty
+      </a>
+    </div>
+
+    <p>
+      Оплата картой любого банка, включая российские.
+    <p>
+    <div class="how-to-buy-btn-container">
+      <a href="${med.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
+        Приобрести через GetCourse
       </a>
     </div>
 
     <div class="how-to-buy-issues">
       <p>
-        Если ссылка не открывается или возникают сложности с оплатой — это нормально.
-        В некоторых странах (например, США) Boosty может работать нестабильно.
-      </p>
-      <p>
-        В таком случае просто напишите моим помощницам — мы поможем вам получить доступ вручную:
+        Если ссылка не открывается или возникают сложности с оплатой, просто напишите моим помощницам.
       </p>
       <div class="how-to-buy-contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
@@ -253,9 +262,9 @@ function buildPage(med, allPacks) {
       </div>
     </div>
     <p class="how-to-buy-note">
-      Мы ответим, подскажем удобный способ оплаты и мягко проведём вас к практике
+      Мы поможем найти удобный способ и мягко проведём вас к практике.
     </p>
-  </>
+  </p>
 </section>
   
   `;
