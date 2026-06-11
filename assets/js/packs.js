@@ -22,10 +22,10 @@ const CONTACT_HTML = `
             <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg" alt="Contact Sofia TG" />
           </a>
           <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener">
-            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/vk_form_z0dx2b.svg" alt="Contact Maria VK" />
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/vk_form_z0dx2b.svg" alt="Contact Sofia VK" />
           </a>
           <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank" rel="noopener">
-            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964727/wa_form_ecbrn5.svg" alt="Contact WhatsApp" />
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964727/wa_form_ecbrn5.svg" alt="Contact Sofia What's up" />
           </a>
         </div>
         <div class="contact-form-container">
