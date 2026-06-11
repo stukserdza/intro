@@ -17,7 +17,7 @@ const CONTACT_HTML = `
         <div class="contact-text" id="sofia-contact">
           <h2 class="section-title section-title--lined">Готовы сделать первый шаг?</h2>
           <p>Если вы чувствуете, что пришло время менять свою жизнь, важно не оставаться с этим в одиночестве. Я и моя команда рядом, чтобы поддержать вас на этом пути.</p>
-          <p>Для консультации или понимания, с чего лучше начать, напишите моей ассистентке Софии в Telegram и Марии в VK, они с теплотой откликнутся, поддержат и мягко направят.</p>
+          <p>Для консультации или понимания, с чего лучше начать, напишите моей ассистентке Софии в Telegram, VK, или WhatsApp. Она с теплотой откликнется, поддержит и мягко направит.</p>
           <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener">
             <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg" alt="Contact Sofia TG" />
           </a>
