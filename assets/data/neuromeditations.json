@@ -1,16 +1,100 @@
 {
+  "neuroalignments": [{
+      "id": 1,
+      "slug": "",
+      "title": "",
+      "titleForCards": "",
+      "meditationHeroBadge": "Нейронастройка Сурии",
+      "numerologicalCode": "",
+      "duration": "6:29",
+      "websiteLink": "",
+      "getCourseTrenningLink": "",
+      "getCourseBuyLink": "",
+      "boostyLink": "",
+      "patreonLink": "",
+      "type": "neuroalignment",
+      "price": 0,
+      "image": "",
+      "shortDescriptionCommon": "",
+      "shortDescriptionHero": "",
+      "problemSectionTitle": "",
+      "problemSectionTitleAccent": "",
+      "problemSectionDescription": [
+        ""
+      ],
+      "howItLooksTitle": "",
+      "howItLooksBooletPoints": [
+        ""
+      ],
+      "effectsTitle": "",
+      "effectsBooletPoints": [
+        ""
+      ],
+      "howItHelpsTitle": "",
+      "howItHelpsBooletPoints": [
+        ""
+      ],
+      "instructions": "Наденьте наушники, закройте глаза, дайте себе 10 минут без «надо» и «должна». Позвольте своей женственности проснуться.",
+      "includedInPacks": [],
+      "page": "meditations/",
+      "releaseDate": "2026-01-01",
+      "isNew": false
+    },
+    {
+      "id": 1,
+      "slug": "",
+      "title": "",
+      "titleForCards": "",
+      "meditationHeroBadge": "Нейронастройка Сурии",
+      "numerologicalCode": "",
+      "duration": "6:29",
+      "websiteLink": "",
+      "getCourseTrenningLink": "",
+      "getCourseBuyLink": "",
+      "boostyLink": "",
+      "patreonLink": "",
+      "type": "neuroalignment",
+      "price": 0,
+      "image": "",
+      "shortDescriptionCommon": "",
+      "shortDescriptionHero": "",
+      "problemSectionTitle": "",
+      "problemSectionTitleAccent": "",
+      "problemSectionDescription": [
+        ""
+      ],
+      "howItLooksTitle": "",
+      "howItLooksBooletPoints": [
+        ""
+      ],
+      "effectsTitle": "",
+      "effectsBooletPoints": [
+        ""
+      ],
+      "howItHelpsTitle": "",
+      "howItHelpsBooletPoints": [
+        ""
+      ],
+      "instructions": "Наденьте наушники, закройте глаза, дайте себе 10 минут без «надо» и «должна». Позвольте своей женственности проснуться.",
+      "includedInPacks": [],
+      "page": "meditations/",
+      "releaseDate": "2026-01-01",
+      "isNew": false
+    }
+  ],
   "meditations": [{
-      "id": 5,
+      "id": 1,
       "slug": "femininity-awakening",
       "title": "Пробуждение женственности",
       "titleForCards": "Пробуждение <br> женственности",
-      "meditationHeroBadge": "Аудиопрограмма Сурии",
+      "meditationHeroBadge": "Медитация Сурии",
       "numerologicalCode": "",
       "duration": "8:00",
       "websiteLink": "",
       "getCourseTrenningLink": "https://stukserdza.ru/pl/teach/control/lesson/view?id=342242365&editMode=0",
       "getCourseBuyLink": "",
       "boostyLink": "https://boosty.to/stukserdza/posts/e2b13bbe-00e0-46d4-80da-c692802afcd5",
+      "patreonLink": "https://www.patreon.com/stukserdza/posts/probuzhdenie-161368150",
       "type": "meditation",
       "price": 0,
       "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1775964653/femininity-awakening_jlxlpa.png",
@@ -51,20 +135,21 @@
       "isNew": false
     },
     {
-      "id": 6,
+      "id": 2,
       "slug": "money-meditation",
       "title": "Медитация на деньги",
       "titleForCards": "Медитация<br>на деньги",
-      "meditationHeroBadge": "Аудиопрограмма Сурии",
+      "meditationHeroBadge": "Медитация Сурии",
       "numerologicalCode": "",
       "duration": "6:06",
       "websiteLink": "",
       "getCourseTrenningLink": "https://stukserdza.ru/pl/teach/control/lesson/view?id=342885869&editMode=0",
       "getCourseBuyLink": "",
       "boostyLink": "https://boosty.to/stukserdza/posts/a300877b-e935-400b-8b6a-abd2122325dc",
+      "patreonLink": "https://www.patreon.com/stukserdza/posts/meditatsiia-na-161367906",
       "type": "meditation",
       "price": 0,
-      "image": "assets/images/meditations-images/money-meditation.jpg",
+      "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1781721058/snimok-ekrana-2025-06-02-v-14.10.04_k7flf6.png",
       "shortDescriptionCommon": "Если деньги утекают, вечно не хватает и вы в режиме выживания, пора менять не бюджет, а внутреннее состояние. Эта медитация помогает выйти из ощущения нехватки и включить энергию прихода. Спокойствие, уверенность и внутреннее разрешение иметь больше. Слушайте 21 день и смотрите, как мир отвечает иначе.",
       "shortDescriptionHero": "Если деньги утекают и вы в режиме выживания, пора менять не бюджет, а внутреннее состояние. Медитация помогает выйти из ощущения нехватки и включить энергию прихода.",
       "problemSectionTitle": "Медитация на деньги",
@@ -101,20 +186,21 @@
       "isNew": false
     },
     {
-      "id": 7,
+      "id": 3,
       "slug": "body-meditation",
-      "title": "Медитация на тело",
+      "title": "Принятие своего тела",
       "titleForCards": "Медитация<br>на тело",
-      "meditationHeroBadge": "Аудиопрограмма Сурии",
+      "meditationHeroBadge": "Медитация Сурии",
       "numerologicalCode": "",
       "duration": "11:29",
       "websiteLink": "",
       "getCourseTrenningLink": "https://stukserdza.ru/pl/teach/control/lesson/view?id=345031621&editMode=0",
       "getCourseBuyLink": "",
       "boostyLink": "https://boosty.to/stukserdza/posts/9d74ca9e-25c8-46ae-922b-7d5d91ebb632",
+      "patreonLink": "https://www.patreon.com/stukserdza/posts/prinimaiu-svoio-161367623",
       "type": "meditation",
       "price": 0,
-      "image": "assets/images/meditations-images/body-meditation.jpg",
+      "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1781721041/img1070-2_x9paj7.jpg",
       "shortDescriptionCommon": "Если вы смотрите в зеркало и первым делом видите недостатки, эта медитация для вас. Она помогает перестать воевать с телом и наконец оказаться с ним в одной команде. Когда уходит внутреннее отвержение, тело отпускает зажимы, вес, усталость. Возвращается лёгкость, энергия и ощущение «я красивая».",
       "shortDescriptionHero": "Если вы смотрите в зеркало и первым делом видите недостатки — эта медитация для вас. Помогает перестать воевать с телом и оказаться с ним в одной команде.",
       "problemSectionTitle": "Медитация на тело",
@@ -152,20 +238,21 @@
       "isNew": false
     },
     {
-      "id": 16,
+      "id": 4,
       "slug": "morning-energy",
       "title": "Утро с энергией",
       "titleForCards": "Утро<br>с энергией",
-      "meditationHeroBadge": "Аудиопрограмма Сурии",
+      "meditationHeroBadge": "Медитация Сурии",
       "numerologicalCode": "",
       "duration": "5:39",
       "websiteLink": "",
       "getCourseTrenningLink": "https://stukserdza.ru/pl/teach/control/lesson/view?id=346785414&editMode=0",
       "getCourseBuyLink": "",
       "boostyLink": "https://boosty.to/stukserdza/posts/ce75b291-2b74-4709-80cf-021df5be1283",
+      "patreonLink": "https://www.patreon.com/stukserdza/posts/utro-s-energiei-161366758",
       "type": "meditation",
       "price": 0,
-      "image": "assets/images/meditations-images/morning-energy.jpg",
+      "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1781721162/morning-with-energy-image_xf8wz8.png",
       "shortDescriptionCommon": "5 минут после пробуждения, чтобы настроить день на нужную волну. Не заставлять себя быть позитивной, а реально почувствовать энергию, уверенность и готовность к дню. После прослушивания встаёшь не с тяжестью «опять этот день», а с ощущением «сегодня будет круто, я это чувствую».",
       "shortDescriptionHero": "5 минут после пробуждения, чтобы настроить день на нужную волну. Реально почувствовать энергию и готовность к дню — без «опять этот день».",
       "problemSectionTitle": "Утро с энергией",
@@ -200,6 +287,51 @@
       "includedInPacks": [],
       "page": "meditations/morning-energy.html",
       "releaseDate": "2026-02-18",
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "slug": "set-to-calm",
+      "title": "Настройка на спокойствие",
+      "titleForCards": "Настройка на <br> спокойствие",
+      "meditationHeroBadge": "Медитация Сурии",
+      "numerologicalCode": "",
+      "duration": "3:25",
+      "websiteLink": "",
+      "getCourseTrenningLink": "https://stukserdza.ru/pl/teach/control/lesson/view?id=348505471&editMode=0",
+      "getCourseBuyLink": "",
+      "boostyLink": "https://boosty.to/stukserdza/posts/984c20de-5e6f-4b3e-b86c-472697aa05a5?share=post_link",
+      "patreonLink": "https://www.patreon.com/stukserdza/posts/nastroika-na-161365852",
+      "type": "meditation",
+      "price": 0,
+      "image": "https://res.cloudinary.com/dcstupoud/image/upload/v1781721037/IMG_0637_wwwnrq.png",
+      "shortDescriptionCommon": "Прямо сейчас отложите все дела всего на одну минуту. Даже если вы на работе — закройте вкладки, наденьте наушники, сделайте паузу. Мир не рухнет за несколько минут, обещаю.",
+      "shortDescriptionHero": "Прямо сейчас отложите все дела всего на одну минуту. Даже если вы на работе — закройте вкладки, наденьте наушники, сделайте паузу. Мир не рухнет за несколько минут, обещаю.",
+      "problemSectionTitle": "Настройка на спокойствие",
+      "problemSectionTitleAccent": "",
+      "problemSectionDescription": [
+        ""
+      ],
+      "howItLooksTitle": "",
+      "howItLooksBooletPoints": [
+        ""
+      ],
+      "effectsTitle": "",
+      "effectsBooletPoints": [
+        "Девочки, мы все знаем про то, как голос и правильные частоты умеют мгновенно отключать тревогу и возвращать нас в состояние 'здесь и сейчас '.  Представьте, что ваш мозг весь день крутится на бешеных оборотах: стресс, дела, тревоги, мысли не останавливаются ни на секунду. Это режим выживания, когда тело живет в постоянном напряжении.",
+        "✅А теперь самое интересное. Мой голос от природы работает на частоте ниже 160 Гц. Это низкие, бархатные вибрации, которые ваше тело помнит еще с самого начала, с утробы матери, когда вы слышали сердцебиение, приглушенные звуки и чувствовали абсолютную безопасность.",
+        "Но, теорию вы и так знаете, поэтому сегодня я предлагаю просто попробовать на себе и перейти к практике."
+      ],
+      "howItHelpsTitle": "Как это помогает",
+      "howItHelpsBooletPoints": [
+        "Прямо сейчас отложите все дела всего на одну минуту. Даже если вы на работе — закройте вкладки, наденьте наушники, сделайте паузу. Мир не рухнет за несколько минут, обещаю.",
+        "Закройте глаза и послушайте это аудио 🎧",
+        "Без мыслей, без бесконечной прокрутки задач в голове. Дайте себе эту короткую, но такую нужную передышку. Позвольте уму замолчать хотя бы на минуту. Включайте звук, сделайте медленный вдох и просто дышите."
+      ],
+      "instructions": "Наденьте наушники, закройте глаза, дайте себе 5 минут без «надо» и «должна». Позвольте своей женственности проснуться.",
+      "includedInPacks": [],
+      "page": "meditations/set-to-calm.html",
+      "releaseDate": "2025-06-01",
       "isNew": false
     }
   ],
