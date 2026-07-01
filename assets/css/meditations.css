@@ -788,6 +788,13 @@ li.sparkle {
   text-align: center;
 }
 
+.how-to-buy-wrapper p {
+  max-width: 700px;
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  color: var(--beige);
+}
+
 .how-to-buy-lead {
   font-size: var(--fs-20-text);
   padding: 1em 0;
