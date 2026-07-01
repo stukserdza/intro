@@ -299,6 +299,14 @@ function buildPage(pack, allMeditations) {
         Приобрести через GetCourse
       </a>
     </div>
+    <p>
+      Для пользователей по всему миру. Удобная международная оплата и доступ к материалам сразу после оформления подписки.
+    <p>
+    <div class="how-to-buy-btn-container">
+      <a href="${pack.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
+        Приобрести через Patreon
+      </a>
+    </div>
 
     <div class="how-to-buy-issues">
       <p>
