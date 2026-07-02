@@ -225,7 +225,7 @@ function buildPage(med, allPacks) {
 
     <p>
       Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
-    <p>
+    </p>
     <div class="how-to-buy-btn-container">
       <a href="${med.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
         Приобрести через Boosty
@@ -234,7 +234,7 @@ function buildPage(med, allPacks) {
 
     <p>
       Оплата картой любого банка, включая российские.
-    <p>
+    </p>
     <div class="how-to-buy-btn-container">
       <a href="${med.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
         Приобрести через GetCourse
@@ -243,7 +243,7 @@ function buildPage(med, allPacks) {
 
     <p>
       Для пользователей по всему миру. Удобная международная оплата и доступ к материалам сразу после оформления подписки.
-    <p>
+    </p>
     <div class="how-to-buy-btn-container">
       <a href="${med.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
         Приобрести через Patreon
