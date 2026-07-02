@@ -310,7 +310,7 @@ function buildPage(pack, allMeditations) {
 
     <div class="how-to-buy-issues">
       <p>
-        Если ссылка не открывается или возникают сложности с оплатой, просто напишите моим помощницам.
+        Если ссылка не открывается или возникают сложности с оплатой, просто напишите моей помощнице Софии.
       </p>
       <div class="contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
