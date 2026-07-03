@@ -896,7 +896,15 @@ li.sparkle {
   transform: translateY(12px);
 }
 
-.boosty-float-icon {
+.subs-float-icons {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.boosty-float-icon.boosty-float,
+.patreon-float-icon.patreon-float {
   width: 36%;
   height: 36px;
   border-radius: 50%;
@@ -905,7 +913,15 @@ li.sparkle {
   justify-content: center;
 }
 
-.boosty-float-icon img {
+.getcourse-float-icon {
+  font-size: var(--fs-36-text);
+  color: var(--gold-light);
+  font-weight: bold;
+}
+
+.boosty-float-icon img,
+.patreon-float-icon img,
+.getcourse-float-icon img {
   width: 36px;
   height: 36px;
   display: block;
