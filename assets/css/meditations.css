@@ -869,7 +869,7 @@ li.sparkle {
 }
 
 /* boosty aside */
-.boosty-float {
+.subs-float {
   position: fixed;
   right: 12px;
   bottom: 16px;
@@ -889,7 +889,7 @@ li.sparkle {
     transform 0.25s ease;
 }
 
-.boosty-float.is-hidden {
+.subs-float.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -903,7 +903,7 @@ li.sparkle {
   justify-content: center;
 }
 
-.boosty-float-icon.boosty-float,
+.subs-float-icon.subs-float,
 .patreon-float-icon.patreon-float {
   width: 36%;
   height: 36px;
@@ -919,7 +919,7 @@ li.sparkle {
   font-weight: bold;
 }
 
-.boosty-float-icon img,
+.subs-float-icon img,
 .patreon-float-icon img,
 .getcourse-float-icon img {
   width: 36px;
@@ -928,7 +928,7 @@ li.sparkle {
   object-fit: contain;
 }
 
-.boosty-float-box {
+.subs-float-box {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -941,14 +941,14 @@ li.sparkle {
   text-align: center;
 }
 
-.boosty-float-text {
+.subs-float-text {
   margin: 1em 0;
   color: var(--beige);
   font-size: clamp(14px, 0.9rem + 0.2vw, 16px);
   line-height: 1.3;
 }
 
-.boosty-float-btn {
+.subs-float-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -967,21 +967,21 @@ li.sparkle {
     filter 0.18s ease;
 }
 
-.boosty-float-btn:hover {
+.subs-float-btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.03);
 }
 
-.boosty-float-btn:active {
+.subs-float-btn:active {
   transform: translateY(0);
 }
 
-.boosty-float-box {
+.subs-float-box {
   position: relative;
   /* needed so close btn can position against it */
 }
 
-.boosty-float-close {
+.subs-float-close {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -996,17 +996,17 @@ li.sparkle {
   transition: opacity 0.18s;
 }
 
-.boosty-float-close:hover {
+.subs-float-close:hover {
   opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .boosty-float {
+  .subs-float {
     right: 12px;
     bottom: 12px;
   }
 
-  .boosty-float-box {
+  .subs-float-box {
     width: 210px;
     padding: 14px;
   }
@@ -1087,7 +1087,7 @@ li.sparkle {
 }
 
 @media (max-width: 768px) {
-  .boosty-float {
+  .subs-float {
     right: 12px;
     bottom: 16px;
     top: auto;
@@ -1095,22 +1095,22 @@ li.sparkle {
     align-items: flex-end;
   }
 
-  .boosty-float-icon {
+  .subs-float-icon {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
 
-  .boosty-float-box {
+  .subs-float-box {
     width: 200px;
     padding: 14px;
   }
 
-  .boosty-float-text {
+  .subs-float-text {
     font-size: 13px;
   }
 
-  .boosty-float-btn {
+  .subs-float-btn {
     min-width: 145px;
     padding: 11px 16px;
     font-size: 12px;
