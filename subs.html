@@ -95,7 +95,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="readings.html" aria-label="Перейти к раскладам">
+                        <a href="subs-pages.html" aria-label="Перейти к раскладам">
                             Расклады
                         </a>
                     </li>
@@ -133,10 +133,40 @@
         <section class="how-to-buy" id="subscriptions">
             <div class="how-to-buy-wrapper">
                 <h2 class="section-title">Оформить подписку</h2>
-                <p>
-                    Оформите подписку и получайте доступ к библиотеке каждый месяц
-                </p>
+                <div class="subs-pages-panels" id="subs-pages-panels">
+                    <div class="subs-page-card">
+                        <p class="subs-page-card-paragraph">
+                            Оформите подписку и получайте доступ к библиотеке каждый месяц
+                        </p>
+                        <button class="subs-page-toggle-btn" type="button" aria-expanded="false">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_cnfjpu.svg"
+                                alt="Показать список" class="subs-page-toggle-icon">
+                        </button>
+                        <ul class="subs-page-questions">
+                            <li>
+                                <h2 class="subs-page-title">Тариф «База»</h2>
+                                <p>
+                                    Идеальный старт для первых изменений в самооценке, отношениях и внутреннем
+                                    состоянии. Помогает отпустить прошлое, увереннее отстаивать свои границы и начать
+                                    выбирать себя без чувства вины.
+                                </p>
 
+                                <p class="subs-page-price">990 ₽</p>
+                                <br>
+                            </li>
+                            <li>
+                                <h2 class="subs-page-title">Тариф «Стандарт»</h2>
+                                <p>
+                                    Полный доступ ко всей библиотеке нейромедитаций и практик для работы с самооценкой,
+                                    отношениями, деньгами, карьерой и состоянием тела. Подходит тем, кто хочет
+                                    комплексно менять свою жизнь и получать рекомендации по практикам под свои цели.
+                                </p>
+
+                                <p class="subs-page-price">2 490 ₽</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <p>
                     Оптимальный вариант для пользователей из России и стран СНГ. Удобная оплата картами российских и
                     международных банков.
@@ -393,7 +423,7 @@
                     <a href="diagnostics.html" aria-label="Перейти к диагностикам">
                         Диагностики
                     </a>
-                    <a href="readings.html" aria-label="Перейти к раскладам">
+                    <a href="subs-pages.html" aria-label="Перейти к раскладам">
                         Расклады
                     </a>
                     <a href="blog.html" aria-label="Перейти к Блогу">
@@ -425,8 +455,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        const panelsWrap = document.getElementById("subs-pages-panels");
+        /* toggle expand/collapse questions */
+        document.addEventListener("click", (e) => {
+            console.log("HIII")
+            const btn = e.target.closest(".subs-page-toggle-btn");
+            if (!btn) return;
+            const card = btn.closest(".subs-page-card");
+            console.log(card)
+            const list = card && card.querySelector(".subs-page-questions");
+            if (!list) return;
+            const isOpen = btn.classList.toggle("is-open");
+            console.log(isOpen)
+            btn.setAttribute("aria-expanded", isOpen);
+            list.classList.toggle("is-open", isOpen);
+        });
+    </script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/boosty-float.js"></script>
     <script src="assets/js/meditations.js"></script>
 </body>
 
