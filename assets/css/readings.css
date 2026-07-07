@@ -312,7 +312,7 @@
 .readings-panel-title {
     margin: 0 0 0.3rem;
     font-weight: 100;
-    font-size: var(--fs-card-textt);
+    font-size: var(--fs-card-text);
 }
 
 .readings-panel-subtitle {
