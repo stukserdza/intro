@@ -231,16 +231,6 @@ function buildPage(med, allPacks) {
         Приобрести через Boosty
       </a>
     </div>
-
-    <p>
-      Оплата картой любого банка, включая российские.
-    </p>
-    <div class="how-to-buy-btn-container">
-      <a href="${med.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
-        Приобрести через GetCourse
-      </a>
-    </div>
-
     <p>
       Для пользователей по всему миру. Удобная международная оплата и доступ к материалам сразу после оформления подписки.
     </p>
@@ -249,7 +239,14 @@ function buildPage(med, allPacks) {
         Приобрести через Patreon
       </a>
     </div>
-
+    <p>
+      Оплата картой любого банка, включая российские.
+    </p>
+    <div class="how-to-buy-btn-container">
+      <a href="${med.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
+        Приобрести через GetCourse
+      </a>
+    </div>
     <div class="how-to-buy-issues">
       <p>
         Если ссылка не открывается или возникают сложности с оплатой, просто напишите моей помощнице Софии.
