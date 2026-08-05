@@ -1,7 +1,7 @@
 {
-  "neuroalignments": [{
+  "neyronastroyki": [{
       "id": 1,
-      "slug": "izmeni-situaciyu-mezhdu-vami",
+      "slug": "neyronastroyka-izmeni-situaciyu-mezhdu-vami",
       "title": "Измени ситуацию между вами",
       "titleForCards": "Измени <br> ситуацию <br> между вами",
       "meditationHeroBadge": "Нейронастройка Сурии",
@@ -37,7 +37,7 @@
       ],
       "instructions": "Каждый вечер перед сном, 7 дней подряд. Наушники, удобная поза, телефон убрать из рук и не нужно ничего анализировать и пытаться почувствовать что-то правильно, просто позволь записи сделать своё дело. К седьмому дню ты сама заметишь, что внутри что-то изменилось.",
       "includedInPacks": [],
-      "page": "meditations/izmeni-situaciyu-mezhdu-vami.html",
+      "page": "meditations/neyronastroyka-izmeni-situaciyu-mezhdu-vami.html",
       "releaseDate": "2026-01-01",
       "isNew": false
     },
