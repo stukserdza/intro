@@ -363,7 +363,7 @@ fetch(JSON_PATH)
       document.getElementById("med-main").innerHTML =
         `<section class="med-single-section"><div class="med-single-wrap">
                <p>Нейронастройка не найдена.</p>
-               <a href="../neyronastroyki.html">← Все нейронастройки</a>
+               <a href="../meditations.html">← Все нейромедитации</a>
              </div></section>`;
       return;
     }
