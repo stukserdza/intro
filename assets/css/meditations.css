@@ -992,10 +992,110 @@ li.sparkle {
   }
 }
 
+/* individual neuronaстройка */
+.med-ind-neuro {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-20-text);
 
+  color: var(--beige);
+  text-align: center;
+}
+
+.med-pain-points-body p {
+  /* opacity: 0.8; */
+  padding: 1em 0;
+
+}
+
+
+/* .med-ind-neuro-diff {} */
+
+.med-ind-neuro-diff-wrapper {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deepest-red);
+  border: var(--card-border-red);
+  padding: 1em 3em;
+}
+
+.med-ind-neuro-diff {
+  background: var(--deep-red);
+  width: 100%;
+  opacity: 1;
+  text-align: center;
+  color: var(--beige);
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
+}
+
+.med-pain-subtitle {
+  font-size: var(--fs-20-text);
+  /* opacity: 0.8; */
+  padding: 1em 0;
+  text-align: center;
+}
+
+.med-ind-neuro ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
+
+.med-how-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0 1em 0;
+}
+
+.med-how-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+
+}
+
+.med-how-payment-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 1em;
+}
+
+.med-how-payment-title {
+  font-size: var(--fs-36-text);
+  padding: 1em 0 0.5em 0;
+  color: var(--gold-light);
+  font-family: var(--ff-headings);
+}
+
+.med-how-payment-paragraph {
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  text-align: center;
+  max-width: 600px;
+  color: var(--white);
+  padding-bottom: 0.5em;
+}
 
 /* subs */
-
 .subs-pages-panels {
   display: flex;
   flex-direction: column;
