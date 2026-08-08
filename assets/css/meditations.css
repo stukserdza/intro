@@ -1016,7 +1016,7 @@ li.sparkle {
 /* .med-ind-neuro-diff {} */
 
 .med-ind-neuro-diff-wrapper {
-  max-width: 900px;
+  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1024,7 +1024,7 @@ li.sparkle {
   justify-content: center;
   background-color: var(--deepest-red);
   border: var(--card-border-red);
-  padding: 1em 3em;
+  padding: 1em 1em;
 }
 
 .med-ind-neuro-diff {
@@ -1035,6 +1035,17 @@ li.sparkle {
   color: var(--beige);
   font-size: var(--fs-20-text);
   padding: 1em 0;
+}
+
+.med-difference-intro-text {
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+  padding: 1em 0;
+}
+
+.med-difference-intro-text p {
+  opacity: 0.8;
+  padding: 0.5em 0;
 }
 
 .med-pain-subtitle {
