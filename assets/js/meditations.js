@@ -25,14 +25,58 @@ document.addEventListener("DOMContentLoaded", () => {
         .filter((m) => m.price > 0)
         .reverse();
 
+      const neuroSettings = [...data.neyronastroyki]
+        .filter((m) => m.price > 0)
+        .reverse();
+
+      const meditations = [...data.meditations]
+        .filter((m) => m.price > 0)
+        .reverse();
+
+      console.log("Loaded meditations data:", {
+        packs,
+        neuromeditations,
+        neuroSettings,
+        meditations,
+      });
+
+      // ── NEUROSETTINGS CARDS ─────────────────────────────────────────────
+      const neuroSettingsContainer = document.getElementById(
+        "neuro-settings-cards-container",
+      );
+      if (neuroSettingsContainer) {
+        neuroSettingsContainer.innerHTML = neuroSettings
+          .map((m) => {
+            const newLabel = isNew(m.releaseDate)
+              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
+              : "";
+            return `
+              <article class="med-card">
+                <figure class="med-card-figure">
+                  ${newLabel}
+                  <img src="${m.image}" alt="${m.title}" class="med-card-image" loading="lazy">
+                </figure>
+                <h3 class="med-card-title">${m.titleForCards}</h3>
+                <p class="med-card-text">${m.shortDescriptionCommon}</p>
+                <div class="med-card-action">
+                  <p class="med-card-price">${m.price.toLocaleString("ru-RU")} ₽</p>
+                  <a href="${m.page}" class="btn-primary" aria-label="Подробнее о ${m.title}">
+                    Подробнее
+                  </a>
+                </div>
+              </article>`;
+          })
+          .join("");
+      }
+
       // ── MEDITATION CARDS ──────────────────────────────────────
       const medCardsContainer = document.getElementById("med-cards-container");
       if (medCardsContainer) {
         medCardsContainer.innerHTML = neuromeditations
           .map((m) => {
-            const newLabel = isNew(m.releaseDate) ?
-              `<div class="med-card-tag med-card-tag-new">NEW</div>` :
-              "";
+            const newLabel = isNew(m.releaseDate)
+              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
+              : "";
             return `
               <article class="med-card">
                 <figure class="med-card-figure">
@@ -67,9 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // build pack cards
         track.innerHTML = packs
           .map((pack) => {
-            const newLabel = isNew(pack.releaseDate) ?
-              `<div class="med-card-tag med-card-tag-new">NEW</div>` :
-              "";
+            const newLabel = isNew(pack.releaseDate)
+              ? `<div class="med-card-tag med-card-tag-new">NEW</div>`
+              : "";
             return `
             <article class="med-packs-card" data-pack-id="${pack.id}">
               <div class="med-packs-card-content">
@@ -99,8 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const cardWidth = card.getBoundingClientRect().width;
           const gap = parseFloat(
             getComputedStyle(track).gap ||
-            getComputedStyle(track).columnGap ||
-            0,
+              getComputedStyle(track).columnGap ||
+              0,
           );
           return cardWidth + gap;
         };
