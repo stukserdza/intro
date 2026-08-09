@@ -132,6 +132,22 @@
   font-size: var(--fs-main-text);
 }
 
+.article-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.article-btns-title {
+  text-align: center;
+}
+
+.article-btns a {
+  margin-bottom: 20px;
+}
+
 /* Headings */
 .article-content h2 {
   font-family: var(--ff-headings);
