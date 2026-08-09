@@ -36,6 +36,7 @@ async function init() {
     injectSEO(article);
     renderHero(article);
     renderContent(article);
+    renderBtns(article);
     renderFAQ(article);
     renderSignature(article);
     renderTags(article);
@@ -92,6 +93,42 @@ async function init() {
     });
 
     DOM.content.innerHTML = "";
+    DOM.content.appendChild(fragment);
+  }
+
+  function renderBtns(article) {
+    // place this fragment in a separate div with class "article-btns" to style it as a section
+
+    const fragment = document.createDocumentFragment();
+
+    // add class to this fragment to style it as a section
+    fragment.className = "article-content article-btns";
+
+    const btns = article.article.btns_section;
+    if (!btns) return;
+
+    fragment.appendChild(
+      create("h2", {
+        textContent: btns.title,
+        className: "article-btns-title",
+      }),
+    );
+    const btnsContainer = create("div", {
+      className: "article-btns",
+    });
+    fragment.appendChild(btnsContainer);
+
+    btns.btns_base.forEach((btn) => {
+      btnsContainer.appendChild(
+        create("a", {
+          href: btn.btn_link,
+          className: "btn-primary",
+          textContent: btn.btn_text,
+          "aria-label": btn.btn_text,
+        }),
+      );
+    });
+
     DOM.content.appendChild(fragment);
   }
 
