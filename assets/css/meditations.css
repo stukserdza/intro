@@ -571,6 +571,7 @@
 
   .med-card-image {
     max-height: 250px;
+    width: unset;
   }
 }
 
@@ -658,6 +659,7 @@
   .med-card-image,
   .med-packs-card-img {
     height: 150px;
+    width: unset;
   }
 }
 

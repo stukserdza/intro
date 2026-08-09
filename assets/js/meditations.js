@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <article class="med-card">
                 <figure class="med-card-figure">
                   ${newLabel}
-                  <img src="${m.image}" alt="${m.title}" class="med-card-image" loading="lazy">
+                  <img src="${m.image}" alt="${m.title}" class="med-card-image med-packs-card-img" loading="lazy">
                 </figure>
                 <h3 class="med-card-title">${m.titleForCards}</h3>
                 <p class="med-card-text">${m.shortDescriptionCommon}</p>
