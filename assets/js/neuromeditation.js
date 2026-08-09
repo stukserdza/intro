@@ -91,7 +91,7 @@ const CONTACT_HTML = `
                             и
                             <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal"
                                 aria-label="Перейти к нашим условиям использования">
-                                условиями использования сайта
+                                условиями
                             </a>
                             использования сайта
                         </p>
