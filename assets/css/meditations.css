@@ -1086,7 +1086,6 @@ li.sparkle {
   }
 }
 
-/* 
 .med-pain-subtitle {
   font-size: var(--fs-20-text);
   padding: 1em 0;
@@ -1111,7 +1110,7 @@ li.sparkle {
   align-items: center;
   width: 100%;
   padding: 2em 0 1em 0;
-} */
+}
 
 .med-ind-how-inner {
   display: flex;
