@@ -1,7 +1,6 @@
 const JSON_PATH = "assets/data/readings.json"; // adjust path if needed
 const START_INDEX = 1; // which menu item is active on load (0-based)
 const ITEM_H = 52; // must match --item-height in CSS
-const N_PLACEHOLDER = 0; // filled after JSON loads
 let MENU_DATA = [];
 let N = 0;
 let current = START_INDEX;
@@ -104,46 +103,6 @@ function updatePanels() {
 }
 
 /* ── CAROUSEL ────────────────────────────────────────── */
-// function setupCarousel(panel) {
-//   const carousel = panel.querySelector("[data-carousel]");
-//   if (!carousel || carousel.dataset.ready === "true") return;
-
-//   const track = carousel.querySelector(".readings-track");
-//   const cards = Array.from(track.children);
-//   const prevBtn = carousel.querySelector('.readings-nav-btn[data-dir="prev"]');
-//   const nextBtn = carousel.querySelector('.readings-nav-btn[data-dir="next"]');
-//   let idx = 0;
-
-//   function cw() {
-//     return (
-//       cards[0].offsetWidth + (parseFloat(getComputedStyle(track).gap) || 0)
-//     );
-//   }
-
-//   function update() {
-//     track.style.transform = `translateX(-${idx * cw()}px)`;
-//     prevBtn.disabled = idx === 0;
-//     nextBtn.disabled = idx >= cards.length - 1;
-//     prevBtn.classList.toggle("is-disabled", idx === 0);
-//     nextBtn.classList.toggle("is-disabled", idx >= cards.length - 1);
-//   }
-//   prevBtn.addEventListener("click", () => {
-//     if (idx > 0) {
-//       idx--;
-//       update();
-//     }
-//   });
-//   nextBtn.addEventListener("click", () => {
-//     if (idx < cards.length - 1) {
-//       idx++;
-//       update();
-//     }
-//   });
-//   window.addEventListener("resize", update);
-//   carousel.dataset.ready = "true";
-//   update();
-// }
-
 function setupCarousel(panel) {
   const carousel = panel.querySelector("[data-carousel]");
   if (!carousel || carousel.dataset.ready === "true") return;
@@ -151,54 +110,49 @@ function setupCarousel(panel) {
   const track = carousel.querySelector(".readings-track");
   const prevBtn = carousel.querySelector('.readings-nav-btn[data-dir="prev"]');
   const nextBtn = carousel.querySelector('.readings-nav-btn[data-dir="next"]');
+  const navHeader = carousel.querySelector(".readings-carousel-header");
 
-  let cards = [];
+  let cards = Array.from(track.children);
   let idx = 0;
 
-  // =========================
-  // STEP SIZE (safe)
-  // =========================
+  // Single or zero cards: hide controls and return early
+  if (cards.length <= 1) {
+    if (navHeader) navHeader.style.display = "none";
+    carousel.dataset.ready = "true";
+    return;
+  }
+
+  // STEP SIZE
   function cw() {
     const first = track.querySelector(".reading-card");
     if (!first) return 0;
-
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     return first.getBoundingClientRect().width + gap;
   }
 
-  // =========================
-  // VISIBLE COUNT (safe + stable)
-  // =========================
+  // VISIBLE COUNT
   function getVisible() {
     const step = cw();
     if (!step) return 1;
-
     const width = track.getBoundingClientRect().width;
     return Math.max(1, Math.round(width / step));
   }
 
-  // =========================
   // RENDER
-  // =========================
   function update(animate = true) {
     const step = cw();
-
     track.style.transition = animate ? "transform 300ms ease" : "none";
     track.style.transform = `translateX(-${idx * step}px)`;
   }
 
-  // =========================
   // MOVE
-  // =========================
   function move(dir) {
     const visible = getVisible();
     idx += dir * visible;
     update(true);
   }
 
-  // =========================
   // LOOP FIX
-  // =========================
   function fixLoop() {
     const visible = getVisible();
     const totalOriginal = cards.length - visible * 2;
@@ -214,15 +168,12 @@ function setupCarousel(panel) {
     }
   }
 
-  // =========================
-  // INFINITE INIT (SAFE)
-  // =========================
+  // INFINITE INIT
   function initInfinite() {
     const originals = Array.from(track.children);
     cards = originals;
 
     const visible = getVisible();
-
     if (!visible || cards.length < 2) return;
 
     const firstClones = originals
@@ -243,35 +194,30 @@ function setupCarousel(panel) {
     });
   }
 
-  // =========================
   // EVENTS
-  // =========================
   prevBtn?.addEventListener("click", () => move(-1));
   nextBtn?.addEventListener("click", () => move(1));
-
   track.addEventListener("transitionend", fixLoop);
 
   window.addEventListener("resize", () => {
-    // reset and rebuild safely
     const originals = Array.from(track.querySelectorAll(".reading-card"));
-
     track.innerHTML = "";
     originals.forEach((c) => track.appendChild(c));
-
     initInfinite();
   });
 
-  // =========================
-  // CRITICAL FIX: WAIT FOR LAYOUT
-  // =========================
   carousel.dataset.ready = "true";
 
-  window.addEventListener("load", () => {
-    requestAnimationFrame(() => {
-      initInfinite();
+  // Execute immediately if DOM is ready, or on load
+  if (document.readyState === "complete") {
+    requestAnimationFrame(initInfinite);
+  } else {
+    window.addEventListener("load", () => {
+      requestAnimationFrame(initInfinite);
     });
-  });
+  }
 }
+
 /* ── BUILD DOM FROM JSON ─────────────────────────────── */
 function buildPanel(panelData) {
   const section = document.createElement("div");
@@ -304,16 +250,18 @@ function buildPanel(panelData) {
   viewport.appendChild(track);
   carousel.appendChild(viewport);
 
-  /* nav buttons */
-  carousel.innerHTML += `
-    <div class="readings-carousel-header">
-      <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
-        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
-      </button>
-      <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
-        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
-      </button>
-    </div>`;
+  /* nav buttons (only rendered if multiple cards exist) */
+  if (panelData.cards.length > 1) {
+    carousel.innerHTML += `
+      <div class="readings-carousel-header">
+        <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
+          <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
+        </button>
+        <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
+          <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
+        </button>
+      </div>`;
+  }
 
   section.appendChild(carousel);
   return section;
@@ -323,17 +271,24 @@ function buildCard(card) {
   const article = document.createElement("article");
   article.className = "reading-card";
 
-  const hasQuestions = card.questions && card.questions.length > 0;
+  const questionsCount = card.questions ? card.questions.length : 0;
 
-  const questionsHTML = hasQuestions
-    ? `
+  if (questionsCount === 1) {
+    console.log("There is one question in the card:", card.questions[0]);
+  } else if (questionsCount > 1) {
+    console.log("There are multiple questions in the card:", card.questions);
+  }
+
+  const questionsHTML =
+    questionsCount > 0
+      ? `
     <button class="reading-toggle-btn" type="button" aria-expanded="false">
       <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_cnfjpu.svg" alt="Показать список" class="reading-toggle-icon">
     </button>
     <ul class="reading-questions">
       ${card.questions.map((q) => `<li>${q}</li>`).join("")}
     </ul>`
-    : "";
+      : "";
 
   article.innerHTML = `
     <h3 class="reading-title">${card.title}</h3>
@@ -381,9 +336,7 @@ function bindEvents() {
       goTo(current + (e.deltaY > 0 ? 1 : -1));
       setTimeout(() => (wheelLocked = false), ANIM_MS + 60);
     },
-    {
-      passive: false,
-    },
+    { passive: false },
   );
 
   let touchY = null;
@@ -392,9 +345,7 @@ function bindEvents() {
     (e) => {
       touchY = e.touches[0].clientY;
     },
-    {
-      passive: true,
-    },
+    { passive: true },
   );
   document
     .getElementById("readingsSwitcher")
