@@ -1129,11 +1129,16 @@ li.sparkle {
   max-width: 600px;
   color: var(--white);
   padding-bottom: 0.5em;
+  margin: 0.5em auto;
 }
 
 .med-ind-how-inner p span {
   font-weight: 600;
   color: var(--gold-light);
+}
+
+.med-ind-how-inner div {
+  margin: 1em 0;
 }
 
 .med-how-payment {
