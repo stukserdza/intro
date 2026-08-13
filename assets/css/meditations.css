@@ -1027,6 +1027,7 @@ li.sparkle {
   color: var(--beige);
   font-size: var(--fs-20-text);
   padding: 1em 0;
+  max-width: 900px;
 }
 
 
