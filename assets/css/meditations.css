@@ -1052,12 +1052,12 @@ li.sparkle {
 
 .med-difference-intro-text {
   font-size: var(--fs-20-text);
-  opacity: 0.8;
+  /* opacity: 0.8; */
   padding: 1em 0;
 }
 
 .med-difference-intro-text p {
-  opacity: 0.8;
+  /* opacity: 0.8; */
   padding: 0.5em 0;
 }
 
@@ -1069,6 +1069,28 @@ li.sparkle {
   align-items: center;
   padding: 1em 0;
   object-fit: contain;
+}
+
+.blog-card-link {
+  font-family: var(--ff-body);
+  font-size: var(--fs-14-text);
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+/* .blog-card-link::after {
+  content: '→';
+  transition: transform 0.2s ease;
+} */
+
+.blog-card-link:hover {
+  color: var(--gold-bright);
 }
 
 @media (max-width: 750px) {
