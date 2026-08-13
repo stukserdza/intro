@@ -1082,7 +1082,7 @@ li.sparkle {
 
 /* Section: Pain Points */
 .med-ind-pain-section {
-  max-width: 900px;
+  max-width: 1200px;
   text-align: center;
   padding: 1em 0;
 }
@@ -1096,6 +1096,52 @@ li.sparkle {
 .med-ind-pain-subtitle span {
   font-weight: 600;
   color: var(--gold-light);
+}
+
+.med-ind-pain-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Default mobile layout */
+  gap: 24px;
+  padding-top: 1em;
+  align-items: center;
+  /* Vertically aligns image with text */
+}
+
+/* Desktop layout: text gets 2x more space than the image */
+@media (min-width: 769px) {
+  .med-ind-pain-grid {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}
+
+.med-ind-pain-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--beige);
+  font-size: var(--fs-20-text);
+  opacity: 0.8;
+}
+
+.med-ind-pain-img-wrap {
+  width: 100%;
+  max-width: 280px;
+  /* Reduced max-width (down from 400px) */
+  margin: 0 auto;
+  /* Centers image container on mobile */
+  display: flex;
+  justify-content: center;
+}
+
+.med-ind-pain-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* border-radius: 12px; */
+  /* Optional rounded corners matching site style */
 }
 
 .med-pain-points-list {
@@ -1232,19 +1278,6 @@ li.sparkle {
   transform: translateY(-5px);
   border-color: rgba(212, 165, 169, 0.4);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 165, 169, 0.1);
-}
-
-/* Декоративная кавычка */
-.testimonial-card::before {
-  content: "“";
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 4rem;
-  color: rgba(212, 165, 169, 0.15);
-  font-family: Georgia, serif;
-  line-height: 1;
-  pointer-events: none;
 }
 
 .med-ind-testimonials-content {
