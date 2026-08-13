@@ -8,17 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPrev = document.querySelector("[data-dir='prev']");
   const btnNext = document.querySelector("[data-dir='next']");
 
-  console.log(
-    "Carousel:",
-    carousel,
-    "Track:",
-    track,
-    "Prev Button:",
-    btnPrev,
-    "Next Button:",
-    btnNext,
-  );
-
   if (!track) return;
 
   // Fisher–Yates shuffle
@@ -38,28 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
       return res.json();
     })
     .then((data) => {
+      if (!data || !data.length) return;
+
       const randomized = shuffle([...data]);
 
-      // Generate image-based cards
-      track.innerHTML = randomized
+      // Multiply items (clone 3 times) to ensure enough track length for infinite scrolling
+      const itemsToRender = [...randomized, ...randomized, ...randomized];
+
+      track.innerHTML = itemsToRender
         .map(
           (item) => `
         <article class="testimonial-card">
             <img src="${item.image}" alt="Отзыв клиента" class="testimonial-img" loading="lazy">
         </article>
-    `,
+      `,
         )
         .join("");
 
       const cards = track.querySelectorAll(".testimonial-card");
-      if (!cards.length) return;
+      const realCount = randomized.length;
 
-      // FIX: Declare currentIndex here!
-      let currentIndex = 0;
+      // Start in the middle set of cloned items
+      let currentIndex = realCount;
 
-      function getCardWidth() {
+      function getCardStep() {
         const style = getComputedStyle(cards[0]);
-        // Include right gap/margin if present in CSS
         const gap =
           parseFloat(style.marginRight) ||
           parseFloat(getComputedStyle(track).gap) ||
@@ -69,27 +61,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
       function getVisibleCount() {
         const carouselWidth = carousel.offsetWidth;
-        const cardWidth = getCardWidth();
-        return Math.max(1, Math.round(carouselWidth / cardWidth));
+        const step = getCardStep();
+        return Math.max(1, Math.round(carouselWidth / step));
       }
 
-      function scrollTo(index) {
-        const visible = getVisibleCount();
-        const maxIndex = cards.length - visible;
+      // Initial positioning to center group (without animation)
+      requestAnimationFrame(() => {
+        track.scrollLeft = currentIndex * getCardStep();
+      });
 
-        if (index < 0) {
-          currentIndex = Math.max(0, maxIndex);
-        } else if (index > maxIndex) {
-          currentIndex = 0;
-        } else {
-          currentIndex = index;
-        }
+      function scrollTo(targetIndex) {
+        const step = getCardStep();
 
+        // Perform smooth scroll to target
         track.scrollTo({
-          left: currentIndex * getCardWidth(),
+          left: targetIndex * step,
           behavior: "smooth",
         });
+
+        currentIndex = targetIndex;
       }
+
+      // Seamless Reset when reaching edge sets
+      let isAdjusting = false;
+      track.addEventListener(
+        "scroll",
+        () => {
+          if (isAdjusting) return;
+
+          const step = getCardStep();
+          if (step <= 0) return;
+
+          const currentPos = Math.round(track.scrollLeft / step);
+
+          // If scrolled into the first set, jump silently to middle set
+          if (currentPos < realCount / 2) {
+            isAdjusting = true;
+            currentIndex = currentPos + realCount;
+            track.scrollLeft = currentIndex * step;
+            setTimeout(() => (isAdjusting = false), 50);
+          }
+          // If scrolled into the last set, jump silently to middle set
+          else if (currentPos >= realCount * 2) {
+            isAdjusting = true;
+            currentIndex = currentPos - realCount;
+            track.scrollLeft = currentIndex * step;
+            setTimeout(() => (isAdjusting = false), 50);
+          } else {
+            currentIndex = currentPos;
+          }
+        },
+        { passive: true },
+      );
 
       btnPrev?.addEventListener("click", () => {
         scrollTo(currentIndex - getVisibleCount());
