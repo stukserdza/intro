@@ -995,6 +995,13 @@ li.sparkle {
 }
 
 /* individual neuronaстройка */
+.ind-neuro-hero-title {
+  font-size: var(--fs-36-text);
+  text-align: center;
+  color: var(--gold-light);
+  font-family: var(--ff-headings);
+}
+
 .med-ind-neuro {
   width: 100%;
   max-width: 700px;
