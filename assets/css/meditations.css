@@ -996,11 +996,19 @@ li.sparkle {
 }
 
 /* individual neuronaстройка */
-.ind-neuro-hero-title {
+.med-ind-hero-badge {
+  margin-bottom: 1.5em;
+}
+
+.med-ind-neuro-hero-title {
   font-size: var(--fs-30-text);
   text-align: center;
   color: var(--gold-light);
   font-family: var(--ff-headings);
+}
+
+.med-ind-hero-subtitle {
+  /* margin-top: 1em; */
 }
 
 .med-ind-neuro {
@@ -1072,6 +1080,33 @@ li.sparkle {
 }
 
 /* Section: Pain Points */
+.med-ind-pain-section {
+  max-width: 900px;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.med-ind-pain-subtitle {
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
+  text-align: center;
+}
+
+.med-ind-pain-subtitle span {
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.med-pain-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: left;
+  opacity: 0.8;
+}
 
 .pain-points-card {
   display: flex;
@@ -1143,16 +1178,6 @@ li.sparkle {
   font-family: var(--ff-headings);
 }
 
-.med-pain-subtitle {
-  font-size: var(--fs-20-text);
-  padding: 1em 0;
-  text-align: center;
-}
-
-.med-pain-subtitle span {
-  font-weight: 600;
-  color: var(--gold-light);
-}
 
 .med-ind-neuro ul {
   list-style: none;
