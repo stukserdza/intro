@@ -1119,6 +1119,7 @@ li.sparkle {
   align-items: stretch;
   border: var(--card-border-red);
   margin: 0.625em 0;
+  text-align: left;
 }
 
 .pain-points-card-content {
