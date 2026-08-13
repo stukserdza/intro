@@ -872,11 +872,11 @@ li.sparkle {
 
 
 @media (max-width: 1100px) {
-  .diag-card-content {
+  .pain-points-card-content {
     column-gap: 1px;
   }
 
-  .diag-card-footer {
+  .pain-points-card-footer {
     flex-direction: column;
   }
 
@@ -894,15 +894,15 @@ li.sparkle {
     padding: 0.2em 0 1em 0;
   }
 
-  .diag-card {
+  .pain-points-card {
     grid-template-columns: 1fr;
   }
 
-  .diag-card-image {
+  .pain-points-card-image {
     min-height: 260px;
   }
 
-  .diag-card-content {
+  .pain-points-card-content {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -1070,19 +1070,76 @@ li.sparkle {
   color: var(--gold-bright);
 }
 
-@media (max-width: 750px) {
-  .med-ind-neuro-diff-main-wrapper {
-    flex-direction: column;
-  }
+/* Section: Pain Points */
 
-  .med-ind-neuro-diff-wrapper,
-  .med-ind-neuro-diff-img-wrapper {
-    width: 100%;
-  }
+.pain-points-card {
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 424px 1fr; */
+  gap: 2em;
+  padding: 2.5em;
+  background-color: var(--deepest-red);
+  align-items: stretch;
+  border: var(--card-border-red);
+  margin: 0.625em 0;
+}
 
-  .med-ind-neuro-diff-img-wrapper {
-    max-width: 400px;
-  }
+.pain-points-card-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto 1fr auto;
+  column-gap: 20px;
+  row-gap: 10px;
+  color: var(--beige);
+  min-width: 0;
+}
+
+.pain-points-card-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: var(--fs-card-text);
+  line-height: 1.15;
+  font-weight: 400;
+  color: var(--gold-light);
+}
+
+.pain-points-card-text {
+  grid-column: 1 / -1;
+  margin: 0;
+  max-width: 100%;
+  font-size: var(--fs-20-text);
+  line-height: 1.35;
+}
+
+.pain-points-card-list {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1em;
+  /* remove list decoration */
+  list-style: none;
+  line-height: 1.45;
+}
+
+.pain-points-card-list li+li {
+  margin-top: 4px;
+}
+
+.pain-points-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.diag-price {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  align-self: end;
+  font-size: var(--fs-card-text);
+  line-height: 1;
+  color: var(--gold-light);
+  font-family: var(--ff-headings);
 }
 
 .med-pain-subtitle {
