@@ -1180,6 +1180,93 @@ li.sparkle {
   font-family: var(--ff-headings);
 }
 
+/* med-ind-testimonials */
+.med-ind-testimonials {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-20-text);
+  color: var(--beige);
+  text-align: center;
+}
+
+.testimonials-header h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #d4a5a9, #f0d988);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Сетка отзывов */
+.med-ind-testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  /* align center */
+  justify-content: center;
+
+}
+
+/* Карточка отзыва */
+.med-ind-testimonials-card {
+  background: var(--deepest-red);
+  border: var(--card-border-red);
+  padding: 35px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 165, 169, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 165, 169, 0.1);
+}
+
+/* Декоративная кавычка */
+.testimonial-card::before {
+  content: "“";
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 4rem;
+  color: rgba(212, 165, 169, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.med-ind-testimonials-content {
+  font-size: 0.98rem;
+  font-weight: 300;
+  color: var(--beige);
+  white-space: pre-line;
+  margin-bottom: 25px;
+}
+
+/* Автор */
+.med-ind-testimonials-author {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 20px;
+  margin-top: auto;
+}
+
 
 .med-ind-neuro ul {
   list-style: none;
