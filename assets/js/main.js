@@ -60,16 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.round(carouselWidth / cardWidth);
       }
 
-      //   function scrollTo(index) {
-      //     console.log(index);
-      //     // wrap around
-      //     currentIndex = ((index % cards.length) + cards.length) % cards.length;
-      //     console.log(currentIndex);
-      //     track.scrollTo({
-      //       left: currentIndex * getCardWidth(),
-      //       behavior: "smooth",
-      //     });
-      //   }
       function scrollTo(index) {
         const visible = getVisibleCount();
 
