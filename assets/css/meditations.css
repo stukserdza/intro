@@ -1052,12 +1052,10 @@ li.sparkle {
 
 .med-difference-intro-text {
   font-size: var(--fs-20-text);
-  /* opacity: 0.8; */
   padding: 1em 0;
 }
 
 .med-difference-intro-text p {
-  /* opacity: 0.8; */
   padding: 0.5em 0;
 }
 
