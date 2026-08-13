@@ -1024,16 +1024,17 @@ li.sparkle {
   text-align: center;
 }
 
+.med-ind-describ-paragraph {
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
+  text-align: center;
+}
+
 .med-pain-points-body p {
   /* opacity: 0.8; */
   padding: 1em 0;
 
 }
-
-
-/* .med-ind-neuro-diff {} */
-
-
 
 .med-ind-neuro-diff {
   background: var(--deep-red);
