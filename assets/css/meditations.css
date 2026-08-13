@@ -1229,7 +1229,7 @@ li.sparkle {
 /* med-ind-testimonials */
 .med-ind-testimonials {
   width: 100%;
-  max-width: 900px;
+  max-width: 900px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1274,12 +1274,6 @@ li.sparkle {
   width: 100%;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(212, 165, 169, 0.4);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 165, 169, 0.1);
-}
-
 .med-ind-testimonials-content {
   font-size: 0.98rem;
   font-weight: 300;
@@ -1300,6 +1294,149 @@ li.sparkle {
   margin-top: auto;
 }
 
+/* test */
+/* ==========================================
+   Testimonials Section (Image Carousel)
+   ========================================== */
+
+section.testimonials {
+  padding: 3em 0;
+  background: var(--deepest-red);
+  width: 100%;
+}
+
+.testimonials-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  /* Updated to 900px */
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--gold-light);
+}
+
+.testimonials-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  /* Updated to 900px */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* track */
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* card - No border radius, no hover effects */
+.testimonial-card {
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  flex: 0 0 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+  text-align: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  /* Removed border radius */
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image - Clean display without border radius */
+.testimonial-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  /* Removed border radius */
+  display: block;
+}
+
+/* Nav testimonials-carousel - Kept previous styles */
+.testimonials-carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 18px 0;
+  width: 100%;
+}
+
+.testimonials-nav-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--gold);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--gold-light);
+  background-color: var(--deepest-red);
+}
+
+.testimonials-nav-btn span {
+  color: var(--gold-light);
+  font-size: 30px;
+}
+
+.testimonials-nav-btn:hover {
+  background: rgba(255, 201, 9, 0.2);
+  transform: scale(1.05);
+}
+
+.testimonials-nav-btn.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+  background: transparent;
+}
+
+/* desktop: 2 visible */
+@media (min-width: 769px) {
+  .testimonials-carousel {
+    max-width: 900px;
+  }
+}
+
+/* tablet/mobile: 1 visible */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .testimonials-carousel {
+    padding: 1.25rem;
+  }
+}
 
 .med-ind-neuro ul {
   list-style: none;
