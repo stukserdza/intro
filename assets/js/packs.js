@@ -274,41 +274,47 @@ function buildPage(pack, allMeditations) {
   const howToBuy = `
   <section class="how-to-buy" id="how-to-buy">
   <div class="how-to-buy-wrapper">
-    <h2 class="section-title">Как приобрести пакет</h2>
+    <h2 class="section-title">Как получить пакет</h2>
 
     <p class="how-to-buy-lead">
       Готовы начать прямо сейчас?
       <br>
-      Выберите удобный способ оплаты:
+      Выберите оплату по вашей карте, доступ придёт сразу после оплаты.
     </p>
-
+    <h3 class="how-to-buy-subtitle">
+      Оплата российской картой
+    </h3>
     <p>
-      Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
-    </p>
-    <div class="how-to-buy-btn-container">
-      <a href="${pack.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
-        Приобрести через Boosty
-      </a>
-    </div>
-    <p>
-      Для пользователей по всему миру. Удобная международная оплата и доступ к материалам сразу после оформления подписки.
-    </p>
-    <div class="how-to-buy-btn-container">
-      <a href="${pack.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
-        Приобрести через Patreon
-      </a>
-    </div>
-    <p>
-      Оплата картой любого банка, включая российские.
+      Карта любого российского банка.
     </p>
     <div class="how-to-buy-btn-container">
       <a href="${pack.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
-        Приобрести через GetCourse
+        Оплатить через GetCourse
+      </a>
+    </div>
+    <p>
+      Если GetCourse не открывается или зависает, оплатите через Boosty.
+      Подходит и для российских, и для зарубежных карт:
+    </p>
+    <div class="how-to-buy-btn-container">
+      <a href="${pack.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
+        Оплатить через Boosty
+      </a>
+    </div>
+    <h3 class="how-to-buy-subtitle">
+      Оплата российской картой
+    </h3>
+    <p>
+      Для оплаты из любой страны мира.
+    </p>
+    <div class="how-to-buy-btn-container">
+      <a href="${pack.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
+        Оплатить через Patreon
       </a>
     </div>
     <div class="how-to-buy-issues">
       <p>
-        Если ссылка не открывается или возникают сложности с оплатой, просто напишите моей помощнице Софии.
+        Остались сложности с оплатой? Напишите моей помощнице Софии.
       </p>
       <div class="contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
@@ -326,9 +332,6 @@ function buildPage(pack, allMeditations) {
         </a>
       </div>
     </div>
-    <p class="how-to-buy-note">
-      Мы поможем найти удобный способ и мягко проведём вас к практике.
-    </p>
   </div>
 </section>
   
