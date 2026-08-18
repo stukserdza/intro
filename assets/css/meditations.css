@@ -780,6 +780,7 @@ li.sparkle {
 
 .how-to-buy-wrapper,
 .how-to-buy-lead,
+.how-to-buy-subtitle,
 .how-to-buy-issues,
 .how-to-buy-note {
   max-width: 1200px;
@@ -799,6 +800,12 @@ li.sparkle {
 }
 
 .how-to-buy-lead {
+  font-size: var(--fs-20-text);
+  padding: 1em 0;
+  color: var(--beige);
+}
+
+.how-to-buy-subtitle {
   font-size: var(--fs-20-text);
   padding: 1em 0;
   color: var(--beige);
