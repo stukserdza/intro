@@ -1209,10 +1209,33 @@ li.sparkle {
   /* remove list decoration */
   list-style: none;
   line-height: 1.45;
+  padding-left: 0;
 }
 
 .pain-points-card-list li+li {
   margin-top: 4px;
+}
+
+.pain-points-card-list li {
+  position: relative;
+  padding-left: 24px;
+  /* Отступ для кастомной точки */
+  margin-bottom: 10px;
+  /* Расстояние между пунктами */
+}
+
+/* Создаем кастомную точку */
+.pain-points-card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--gold-light);
+  /* Цвет точки */
 }
 
 .pain-points-card-footer {
