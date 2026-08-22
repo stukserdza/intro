@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!track) return;
 
-  // Fisher–Yates shuffle
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -21,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fetch(REVIEWS_JSON_PATH)
     .then((res) => {
-      if (!res.ok) {
-        throw new Error(`Failed to load reviews: ${res.status}`);
-      }
+      if (!res.ok) throw new Error(`Failed to load reviews: ${res.status}`);
       return res.json();
     })
     .then((data) => {
@@ -31,8 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const randomized = shuffle([...data]);
 
-      // Multiply items (clone 3 times) to ensure enough track length for infinite scrolling
-      const itemsToRender = [...randomized, ...randomized, ...randomized];
+      // Clone 5 times instead of 3 to create a wider buffer zone
+      const itemsToRender = [
+        ...randomized,
+        ...randomized,
+        ...randomized,
+        ...randomized,
+        ...randomized,
+      ];
 
       track.innerHTML = itemsToRender
         .map(
@@ -47,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const cards = track.querySelectorAll(".testimonial-card");
       const realCount = randomized.length;
 
-      // Start in the middle set of cloned items
-      let currentIndex = realCount;
+      // Start in the middle set (set #3 out of 5)
+      let currentIndex = realCount * 2;
 
       function getCardStep() {
         const style = getComputedStyle(cards[0]);
@@ -65,15 +68,31 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.max(1, Math.round(carouselWidth / step));
       }
 
-      // Initial positioning to center group (without animation)
+      // Initial centering without animation
       requestAnimationFrame(() => {
         track.scrollLeft = currentIndex * getCardStep();
       });
 
-      function scrollTo(targetIndex) {
+      function navigate(direction) {
         const step = getCardStep();
+        const shift = getVisibleCount();
 
-        // Perform smooth scroll to target
+        // Standardize index within the middle group if user reached cloned edges
+        if (currentIndex < realCount) {
+          currentIndex += realCount * 2;
+          track.scrollLeft = currentIndex * step;
+        } else if (currentIndex >= realCount * 3) {
+          currentIndex -= realCount * 2;
+          track.scrollLeft = currentIndex * step;
+        }
+
+        // Force browser layout repaint before starting smooth transition
+        void track.offsetWidth;
+
+        // Calculate target position and perform smooth scroll
+        const targetIndex =
+          direction === "next" ? currentIndex + shift : currentIndex - shift;
+
         track.scrollTo({
           left: targetIndex * step,
           behavior: "smooth",
@@ -82,45 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = targetIndex;
       }
 
-      // Seamless Reset when reaching edge sets
-      let isAdjusting = false;
-      track.addEventListener(
-        "scroll",
-        () => {
-          if (isAdjusting) return;
-
-          const step = getCardStep();
-          if (step <= 0) return;
-
-          const currentPos = Math.round(track.scrollLeft / step);
-
-          // If scrolled into the first set, jump silently to middle set
-          if (currentPos < realCount / 2) {
-            isAdjusting = true;
-            currentIndex = currentPos + realCount;
-            track.scrollLeft = currentIndex * step;
-            setTimeout(() => (isAdjusting = false), 50);
-          }
-          // If scrolled into the last set, jump silently to middle set
-          else if (currentPos >= realCount * 2) {
-            isAdjusting = true;
-            currentIndex = currentPos - realCount;
-            track.scrollLeft = currentIndex * step;
-            setTimeout(() => (isAdjusting = false), 50);
-          } else {
-            currentIndex = currentPos;
-          }
-        },
-        { passive: true },
-      );
-
-      btnPrev?.addEventListener("click", () => {
-        scrollTo(currentIndex - getVisibleCount());
-      });
-
-      btnNext?.addEventListener("click", () => {
-        scrollTo(currentIndex + getVisibleCount());
-      });
+      btnPrev?.addEventListener("click", () => navigate("prev"));
+      btnNext?.addEventListener("click", () => navigate("next"));
     })
     .catch((err) => {
       console.error(err);
