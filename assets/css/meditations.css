@@ -1315,50 +1315,6 @@ li.sparkle {
   border-radius: 2px;
 }
 
-/* Сетка отзывов */
-.med-ind-testimonials-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  /* align center */
-  justify-content: center;
-
-}
-
-/* Карточка отзыва */
-.med-ind-testimonials-card {
-  background: var(--deepest-red);
-  border: var(--card-border-red);
-  padding: 35px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.med-ind-testimonials-content {
-  font-size: 0.98rem;
-  font-weight: 300;
-  color: var(--beige);
-  white-space: pre-line;
-  margin-bottom: 25px;
-}
-
-/* Автор */
-.med-ind-testimonials-author {
-  width: 100%;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding-top: 20px;
-  margin-top: auto;
-}
 
 /* test */
 /* ==========================================
