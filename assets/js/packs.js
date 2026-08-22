@@ -302,11 +302,8 @@ function buildPage(pack, allMeditations) {
       </a>
     </div>
     <h3 class="how-to-buy-subtitle">
-      Оплата российской картой
+      Оплата зарубежной картой
     </h3>
-    <p>
-      Для оплаты из любой страны мира.
-    </p>
     <div class="how-to-buy-btn-container">
       <a href="${pack.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${pack.title} на Boosty">
         Оплатить через Patreon
@@ -314,7 +311,7 @@ function buildPage(pack, allMeditations) {
     </div>
     <div class="how-to-buy-issues">
       <p>
-        Остались сложности с оплатой? Напишите моей помощнице Софии.
+        Остались сложности с оплатой? </br>Напишите моей помощнице Софии.
       </p>
       <div class="contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
