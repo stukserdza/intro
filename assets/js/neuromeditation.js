@@ -243,11 +243,8 @@ function buildPage(med, allPacks) {
       </a>
     </div>
     <h3 class="how-to-buy-subtitle">
-      Оплата российской картой
+      Оплата зарубежной картой
     </h3>
-    <p>
-      Для оплаты из любой страны мира.
-    </p>
     <div class="how-to-buy-btn-container">
       <a href="${med.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${med.title} на Boosty">
         Оплатить через Patreon
@@ -256,7 +253,7 @@ function buildPage(med, allPacks) {
 
     <div class="how-to-buy-issues">
       <p>
-        Остались сложности с оплатой? Напишите моей помощнице Софии.
+        Остались сложности с оплатой? </br>Напишите моей помощнице Софии.
       </p>
       <div class="how-to-buy-contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
