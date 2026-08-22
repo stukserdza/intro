@@ -1238,6 +1238,42 @@ li.sparkle {
   /* Цвет точки */
 }
 
+.pain-points-card-list-set {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1em;
+  /* remove list decoration */
+  list-style: none;
+  line-height: 1.45;
+  padding-left: 0;
+}
+
+/* 
+.pain-points-card-list-set li+li {
+  margin-top: 4px;
+} */
+
+/* Option 2 */
+.pain-points-card-list-set li {
+  position: relative;
+  padding-left: 28px;
+  /* Оставляем компактный отступ */
+  margin-bottom: 10px;
+}
+
+/* Рисуем длинную полоску через CSS */
+.pain-points-card-list-set li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 1px !important;
+  background-color: var(--gold-light);
+}
+
 .pain-points-card-footer {
   display: flex;
   justify-content: space-between;
