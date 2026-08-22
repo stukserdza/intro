@@ -1145,7 +1145,8 @@ li.sparkle {
   object-fit: contain;
 } */
 
-.med-pain-points-list {
+.med-pain-points-list,
+.med-ind-pricing-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1196,7 +1197,8 @@ li.sparkle {
   line-height: 1.35;
 }
 
-.pain-points-card-list {
+.pain-points-card-list,
+.med-ind-pricing-list {
   grid-column: 1 / -1;
   margin: 0;
   padding: 1em;
@@ -1206,11 +1208,13 @@ li.sparkle {
   padding-left: 0;
 }
 
-.pain-points-card-list li+li {
+.pain-points-card-list li+li,
+.med-ind-pricing-list li+li {
   margin-top: 4px;
 }
 
-.pain-points-card-list li {
+.pain-points-card-list li,
+.med-ind-pricing-list li {
   position: relative;
   padding-left: 24px;
   /* Отступ для кастомной точки */
@@ -1219,71 +1223,26 @@ li.sparkle {
 }
 
 /* Создаем кастомную точку */
-.pain-points-card-list li::before {
+.pain-points-card-list li::before,
+.med-ind-pricing-list li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: var(--beige);
+  background-color: var(--gold-light);
   /* Цвет точки */
 }
 
-.pain-points-card-list-set {
-  grid-column: 1 / -1;
-  margin: 0;
-  padding: 1em;
-  /* remove list decoration */
-  list-style: none;
-  line-height: 1.45;
-  padding-left: 0;
-}
-
-/* 
-.pain-points-card-list-set li+li {
-  margin-top: 4px;
-} */
-
-/* Option 2 */
-.pain-points-card-list-set li {
-  position: relative;
-  padding-left: 28px;
-  /* Оставляем компактный отступ */
-  margin-bottom: 10px;
-}
-
-/* Рисуем длинную полоску через CSS */
-.pain-points-card-list-set li::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 1px !important;
-  background-color: var(--gold-light);
-}
 
 .pain-points-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.diag-price {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  align-self: end;
-  font-size: var(--fs-card-text);
-  line-height: 1;
-  color: var(--gold-light);
-  font-family: var(--ff-headings);
 }
 
 /* med-ind-testimonials */
@@ -1454,12 +1413,6 @@ section.testimonials {
   }
 }
 
-.med-ind-neuro ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1em;
-  opacity: 0.8;
-}
 
 .med-how-btn-wrap {
   display: flex;
