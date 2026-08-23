@@ -1153,8 +1153,8 @@ li.sparkle {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  text-align: left;
-  opacity: 0.8;
+  text-align: center;
+  opacity: 1;
 }
 
 .pain-points-card {
