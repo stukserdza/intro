@@ -1153,7 +1153,7 @@ li.sparkle {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  text-align: center;
+  text-align: left;
   opacity: 1;
 }
 
@@ -1198,7 +1198,8 @@ li.sparkle {
 }
 
 .pain-points-card-list,
-.med-ind-pricing-list {
+.med-ind-pricing-list,
+.med-pain-points-list {
   grid-column: 1 / -1;
   margin: 0;
   padding: 1em;
@@ -1209,22 +1210,22 @@ li.sparkle {
 }
 
 .pain-points-card-list li+li,
-.med-ind-pricing-list li+li {
+.med-ind-pricing-list li+li,
+.med-pain-points-list li+li {
   margin-top: 4px;
 }
 
 .pain-points-card-list li,
-.med-ind-pricing-list li {
+.med-ind-pricing-list li,
+.med-pain-points-list li {
   position: relative;
   padding-left: 24px;
-  /* Отступ для кастомной точки */
   margin-bottom: 10px;
-  /* Расстояние между пунктами */
 }
 
-/* Создаем кастомную точку */
 .pain-points-card-list li::before,
-.med-ind-pricing-list li::before {
+.med-ind-pricing-list li::before,
+.med-pain-points-list li::before {
   content: "";
   position: absolute;
   left: 0;
