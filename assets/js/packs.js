@@ -264,7 +264,7 @@ function buildPage(pack, allMeditations) {
 
   /* ── instructions ── */
   const instructionsSection = pack.instructions
-    ? `<section class="med-single-section">
+    ? `<section class="med-single-section med-single-section-instructions">
            <div class="med-how-inner">
              <p class="med-section-intro">${pack.instructions}</p>
            </div>
