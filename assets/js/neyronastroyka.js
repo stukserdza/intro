@@ -209,7 +209,7 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
 
   /* ── instructions ── */
   const instructionsSection = neyronastroyka.instructions
-    ? `<section class="med-single-section">
+    ? `<section class="med-single-section med-single-section-instructions">
             <div class="med-how-inner">
               <p class="med-section-intro">${neyronastroyka.instructions}</p>
             </div>
@@ -217,44 +217,49 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
     : "";
 
   /* ── how to buy ── */
+
   const howToBuy = `
   <section class="how-to-buy" id="how-to-buy">
   <div class="how-to-buy-wrapper">
-    <h2 class="section-title">Как приобрести нейромедитацию</h2>
+    <h2 class="section-title">Как получить нейронастройку</h2>
 
     <p class="how-to-buy-lead">
       Готовы начать прямо сейчас?
       <br>
-      Выберите удобный способ оплаты:
+      Выберите оплату по вашей карте, доступ придёт сразу после оплаты.
     </p>
-
+    <h3 class="how-to-buy-subtitle">
+      Оплата российской картой
+    </h3>
     <p>
-      Нажмите кнопку ниже и получите доступ к нейромедитации через Boosty.
+      Карта любого российского банка.
+    </p>
+        <div class="how-to-buy-btn-container">
+      <a href="${neyronastroyka.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
+        Оплатить через GetCourse
+      </a>
+    </div>
+    <p>
+      Если GetCourse не открывается или зависает, оплатите через Boosty.
+      Подходит и для российских, и для зарубежных карт:
     </p>
     <div class="how-to-buy-btn-container">
       <a href="${neyronastroyka.boostyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
-        Приобрести через Boosty
+        Оплатить через Boosty
       </a>
     </div>
-    <p>
-      Для пользователей по всему миру. Удобная международная оплата и доступ к материалам сразу после оформления подписки.
-    </p>
+    <h3 class="how-to-buy-subtitle">
+      Оплата зарубежной картой
+    </h3>
     <div class="how-to-buy-btn-container">
       <a href="${neyronastroyka.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
-        Приобрести через Patreon
+        Оплатить через Patreon
       </a>
     </div>
-    <p>
-      Оплата картой любого банка, включая российские.
-    </p>
-    <div class="how-to-buy-btn-container">
-      <a href="${neyronastroyka.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
-        Приобрести через GetCourse
-      </a>
-    </div>
+
     <div class="how-to-buy-issues">
       <p>
-        Если ссылка не открывается или возникают сложности с оплатой, просто напишите моей помощнице Софии.
+        Остались сложности с оплатой? </br>Напишите моей помощнице Софии.
       </p>
       <div class="how-to-buy-contact-links">
         <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
@@ -272,14 +277,10 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
         </a>
       </div>
     </div>
-    <p class="how-to-buy-note">
-      Мы поможем найти удобный способ и мягко проведём вас к практике.
-    </p>
   </div>
 </section>
   
   `;
-
   /* ── full HTML ── */
   const html = `
         <!-- Hero -->
