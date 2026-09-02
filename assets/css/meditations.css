@@ -730,6 +730,10 @@ li.sparkle {
   fill: var(--gold-light);
 }
 
+.med-single-section-instructions {
+  padding: 1em 0 2em 0 !important;
+}
+
 .med-how-inner-steps {
   max-width: 1000px !important;
   width: 100%;
