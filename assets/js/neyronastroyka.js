@@ -217,8 +217,63 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
     : "";
 
   /* ── how to buy ── */
+  // neyronastroyka-zdorovyye-otnosheniya-s-yedoy
+  const howToBuyPatreonGetCourse = `
+  <section class="how-to-buy" id="how-to-buy">
+  <div class="how-to-buy-wrapper">
+    <h2 class="section-title">Как получить нейронастройку</h2>
 
-  const howToBuy = `
+    <p class="how-to-buy-lead">
+      Готовы начать прямо сейчас?
+      <br>
+      Выберите оплату по вашей карте, доступ придёт сразу после оплаты.
+    </p>
+    <h3 class="how-to-buy-subtitle">
+      Оплата российской картой
+    </h3>
+    <p>
+      Карта любого российского банка.
+    </p>
+        <div class="how-to-buy-btn-container">
+      <a href="${neyronastroyka.getCourseBuyLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
+        Оплатить через GetCourse
+      </a>
+    </div>
+    <h3 class="how-to-buy-subtitle">
+      Оплата зарубежной картой
+    </h3>
+    <div class="how-to-buy-btn-container">
+      <a href="${neyronastroyka.patreonLink}" target="_blank" class="btn-primary" aria-label="Преобрести нейромедитацию ${neyronastroyka.title} на Boosty">
+        Оплатить через Patreon
+      </a>
+    </div>
+
+    <div class="how-to-buy-issues">
+      <p>
+        Остались сложности с оплатой? </br>Напишите моей помощнице Софии.
+      </p>
+      <div class="how-to-buy-contact-links">
+        <a class="contact-highlight" href="https://t.me/sofiya1203" target="_blank" rel="noopener" aria-label="Перейти в Телеграм и написать Софии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_form_xlg8vi.svg"
+                alt="Contact Sofia TG">
+        </a>
+        <a class="contact-highlight" href="https://vk.me/stukserdzavk" target="_blank" rel="noopener" aria-label="Перейти в Вконтакте и написать Софии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/vk_form_z0dx2b.svg"
+                alt="Contact Sofia VK">
+        </a>
+        <a class="contact-highlight" href="https://wa.me/message/4EWYRWQBFWOBF1" target="_blank"
+            rel="noopener"  aria-label="Перейти в What's up и написать Софии ассистенту">
+            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964727/wa_form_ecbrn5.svg"
+                alt="Contact Sofia What's up">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  `;
+
+  const howToBuyPatreonGetCourseBoosty = `
   <section class="how-to-buy" id="how-to-buy">
   <div class="how-to-buy-wrapper">
     <h2 class="section-title">Как получить нейронастройку</h2>
@@ -281,6 +336,11 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
 </section>
   
   `;
+
+  const howToBuy =
+    neyronastroyka.slug === "neyronastroyka-zdorovyye-otnosheniya-s-yedoy"
+      ? howToBuyPatreonGetCourse
+      : howToBuyPatreonGetCourseBoosty;
   /* ── full HTML ── */
   const html = `
         <!-- Hero -->
@@ -336,7 +396,6 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
 
         <!-- howToBuy -->
         ${howToBuy}
-
         <!-- Contact -->
         ${CONTACT_HTML}`;
 
