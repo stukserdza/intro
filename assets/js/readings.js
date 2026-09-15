@@ -6,8 +6,10 @@ let N = 0;
 let current = START_INDEX;
 let offsetY = 0;
 let animTarget = 0;
-const vp = document.getElementById("cylinder-viewport");
+
 const panelsWrap = document.getElementById("readings-panels");
+const vp = document.getElementById("readingsViewport"); // Container for cylinder items
+
 let els = [];
 let panels = [];
 const ANIM_MS = 280;
@@ -15,91 +17,49 @@ let rafId = null,
   animStart = null,
   animFrom = 0;
 
-function ease(t) {
-  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+/* ── CYLINDER RENDER & NAV LOGIC ──────────────────────── */
+function render() {
+  if (!els.length) return;
+  els.forEach((el, index) => {
+    const dist = index - current;
+    el.classList.toggle("is-active", index === current);
+    el.style.transform = `translateY(${offsetY + index * ITEM_H}px)`;
+  });
 }
 
-function tick(ts) {
-  if (!animStart) animStart = ts;
-  const t = Math.min((ts - animStart) / ANIM_MS, 1);
-  offsetY = animFrom + (animTarget - animFrom) * ease(t);
+function updatePanels() {
+  panels.forEach((panel, idx) => {
+    panel.classList.toggle("is-active", idx === current);
+  });
+}
+
+function animate(timestamp) {
+  if (!animStart) animStart = timestamp;
+  const progress = Math.min((timestamp - animStart) / ANIM_MS, 1);
+  const easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2; // Ease in-out
+
+  offsetY = animFrom + (animTarget - animFrom) * easeProgress;
   render();
-  if (t < 1) rafId = requestAnimationFrame(tick);
-  else {
+
+  if (progress < 1) {
+    rafId = requestAnimationFrame(animate);
+  } else {
     rafId = null;
     animStart = null;
-    offsetY = animTarget;
-    render();
   }
 }
 
-function startAnim(to) {
+function goTo(index) {
+  if (index < 0 || index >= N || index === current) return;
+  current = index;
   animFrom = offsetY;
-  animTarget = to;
-  animStart = null;
+  animTarget = -current * ITEM_H;
+
   if (rafId) cancelAnimationFrame(rafId);
-  rafId = requestAnimationFrame(tick);
-}
+  animStart = null;
+  rafId = requestAnimationFrame(animate);
 
-/* ── NAVIGATION ──────────────────────────────────────── */
-function goTo(idx) {
-  idx = ((idx % N) + N) % N;
-  if (idx === current) return;
-  const delta = (() => {
-    let d = idx - current;
-    if (d > N / 2) d -= N;
-    if (d < -N / 2) d += N;
-    return d;
-  })();
-  current = idx;
-  startAnim(animTarget - delta * ITEM_H);
   updatePanels();
-}
-
-/* ── RENDER CYLINDER ─────────────────────────────────── */
-function render() {
-  const vpH = vp.offsetHeight || ITEM_H * 3;
-  const center = vpH / 2;
-
-  for (let i = 0; i < N; i++) {
-    const rawDist = (((i - current) % N) + N) % N;
-    const logicalDist = Math.min(rawDist, N - rawDist);
-
-    let slotOffset = 0;
-    if (logicalDist !== 0) {
-      const wrapped = (((i - current) % N) + N) % N;
-      slotOffset = wrapped === N - 1 ? -1 : 1;
-      if (logicalDist === 2) slotOffset *= 2;
-    }
-
-    const itemY = center + slotOffset * ITEM_H;
-    els[i].style.top = itemY - ITEM_H / 2 + "px";
-    els[i].style.opacity =
-      logicalDist === 0
-        ? 1
-        : logicalDist === 1
-          ? 0.6
-          : logicalDist === 2
-            ? 0.2
-            : 0;
-
-    els[i].classList.remove("is-active", "prev", "next");
-    if (logicalDist === 0) els[i].classList.add("is-active");
-    else if (logicalDist === 1) {
-      const w = (((i - current) % N) + N) % N;
-      els[i].classList.add(w === N - 1 ? "prev" : "next");
-    }
-  }
-}
-
-/* ── PANELS ──────────────────────────────────────────── */
-function updatePanels() {
-  const activeTarget = MENU_DATA[current].id;
-  panels.forEach((p) => {
-    const on = p.dataset.panel === activeTarget;
-    p.classList.toggle("is-active", on);
-    if (on) setupCarousel(p);
-  });
 }
 
 /* ── CAROUSEL ────────────────────────────────────────── */
@@ -115,14 +75,12 @@ function setupCarousel(panel) {
   let cards = Array.from(track.children);
   let idx = 0;
 
-  // Single or zero cards: hide controls and return early
   if (cards.length <= 1) {
     if (navHeader) navHeader.style.display = "none";
     carousel.dataset.ready = "true";
     return;
   }
 
-  // STEP SIZE
   function cw() {
     const first = track.querySelector(".reading-card");
     if (!first) return 0;
@@ -130,7 +88,6 @@ function setupCarousel(panel) {
     return first.getBoundingClientRect().width + gap;
   }
 
-  // VISIBLE COUNT
   function getVisible() {
     const step = cw();
     if (!step) return 1;
@@ -138,21 +95,18 @@ function setupCarousel(panel) {
     return Math.max(1, Math.round(width / step));
   }
 
-  // RENDER
   function update(animate = true) {
     const step = cw();
     track.style.transition = animate ? "transform 300ms ease" : "none";
     track.style.transform = `translateX(-${idx * step}px)`;
   }
 
-  // MOVE
   function move(dir) {
     const visible = getVisible();
     idx += dir * visible;
     update(true);
   }
 
-  // LOOP FIX
   function fixLoop() {
     const visible = getVisible();
     const totalOriginal = cards.length - visible * 2;
@@ -168,7 +122,6 @@ function setupCarousel(panel) {
     }
   }
 
-  // INFINITE INIT
   function initInfinite() {
     const originals = Array.from(track.children);
     cards = originals;
@@ -194,7 +147,6 @@ function setupCarousel(panel) {
     });
   }
 
-  // EVENTS
   prevBtn?.addEventListener("click", () => move(-1));
   nextBtn?.addEventListener("click", () => move(1));
   track.addEventListener("transitionend", fixLoop);
@@ -208,7 +160,6 @@ function setupCarousel(panel) {
 
   carousel.dataset.ready = "true";
 
-  // Execute immediately if DOM is ready, or on load
   if (document.readyState === "complete") {
     requestAnimationFrame(initInfinite);
   } else {
@@ -224,7 +175,6 @@ function buildPanel(panelData) {
   section.className = "readings-panel";
   section.dataset.panel = panelData.id;
 
-  /* head */
   section.innerHTML = `
     <div class="section-title readings-panel-head">
       <h2 class="readings-panel-title">${panelData.title}</h2>
@@ -232,7 +182,6 @@ function buildPanel(panelData) {
       <div class="readings-panel-category">${panelData.category}</div>
     </div>`;
 
-  /* carousel */
   const carousel = document.createElement("div");
   carousel.className = "readings-carousel";
   carousel.setAttribute("data-carousel", "");
@@ -250,17 +199,18 @@ function buildPanel(panelData) {
   viewport.appendChild(track);
   carousel.appendChild(viewport);
 
-  /* nav buttons (only rendered if multiple cards exist) */
+  /* SAFE NAVIGATION BUTTON INJECTION (Replaces innerHTML +=) */
   if (panelData.cards.length > 1) {
-    carousel.innerHTML += `
-      <div class="readings-carousel-header">
+    const navHeader = document.createElement("div");
+    navHeader.className = "readings-carousel-header";
+    navHeader.innerHTML = `
         <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
           <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
         </button>
         <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
           <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
-        </button>
-      </div>`;
+        </button>`;
+    carousel.appendChild(navHeader);
   }
 
   section.appendChild(carousel);
@@ -272,12 +222,6 @@ function buildCard(card) {
   article.className = "reading-card";
 
   const questionsCount = card.questions ? card.questions.length : 0;
-
-  if (questionsCount === 1) {
-    console.log("There is one question in the card:", card.questions[0]);
-  } else if (questionsCount > 1) {
-    console.log("There are multiple questions in the card:", card.questions);
-  }
 
   const questionsHTML =
     questionsCount > 0
@@ -305,6 +249,7 @@ function buildCard(card) {
 }
 
 function buildCylinder() {
+  if (!vp) return;
   els = MENU_DATA.map((item, i) => {
     const btn = document.createElement("button");
     btn.className = "readings-roll-item";
@@ -320,14 +265,17 @@ function buildCylinder() {
 
 /* ── EVENTS ──────────────────────────────────────────── */
 function bindEvents() {
-  document.getElementById("readingsSwitcher").addEventListener("click", (e) => {
+  const switcher = document.getElementById("readingsSwitcher");
+  if (!switcher) return;
+
+  switcher.addEventListener("click", (e) => {
     const btn = e.target.closest(".readings-roll-btn");
     if (!btn) return;
     goTo(btn.dataset.dir === "up" ? current - 1 : current + 1);
   });
 
   let wheelLocked = false;
-  document.getElementById("readingsSwitcher").addEventListener(
+  switcher.addEventListener(
     "wheel",
     (e) => {
       e.preventDefault();
@@ -340,21 +288,19 @@ function bindEvents() {
   );
 
   let touchY = null;
-  document.getElementById("readingsSwitcher").addEventListener(
+  switcher.addEventListener(
     "touchstart",
     (e) => {
       touchY = e.touches[0].clientY;
     },
     { passive: true },
   );
-  document
-    .getElementById("readingsSwitcher")
-    .addEventListener("touchend", (e) => {
-      if (touchY === null) return;
-      const dy = touchY - e.changedTouches[0].clientY;
-      if (Math.abs(dy) > 20) goTo(current + (dy > 0 ? 1 : -1));
-      touchY = null;
-    });
+  switcher.addEventListener("touchend", (e) => {
+    if (touchY === null) return;
+    const dy = touchY - e.changedTouches[0].clientY;
+    if (Math.abs(dy) > 20) goTo(current + (dy > 0 ? 1 : -1));
+    touchY = null;
+  });
 
   /* toggle expand/collapse questions */
   document.addEventListener("click", (e) => {
@@ -377,21 +323,17 @@ fetch(JSON_PATH)
     N = data.length;
     current = Math.min(START_INDEX, N - 1);
 
-    /* build panels */
     data.forEach((panelData) => {
       const el = buildPanel(panelData);
       panelsWrap.appendChild(el);
     });
     panels = Array.from(panelsWrap.querySelectorAll(".readings-panel"));
 
-    /* build cylinder */
     buildCylinder();
 
-    /* set initial scroll position */
     offsetY = -current * ITEM_H;
     animTarget = offsetY;
 
-    /* initialise */
     panels.forEach(setupCarousel);
     render();
     updatePanels();
