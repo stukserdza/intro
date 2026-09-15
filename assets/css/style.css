@@ -257,6 +257,8 @@ section.main__page {
   font-weight: 400;
   font-size: var(--fs-section-title);
   line-height: 1.25;
+  /* add text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero__subtitle {
