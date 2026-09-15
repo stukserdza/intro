@@ -195,8 +195,6 @@ function buildPanel(panelData) {
   section.innerHTML = `
     <div class="section-title readings-panel-head">
       <h2 class="readings-panel-title">${panelData.title}</h2>
-      <p class="readings-panel-subtitle">${panelData.subtitle}</p>
-      <div class="readings-panel-category">${panelData.category}</div>
     </div>`;
 
   /* carousel */
