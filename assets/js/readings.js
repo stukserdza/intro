@@ -8,7 +8,7 @@ let offsetY = 0;
 let animTarget = 0;
 
 const panelsWrap = document.getElementById("readings-panels");
-const vp = document.getElementById("readingsViewport"); // Container for cylinder items
+const vp = document.getElementById("readingsViewport"); // Cylinder container element
 
 let els = [];
 let panels = [];
@@ -17,11 +17,10 @@ let rafId = null,
   animStart = null,
   animFrom = 0;
 
-/* ── CYLINDER RENDER & NAV LOGIC ──────────────────────── */
+/* ── CYLINDER RENDER & NAVIGATION LOGIC ───────────────── */
 function render() {
   if (!els.length) return;
   els.forEach((el, index) => {
-    const dist = index - current;
     el.classList.toggle("is-active", index === current);
     el.style.transform = `translateY(${offsetY + index * ITEM_H}px)`;
   });
@@ -75,12 +74,14 @@ function setupCarousel(panel) {
   let cards = Array.from(track.children);
   let idx = 0;
 
+  // Single or zero cards: hide controls and return early
   if (cards.length <= 1) {
     if (navHeader) navHeader.style.display = "none";
     carousel.dataset.ready = "true";
     return;
   }
 
+  // STEP SIZE
   function cw() {
     const first = track.querySelector(".reading-card");
     if (!first) return 0;
@@ -88,6 +89,7 @@ function setupCarousel(panel) {
     return first.getBoundingClientRect().width + gap;
   }
 
+  // VISIBLE COUNT
   function getVisible() {
     const step = cw();
     if (!step) return 1;
@@ -95,21 +97,26 @@ function setupCarousel(panel) {
     return Math.max(1, Math.round(width / step));
   }
 
+  // RENDER
   function update(animate = true) {
     const step = cw();
     track.style.transition = animate ? "transform 300ms ease" : "none";
     track.style.transform = `translateX(-${idx * step}px)`;
   }
 
+  // MOVE
   function move(dir) {
     const visible = getVisible();
     idx += dir * visible;
     update(true);
   }
 
+  // LOOP FIX
   function fixLoop() {
     const visible = getVisible();
     const totalOriginal = cards.length - visible * 2;
+
+    if (totalOriginal <= 0) return; // Guard for non-cloned short lists
 
     if (idx >= totalOriginal + visible) {
       idx = visible;
@@ -122,12 +129,19 @@ function setupCarousel(panel) {
     }
   }
 
+  // INFINITE INIT
   function initInfinite() {
     const originals = Array.from(track.children);
     cards = originals;
 
     const visible = getVisible();
-    if (!visible || cards.length < 2) return;
+
+    // Prevent over-cloning if visible cards count is >= total cards available
+    if (!visible || originals.length <= visible) {
+      idx = 0;
+      update(false);
+      return;
+    }
 
     const firstClones = originals
       .slice(0, visible)
@@ -147,6 +161,7 @@ function setupCarousel(panel) {
     });
   }
 
+  // EVENTS
   prevBtn?.addEventListener("click", () => move(-1));
   nextBtn?.addEventListener("click", () => move(1));
   track.addEventListener("transitionend", fixLoop);
@@ -160,6 +175,7 @@ function setupCarousel(panel) {
 
   carousel.dataset.ready = "true";
 
+  // Execute immediately if DOM is ready, or on load
   if (document.readyState === "complete") {
     requestAnimationFrame(initInfinite);
   } else {
@@ -175,6 +191,7 @@ function buildPanel(panelData) {
   section.className = "readings-panel";
   section.dataset.panel = panelData.id;
 
+  /* head */
   section.innerHTML = `
     <div class="section-title readings-panel-head">
       <h2 class="readings-panel-title">${panelData.title}</h2>
@@ -182,6 +199,7 @@ function buildPanel(panelData) {
       <div class="readings-panel-category">${panelData.category}</div>
     </div>`;
 
+  /* carousel */
   const carousel = document.createElement("div");
   carousel.className = "readings-carousel";
   carousel.setAttribute("data-carousel", "");
@@ -199,17 +217,17 @@ function buildPanel(panelData) {
   viewport.appendChild(track);
   carousel.appendChild(viewport);
 
-  /* SAFE NAVIGATION BUTTON INJECTION (Replaces innerHTML +=) */
+  /* nav buttons (safely appended without breaking viewport references) */
   if (panelData.cards.length > 1) {
     const navHeader = document.createElement("div");
     navHeader.className = "readings-carousel-header";
     navHeader.innerHTML = `
-        <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
-          <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
-        </button>
-        <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
-          <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
-        </button>`;
+      <button class="readings-nav-btn" type="button" data-dir="prev" aria-label="Предыдущий расклад">
+        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_left_ubopbz.svg" alt="Предыдущий расклад">
+      </button>
+      <button class="readings-nav-btn" type="button" data-dir="next" aria-label="Следующий расклад">
+        <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964724/arrow_right_whxl58.svg" alt="Следующий расклад">
+      </button>`;
     carousel.appendChild(navHeader);
   }
 
@@ -323,17 +341,21 @@ fetch(JSON_PATH)
     N = data.length;
     current = Math.min(START_INDEX, N - 1);
 
+    /* build panels */
     data.forEach((panelData) => {
       const el = buildPanel(panelData);
       panelsWrap.appendChild(el);
     });
     panels = Array.from(panelsWrap.querySelectorAll(".readings-panel"));
 
+    /* build cylinder */
     buildCylinder();
 
+    /* set initial scroll position */
     offsetY = -current * ITEM_H;
     animTarget = offsetY;
 
+    /* initialise */
     panels.forEach(setupCarousel);
     render();
     updatePanels();
