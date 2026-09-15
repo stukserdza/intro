@@ -518,10 +518,15 @@ section.products {
   gap: 10px;
   width: 100%;
   max-width: 1200px;
+  /* align to center gor grid display*/
+  margin: 0 auto;
+  /* Center items inside the grid cells */
+  justify-items: center;
 }
 
 .product-card {
   min-height: 320px;
+  width: 100%;
   padding: 56px 42px 48px;
   background: #140002;
   border: var(--card-border-red);
