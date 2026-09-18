@@ -156,7 +156,7 @@ function buildPage(neyronastroyka, allNeyronastroyki) {
   const pageUrl = `${BASE_URL}${neyronastroyka.slug}.html`;
 
   /* ── SEO ── */
-  document.title = `Сурия | Стук сердца | Нейромедитация | ${neyronastroyka.title.replace(/<br\s*\/?>/gi, " ")}`;
+  document.title = `Сурия | Стук сердца | Нейронастройка | ${neyronastroyka.title.replace(/<br\s*\/?>/gi, " ")}`;
   document.querySelector('meta[name="description"]').content =
     neyronastroyka.shortDescriptionCommon;
   document.querySelector('meta[property="og:title"]').content = document.title;
