@@ -653,10 +653,15 @@
                     </button>
                     <div id="faq-2"
                         class="hidden p-5 pt-0 text-xs sm:text-sm text-textMuted border-t border-gold/10 leading-relaxed space-y-2">
-                        <p><strong>Из России и СНГ:</strong> Используйте Boosty (карты РФ, МИР) или GetCourse (СБП,
-                            карты РФ).</p>
-                        <p><strong>Из других стран мира:</strong> Используйте Patreon ($4.99 / мес для Стартера) или
-                            Boosty (поддерживают Visa, Mastercard, PayPal и зарубежные платежи).</p>
+                        <p>
+                            <strong>Из России и СНГ:</strong>
+                            Используйте Boosty (карты РФ, МИР) или GetCourse (СБП, карты РФ).
+                        </p>
+                        <p>
+                            <strong>Из других стран мира:</strong>
+                            Используйте Patreon ($4.99 / мес для Стартера) или Boosty (поддерживают Visa, Mastercard,
+                            PayPal и зарубежные платежи).
+                        </p>
                     </div>
                 </div>
 
@@ -720,12 +725,16 @@
             </button>
 
             <div class="text-center mb-6">
-                <span class="text-[10px] font-bold tracking-widest text-goldAccent uppercase">Выберите платёжную
-                    систему</span>
-                <h4 id="modal-plan-name" class="font-serif text-2xl font-bold beigeText mt-1">Тариф</h4>
-                <p id="modal-plan-price" class="text-xs text-goldMuted font-semibold mt-1">Стоимость</p>
+                <span class="text-[10px] font-bold tracking-widest text-goldAccent uppercase">
+                    Выберите платёжную систему
+                </span>
+                <h4 id="modal-plan-name" class="font-serif text-2xl font-bold beigeText mt-1">
+                    Тариф
+                </h4>
+                <p id="modal-plan-price" class="text-xs text-goldMuted font-semibold mt-1">
+                    Стоимость
+                </p>
             </div>
-
             <div id="modal-options" class="space-y-3"></div>
         </div>
     </div>
@@ -856,6 +865,7 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
+        // Audio player logic
         const audioLink =
             'https://res.cloudinary.com/dcstupoud/video/upload/v1793133681/%D0%98%D1%81%D1%86%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_zrqw9l.mp3';
         const audio = new Audio(audioLink);
@@ -890,6 +900,7 @@
             document.getElementById('eq-container').classList.remove('playing');
         });
 
+        // FAQ Accordion logic
         function toggleFaq(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById(id + '-icon');
@@ -903,6 +914,7 @@
             }
         }
 
+        // Modal payment logic
         function openModal(planName, price, platforms) {
             document.getElementById('modal-plan-name').innerText = `Тариф «${planName}»`;
             document.getElementById('modal-plan-price').innerText = price;
@@ -910,6 +922,7 @@
             const container = document.getElementById('modal-options');
             container.innerHTML = '';
 
+            // Boosty link with lightning icon and description
             if (platforms.boosty) {
                 container.innerHTML += `
                     <a href="https://boosty.to/stukserdza/posts/1266034f-d1f1-4ed7-a272-51ca7b827167" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
@@ -925,6 +938,23 @@
                 `;
             }
 
+            // Patreon link with red icon and description
+            if (platforms.patreon) {
+                container.innerHTML += `
+                    <a href="https://www.patreon.com/16009109/join" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-patreon text-red-400"></i>
+                            <div class="text-left">
+                                <div class="font-semibold beigeText text-xs group-hover:text-goldAccent">Patreon</div>
+                                <div class="text-[10px] text-textMuted">Зарубежные карты, PayPal</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-goldAccent">Оформить ➔</span>
+                    </a>
+                `;
+            }
+
+            // GetCourse link with warning icon and callout box
             if (platforms.getcourse) {
                 container.innerHTML += `
                     <div class="space-y-2">
@@ -952,25 +982,9 @@
                     </div>
                 `;
             }
-
-            if (platforms.patreon) {
-                container.innerHTML += `
-                    <a href="https://www.patreon.com/16009109/join" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-brands fa-patreon text-red-400"></i>
-                            <div class="text-left">
-                                <div class="font-semibold beigeText text-xs group-hover:text-goldAccent">Patreon</div>
-                                <div class="text-[10px] text-textMuted">Зарубежные карты, PayPal</div>
-                            </div>
-                        </div>
-                        <span class="text-xs font-semibold text-goldAccent">Оформить ➔</span>
-                    </a>
-                `;
-            }
-
             document.getElementById('platform-modal').classList.remove('hidden');
         }
-
+        // Modal close logic
         function closeModal() {
             document.getElementById('platform-modal').classList.add('hidden');
         }
