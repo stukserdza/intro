@@ -927,16 +927,29 @@
 
             if (platforms.getcourse) {
                 container.innerHTML += `
-                    <a href="https://stukserdza.getcourse.ru/subs" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-graduation-cap text-blue-400"></i>
-                            <div class="text-left">
-                                <div class="font-semibold beigeText text-xs group-hover:text-goldAccent">GetCourse</div>
-                                <div class="text-[10px] text-textMuted">Карты РФ, СБП</div>
+                    <div class="space-y-2">
+                        <a href="https://stukserdza.getcourse.ru/subs" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-graduation-cap text-blue-400" aria-hidden="true"></i>
+                                <div class="text-left">
+                                    <!-- Title with inline warning icon -->
+                                    <span class="block font-semibold beigeText text-xs group-hover:text-goldAccent">
+                                        GetCourse
+                                        <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs ml-1 inline-block align-middle" aria-hidden="true"></i>
+                                    </span>
+                                    
+                                    <small class="block text-[10px] text-textMuted">Карты РФ, СБП</small>
+                                </div>
                             </div>
-                        </div>
-                        <span class="text-xs font-semibold text-goldAccent">Оформить ➔</span>
-                    </a>
+                            <span class="text-xs font-semibold text-goldAccent">Оформить <span aria-hidden="true">➔</span></span>
+                        </a>
+
+                        <!-- Warning Callout Box -->
+                        <aside aria-label="Предупреждение" class="flex items-start space-x-2 p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-200 text-[11px] leading-tight">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                            <p><strong>Обратите внимание:</strong> на платформе GetCourse недоступны аудио-ресеты, подкасты и практики.</p>
+                        </aside>
+                    </div>
                 `;
             }
 
