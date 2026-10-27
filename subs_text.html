@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стук Сердца — Подписки & Нейронастройки | Suria Kar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Palette & Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#110205',
+                        darkBgAlt: '#13070b',
+                        cardBg: '#18070d',
+                        wineDark: '#210202',
+                        gold: '#fae371',
+                        goldLight: '#fde885',
+                        goldDark: '#ffc909',
+                        textMuted: '#bda6ad',
+                        textLight: '#f9f5f6'
+                    },
+                    fontFamily: {
+                        serif: ['"Cinzel"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px -5px rgba(212, 175, 55, 0.25)',
+                        'gold-glow-lg': '0 0 45px -5px rgba(245, 215, 127, 0.35)',
+                        'deep-card': '0 20px 40px -15px rgba(0, 0, 0, 0.9)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0c0407;
+            color: #f9f5f6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Luxury Glassmorphism Container */
+        .glass-panel {
+            background: linear-gradient(145deg, rgba(24, 7, 13, 0.88) 0%, rgba(12, 4, 7, 0.95) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(212, 175, 55, 0.45);
+        }
+
+        /* Gold Gradient Text Utility */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fde885 0%, #f4dd6b 40%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Equalizer Bar Animation */
+        .eq-bar {
+            width: 3px;
+            background: linear-gradient(to top, #d4af37, #f5d77f);
+            border-radius: 3px;
+            height: 4px;
+            transition: height 0.15s ease;
+        }
+
+        .playing .eq-bar {
+            animation: eqPulse 1.2s infinite ease-in-out alternate;
+        }
+
+        @keyframes eqPulse {
+            0% {
+                height: 4px;
+            }
+
+            50% {
+                height: 28px;
+            }
+
+            100% {
+                height: 12px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0c0407;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2a0913;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen flex flex-col justify-between selection:bg-gold selection:text-black">
+
+    <!-- Ambient Lighting Effects -->
+    <div
+        class="fixed w-[600px] h-[600px] rounded-full bg-goldDark/10 blur-[140px] pointer-events-none -top-40 -left-40 z-0">
+    </div>
+    <div
+        class="fixed w-[700px] h-[700px] rounded-full bg-wineDark/30 blur-[150px] pointer-events-none top-1/2 -right-60 z-0">
+    </div>
+    <div
+        class="fixed w-[500px] h-[500px] rounded-full bg-gold/10 blur-[120px] pointer-events-none -bottom-20 left-1/3 z-0">
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 w-full border-b border-gold/15 bg-darkBg/85 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div
+                    class="w-10 h-10 rounded-full border border-gold/40 bg-wineDark/60 flex items-center justify-center text-goldLight shadow-gold-glow group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <div>
+                    <span
+                        class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text block leading-none">Стук
+                        Сердца</span>
+                    <span class="text-[9px] tracking-widest text-textMuted uppercase font-medium">Нейромедитации &
+                        Ресеты</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav
+                class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold text-textMuted">
+                <a href="#plans" class="hover:text-goldLight transition-colors">Тарифы</a>
+                <a href="#preview" class="hover:text-goldLight transition-colors">Аудио-демо</a>
+                <a href="#matrix" class="hover:text-goldLight transition-colors">Сравнение</a>
+                <a href="#faq" class="hover:text-goldLight transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-3">
+                <a href="https://t.me/tech_support_julia" target="_blank"
+                    class="hidden sm:flex items-center space-x-2 px-3.5 py-2 rounded-full border border-gold/30 text-textMuted hover:text-goldLight hover:border-gold transition-colors text-xs">
+                    <i class="fa-brands fa-telegram text-gold"></i>
+                    <span>Юлия (@tech_support_julia)</span>
+                </a>
+                <a href="#plans"
+                    class="px-5 py-2.5 rounded-full text-xs font-bold tracking-wider text-black bg-gradient-to-r from-goldLight via-gold to-goldDark hover:opacity-90 transition-all shadow-gold-glow">
+                    <span>Выбрать тариф</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow">
+
+        <!-- HERO SECTION -->
+        <section class="pt-14 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+
+            <!-- Catchy Badge -->
+            <div
+                class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold/30 bg-wineDark/40 text-goldLight text-xs font-medium mb-6 backdrop-blur-md shadow-gold-glow">
+                <i class="fa-solid fa-sparkles text-gold text-xs"></i>
+                <span>✨ Оформление клубной подписки</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Верните контакт с собой, <br class="hidden sm:inline">
+                <span class="gold-gradient-text italic font-normal">измените внутреннее состояние</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="max-w-3xl mx-auto text-sm sm:text-base lg:text-lg text-textMuted leading-relaxed mb-10">
+                Ежемесячная подписка на авторские нейромедитации, короткие аудио-ресеты и глубокие практики. Быстрая
+                настройка подсознания без гипноза и сложных усилителей.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                <a href="#plans"
+                    class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-xs sm:text-sm tracking-wider uppercase text-black bg-gradient-to-r from-goldLight via-gold to-goldDark hover:scale-[1.02] active:scale-95 transition-all shadow-gold-glow-lg flex items-center justify-center space-x-2">
+                    <span>Перейти к выбору подписки</span>
+                    <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="#preview"
+                    class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-xs sm:text-sm text-textLight border border-gold/30 hover:border-gold bg-wineDark/30 hover:bg-wineDark/60 transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-play-circle text-gold text-base"></i>
+                    <span>Послушать аудио-демо</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar (3 Columns matching screenshot bottom) -->
+            <div
+                class="pt-8 border-t border-gold/15 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="px-4 border-b md:border-b-0 md:border-r border-gold/15 pb-6 md:pb-0">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold mb-1">10 000+</div>
+                    <div class="text-xs text-textMuted">Слушателей по всему миру</div>
+                </div>
+                <div class="px-4 border-b md:border-b-0 md:border-r border-gold/15 pb-6 md:pb-0">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold mb-1">1-2 раза</div>
+                    <div class="text-xs text-textMuted">В неделю новые релизы</div>
+                </div>
+                <div class="px-4">
+                    <div class="font-serif text-2xl sm:text-3xl font-bold text-gold mb-1">100%</div>
+                    <div class="text-xs text-textMuted">Удобная отмена в любой момент</div>
+                </div>
+            </div>
+
+
+            <!-- AUDIO PREVIEW SECTION -->
+            <section id="preview" class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                <div
+                    class="glass-panel p-6 sm:p-8 rounded-3xl border border-gold/30 shadow-gold-glow relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold tracking-widest uppercase text-gold px-3 py-1 rounded-full bg-wineDark border border-gold/20 inline-block mb-2">
+                                <i class="fa-solid fa-headphones mr-1"></i> ДЕМО-АУДИО ПЛЕЕР
+                            </span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">Ощутите формат аудио-ресетов
+                            </h3>
+                            <p class="text-xs text-textMuted mt-1">Быстрые нейронастройки для регулярной перезагрузки
+                                нервной системы</p>
+                        </div>
+
+                        <!-- Track Selection Dropdown -->
+                        <div class="w-full md:w-auto">
+                            <select id="track-select" onchange="changeTrack()"
+                                class="w-full md:w-64 bg-darkBg border border-gold/30 text-white text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-gold">
+                                <option value="0">1. Перезагрузка нервной системы (2:30)</option>
+                                <option value="1">2. Повышение самооценки & Опора внутри (3:15)</option>
+                                <option value="2">3. Возврат в тело & Быстрое заземление (2:00)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Player Interface -->
+                    <div
+                        class="p-4 rounded-2xl bg-darkBg/60 border border-gold/15 flex flex-col sm:flex-row items-center gap-5">
+                        <!-- Play Button -->
+                        <button id="player-toggle-btn" onclick="toggleAudioPreview()"
+                            class="w-14 h-14 rounded-full bg-gradient-to-r from-goldLight to-gold text-black flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform flex-shrink-0 shadow-gold-glow">
+                            <i id="player-icon" class="fa-solid fa-play ml-1"></i>
+                        </button>
+
+                        <!-- Player Info -->
+                        <div class="w-full">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 id="track-title" class="font-semibold text-sm sm:text-base text-white">Перезагрузка
+                                    нервной системы</h4>
+                                <span id="player-time" class="text-xs text-gold font-mono">0:00 / 2:30</span>
+                            </div>
+                            <p id="track-desc" class="text-xs text-textMuted mb-3">Короткая экспресс-настройка для
+                                возвращения ресурсного состояния посреди дня</p>
+
+                            <!-- Progress Bar -->
+                            <div onclick="seekTrack(event)"
+                                class="w-full h-2 bg-wineDark rounded-full cursor-pointer relative overflow-hidden border border-gold/20">
+                                <div id="player-progress"
+                                    class="h-full bg-gradient-to-r from-gold to-goldLight w-0 transition-all duration-150">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Equalizer Waves Animation -->
+                    <div id="eq-container"
+                        class="flex items-end justify-center space-x-1.5 h-7 mt-4 pt-2 border-t border-gold/10">
+                        <div class="eq-bar" style="animation-delay: 0.1s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.35s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.2s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.5s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.15s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.4s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.25s"></div>
+                        <div class="eq-bar" style="animation-delay: 0.45s"></div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- SUBSCRIPTION TIERS SECTION -->
+            <section id="plans" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4">Выберите свой тариф подписки</h2>
+                    <p class="text-textMuted max-w-xl mx-auto text-xs sm:text-base">
+                        Все подписки продлеваются каждый месяц. Вы можете сменить тариф или отменить продление в любой
+                        момент.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+                    <!-- TIER 1: Стартер / Аудио-ресеты -->
+                    <div
+                        class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:-translate-y-1 hover:shadow-gold-glow">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="text-[10px] font-bold tracking-wider uppercase text-goldLight px-3 py-1 rounded-full bg-wineDark/60 border border-gold/20">
+                                    ЛЁГКИЙ СТАРТ
+                                </span>
+                                <span class="text-xs text-textMuted">30 дней доступа</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-1">Тариф «Стартер»</h3>
+                            <div class="text-xs text-gold font-serif italic mb-4">«Для Вашего Истинного Присутствия»
+                            </div>
+
+                            <p class="text-xs text-textMuted mb-6 leading-relaxed">
+                                Быстрые нейронастройки для возвращения контакта с собой и перезагрузки состояния прямо
+                                посреди дня. Идеальный вариант, когда мало времени.
+                            </p>
+
+                            <!-- Price Box -->
+                            <div class="mb-6 p-4 rounded-2xl bg-wineDark/30 border border-gold/15">
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-3xl sm:text-4xl font-bold gold-gradient-text">490 ₽</span>
+                                    <span class="text-sm font-medium text-textMuted">/ $4.99 в мес</span>
+                                </div>
+                                <span class="text-[11px] text-textMuted mt-1 block">Автопродление раз в месяц</span>
+                            </div>
+
+                            <!-- Bullets -->
+                            <div class="space-y-3 mb-8 text-xs sm:text-sm">
+                                <div class="font-semibold text-gold uppercase text-[11px] tracking-wider mb-2">Что
+                                    входит в
+                                    подписку:</div>
+
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Короткие авторские нейронастройки (Instagram / TikTok / YouTube) в одном
+                                        месте</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Пополнение коллекции <strong>1–2 раза в неделю</strong></span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Регулярные подкасты, аудио-ресеты, посты и легкие практики</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Эксклюзивный контент только для подписчиков</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-gold/10">
+                            <button
+                                onclick="openModal('Стартер / Аудио-ресеты', '490 ₽ / $4.99', { boosty: true, patreon: true, getcourse: false })"
+                                class="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-black bg-gradient-to-r from-goldLight to-gold hover:opacity-95 transition-opacity flex items-center justify-center space-x-2 shadow-lg">
+                                <span>Оформить доступ</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TIER 2: База (FEATURED) -->
+                    <div
+                        class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:-translate-y-1 hover:shadow-gold-glow border-gold/40">
+                        <div
+                            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-wineDark border border-gold text-goldLight font-bold text-[10px] uppercase px-3.5 py-1 rounded-full tracking-widest flex items-center space-x-1 shadow-md">
+                            <span>🔥 Популярный выбор</span>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-4 mt-2">
+                                <span
+                                    class="text-[10px] font-bold tracking-wider uppercase text-goldLight px-3 py-1 rounded-full bg-wineDark/60 border border-gold/20">
+                                    ОСНОВНОЙ
+                                </span>
+                                <span class="text-xs text-textMuted">30 дней доступа</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-1">Тариф «База»</h3>
+                            <div class="text-xs text-gold font-serif italic mb-4">«Первый шаг к изменениям»</div>
+
+                            <p class="text-xs text-textMuted mb-6 leading-relaxed">
+                                Когда хочется что-то изменить внутри, но пока непонятно, с чего начать. Направление для
+                                работы с телом, границами, самооценкой и прошлым.
+                            </p>
+
+                            <!-- Price Box -->
+                            <div class="mb-6 p-4 rounded-2xl bg-wineDark/30 border border-gold/15">
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-3xl sm:text-4xl font-bold gold-gradient-text">990 ₽</span>
+                                    <span class="text-sm font-medium text-textMuted">/ месяц</span>
+                                </div>
+                                <span class="text-[11px] text-gold font-medium mt-1 block">Включает всё из тарифа
+                                    «Стартер»</span>
+                            </div>
+
+                            <!-- Bullets -->
+                            <div class="space-y-3 mb-8 text-xs sm:text-sm">
+                                <div class="font-semibold text-gold uppercase text-[11px] tracking-wider mb-2">Что
+                                    входит в
+                                    подписку:</div>
+
+                                <div class="flex items-start space-x-3 text-goldLight font-medium">
+                                    <i class="fa-solid fa-plus text-gold mt-1 text-xs"></i>
+                                    <span><strong>Всё из тарифа «Стартер»</strong> (аудио-ресеты + подкасты)</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span><strong>6 авторских нейромедитаций:</strong> «Отпустить боль прошлого»,
+                                        «Баланс
+                                        энергий», «Опора внутри меня», «Свобода от чужого мнения», «Разреши себе быть»,
+                                        «Повышение самооценки»</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>4 базовые медитации</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Дневник осознанности с практиками + Заметки ощущений</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-gold/10">
+                            <button
+                                onclick="openModal('База', '990 ₽', { boosty: true, patreon: true, getcourse: true })"
+                                class="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-black bg-gradient-to-r from-goldLight via-gold to-goldDark hover:opacity-95 transition-opacity flex items-center justify-center space-x-2 shadow-lg">
+                                <span>Оформить доступ</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TIER 3: Стандарт (VIP) -->
+                    <div
+                        class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:-translate-y-1 border-2 border-gold shadow-gold-glow-lg scale-100 lg:scale-[1.03] z-10">
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-goldLight via-gold to-goldDark text-black font-bold text-[10px] uppercase px-4 py-1 rounded-full shadow-md tracking-wider">
+                            ✨ VIP Доступ • Все Премьеры
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-4 mt-2">
+                                <span
+                                    class="text-[10px] font-bold tracking-wider uppercase text-gold px-3 py-1 rounded-full bg-wineDark border border-gold/30">
+                                    МАКСИМУМ
+                                </span>
+                                <span class="text-xs text-textMuted">30 дней доступа</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-1">Тариф «Стандарт»</h3>
+                            <div class="text-xs text-gold font-serif italic mb-4">«Углубляй практику, расширяй
+                                возможности»
+                            </div>
+
+                            <p class="text-xs text-textMuted mb-6 leading-relaxed">
+                                Полный доступ к постоянно пополняющейся библиотеке нейромедитаций. Все новые премьеры
+                                становятся вашими в день выхода.
+                            </p>
+
+                            <!-- Price Box -->
+                            <div class="mb-6 p-4 rounded-2xl bg-wineDark/50 border border-gold/30">
+                                <div class="flex items-baseline space-x-2">
+                                    <span class="text-3xl sm:text-4xl font-bold gold-gradient-text">2 490 ₽</span>
+                                    <span class="text-sm font-medium text-textMuted">/ месяц</span>
+                                </div>
+                                <span class="text-[11px] text-gold font-medium mt-1 block">Включает всё из «Стартер» и
+                                    «База»</span>
+                            </div>
+
+                            <!-- Bullets -->
+                            <div class="space-y-3 mb-8 text-xs sm:text-sm">
+                                <div class="font-semibold text-gold uppercase text-[11px] tracking-wider mb-2">Что
+                                    входит в
+                                    подписку:</div>
+
+                                <div class="flex items-start space-x-3 text-goldLight font-medium">
+                                    <i class="fa-solid fa-crown text-gold mt-1 text-xs"></i>
+                                    <span><strong>Все нейромедитации библиотеки без ограничений</strong></span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Доступ ко всем новым релизам в день выхода (включая <strong>«Избавление от
+                                            долгов»</strong>)</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Нейронастройки: «Измени ситуацию между вами» + «Повышение самооценки»</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span><strong>Видео-практика</strong> по расслаблению тела и заземлению</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check text-gold mt-1 text-xs"></i>
+                                    <span>Дневник осознанности + Заметки ощущений</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-gold/20">
+                            <button
+                                onclick="openModal('Стандарт', '2 490 ₽', { boosty: true, patreon: true, getcourse: true })"
+                                class="w-full py-4 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-black bg-gradient-to-r from-goldLight via-gold to-goldDark hover:opacity-95 transition-opacity flex items-center justify-center space-x-2 shadow-gold-glow">
+                                <span>Оформить полный доступ</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- COMPARISON TABLE MATRIX -->
+            <section id="matrix" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold">Сравнительная матрица тарифов</h2>
+                    <p class="text-xs sm:text-sm text-textMuted mt-2">Наглядное сравнение доступных материалов и уровней
+                        подписки</p>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs sm:text-sm glass-panel rounded-2xl border-collapse">
+                        <thead>
+                            <tr class="border-b border-gold/20 text-gold font-serif text-sm sm:text-base">
+                                <th class="p-4 sm:p-5 font-semibold">Материалы и возможности</th>
+                                <th class="p-4 sm:p-5 font-semibold text-center">Стартер<br><span
+                                        class="text-xs font-sans text-textMuted font-normal">490 ₽</span></th>
+                                <th class="p-4 sm:p-5 font-semibold text-center">База<br><span
+                                        class="text-xs font-sans text-textMuted font-normal">990 ₽</span></th>
+                                <th class="p-4 sm:p-5 font-semibold text-center text-goldLight">Стандарт<br><span
+                                        class="text-xs font-sans text-textMuted font-normal">2 490 ₽</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gold/10 text-textMuted">
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Аудио-ресеты и короткие нейронастройки
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Подкасты и эксклюзивные публикации</td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">6 Авторских базовых нейромедитаций</td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Дневник осознанности + Заметки ощущений
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Полный доступ ко всей библиотеке
+                                    нейромедитаций</td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Новые релизы сразу в день выхода
+                                    («Избавление
+                                    от долгов»)</td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 sm:p-5 text-white font-medium">Видео-практика расслабления и заземления
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                                </td>
+                                <td class="p-4 sm:p-5 text-center text-gold"><i
+                                        class="fa-solid fa-circle-check text-base"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <!-- FAQ ACCORDION SECTION -->
+            <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3">Часто задаваемые вопросы</h2>
+                    <p class="text-textMuted text-xs sm:text-sm">Всё про оплату, форматы и управление подпиской</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-panel rounded-2xl overflow-hidden transition-all duration-200">
+                        <button onclick="toggleFaq('faq-1')"
+                            class="w-full p-5 text-left font-semibold text-sm sm:text-base flex items-center justify-between text-white hover:text-gold">
+                            <span>Как происходит продление подписки?</span>
+                            <i id="faq-1-icon"
+                                class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-1"
+                            class="hidden p-5 pt-0 text-xs sm:text-sm text-textMuted border-t border-gold/10 leading-relaxed">
+                            Подписка оформляется на 30 дней и продлевается автоматически каждый месяц. Вы можете
+                            отменить
+                            автопродление в любой момент в личном кабинете выбранной платформы
+                            (Boosty/Patreon/GetCourse) в
+                            1 клик.
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-2xl overflow-hidden transition-all duration-200">
+                        <button onclick="toggleFaq('faq-2')"
+                            class="w-full p-5 text-left font-semibold text-sm sm:text-base flex items-center justify-between text-white hover:text-gold">
+                            <span>Из какой страны я могу оплатить подписку?</span>
+                            <i id="faq-2-icon"
+                                class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-2"
+                            class="hidden p-5 pt-0 text-xs sm:text-sm text-textMuted border-t border-gold/10 leading-relaxed space-y-2">
+                            <p><strong>Из России и СНГ:</strong> Используйте Boosty (карты РФ, МИР) или GetCourse (СБП,
+                                карты РФ).</p>
+                            <p><strong>Из других стран мира:</strong> Используйте Patreon ($4.99 / мес для Стартера) или
+                                Boosty (поддерживают Visa, Mastercard, PayPal и зарубежные платежи).</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-2xl overflow-hidden transition-all duration-200">
+                        <button onclick="toggleFaq('faq-3')"
+                            class="w-full p-5 text-left font-semibold text-sm sm:text-base flex items-center justify-between text-white hover:text-gold">
+                            <span>Что делать, если ссылка не открывается или не проходит оплата?</span>
+                            <i id="faq-3-icon"
+                                class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-3"
+                            class="hidden p-5 pt-0 text-xs sm:text-sm text-textMuted border-t border-gold/10 leading-relaxed">
+                            Попробуйте переключить VPN или воспользоваться другим браузером. Если возникла сложность с
+                            оплатой, просто напишите нашей помощнице Юлии в Telegram (<a
+                                href="https://t.me/tech_support_julia" target="_blank"
+                                class="text-gold underline">@tech_support_julia</a>) — мы оперативно поможем подключить
+                            доступ.
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-2xl overflow-hidden transition-all duration-200">
+                        <button onclick="toggleFaq('faq-4')"
+                            class="w-full p-5 text-left font-semibold text-sm sm:text-base flex items-center justify-between text-white hover:text-gold">
+                            <span>В каком формате передаются материалы?</span>
+                            <i id="faq-4-icon"
+                                class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-4"
+                            class="hidden p-5 pt-0 text-xs sm:text-sm text-textMuted border-t border-gold/10 leading-relaxed">
+                            Все аудио-ресеты, нейронастройки, медитации и дневники доступны в удобном закрытом
+                            канале/платформе. Вы получаете прямое прослушивание в высоком качестве с любого смартфона
+                            или
+                            ПК.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SUPPORT CALLOUT -->
+            <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                <div class="glass-panel rounded-3xl p-8 text-center relative border border-gold/30 shadow-gold-glow">
+                    <div class="max-w-xl mx-auto">
+                        <div
+                            class="w-14 h-14 rounded-full bg-wineDark border border-gold/40 flex items-center justify-center mx-auto mb-4 text-gold text-2xl shadow-gold-glow">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-2">Остались вопросы по подключению?</h3>
+                        <p class="text-xs sm:text-sm text-textMuted mb-6">
+                            По всем вопросам оплаты, выбора платформы или доступа пишите нашей помощнице Юлии ♥️
+                        </p>
+
+                        <a href="https://t.me/tech_support_julia" target="_blank"
+                            class="inline-flex items-center space-x-3 px-8 py-3.5 rounded-full bg-gradient-to-r from-goldLight to-gold text-black font-bold text-xs uppercase tracking-wider hover:scale-105 transition-transform shadow-lg">
+                            <span>Написать Юлии (@tech_support_julia)</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+    <!-- PAYMENT PLATFORM MODAL -->
+    <div id="platform-modal"
+        class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel rounded-3xl p-6 sm:p-8 max-w-md w-full border border-gold/40 relative">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-textMuted hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-gold uppercase">Выберите удобную
+                    платформу</span>
+                <h4 id="modal-plan-name" class="font-serif text-2xl font-bold mt-1">Тариф</h4>
+                <p id="modal-plan-price" class="text-xs text-goldLight font-semibold mt-1">Стоимость</p>
+            </div>
+
+            <!-- Options Container -->
+            <div id="modal-options" class="space-y-3">
+                <!-- Dynamically Inserted -->
+            </div>
+
+            <!-- Footer Note -->
+            <div class="mt-6 text-center border-t border-gold/10 pt-4 text-[11px] text-textMuted">
+                Пошаговые инструкции по оплате — в закрепе нашего Telegram-канала.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 border-t border-gold/10 bg-darkBg py-8 px-4 text-center text-xs text-textMuted">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-heart text-gold"></i>
+                <span class="font-serif text-sm font-semibold text-white">Стук Сердца • Suria Kar</span>
+            </div>
+            <div>
+                © 2026 Стук Сердца. Все права защищены.
+            </div>
+            <div>
+                <a href="https://t.me/tech_support_julia" target="_blank" class="hover:text-gold transition-colors">
+                    <i class="fa-brands fa-telegram mr-1"></i> @tech_support_julia
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT CODE -->
+    <script>
+        // Track list for demo player
+        const tracks = [{
+                title: "Перезагрузка нервной системы",
+                desc: "Короткая экспресс-настройка для возвращения ресурсного состояния посреди дня",
+                duration: 150,
+                durationStr: "2:30"
+            },
+            {
+                title: "Повышение самооценки & Опора внутри",
+                desc: "Авторская нейронастройка для глубинного укрепления самооценки и снятия тревоги",
+                duration: 195,
+                durationStr: "3:15"
+            },
+            {
+                title: "Возврат в тело & Быстрое заземление",
+                desc: "Аудио-ресет для мгновенного снятия мышечных зажимов и восстановления дыхания",
+                duration: 120,
+                durationStr: "2:00"
+            }
+        ];
+
+        let currentTrackIdx = 0;
+        let isPlaying = false;
+        let progressVal = 0;
+        let playerTimer = null;
+
+        function changeTrack() {
+            const select = document.getElementById('track-select');
+            currentTrackIdx = parseInt(select.value);
+            const track = tracks[currentTrackIdx];
+
+            document.getElementById('track-title').innerText = track.title;
+            document.getElementById('track-desc').innerText = track.desc;
+            document.getElementById('player-time').innerText = `0:00 / ${track.durationStr}`;
+
+            progressVal = 0;
+            document.getElementById('player-progress').style.width = '0%';
+
+            if (isPlaying) {
+                pauseAudio();
+                playAudio();
+            }
+        }
+
+        function toggleAudioPreview() {
+            if (isPlaying) {
+                pauseAudio();
+            } else {
+                playAudio();
+            }
+        }
+
+        function playAudio() {
+            isPlaying = true;
+            document.getElementById('player-icon').className = 'fa-solid fa-pause ml-0';
+            document.getElementById('eq-container').classList.add('playing');
+
+            const track = tracks[currentTrackIdx];
+
+            playerTimer = setInterval(() => {
+                progressVal += (100 / track.duration) * 0.5;
+                if (progressVal >= 100) {
+                    progressVal = 0;
+                    pauseAudio();
+                    return;
+                }
+                document.getElementById('player-progress').style.width = progressVal + '%';
+
+                const currentSecs = Math.floor((progressVal / 100) * track.duration);
+                const m = Math.floor(currentSecs / 60);
+                const s = currentSecs % 60;
+                document.getElementById('player-time').innerText =
+                    `${m}:${s < 10 ? '0' : ''}${s} / ${track.durationStr}`;
+            }, 500);
+        }
+
+        function pauseAudio() {
+            isPlaying = false;
+            document.getElementById('player-icon').className = 'fa-solid fa-play ml-1';
+            document.getElementById('eq-container').classList.remove('playing');
+            clearInterval(playerTimer);
+        }
+
+        function seekTrack(event) {
+            const bar = event.currentTarget;
+            const clickPos = event.clientX - bar.getBoundingClientRect().left;
+            const newPct = (clickPos / bar.clientWidth) * 100;
+            progressVal = Math.max(0, Math.min(100, newPct));
+            document.getElementById('player-progress').style.width = progressVal + '%';
+        }
+
+        // FAQ Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Modal Logic
+        function openModal(planName, price, platforms) {
+            document.getElementById('modal-plan-name').innerText = `Тариф «${planName}»`;
+            document.getElementById('modal-plan-price').innerText = price;
+
+            const container = document.getElementById('modal-options');
+            container.innerHTML = '';
+
+            if (platforms.boosty) {
+                container.innerHTML += `
+                    <a href="https://boosty.to" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-wineDark/50 border border-gold/20 hover:border-gold hover:bg-wineDark transition-all group">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-semibold text-white text-sm group-hover:text-goldLight">Boosty</div>
+                                <div class="text-[11px] text-textMuted">Карты РФ, МИР и СНГ</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-gold group-hover:translate-x-1 transition-transform">Оформить ➔</span>
+                    </a>
+                `;
+            }
+
+            if (platforms.getcourse) {
+                container.innerHTML += `
+                    <a href="https://getcourse.ru" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-wineDark/50 border border-gold/20 hover:border-gold hover:bg-wineDark transition-all group">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-semibold text-white text-sm group-hover:text-goldLight">GetCourse</div>
+                                <div class="text-[11px] text-textMuted">Карты РФ, СБП</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-gold group-hover:translate-x-1 transition-transform">Оформить ➔</span>
+                    </a>
+                `;
+            }
+
+            if (platforms.patreon) {
+                container.innerHTML += `
+                    <a href="https://patreon.com" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-wineDark/50 border border-gold/20 hover:border-gold hover:bg-wineDark transition-all group">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-brands fa-patreon"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-semibold text-white text-sm group-hover:text-goldLight">Patreon</div>
+                                <div class="text-[11px] text-textMuted">Зарубежные карты, PayPal ($4.99/mo)</div>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-gold group-hover:translate-x-1 transition-transform">Оформить ➔</span>
+                    </a>
+                `;
+            }
+
+            document.getElementById('platform-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('platform-modal').classList.add('hidden');
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('platform-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+
+</html>
