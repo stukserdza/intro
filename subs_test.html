@@ -216,7 +216,7 @@
             <!-- Audio Reset Card -->
             <div class="max-w-2xl mx-auto mb-14">
                 <div
-                    class="p-4 sm:p-5 rounded-2xl bg-cardBg border border-goldAccent/25 backdrop-blur-md shadow-lg flex items-center justify-between transition-all hover:border-goldAccent/50">
+                    class="p-4 rounded-2xl bg-priceBg border border-gold/15 flex flex-col sm:flex-row items-center gap-5">
                     <div class="flex items-center space-x-4">
                         <button id="player-toggle-btn" onclick="toggleHeroAudio()"
                             class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-goldAccent text-black flex items-center justify-center text-lg font-bold hover:scale-105 active:scale-95 transition-all flex-shrink-0 shadow-md">
@@ -225,10 +225,11 @@
 
                         <div class="text-left">
                             <div class="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-goldAccent">
-                                АУДИО-РЕСЕТ ДНЯ</div>
+                                АУДИО-РЕСЕТ</div>
                             <div id="hero-track-title"
-                                class="font-bold text-xs sm:text-sm lg:text-base beigeText mt-0.5">Перезагрузка Нервной
-                                Системы (2 мин)</div>
+                                class="font-bold text-xs sm:text-sm lg:text-base beigeText mt-0.5">
+                                ИСЦИЛЕНИЕ
+                            </div>
                         </div>
                     </div>
 
@@ -807,6 +808,9 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
+        const audioLink =
+            'https://res.cloudinary.com/dcstupoud/video/upload/v1793133681/%D0%98%D1%81%D1%86%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_zrqw9l.mp3';
+        const audio = new Audio(audioLink);
         let isPlaying = false;
 
         function toggleHeroAudio() {
@@ -817,11 +821,26 @@
             if (isPlaying) {
                 btnIcon.className = 'fa-solid fa-pause ml-0';
                 eq.classList.add('playing');
+                audio.play().catch(error => {
+                    console.error("Audio playback error:", error);
+                    // Reset UI state if playback fails (e.g. autoplay restriction)
+                    isPlaying = false;
+                    btnIcon.className = 'fa-solid fa-play ml-1';
+                    eq.classList.remove('playing');
+                });
             } else {
                 btnIcon.className = 'fa-solid fa-play ml-1';
                 eq.classList.remove('playing');
+                audio.pause();
             }
         }
+
+        // Automatically update UI back to "play" state when the track finishes
+        audio.addEventListener('ended', () => {
+            isPlaying = false;
+            document.getElementById('player-icon').className = 'fa-solid fa-play ml-1';
+            document.getElementById('eq-container').classList.remove('playing');
+        });
 
         function toggleFaq(id) {
             const content = document.getElementById(id);
