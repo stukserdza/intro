@@ -45,7 +45,9 @@
                     },
                     boxShadow: {
                         'gold-border-glow': '0 0 20px rgba(242, 202, 82, 0.3)',
-                        'gold-glow-lg': '0 0 35px rgba(242, 202, 82, 0.25)'
+                        'gold-glow-lg': '0 0 35px rgba(242, 202, 82, 0.25)',
+                        'gold-glow': '0 0 25px -5px rgba(212, 175, 55, 0.25)',
+                        'deep-card': '0 20px 40px -15px rgba(0, 0, 0, 0.9)'
                     }
                 }
             }
@@ -216,7 +218,7 @@
             <!-- Audio Reset Card -->
             <div class="max-w-2xl mx-auto mb-14">
                 <div
-                    class="p-4 rounded-2xl bg-priceBg border border-gold/15 flex flex-col sm:flex-row items-center gap-5">
+                    class=" shadow-gold-glow p-4 rounded-2xl bg-priceBg border border-gold/100 flex flex-col sm:flex-row items-center gap-5">
                     <div class="flex items-center space-x-4">
                         <button id="player-toggle-btn" onclick="toggleHeroAudio()"
                             class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-goldAccent text-black flex items-center justify-center text-lg font-bold hover:scale-105 active:scale-95 transition-all flex-shrink-0 shadow-md">
@@ -530,25 +532,33 @@
                             </td>
                             <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
                             </td>
-                            <td class="p-4 sm:p-5 text-center text-gold"><i
-                                    class="fa-solid fa-circle-check text-base"></i></td>
-                            <td class="p-4 sm:p-5 text-center text-gold"><i
-                                    class="fa-solid fa-circle-check text-base"></i></td>
+                            <td class="p-4 sm:p-5 text-center text-gold">
+                                <i class="fa-solid fa-circle-check text-base"></i>
+                            </td>
+                            <td class="p-4 sm:p-5 text-center text-gold">
+                                <i class="fa-solid fa-circle-check text-base"></i>
+                            </td>
                         </tr>
                         <tr>
-                            <td class="p-4 sm:p-5 beigeText font-medium">Полный доступ ко всей библиотеке
-                                нейромедитаций</td>
-                            <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                            <td class="p-4 sm:p-5 beigeText font-medium">
+                                <span class="text-gold font-medium">
+                                    Полный доступ ко всей библиотеке
+                                    нейромедитаций</span>
                             </td>
-                            <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
+                            <td class="p-4 sm:p-5 text-center text-textMuted/30">
+                                <i class="fa-solid fa-minus"></i>
                             </td>
-                            <td class="p-4 sm:p-5 text-center text-gold"><i
-                                    class="fa-solid fa-circle-check text-base"></i></td>
+                            <td class="p-4 sm:p-5 text-center text-textMuted/30">
+                                <i class="fa-solid fa-minus"></i>
+                            </td>
+                            <td class="p-4 sm:p-5 text-center text-gold">
+                                <i class="fa-solid fa-circle-check text-base"></i>
+                            </td>
                         </tr>
                         <tr>
-                            <td class="p-4 sm:p-5 beigeText font-medium">Новые релизы сразу в день выхода
-                                («Избавление
-                                от долгов»)</td>
+                            <td class="p-4 sm:p-5 beigeText font-medium">
+                                Новые релизы сразу в день выхода
+                            </td>
                             <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
                             </td>
                             <td class="p-4 sm:p-5 text-center text-textMuted/30"><i class="fa-solid fa-minus"></i>
