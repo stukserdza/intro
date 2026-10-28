@@ -275,34 +275,39 @@
         class="fixed w-[500px] h-[500px] rounded-full bg-priceBg/60 blur-[150px] pointer-events-none top-1/2 -right-20 z-0">
     </div>
 
-    <!-- HEADER (EXACT SCREENSHOT TOP BAR) -->
+    <!-- HEADER (MOBILE OPTIMIZED) -->
     <header class="sticky top-0 z-40 w-full border-b border-borderMuted bg-siteBg/90 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
 
             <!-- Logo Section -->
             <a href="https://stukserdza.com/" aria-label="Перейти на главную страницу сайта"
-                class="flex items-center space-x-3.5 group">
+                class="flex items-center space-x-2 sm:space-x-3.5 group min-w-0">
                 <div
-                    class="w-20 h-20  flex items-center justify-center text-goldAccent group-hover:scale-105 transition-transform">
+                    class="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                     <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964615/logo-white_ybuftx.png"
-                        alt="Стук сердца logo" class="logo-image">
+                        alt="Стук сердца logo" class="w-full h-full object-contain">
                 </div>
-                <div>
+                <div class="min-w-0 truncate">
                     <span
-                        class="font-serif text-lg sm:text-xl font-bold tracking-widest text-goldAccent block leading-tight">СТУК
-                        СЕРДЦА</span>
-                    <span class="text-[9px] tracking-widest text-textMuted uppercase font-medium block">НЕЙРОМЕДИТАЦИИ &
-                        РЕСЕТЫ</span>
+                        class="font-serif text-sm sm:text-lg font-bold tracking-widest text-goldAccent block leading-tight truncate">
+                        СТУК СЕРДЦА
+                    </span>
+                    <span
+                        class="text-[8px] sm:text-[9px] tracking-wider sm:tracking-widest text-textMuted uppercase font-medium block truncate">
+                        НЕЙРОМЕДИТАЦИИ &amp; РЕСЕТЫ
+                    </span>
                 </div>
             </a>
-            <!-- Right CTA Buttons -->
-            <div class="flex items-center space-x-3">
+
+            <!-- Right CTA Button -->
+            <div class="flex items-center flex-shrink-0">
                 <a href="#plans"
-                    class="px-5 py-2 rounded-full border border-goldAccent/60 text-goldAccent text-xs font-bold tracking-wider hover:bg-goldAccent hover:text-black transition-all flex items-center space-x-2">
+                    class="px-3 py-1.5 sm:px-5 sm:py-2 rounded-full border border-goldAccent/60 text-goldAccent text-[10px] sm:text-xs font-bold tracking-wider hover:bg-goldAccent hover:text-black transition-all flex items-center space-x-1.5 whitespace-nowrap">
                     <span>ВЫБРАТЬ ТАРИФ</span>
-                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-down text-[9px] sm:text-[10px]"></i>
                 </a>
             </div>
+
         </div>
     </header>
 
