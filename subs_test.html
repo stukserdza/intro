@@ -275,36 +275,44 @@
         class="fixed w-[500px] h-[500px] rounded-full bg-priceBg/60 blur-[150px] pointer-events-none top-1/2 -right-20 z-0">
     </div>
 
-    <!-- HEADER (MOBILE OPTIMIZED) -->
-    <header class="sticky top-0 z-40 w-full border-b border-borderMuted bg-siteBg/90 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+    <!-- HEADER WITH COMPACT MOBILE BUTTON -->
+    <header class="sticky top-0 z-40 w-full border-b border-borderMuted bg-siteBg/95 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-1.5">
 
             <!-- Logo Section -->
             <a href="https://stukserdza.com/" aria-label="Перейти на главную страницу сайта"
                 class="flex items-center space-x-2 sm:space-x-3.5 group min-w-0">
+
+                <!-- Logo Icon -->
                 <div
-                    class="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    class="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                     <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964615/logo-white_ybuftx.png"
                         alt="Стук сердца logo" class="w-full h-full object-contain">
                 </div>
-                <div class="min-w-0 truncate">
-                    <span
-                        class="font-serif text-sm sm:text-lg font-bold tracking-widest text-goldAccent block leading-tight truncate">
-                        СТУК СЕРДЦА
-                    </span>
-                    <span
-                        class="text-[8px] sm:text-[9px] tracking-wider sm:tracking-widest text-textMuted uppercase font-medium block truncate">
+
+                <!-- Typography Container -->
+                <div class="flex flex-col justify-center leading-tight min-w-0">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center sm:gap-1.5 font-serif text-[10px] sm:text-lg font-bold tracking-[0.12em] sm:tracking-[0.15em] text-goldAccent uppercase leading-none">
+                        <span>СУРИЯ</span>
+                        <span class="hidden sm:inline-block text-goldAccent/70">—</span>
+                        <span class="whitespace-nowrap">СТУК СЕРДЦА</span>
+                    </div>
+                    <div
+                        class="text-[7px] sm:text-[9px] font-sans tracking-[0.1em] sm:tracking-[0.12em] text-textMuted uppercase mt-0.5 whitespace-nowrap">
                         НЕЙРОМЕДИТАЦИИ &amp; РЕСЕТЫ
-                    </span>
+                    </div>
                 </div>
             </a>
 
-            <!-- Right CTA Button -->
+            <!-- Right CTA Button (Ultra-Compact on Mobile) -->
             <div class="flex items-center flex-shrink-0">
                 <a href="#plans"
-                    class="px-3 py-1.5 sm:px-5 sm:py-2 rounded-full border border-goldAccent/60 text-goldAccent text-[10px] sm:text-xs font-bold tracking-wider hover:bg-goldAccent hover:text-black transition-all flex items-center space-x-1.5 whitespace-nowrap">
-                    <span>ВЫБРАТЬ ТАРИФ</span>
-                    <i class="fa-solid fa-arrow-down text-[9px] sm:text-[10px]"></i>
+                    class="px-2 py-1 sm:px-5 sm:py-2 rounded-full border border-goldAccent/60 text-goldAccent text-[8.5px] xs:text-[9.5px] sm:text-xs font-bold tracking-tight sm:tracking-wider hover:bg-goldAccent hover:text-black transition-all flex items-center space-x-1 whitespace-nowrap shadow-sm">
+                    <!-- Short text on small mobile, full text on larger screens -->
+                    <span class="xs:hidden">ТАРИФЫ</span>
+                    <span class="hidden xs:inline">ВЫБРАТЬ ТАРИФ</span>
+                    <i class="fa-solid fa-arrow-down text-[7.5px] sm:text-[10px]"></i>
                 </a>
             </div>
 
