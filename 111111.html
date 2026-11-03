@@ -1510,22 +1510,22 @@
 
                 <!-- Main Checkout Card -->
                 <div
-                    class="bg-[#100c0c] rounded-3xl p-8 md:p-12 shadow-luxury border border-temple-border relative overflow-hidden">
+                    class="bg-[#1C1F1D] rounded-3xl p-8 md:p-12 shadow-luxury border border-temple-border relative overflow-hidden">
 
+                    <!-- Pricing Header -->
                     <div class="text-center mb-10 pb-8 border-b border-temple-border">
                         <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">Единая
-                            стоимость
-                            участия</span>
+                            стоимость участия</span>
                         <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-cream tracking-tight">
-                            1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $110</span>
+                            1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $11</span>
                         </div>
                         <span
-                            class="inline-block mt-2 text-xs text-emerald-300 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-800/60">
+                            class="inline-block mt-3 text-xs text-emerald-300 bg-emerald-950/50 px-4 py-1.5 rounded-full border border-emerald-800/60">
                             Включает все храмовые подношения и персональный ритуал
                         </span>
                     </div>
 
-                    <!-- Payment Region Tabs -->
+                    <!-- Payment Region Options -->
                     <div class="space-y-8">
 
                         <!-- Region 1: RU & CIS -->
@@ -1539,16 +1539,17 @@
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <!-- GetCourse Button -->
                                 <button onclick="openPaymentSphereModal('getcourse', 'GetCourse')"
-                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
+                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left cursor-pointer">
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-10 h-10 rounded-lg bg-temple-dark text-temple-gold flex items-center justify-center font-bold text-xs border border-temple-gold/20">
                                             GC
                                         </div>
-                                        <div class="text-left">
+                                        <div>
                                             <div
                                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                                GetCourse</div>
+                                                GetCourse
+                                            </div>
                                             <div class="text-[11px] text-temple-text-muted">Карты РФ / СБП / Рассрочка
                                             </div>
                                         </div>
@@ -1559,16 +1560,17 @@
 
                                 <!-- Boosty Button -->
                                 <button onclick="openPaymentSphereModal('boosty', 'Boosty')"
-                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
+                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left cursor-pointer">
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-10 h-10 rounded-lg bg-orange-600 text-white flex items-center justify-center font-bold text-xs">
                                             BST
                                         </div>
-                                        <div class="text-left">
+                                        <div>
                                             <div
                                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                                Boosty</div>
+                                                Boosty
+                                            </div>
                                             <div class="text-[11px] text-temple-text-muted">Альтернативный способ РФ
                                             </div>
                                         </div>
@@ -1590,16 +1592,17 @@
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <!-- Patreon Button -->
                                 <button onclick="openPaymentSphereModal('patreon', 'Patreon')"
-                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
+                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left cursor-pointer">
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-10 h-10 rounded-lg bg-rose-500 text-white flex items-center justify-center font-bold text-xs">
                                             PAT
                                         </div>
-                                        <div class="text-left">
+                                        <div>
                                             <div
                                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                                Patreon</div>
+                                                Patreon
+                                            </div>
                                             <div class="text-[11px] text-temple-text-muted">Международные карты</div>
                                         </div>
                                     </div>
@@ -1609,16 +1612,17 @@
 
                                 <!-- PayPal Button -->
                                 <button onclick="openPaymentSphereModal('paypal', 'PayPal')"
-                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
+                                    class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left cursor-pointer">
                                     <div class="flex items-center gap-3">
                                         <div
                                             class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
                                             PP
                                         </div>
-                                        <div class="text-left">
+                                        <div>
                                             <div
                                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                                PayPal</div>
+                                                PayPal
+                                            </div>
                                             <div class="text-[11px] text-temple-text-muted">Прямой международный перевод
                                             </div>
                                         </div>
@@ -1786,11 +1790,73 @@
                 </div>
             </div>
         </div>
-
         <!-- Scripts -->
         <script>
             // Initialize Lucide icons
             lucide.createIcons();
+            // -------------------------------------------------------------
+            // Payment Platform URLs per Sphere
+            // Replace the placeholder URLs ('#') with your actual post links
+            // -------------------------------------------------------------
+            const paymentLinks = {
+                getcourse: {
+                    relationships: 'https://stukserdza.getcourse.ru/subs_relationships',
+                    money: 'https://stukserdza.getcourse.ru/subs_money',
+                    health: 'https://stukserdza.getcourse.ru/subs_health',
+                    self: 'https://stukserdza.getcourse.ru/subs_self'
+                },
+                boosty: {
+                    relationships: 'https://boosty.to/stukserdza/posts/relationships',
+                    money: 'https://boosty.to/stukserdza/posts/money',
+                    health: 'https://boosty.to/stukserdza/posts/health',
+                    self: 'https://boosty.to/stukserdza/posts/self'
+                },
+                patreon: {
+                    relationships: 'https://patreon.com/stukserdza/posts/relationships',
+                    money: 'https://patreon.com/stukserdza/posts/money',
+                    health: 'https://patreon.com/stukserdza/posts/health',
+                    self: 'https://patreon.com/stukserdza/posts/self'
+                },
+                paypal: {
+                    relationships: 'https://paypal.me/stukserdza/relationships',
+                    money: 'https://paypal.me/stukserdza/money',
+                    health: 'https://paypal.me/stukserdza/health',
+                    self: 'https://paypal.me/stukserdza/self'
+                }
+            };
+
+            function openPaymentSphereModal(platformKey, platformName) {
+                const badgeEl = document.getElementById('modalPlatformBadge');
+                if (badgeEl) {
+                    badgeEl.textContent = 'Оплата через ' + platformName;
+                }
+
+                const links = paymentLinks[platformKey] || {};
+                const linkRel = document.getElementById('linkRelationships');
+                const linkMon = document.getElementById('linkMoney');
+                const linkHea = document.getElementById('linkHealth');
+                const linkSel = document.getElementById('linkSelf');
+
+                if (linkRel) linkRel.href = links.relationships || '#';
+                if (linkMon) linkMon.href = links.money || '#';
+                if (linkHea) linkHea.href = links.health || '#';
+                if (linkSel) linkSel.href = links.self || '#';
+
+                const modal = document.getElementById('paymentSphereModal');
+                if (modal) {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }
+            }
+
+            function closePaymentSphereModal() {
+                const modal = document.getElementById('paymentSphereModal');
+                if (modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            }
+
 
             // Questionnaire Modal triggers
             function openModal() {
