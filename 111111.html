@@ -24,14 +24,14 @@
                         'temple-card-dark': '#1C1F1D',
                         'temple-cream': '#FBF9F5',
                         'temple-coffee-bean': '#210202',
-                        'temple-coffee-bean-accent': '#F3EFE6',
+                        'temple-coffee-bean-accent': '#2D0606',
                         'temple-gold': '#D4AF37',
                         'temple-gold-light': '#E6CA65',
                         'temple-gold-dark': '#B38F22',
                         'temple-terracotta': '#933d1c',
                         'temple-terracotta-hover': '#A8593B',
-                        'temple-text-muted': '#8A8F8B',
-                        'temple-border': '#E5DFD3'
+                        'temple-text-muted': '#A3A8A4',
+                        'temple-border': '#3D1C1C'
                     },
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
@@ -40,7 +40,7 @@
                     boxShadow: {
                         'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.25)',
                         'gold-glow-sm': '0 0 15px 0px rgba(212, 175, 55, 0.2)',
-                        'luxury': '0 20px 40px -15px rgba(20, 22, 21, 0.07)'
+                        'luxury': '0 20px 40px -15px rgba(0, 0, 0, 0.5)'
                     }
                 }
             }
@@ -78,15 +78,15 @@
 
         /* Glassmorphic card backdrops */
         .glass-dark {
-            background: rgba(28, 31, 29, 0.75);
+            background: rgba(28, 31, 29, 0.85);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .glass-light {
-            background: rgb(255 218 144 / 85%);
+        .glass-coffee {
+            background: rgba(33, 2, 2, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 223, 211, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.25);
         }
 
         /* Custom Scrollbar */
@@ -110,11 +110,11 @@
 </head>
 
 <body
-    class="bg-temple-coffee-bean text-[#2C2C2C] font-sans antialiased selection:bg-temple-gold selection:text-temple-dark overflow-x-hidden">
+    class="bg-temple-coffee-bean text-temple-cream font-sans antialiased selection:bg-temple-gold selection:text-temple-dark overflow-x-hidden">
 
     <!-- Navigation Header -->
     <header
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-temple-dark/80 backdrop-blur-md border-b border-temple-gold/10">
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-temple-dark/90 backdrop-blur-md border-b border-temple-gold/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
@@ -149,7 +149,7 @@
         class="relative min-h-screen pt-32 pb-20 flex items-center justify-center bg-temple-dark text-temple-cream overflow-hidden">
         <!-- Background Hero Image with Dark Overlay -->
         <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center pointer-events-none scale-105 transition-transform duration-1000"
-            style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop');">
+            style="background-image: url('https://res.cloudinary.com/dcstupoud/image/upload/v1793741053/17383143513_jao65w.webp');">
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-temple-dark/90 via-temple-dark/80 to-temple-dark z-0"></div>
 
@@ -158,7 +158,7 @@
             class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-temple-gold/15 rounded-full blur-[140px] pointer-events-none animate-glow">
         </div>
         <div
-            class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-temple-terracotta/10 rounded-full blur-[100px] pointer-events-none">
+            class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-temple-terracotta/20 rounded-full blur-[100px] pointer-events-none">
         </div>
 
         <!-- Subtle Pattern Overlay -->
@@ -243,7 +243,7 @@
 
             <!-- Key Feature Mini-Badges -->
             <div
-                class="mt-16 pt-12 border-t border-temple-coffee-bean/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-temple-cream/60">
+                class="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-temple-cream/60">
                 <button onclick="openGalleryModal()"
                     class="flex items-center justify-center gap-2 hover:text-temple-gold transition-colors group cursor-pointer">
                     <i data-lucide="map-pin"
@@ -279,7 +279,7 @@
                     Зачем эта практика и как она работает
                 </h2>
                 <div class="w-16 h-[1px] bg-temple-gold mx-auto mb-8"></div>
-                <p class="text-base sm:text-lg text-temple-cream opacity-70 font-light leading-relaxed">
+                <p class="text-base sm:text-lg text-temple-cream/80 font-light leading-relaxed">
                     Бывает чувство, будто вы застряли и ходите по кругу: отношения выматывают, сил ни на что нет, деньги
                     утекают сквозь пальцы, а внутри — постоянная фоновая тяжесть.
                 </p>
@@ -287,14 +287,14 @@
 
             <!-- Quote Highlight Card -->
             <div
-                class="glass-light p-8 md:p-12 rounded-2xl border-l-4 border-l-temple-gold shadow-luxury mb-20 relative overflow-hidden">
+                class="glass-coffee p-8 md:p-12 rounded-2xl border-l-4 border-l-temple-gold shadow-luxury mb-20 relative overflow-hidden">
                 <i data-lucide="quote"
                     class="absolute -right-4 -bottom-4 w-32 h-32 text-temple-gold/10 pointer-events-none"></i>
-                <blockquote class="font-serif text-xl md:text-2xl text-temple-dark italic leading-snug mb-4">
+                <blockquote class="font-serif text-xl md:text-2xl text-temple-cream italic leading-snug mb-4">
                     «Причина простая: нельзя налить свежую воду в чашку, которая уже заполнена до краёв. Пока внутри всё
                     забито старыми переживаниями, страхами и прошлым опытом, новому счастью просто некуда прийти.»
                 </blockquote>
-                <div class="text-xs tracking-widest text-temple-terracotta uppercase font-medium">— Древняя восточная
+                <div class="text-xs tracking-widest text-temple-gold uppercase font-medium">— Древняя восточная
                     мудрость практики</div>
             </div>
 
@@ -302,16 +302,16 @@
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <!-- Step 1 Card -->
                 <div
-                    class="bg-white p-8 md:p-10 rounded-2xl border border-temple-border shadow-sm hover:border-temple-gold/40 transition-all group">
+                    class="bg-[#1C1F1D] p-8 md:p-10 rounded-2xl border border-temple-border shadow-sm hover:border-temple-gold/40 transition-all group">
                     <div class="flex items-center justify-between mb-6">
                         <span class="text-xs font-serif text-temple-gold text-2xl font-semibold">01</span>
                         <div
-                            class="w-12 h-12 rounded-full bg-temple-terracotta/10 text-temple-terracotta flex items-center justify-center group-hover:scale-110 transition-transform">
+                            class="w-12 h-12 rounded-full bg-temple-terracotta/20 text-temple-gold flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i data-lucide="flame" class="w-6 h-6"></i>
                         </div>
                     </div>
-                    <h3 class="font-serif text-2xl text-temple-dark mb-3">1. Сначала убираем старое</h3>
-                    <p class="text-sm text-[#666B67] font-light leading-relaxed">
+                    <h3 class="font-serif text-2xl text-temple-cream mb-3">1. Сначала убираем старое</h3>
+                    <p class="text-sm text-temple-cream/70 font-light leading-relaxed">
                         Снимаем груз, который годами тянет назад, жрёт силы и блокирует энергию. Освобождаем
                         пространство от отживших паттернов и обид.
                     </p>
@@ -319,16 +319,16 @@
 
                 <!-- Step 2 Card -->
                 <div
-                    class="bg-white p-8 md:p-10 rounded-2xl border border-temple-border shadow-sm hover:border-temple-gold/40 transition-all group">
+                    class="bg-[#1C1F1D] p-8 md:p-10 rounded-2xl border border-temple-border shadow-sm hover:border-temple-gold/40 transition-all group">
                     <div class="flex items-center justify-between mb-6">
                         <span class="text-xs font-serif text-temple-gold text-2xl font-semibold">02</span>
                         <div
-                            class="w-12 h-12 rounded-full bg-temple-gold/10 text-temple-gold-dark flex items-center justify-center group-hover:scale-110 transition-transform">
+                            class="w-12 h-12 rounded-full bg-temple-gold/10 text-temple-gold flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i data-lucide="sun" class="w-6 h-6"></i>
                         </div>
                     </div>
-                    <h3 class="font-serif text-2xl text-temple-dark mb-3">2. И сразу зовём новое</h3>
-                    <p class="text-sm text-[#666B67] font-light leading-relaxed">
+                    <h3 class="font-serif text-2xl text-temple-cream mb-3">2. И сразу зовём новое</h3>
+                    <p class="text-sm text-temple-cream/70 font-light leading-relaxed">
                         На освободившееся чистое место приглашаем то, чего вы по-настоящему хотите — любовь, достаток,
                         здоровье и спокойствие.
                     </p>
@@ -337,15 +337,15 @@
 
             <!-- Personal Commitment Note -->
             <div
-                class="bg-temple-coffee-bean-accent/80 rounded-2xl p-6 md:p-8 border border-temple-gold/20 flex flex-col md:flex-row items-center gap-6">
+                class="bg-[#1C1F1D] rounded-2xl p-6 md:p-8 border border-temple-gold/20 flex flex-col md:flex-row items-center gap-6">
                 <div
                     class="w-16 h-16 rounded-full bg-temple-dark text-temple-gold flex-shrink-0 flex items-center justify-center border border-temple-gold/30">
                     <i data-lucide="heart-handshake" class="w-8 h-8"></i>
                 </div>
                 <div class="text-center md:text-left">
-                    <h4 class="font-serif text-xl text-temple-dark font-medium mb-1">Я делаю всю работу в храме за вас
+                    <h4 class="font-serif text-xl text-temple-cream font-medium mb-1">Я делаю всю работу в храме за вас
                     </h4>
-                    <p class="text-sm text-[#5A5E5B] font-light">
+                    <p class="text-sm text-temple-cream/70 font-light">
                         От вас нужно только выбрать сферу и дать два честных ответа: от чего вы устали и чего хотите
                         вместо этого.
                     </p>
@@ -360,12 +360,12 @@
         <div class="max-w-6xl mx-auto px-6">
 
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-[0.25em] text-temple-gold-dark font-semibold mb-3 block">Фокус
+                <span class="text-xs uppercase tracking-[0.25em] text-temple-gold font-semibold mb-3 block">Фокус
                     энергии</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-dark font-light mb-4">
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-cream font-light mb-4">
                     4 сферы, где мы наведём порядок
                 </h2>
-                <p class="text-sm sm:text-base text-[#666B67] font-light">
+                <p class="text-sm sm:text-base text-temple-cream/70 font-light">
                     Вам не нужно копаться в себе часами. Мы снимем тяжесть с той сферы, где сейчас опускаются руки:
                 </p>
             </div>
@@ -375,32 +375,32 @@
 
                 <!-- Sphere 1: Relationships -->
                 <div
-                    class="bg-white rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
+                    class="bg-[#1C1F1D] rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-serif text-xl">
+                                class="w-12 h-12 rounded-xl bg-rose-950/60 text-rose-300 flex items-center justify-center font-serif text-xl border border-rose-800/40">
                                 <i data-lucide="heart" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-serif text-2xl text-temple-dark font-semibold">Отношения</h3>
+                                <h3 class="font-serif text-2xl text-temple-cream font-semibold">Отношения</h3>
                                 <span class="text-xs text-temple-text-muted">Освобождение от прошлых связей</span>
                             </div>
                         </div>
 
                         <div class="space-y-4 mb-6">
-                            <div class="bg-red-50/50 p-4 rounded-xl border border-red-100/60">
+                            <div class="bg-red-950/30 p-4 rounded-xl border border-red-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-red-700 tracking-wider block mb-1">Снимаем:</span>
-                                <p class="text-xs sm:text-sm text-red-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-red-400 tracking-wider block mb-1">Снимаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Мысли о бывших, обиды, привычку всё тянуть на себе и страх открыться мужчине.
                                 </p>
                             </div>
 
-                            <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/60">
+                            <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-emerald-700 tracking-wider block mb-1">Впускаем:</span>
-                                <p class="text-xs sm:text-sm text-emerald-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-emerald-400 tracking-wider block mb-1">Впускаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Спокойные, тёплые отношения со своим человеком, заботу, верность и безопасность.
                                 </p>
                             </div>
@@ -410,32 +410,32 @@
 
                 <!-- Sphere 2: Money -->
                 <div
-                    class="bg-white rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
+                    class="bg-[#1C1F1D] rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-serif text-xl">
+                                class="w-12 h-12 rounded-xl bg-amber-950/60 text-amber-300 flex items-center justify-center font-serif text-xl border border-amber-800/40">
                                 <i data-lucide="coins" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-serif text-2xl text-temple-dark font-semibold">Деньги</h3>
+                                <h3 class="font-serif text-2xl text-temple-cream font-semibold">Деньги</h3>
                                 <span class="text-xs text-temple-text-muted">Финансовый прорыв и достаток</span>
                             </div>
                         </div>
 
                         <div class="space-y-4 mb-6">
-                            <div class="bg-red-50/50 p-4 rounded-xl border border-red-100/60">
+                            <div class="bg-red-950/30 p-4 rounded-xl border border-red-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-red-700 tracking-wider block mb-1">Снимаем:</span>
-                                <p class="text-xs sm:text-sm text-red-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-red-400 tracking-wider block mb-1">Снимаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Вечную тревогу за завтрашний день, долги и ощущение «пашу на износ, а денег нет».
                                 </p>
                             </div>
 
-                            <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/60">
+                            <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-emerald-700 tracking-wider block mb-1">Впускаем:</span>
-                                <p class="text-xs sm:text-sm text-emerald-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-emerald-400 tracking-wider block mb-1">Впускаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Спокойный достаток, лёгкие деньги, новые источники дохода и финансовую уверенность.
                                 </p>
                             </div>
@@ -445,32 +445,32 @@
 
                 <!-- Sphere 3: Body & Health -->
                 <div
-                    class="bg-white rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
+                    class="bg-[#1C1F1D] rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-serif text-xl">
+                                class="w-12 h-12 rounded-xl bg-emerald-950/60 text-emerald-300 flex items-center justify-center font-serif text-xl border border-emerald-800/40">
                                 <i data-lucide="activity" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-serif text-2xl text-temple-dark font-semibold">Тело и здоровье</h3>
+                                <h3 class="font-serif text-2xl text-temple-cream font-semibold">Тело и здоровье</h3>
                                 <span class="text-xs text-temple-text-muted">Восстановление жизненной энергии</span>
                             </div>
                         </div>
 
                         <div class="space-y-4 mb-6">
-                            <div class="bg-red-50/50 p-4 rounded-xl border border-red-100/60">
+                            <div class="bg-red-950/30 p-4 rounded-xl border border-red-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-red-700 tracking-wider block mb-1">Снимаем:</span>
-                                <p class="text-xs sm:text-sm text-red-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-red-400 tracking-wider block mb-1">Снимаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Хроническую усталость, бессонницу, психосоматические зажимы и бессилие.
                                 </p>
                             </div>
 
-                            <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/60">
+                            <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-emerald-700 tracking-wider block mb-1">Впускаем:</span>
-                                <p class="text-xs sm:text-sm text-emerald-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-emerald-400 tracking-wider block mb-1">Впускаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Бодрость, глубокий спокойный сон, здоровье и лёгкость в теле.
                                 </p>
                             </div>
@@ -480,32 +480,32 @@
 
                 <!-- Sphere 4: Inner Self -->
                 <div
-                    class="bg-white rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
+                    class="bg-[#1C1F1D] rounded-2xl p-8 shadow-sm border border-temple-border hover:shadow-luxury transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
                             <div
-                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-serif text-xl">
+                                class="w-12 h-12 rounded-xl bg-indigo-950/60 text-indigo-300 flex items-center justify-center font-serif text-xl border border-indigo-800/40">
                                 <i data-lucide="sparkles" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-serif text-2xl text-temple-dark font-semibold">Вы сами</h3>
+                                <h3 class="font-serif text-2xl text-temple-cream font-semibold">Вы сами</h3>
                                 <span class="text-xs text-temple-text-muted">Внутренняя опора и любовь к себе</span>
                             </div>
                         </div>
 
                         <div class="space-y-4 mb-6">
-                            <div class="bg-red-50/50 p-4 rounded-xl border border-red-100/60">
+                            <div class="bg-red-950/30 p-4 rounded-xl border border-red-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-red-700 tracking-wider block mb-1">Снимаем:</span>
-                                <p class="text-xs sm:text-sm text-red-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-red-400 tracking-wider block mb-1">Снимаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Привычку быть удобной, чувство вины, самоедство и страх сказать «нет».
                                 </p>
                             </div>
 
-                            <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/60">
+                            <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-900/40">
                                 <span
-                                    class="text-xs uppercase font-bold text-emerald-700 tracking-wider block mb-1">Впускаем:</span>
-                                <p class="text-xs sm:text-sm text-emerald-950/80 font-light">
+                                    class="text-xs uppercase font-bold text-emerald-400 tracking-wider block mb-1">Впускаем:</span>
+                                <p class="text-xs sm:text-sm text-temple-cream/80 font-light">
                                     Непоколебимую любовь к себе, внутреннюю опору и право жить так, как хочется вам.
                                 </p>
                             </div>
@@ -545,9 +545,9 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Column 1: Release -->
                     <div class="space-y-4">
-                        <div class="flex items-center gap-3 text-temple-terracotta mb-2">
+                        <div class="flex items-center gap-3 text-temple-gold mb-2">
                             <span
-                                class="w-7 h-7 rounded-full bg-temple-terracotta/20 flex items-center justify-center font-bold text-xs">1</span>
+                                class="w-7 h-7 rounded-full bg-temple-terracotta/40 text-temple-cream flex items-center justify-center font-bold text-xs">1</span>
                             <h4 class="font-medium text-sm text-temple-cream">От чего вы освобождаетесь навсегда:
                             </h4>
                         </div>
@@ -557,20 +557,17 @@
                         <div class="space-y-3">
                             <div
                                 class="p-4 rounded-xl bg-temple-card-dark border border-white/5 text-xs text-temple-cream/80 flex items-start gap-3">
-                                <i data-lucide="x-circle"
-                                    class="w-4 h-4 text-temple-terracotta flex-shrink-0 mt-0.5"></i>
+                                <i data-lucide="x-circle" class="w-4 h-4 text-temple-gold flex-shrink-0 mt-0.5"></i>
                                 <span>«Устала держаться за прошлые обиды на мужчин и бояться предательства»</span>
                             </div>
                             <div
                                 class="p-4 rounded-xl bg-temple-card-dark border border-white/5 text-xs text-temple-cream/80 flex items-start gap-3">
-                                <i data-lucide="x-circle"
-                                    class="w-4 h-4 text-temple-terracotta flex-shrink-0 mt-0.5"></i>
+                                <i data-lucide="x-circle" class="w-4 h-4 text-temple-gold flex-shrink-0 mt-0.5"></i>
                                 <span>«Надоело жить в долгах и вечной тревоге за деньги»</span>
                             </div>
                             <div
                                 class="p-4 rounded-xl bg-temple-card-dark border border-white/5 text-xs text-temple-cream/80 flex items-start gap-3">
-                                <i data-lucide="x-circle"
-                                    class="w-4 h-4 text-temple-terracotta flex-shrink-0 mt-0.5"></i>
+                                <i data-lucide="x-circle" class="w-4 h-4 text-temple-gold flex-shrink-0 mt-0.5"></i>
                                 <span>«Сил нет терпеть постоянную усталость и бессилие»</span>
                             </div>
                         </div>
@@ -634,10 +631,9 @@
         <div class="max-w-5xl mx-auto px-6">
 
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span
-                    class="text-xs uppercase tracking-[0.25em] text-temple-terracotta font-semibold mb-3 block">Прозрачность
+                <span class="text-xs uppercase tracking-[0.25em] text-temple-gold font-semibold mb-3 block">Прозрачность
                     и уважение</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-dark font-light mb-4">
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-cream font-light mb-4">
                     Как проходит практика
                 </h2>
                 <div class="w-16 h-[1px] bg-temple-gold mx-auto"></div>
@@ -645,7 +641,7 @@
 
             <!-- Featured Wat Phnom Temple Visual Card -->
             <div
-                class="mb-12 bg-white rounded-3xl overflow-hidden border border-temple-border shadow-luxury grid lg:grid-cols-12 gap-0 group">
+                class="mb-12 bg-[#1C1F1D] rounded-3xl overflow-hidden border border-temple-border shadow-luxury grid lg:grid-cols-12 gap-0 group">
                 <div class="lg:col-span-7 relative min-h-[300px] lg:min-h-[380px] overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop"
                         alt="Буддийский храм Ват Пном в Пномпене"
@@ -662,20 +658,20 @@
                         </span>
                     </div>
                     <button onclick="openGalleryModal()"
-                        class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md hover:bg-white text-temple-dark px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 shadow-lg transition-all">
-                        <i data-lucide="camera" class="w-4 h-4 text-temple-gold-dark"></i>
+                        class="absolute bottom-4 left-4 bg-temple-dark/90 backdrop-blur-md hover:bg-temple-dark text-temple-cream border border-temple-gold/30 px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 shadow-lg transition-all">
+                        <i data-lucide="camera" class="w-4 h-4 text-temple-gold"></i>
                         <span>Галерея святыни (3 фото)</span>
                     </button>
                 </div>
 
-                <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-center bg-white">
+                <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-center bg-[#1C1F1D]">
                     <div
-                        class="w-10 h-10 rounded-full bg-temple-gold/10 text-temple-gold-dark flex items-center justify-center font-serif text-lg font-bold mb-4">
+                        class="w-10 h-10 rounded-full bg-temple-gold/10 text-temple-gold flex items-center justify-center font-serif text-lg font-bold mb-4 border border-temple-gold/30">
                         01
                     </div>
-                    <h3 class="font-serif text-2xl lg:text-3xl text-temple-dark mb-3">Священное место</h3>
-                    <p class="text-sm text-[#666B67] font-light leading-relaxed mb-6">
-                        Буддийский монастырь <strong class="text-temple-dark font-medium">Ват Пном</strong> в самом
+                    <h3 class="font-serif text-2xl lg:text-3xl text-temple-cream mb-3">Священное место</h3>
+                    <p class="text-sm text-temple-cream/70 font-light leading-relaxed mb-6">
+                        Буддийский монастырь <strong class="text-temple-gold font-medium">Ват Пном</strong> в самом
                         сердце Пномпеня — древняя святыня с вековой историей, величественной ступой и сильной
                         трансформирующей энергетикой.
                     </p>
@@ -692,14 +688,14 @@
 
                 <!-- Step 2 -->
                 <div
-                    class="bg-white p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
+                    class="bg-[#1C1F1D] p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
                     <div>
                         <div
-                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold flex items-center justify-center font-serif text-lg font-bold mb-6">
+                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold border border-temple-gold/30 flex items-center justify-center font-serif text-lg font-bold mb-6">
                             02
                         </div>
-                        <h3 class="font-serif text-2xl text-temple-dark mb-2">Личная работа</h3>
-                        <p class="text-sm text-[#666B67] font-light leading-relaxed">
+                        <h3 class="font-serif text-2xl text-temple-cream mb-2">Личная работа</h3>
+                        <p class="text-sm text-temple-cream/70 font-light leading-relaxed">
                             Я приношу подношения монахам, зажигаю огонь и провожу практику для каждого человека строго
                             по списку — называя ваше имя и закладывая ваши запросы.
                         </p>
@@ -708,14 +704,14 @@
 
                 <!-- Step 3 -->
                 <div
-                    class="bg-white p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
+                    class="bg-[#1C1F1D] p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
                     <div>
                         <div
-                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold flex items-center justify-center font-serif text-lg font-bold mb-6">
+                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold border border-temple-gold/30 flex items-center justify-center font-serif text-lg font-bold mb-6">
                             03
                         </div>
-                        <h3 class="font-serif text-2xl text-temple-dark mb-2">Полное присутствие</h3>
-                        <p class="text-sm text-[#666B67] font-light leading-relaxed">
+                        <h3 class="font-serif text-2xl text-temple-cream mb-2">Полное присутствие</h3>
+                        <p class="text-sm text-temple-cream/70 font-light leading-relaxed">
                             Вам не нужно подстраиваться под время, бросать дела или сидеть в медитации. Вы просто
                             занимаетесь своей жизнью.
                         </p>
@@ -724,14 +720,14 @@
 
                 <!-- Step 4 -->
                 <div
-                    class="bg-white p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
+                    class="bg-[#1C1F1D] p-8 rounded-2xl border border-temple-border shadow-sm flex flex-col justify-between">
                     <div>
                         <div
-                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold flex items-center justify-center font-serif text-lg font-bold mb-6">
+                            class="w-12 h-12 rounded-full bg-temple-dark text-temple-gold border border-temple-gold/30 flex items-center justify-center font-serif text-lg font-bold mb-6">
                             04
                         </div>
-                        <h3 class="font-serif text-2xl text-temple-dark mb-2">Видеоотчёт</h3>
-                        <p class="text-sm text-[#666B67] font-light leading-relaxed">
+                        <h3 class="font-serif text-2xl text-temple-cream mb-2">Видеоотчёт</h3>
+                        <p class="text-sm text-temple-cream/70 font-light leading-relaxed">
                             Я подробно сниму весь процесс в храме и выложу в нашу закрытую Telegram-группу. Вы увидите
                             огонь и подношения так детально, будто стоите рядом со мной.
                         </p>
@@ -747,12 +743,12 @@
         <div class="max-w-4xl mx-auto px-6">
 
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs uppercase tracking-[0.25em] text-temple-gold-dark font-semibold mb-3 block">Участие
+                <span class="text-xs uppercase tracking-[0.25em] text-temple-gold font-semibold mb-3 block">Участие
                     в ритуале</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-dark font-light mb-4">
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-temple-cream font-light mb-4">
                     Стоимость и способы оплаты
                 </h2>
-                <p class="text-sm text-[#666B67] font-light">
+                <p class="text-sm text-temple-cream/70 font-light">
                     Выберите удобный способ оплаты. После совершения платежа вы автоматически получите доступ к анкете и
                     закрытой группе.
                 </p>
@@ -760,16 +756,16 @@
 
             <!-- Main Checkout Card -->
             <div
-                class="bg-white rounded-3xl p-8 md:p-12 shadow-luxury border border-temple-border relative overflow-hidden">
+                class="bg-[#1C1F1D] rounded-3xl p-8 md:p-12 shadow-luxury border border-temple-border relative overflow-hidden">
 
                 <div class="text-center mb-10 pb-8 border-b border-temple-border">
                     <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">Единая стоимость
                         участия</span>
-                    <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-dark tracking-tight">
-                        1111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $110</span>
+                    <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-cream tracking-tight">
+                        1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $110</span>
                     </div>
                     <span
-                        class="inline-block mt-2 text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                        class="inline-block mt-2 text-xs text-emerald-300 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-800/60">
                         Включает все храмовые подношения и персональный ритуал
                     </span>
                 </div>
@@ -780,23 +776,23 @@
                     <!-- Region 1: RU & CIS -->
                     <div>
                         <div
-                            class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-dark mb-4">
-                            <i data-lucide="credit-card" class="w-4 h-4 text-temple-gold-dark"></i>
+                            class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-cream mb-4">
+                            <i data-lucide="credit-card" class="w-4 h-4 text-temple-gold"></i>
                             <span>Оплата картами РФ и СНГ:</span>
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
                             <!-- GetCourse Button -->
                             <a href="https://stukserdza.getcourse.ru/subs" target="_blank"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group">
                                 <div class="flex items-center gap-3">
                                     <div
-                                        class="w-10 h-10 rounded-lg bg-temple-dark text-temple-gold flex items-center justify-center font-bold text-xs">
+                                        class="w-10 h-10 rounded-lg bg-temple-dark text-temple-gold flex items-center justify-center font-bold text-xs border border-temple-gold/20">
                                         GC
                                     </div>
                                     <div class="text-left">
                                         <div
-                                            class="text-sm font-medium text-temple-dark group-hover:text-temple-gold-dark transition-colors">
+                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                             GetCourse</div>
                                         <div class="text-[11px] text-temple-text-muted">Карты РФ / СБП / Рассрочка</div>
                                     </div>
@@ -807,7 +803,7 @@
 
                             <!-- Boosty Button -->
                             <a href="#" target="_blank"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group">
                                 <div class="flex items-center gap-3">
                                     <div
                                         class="w-10 h-10 rounded-lg bg-orange-600 text-white flex items-center justify-center font-bold text-xs">
@@ -815,7 +811,7 @@
                                     </div>
                                     <div class="text-left">
                                         <div
-                                            class="text-sm font-medium text-temple-dark group-hover:text-temple-gold-dark transition-colors">
+                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                             Boosty</div>
                                         <div class="text-[11px] text-temple-text-muted">Альтернативный способ РФ</div>
                                     </div>
@@ -829,15 +825,15 @@
                     <!-- Region 2: Global Cards -->
                     <div>
                         <div
-                            class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-dark mb-4">
-                            <i data-lucide="globe" class="w-4 h-4 text-temple-gold-dark"></i>
+                            class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-cream mb-4">
+                            <i data-lucide="globe" class="w-4 h-4 text-temple-gold"></i>
                             <span>Оплата зарубежными картами (весь мир):</span>
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
                             <!-- Patreon Button -->
                             <a href="#" target="_blank"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group">
                                 <div class="flex items-center gap-3">
                                     <div
                                         class="w-10 h-10 rounded-lg bg-rose-500 text-white flex items-center justify-center font-bold text-xs">
@@ -845,7 +841,7 @@
                                     </div>
                                     <div class="text-left">
                                         <div
-                                            class="text-sm font-medium text-temple-dark group-hover:text-temple-gold-dark transition-colors">
+                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                             Patreon</div>
                                         <div class="text-[11px] text-temple-text-muted">Международные карты</div>
                                     </div>
@@ -856,7 +852,7 @@
 
                             <!-- PayPal Button -->
                             <a href="#" target="_blank"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group">
                                 <div class="flex items-center gap-3">
                                     <div
                                         class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
@@ -864,7 +860,7 @@
                                     </div>
                                     <div class="text-left">
                                         <div
-                                            class="text-sm font-medium text-temple-dark group-hover:text-temple-gold-dark transition-colors">
+                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                             PayPal</div>
                                         <div class="text-[11px] text-temple-text-muted">Прямой международный перевод
                                         </div>
@@ -888,30 +884,30 @@
         <div class="max-w-4xl mx-auto px-6">
 
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <h3 class="font-serif text-2xl sm:text-3xl text-temple-dark mb-4">
+                <h3 class="font-serif text-2xl sm:text-3xl text-temple-cream mb-4">
                     Как вы попадаете в практику после оплаты
                 </h3>
             </div>
 
             <!-- Steps -->
             <div class="grid md:grid-cols-2 gap-6 mb-16">
-                <div class="bg-white p-6 rounded-2xl border border-temple-border flex items-start gap-4">
+                <div class="bg-[#1C1F1D] p-6 rounded-2xl border border-temple-border flex items-start gap-4">
                     <div
-                        class="w-8 h-8 rounded-full bg-temple-gold/20 text-temple-dark font-bold flex items-center justify-center flex-shrink-0 text-sm">
+                        class="w-8 h-8 rounded-full bg-temple-gold/20 text-temple-gold border border-temple-gold/30 font-bold flex items-center justify-center flex-shrink-0 text-sm">
                         1
                     </div>
-                    <p class="text-sm text-[#5A5E5B] leading-relaxed">
+                    <p class="text-sm text-temple-cream/80 leading-relaxed">
                         Сразу после перевода откроется короткая анкета на 2 минуты, где вы напишете своё имя и запрос
                         для храма.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-temple-border flex items-start gap-4">
+                <div class="bg-[#1C1F1D] p-6 rounded-2xl border border-temple-border flex items-start gap-4">
                     <div
-                        class="w-8 h-8 rounded-full bg-temple-gold/20 text-temple-dark font-bold flex items-center justify-center flex-shrink-0 text-sm">
+                        class="w-8 h-8 rounded-full bg-temple-gold/20 text-temple-gold border border-temple-gold/30 font-bold flex items-center justify-center flex-shrink-0 text-sm">
                         2
                     </div>
-                    <p class="text-sm text-[#5A5E5B] leading-relaxed">
+                    <p class="text-sm text-temple-cream/80 leading-relaxed">
                         После отправки анкеты на экране сразу появится прямая ссылка на закрытую группу в Telegram — вы
                         вступаете туда в один клик.
                     </p>
@@ -920,7 +916,7 @@
 
             <!-- Support Card -->
             <div
-                class="bg-temple-dark text-temple-cream p-8 rounded-3xl text-center border border-temple-gold/20 max-w-xl mx-auto relative overflow-hidden">
+                class="bg-temple-dark text-temple-cream p-8 rounded-3xl text-center border border-temple-gold/20 max-w-xl mx-auto relative overflow-hidden shadow-2xl">
                 <div class="relative z-10">
                     <h4 class="font-serif text-xl mb-2">Возникли сложности с оплатой или вопрос по участию?</h4>
                     <p class="text-xs text-temple-cream/70 mb-6">София ответит вам лично и поможет решить любой
@@ -957,25 +953,26 @@
 
     <!-- Interactive Questionnaire Preview Modal -->
     <div id="questionnaireModal"
-        class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+        class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div
+            class="bg-[#1C1F1D] text-temple-cream border border-temple-gold/30 rounded-3xl p-6 md:p-8 max-w-md w-full relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-temple-cream/60 hover:text-temple-cream">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
-            <h3 class="font-serif text-2xl text-temple-dark mb-4">Пример анкеты</h3>
-            <p class="text-sm text-gray-600 mb-4">После оплаты вы заполняете две простые строки:</p>
+            <h3 class="font-serif text-2xl text-temple-gold mb-4">Пример анкеты</h3>
+            <p class="text-sm text-temple-cream/70 mb-4">После оплаты вы заполняете две простые строки:</p>
             <div class="space-y-3 text-xs bg-temple-coffee-bean p-4 rounded-xl border border-temple-border mb-6">
                 <div>
-                    <span class="font-semibold text-temple-terracotta">1. От чего освобождаетесь:</span>
-                    <p class="text-gray-700 mt-0.5">«От постоянных сомнений в себе и чувства усталости»</p>
+                    <span class="font-semibold text-temple-gold">1. От чего освобождаетесь:</span>
+                    <p class="text-temple-cream/80 mt-0.5">«От постоянных сомнений в себе и чувства усталости»</p>
                 </div>
                 <div>
-                    <span class="font-semibold text-temple-gold-dark">2. Что впускаете:</span>
-                    <p class="text-gray-700 mt-0.5">«Уверенность, радость каждого дня и энергию»</p>
+                    <span class="font-semibold text-temple-gold-light">2. Что впускаете:</span>
+                    <p class="text-temple-cream/80 mt-0.5">«Уверенность, радость каждого дня и энергию»</p>
                 </div>
             </div>
             <button onclick="closeModal()"
-                class="w-full py-3 rounded-full bg-temple-dark text-temple-cream text-xs uppercase font-medium">Понятно</button>
+                class="w-full py-3 rounded-full bg-temple-gold text-temple-dark text-xs uppercase font-medium hover:bg-temple-gold-light transition-colors">Понятно</button>
         </div>
     </div>
 
