@@ -46,7 +46,9 @@
             }
         }
     </script>
-
+    <!-- External & Preloaded Styles -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -117,25 +119,21 @@
         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-temple-dark/90 backdrop-blur-md border-b border-temple-gold/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
+            <a href="https://stukserdza.com/" alt="Стук сердца logo" class="flex items-center gap-3 group">
                 <div
-                    class="w-9 h-9 rounded-full border border-temple-gold/40 flex items-center justify-center text-temple-gold group-hover:border-temple-gold transition-colors">
-                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    class="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964615/logo-white_ybuftx.png"
+                        alt="Стук сердца logo" class="w-full h-full object-contain">
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif text-xl tracking-wider text-temple-cream font-medium">СТУК
-                        СЕРДЦА</span>
-                    <span class="text-[10px] tracking-[0.25em] text-temple-gold uppercase opacity-80">by Suria</span>
+                    <span class="font-serif text-xl tracking-wider text-temple-cream font-medium">
+                        СТУК СЕРДЦА
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] text-temple-gold uppercase opacity-80">
+                        Сурия Кар
+                    </span>
                 </div>
             </a>
-
-            <!-- Quick Nav & CTA -->
-            <nav class="hidden md:flex items-center gap-8 text-sm text-temple-cream/80">
-                <a href="#about" class="hover:text-temple-gold transition-colors">О практике</a>
-                <a href="#spheres" class="hover:text-temple-gold transition-colors">4 Сферы</a>
-                <a href="#rule" class="hover:text-temple-gold transition-colors">Правило фокуса</a>
-                <a href="#process" class="hover:text-temple-gold transition-colors">Процесс</a>
-            </nav>
 
             <a href="#payment"
                 class="bg-gradient-to-r from-temple-gold to-temple-gold-dark text-temple-dark px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:shadow-gold-glow transition-all duration-300 transform hover:-translate-y-0.5">
@@ -171,7 +169,7 @@
             <div
                 class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-temple-gold/30 bg-temple-gold/10 text-temple-gold text-xs font-medium uppercase tracking-[0.2em] mb-8 animate-fade-in">
                 <span class="w-1.5 h-1.5 rounded-full bg-temple-gold animate-ping"></span>
-                Храмовая практика в Камбодже
+                практика исцеления в храме
             </div>
 
             <!-- H1 Headline -->
@@ -761,7 +759,7 @@
                     <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">Единая стоимость
                         участия</span>
                     <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-cream tracking-tight">
-                        1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $110</span>
+                        1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $13.60</span>
                     </div>
                     <span
                         class="inline-block mt-2 text-xs text-emerald-300 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-800/60">
@@ -781,24 +779,6 @@
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <!-- GetCourse Button -->
-                            <button onclick="openPaymentSphereModal('getcourse', 'GetCourse')"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
-                                <div class="flex items-center gap-3">
-                                    <div
-                                        class="w-10 h-10 rounded-lg bg-temple-dark text-temple-gold flex items-center justify-center font-bold text-xs border border-temple-gold/20">
-                                        GC
-                                    </div>
-                                    <div class="text-left">
-                                        <div
-                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                            GetCourse</div>
-                                        <div class="text-[11px] text-temple-text-muted">Карты РФ / СБП / Рассрочка</div>
-                                    </div>
-                                </div>
-                                <i data-lucide="chevron-right"
-                                    class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform"></i>
-                            </button>
 
                             <!-- Boosty Button -->
                             <button onclick="openPaymentSphereModal('boosty', 'Boosty')"
@@ -813,6 +793,24 @@
                                             class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                             Boosty</div>
                                         <div class="text-[11px] text-temple-text-muted">Альтернативный способ РФ</div>
+                                    </div>
+                                </div>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <!-- GetCourse Button -->
+                            <button onclick="openPaymentSphereModal('getcourse', 'GetCourse')"
+                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-temple-dark text-temple-gold flex items-center justify-center font-bold text-xs border border-temple-gold/20">
+                                        GC
+                                    </div>
+                                    <div class="text-left">
+                                        <div
+                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
+                                            GetCourse</div>
+                                        <div class="text-[11px] text-temple-text-muted">Карты РФ / СБП / Рассрочка</div>
                                     </div>
                                 </div>
                                 <i data-lucide="chevron-right"
@@ -846,27 +844,8 @@
                                     </div>
                                 </div>
                                 <i data-lucide="chevron-right"
-                                    class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform"></i>
-                            </button>
-
-                            <!-- PayPal Button -->
-                            <button onclick="openPaymentSphereModal('paypal', 'PayPal')"
-                                class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
-                                <div class="flex items-center gap-3">
-                                    <div
-                                        class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
-                                        PP
-                                    </div>
-                                    <div class="text-left">
-                                        <div
-                                            class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                            PayPal</div>
-                                        <div class="text-[11px] text-temple-text-muted">Прямой международный перевод
-                                        </div>
-                                    </div>
-                                </div>
-                                <i data-lucide="chevron-right"
-                                    class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform"></i>
+                                    class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform">
+                                </i>
                             </button>
                         </div>
                     </div>
@@ -915,37 +894,183 @@
 
             <!-- Support Card -->
             <div
-                class="bg-temple-dark text-temple-cream p-8 rounded-3xl text-center border border-temple-gold/20 max-w-xl mx-auto relative overflow-hidden shadow-2xl">
+                class="bg-temple-dark text-temple-cream p-8 md:p-10 rounded-3xl text-center border border-temple-gold/20 max-w-2xl mx-auto relative overflow-hidden shadow-2xl">
                 <div class="relative z-10">
-                    <h4 class="font-serif text-xl mb-2">Возникли сложности с оплатой или вопрос по участию?</h4>
-                    <p class="text-xs text-temple-cream/70 mb-6">София ответит вам лично и поможет решить любой
-                        вопрос
+                    <h4 class="font-serif text-xl sm:text-2xl mb-2">Остались вопросы или возникли сложности с оплатой?
+                    </h4>
+                    <p class="text-xs text-temple-cream/70 mb-8">
+                        Наша команда на связи и готова ответить на любой ваш вопрос
                     </p>
 
-                    <a href="https://t.me/Sofia_StukSerdza" target="_blank"
-                        class="inline-flex items-center gap-3 bg-[#2AABEE] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#229ED9] transition-colors shadow-lg">
-                        <i data-lucide="send" class="w-4 h-4"></i>
-                        <span>Написать Софии в Telegram</span>
-                    </a>
+                    <!-- 2 Contacts Grid -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <!-- Contact 1: Sofia (Theory & Event) -->
+                        <div
+                            class="p-5 rounded-2xl bg-[#1C1F1D] border border-temple-border flex flex-col justify-between items-center text-center group hover:border-temple-gold/40 transition-all">
+                            <div class="mb-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-temple-gold/10 text-temple-gold border border-temple-gold/30 flex items-center justify-center mx-auto mb-3 font-serif font-bold text-sm">
+                                    С
+                                </div>
+                                <h5 class="font-medium text-sm text-temple-cream mb-1">София</h5>
+                                <p class="text-[11px] text-temple-text-muted leading-snug">Вопросы по практике, смыслу и
+                                    сути ритуала</p>
+                            </div>
+                            <a href="https://t.me/sofiya1203" target="_blank"
+                                class="w-full inline-flex items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 py-2.5 rounded-full text-xs font-medium hover:bg-[#229ED9] transition-colors shadow-md">
+                                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                                <span>Написать Софии</span>
+                            </a>
+                        </div>
+
+                        <!-- Contact 2: Julia (Tech Support) -->
+                        <div
+                            class="p-5 rounded-2xl bg-[#1C1F1D] border border-temple-border flex flex-col justify-between items-center text-center group hover:border-temple-gold/40 transition-all">
+                            <div class="mb-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-temple-gold/10 text-temple-gold border border-temple-gold/30 flex items-center justify-center mx-auto mb-3 font-serif font-bold text-sm">
+                                    Ю
+                                </div>
+                                <h5 class="font-medium text-sm text-temple-cream mb-1">Юлия</h5>
+                                <p class="text-[11px] text-temple-text-muted leading-snug">
+                                    Технические вопросы, оплата и доступ к группе
+                                </p>
+                            </div>
+                            <a href="https://t.me/tech_support_julia" target="_blank"
+                                class="w-full inline-flex items-center justify-center gap-2 bg-[#2AABEE] text-white px-4 py-2.5 rounded-full text-xs font-medium hover:bg-[#229ED9] transition-colors shadow-md">
+                                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                                <span>Написать Юлии</span>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-temple-dark text-temple-cream/60 py-12 border-t border-temple-gold/10 text-xs">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <span class="font-serif text-lg text-temple-cream tracking-wider">Стук Сердца</span>
-                <span>© 2026. Все права защищены.</span>
+    <!-- FOOTER -->
+    <footer class="pt-8 border-t border-borderMuted site-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах
+                </h2>
+
+                <p class="footer-text">
+                    Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
+                    кто проходит сложные периоды и ищет выход
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://instagram.com/true_suria" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в instagram аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/inst_footer_qapphn.svg"
+                                alt="instagram icon">
+                        </span>
+                        <span class="social-text">true_suria</span>
+                    </a>
+                    <a href="https://vk.ru/stukserdzavk" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в ВК аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/vk_footer_i3rzow.svg"
+                                alt="vk icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+                    <a href="https://www.t.me/tarotmystic" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в Телелграм аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/tg_footer_asvqgi.svg"
+                                alt="tg icon">
+                        </span>
+                        <span class="social-text">Стук сердца</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@suria_neuro" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в tiktok аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964726/tt_footer_wb0rqi.svg"
+                                alt="tiktok icon">
+                        </span>
+                        <span class="social-text">suria_neuro</span>
+                    </a>
+                    <a href="https://boosty.to/stukserdza" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в boosty аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964725/bst_footer_dahaj4.svg"
+                                alt="boosty icon">
+                        </span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://www.youtube.com/@stukserdzayt" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти к youtube канаду стук сердца">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964727/yt_footer_cvsiit.svg"
+                                alt="youtube icon">
+                        </span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                    <a href="https://www.patreon.com/cw/stukserdza" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="Перейти в patreon аккаунт">
+                        <span class="social-icon">
+                            <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1781730918/PATREON_SYMBOL_1_FDE885_g6nmqn.svg"
+                                alt="patreon icon">
+                        </span>
+                        <span class="social-text">Suria Kar</span>
+                    </a>
+                    <a href="https://stukserdza.getcourse.ru/meditations" target="_blank" rel="noopener"
+                        class="social-btn" aria-label="Перейти к геткурс стук сердца">
+                        <span class="social-icon">
+                            GC.
+                        </span>
+                        <span class="social-text">Стyk сердца</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="flex flex-wrap items-center gap-6 text-temple-cream/50">
-                <a href="https://stukserdza.com" target="_blank"
-                    class="hover:text-temple-gold transition-colors">stukserdza.com</a>
-                <a href="#" class="hover:text-temple-gold transition-colors">Публичная оферта</a>
-                <a href="#" class="hover:text-temple-gold transition-colors">Политика конфиденциальности</a>
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#top" aria-label="Перейти к началу страницы">Наверх</a>
+                    <a href="https://stukserdza.com/" aria-label="Перейти на главную страницу">
+                        Главная
+                    </a>
+                    <a href="meditations.html" aria-label="Перейти ко всем нейромедитациям">
+                        Нейромедитации
+                    </a>
+                    <a href="diagnostics.html" aria-label="Перейти к диагностикам">
+                        Диагностики
+                    </a>
+                    <a href="subs-pages.html" aria-label="Перейти к раскладам">
+                        Расклады
+                    </a>
+                    <a href="blog.html" aria-label="Перейти к Блогу">
+                        Блог
+                    </a>
+                </nav>
+                <div class="line"></div>
+
+
+                <div class="footer-legal">
+                    <a href="privacy.html" target="_blank" class="link__legal" rel=" noopener"
+                        aria-label="Перейти к нашей политике конфиденциальности">
+                        Политика
+                        конфиденциальности
+                    </a>
+                    <a href="terms-of-service.html" target="_blank" rel="noopener" class="link__legal"
+                        aria-label="Перейти к нашим условиям использования">
+                        Условия
+                        использования сайта
+                    </a>
+                    <a href="disclaimer.html" target="_blank" rel="noopener" class="link__legal"
+                        aria-label="Перейти к нашему дисклеймеру">
+                        Дисклеймер
+                    </a>
+                </div>
+                <div class="line"></div>
+
+                <p class="footer-copy">© 2025 Стук сердца by Suria Kar</p>
             </div>
         </div>
     </footer>
@@ -963,10 +1088,15 @@
             <div class="text-center mb-6">
                 <!-- Added id="modalPlatformBadge" here -->
                 <span id="modalPlatformBadge"
-                    class="text-[10px] tracking-[0.2em] text-temple-gold uppercase font-semibold block mb-1">Оплата
-                    через Platform</span>
-                <h3 class="font-serif text-2xl sm:text-3xl text-temple-cream">Выберите сферу фокуса</h3>
-                <p class="text-xs text-temple-cream/70 mt-1">По правилу ритуала: одна практика — одна сфера</p>
+                    class="text-[10px] tracking-[0.2em] text-temple-gold uppercase font-semibold block mb-1">
+                    Оплата через Platform
+                </span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-temple-cream">
+                    Выберите сферу фокуса
+                </h3>
+                <p class="text-xs text-temple-cream/70 mt-1">
+                    По правилу ритуала: одна практика — одна сфера
+                </p>
             </div>
 
             <!-- Sphere Buttons -->
@@ -982,8 +1112,11 @@
                         <div>
                             <div
                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                Отношения</div>
-                            <div class="text-[11px] text-temple-text-muted">Освобождение от прошлых связей</div>
+                                Отношения
+                            </div>
+                            <div class="text-[11px] text-temple-text-muted">
+                                Освобождение от прошлых связей
+                            </div>
                         </div>
                     </div>
                     <i data-lucide="external-link"
@@ -1002,7 +1135,9 @@
                             <div
                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                 Деньги</div>
-                            <div class="text-[11px] text-temple-text-muted">Финансовый прорыв и достаток</div>
+                            <div class="text-[11px] text-temple-text-muted">
+                                Финансовый прорыв и достаток
+                            </div>
                         </div>
                     </div>
                     <i data-lucide="external-link"
@@ -1020,8 +1155,11 @@
                         <div>
                             <div
                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
-                                Тело и здоровье</div>
-                            <div class="text-[11px] text-temple-text-muted">Восстановление жизненной энергии</div>
+                                Тело и здоровье
+                            </div>
+                            <div class="text-[11px] text-temple-text-muted">
+                                Восстановление жизненной энергии
+                            </div>
                         </div>
                     </div>
                     <i data-lucide="external-link"
@@ -1040,7 +1178,9 @@
                             <div
                                 class="text-sm font-medium text-temple-cream group-hover:text-temple-gold transition-colors">
                                 Вы сами</div>
-                            <div class="text-[11px] text-temple-text-muted">Внутренняя опора и любовь к себе</div>
+                            <div class="text-[11px] text-temple-text-muted">
+                                Внутренняя опора и любовь к себе
+                            </div>
                         </div>
                     </div>
                     <i data-lucide="external-link"
