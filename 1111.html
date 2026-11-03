@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -63,20 +63,24 @@
                     },
                     colors: {
                         siteBg: '#0d0406',
-                        cardBg: '#1b070d',
-                        priceBg: '#270a13',
+                        cardBg: '#18060b',
+                        priceBg: '#230810',
                         goldAccent: '#fae371',
                         gold: '#fde885',
-                        goldDark: '#ffc909',
-                        goldMuted: '#d4ab3a',
+                        goldDark: '#e5b839',
+                        goldMuted: '#b89435',
                         textMuted: '#9e8c92',
-                        borderMuted: 'rgba(242, 202, 82, 0.12)',
+                        borderMuted: 'rgba(250, 227, 113, 0.15)',
                         beigeText: '#edded2',
                     },
                     fontFamily: {
                         serif: ['"Cinzel"', 'serif'],
                         script: ['"Cormorant Garamond"', 'serif'],
                         sans: ['"Montserrat"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px -5px rgba(250, 227, 113, 0.18)',
+                        'gold-border-glow': '0 0 20px rgba(250, 227, 113, 0.25)',
                     }
                 }
             }
@@ -91,14 +95,24 @@
             overflow-x: hidden;
         }
 
-        .glass-panel {
-            background: linear-gradient(145deg, rgba(24, 7, 13, 0.88) 0%, rgba(12, 4, 7, 0.95) 100%);
-            backdrop-filter: blur(16px);
+        /* Premium Background Radial Lighting */
+        .bg-glow-effect {
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(250, 227, 113, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 40%, rgba(60, 10, 25, 0.4) 0%, transparent 60%);
+        }
+
+        /* Glassmorphism Luxury Container */
+        .glass-panel-luxury {
+            background: linear-gradient(165deg, rgba(28, 8, 15, 0.92) 0%, rgba(13, 4, 6, 0.97) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(250, 227, 113, 0.22);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
         }
 
         .gold-gradient-text {
-            background: linear-gradient(135deg, #fde885 0%, #f4dd6b 40%, #d4af37 100%);
+            background: linear-gradient(135deg, #fff3b0 0%, #fae371 50%, #d4af37 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -107,6 +121,17 @@
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
             color: #fae371;
+            text-shadow: 0 0 15px rgba(250, 227, 113, 0.2);
+        }
+
+        .gold-btn-shimmer {
+            background: linear-gradient(135deg, #fae371 0%, #e6c84c 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gold-btn-shimmer:hover {
+            box-shadow: 0 0 25px rgba(250, 227, 113, 0.4);
+            transform: translateY(-2px);
         }
     </style>
 
@@ -134,33 +159,33 @@
     </script>
 </head>
 
-<body id="top" class="antialiased flex flex-col min-h-screen">
+<body id="top" class="antialiased flex flex-col min-h-screen bg-glow-effect">
 
     <!-- HEADER WITH COMPACT MOBILE BUTTON -->
-    <header class="sticky top-0 z-40 w-full border-b border-borderMuted bg-siteBg/95 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-1.5">
+    <header class="sticky top-0 z-40 w-full border-b border-borderMuted bg-siteBg/90 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-1.5">
 
             <!-- Logo Section -->
             <a href="https://stukserdza.com/" aria-label="Перейти на главную страницу сайта"
-                class="flex items-center space-x-2 sm:space-x-3.5 group min-w-0">
+                class="flex items-center space-x-2.5 sm:space-x-4 group min-w-0">
 
                 <!-- Logo Icon -->
                 <div
-                    class="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    class="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                     <img src="https://res.cloudinary.com/dcstupoud/image/upload/v1775964615/logo-white_ybuftx.png"
-                        alt="Стук сердца logo" class="w-full h-full object-contain">
+                        alt="Стук сердца logo" class="w-full h-full object-contain filter drop-shadow">
                 </div>
 
                 <!-- Typography Container -->
                 <div class="flex flex-col justify-center leading-tight min-w-0">
                     <div
-                        class="flex flex-col sm:flex-row sm:items-center sm:gap-1.5 font-serif text-[10px] sm:text-lg font-bold tracking-[0.12em] sm:tracking-[0.15em] text-goldAccent uppercase leading-none">
+                        class="flex flex-col sm:flex-row sm:items-center sm:gap-2 font-serif text-[11px] sm:text-lg font-bold tracking-[0.14em] sm:tracking-[0.18em] text-goldAccent uppercase leading-none">
                         <span>СУРИЯ</span>
-                        <span class="hidden sm:inline-block text-goldAccent/70">—</span>
+                        <span class="hidden sm:inline-block text-goldAccent/60">—</span>
                         <span class="whitespace-nowrap">СТУК СЕРДЦА</span>
                     </div>
                     <div
-                        class="text-[7px] sm:text-[9px] font-sans tracking-[0.1em] sm:tracking-[0.12em] text-textMuted uppercase mt-0.5 whitespace-nowrap">
+                        class="text-[7.5px] sm:text-[9.5px] font-sans tracking-[0.12em] text-textMuted uppercase mt-1 whitespace-nowrap">
                         НЕЙРОМЕДИТАЦИИ &amp; РЕСЕТЫ
                     </div>
                 </div>
@@ -169,10 +194,10 @@
             <!-- Right CTA Button -->
             <div class="flex items-center flex-shrink-0">
                 <a href="#payment-section"
-                    class="px-2 py-1 sm:px-5 sm:py-2 rounded-full border border-goldAccent/60 text-goldAccent text-[8.5px] xs:text-[9.5px] sm:text-xs font-bold tracking-tight sm:tracking-wider hover:bg-goldAccent hover:text-black transition-all flex items-center space-x-1 whitespace-nowrap shadow-sm">
+                    class="px-3 py-1.5 sm:px-6 sm:py-2.5 rounded-full border border-goldAccent/70 text-goldAccent text-[9px] xs:text-[10px] sm:text-xs font-bold tracking-wider hover:bg-goldAccent hover:text-black transition-all duration-300 flex items-center space-x-1.5 whitespace-nowrap shadow-gold-border-glow">
                     <span class="xs:hidden">УЧАСТВОВАТЬ</span>
                     <span class="hidden xs:inline">ПРИНЯТЬ УЧАСТИЕ</span>
-                    <i class="fa-solid fa-arrow-down text-[7.5px] sm:text-[10px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down text-[8px] sm:text-[10px]" aria-hidden="true"></i>
                 </a>
             </div>
 
@@ -180,84 +205,99 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-12 w-full">
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-14 w-full">
 
         <!-- BLOCK 1: HERO -->
-        <section class="glass-panel p-6 sm:p-10 rounded-3xl text-center mb-12 shadow-2xl relative overflow-hidden">
-            <div
-                class="inline-block px-4 py-1 rounded-full bg-priceBg border border-goldAccent/30 text-goldAccent text-xs font-semibold uppercase tracking-widest mb-4">
-                Особое событие 11.11
+        <section
+            class="glass-panel-luxury p-7 sm:p-12 rounded-[2rem] text-center mb-14 relative overflow-hidden shadow-gold-glow">
+
+            <!-- Subtle Gold Ornament Bar -->
+            <div class="flex items-center justify-center space-x-2 text-goldAccent/70 mb-4">
+                <span class="h-[1px] w-8 bg-gradient-to-r from-transparent to-goldAccent/50"></span>
+                <span class="text-[10px] uppercase font-serif tracking-[0.25em]">♦ 11.11 Sacred Practice ♦</span>
+                <span class="h-[1px] w-8 bg-gradient-to-l from-transparent to-goldAccent/50"></span>
             </div>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-4 leading-snug">
+
+            <h2
+                class="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-5 leading-snug tracking-wide">
                 Практика в храме Камбоджи: <br>
-                <span class="gold-italic-heading font-normal">скинуть старый груз и впустить в жизнь новое</span>
+                <span class="gold-italic-heading font-normal text-3xl sm:text-5xl">скинуть старый груз и впустить
+                    новое</span>
             </h2>
-            <p class="text-sm sm:text-base text-beigeText/90 max-w-2xl mx-auto leading-relaxed mb-8">
+
+            <p class="text-xs sm:text-base text-beigeText/90 max-w-2xl mx-auto leading-relaxed mb-9 font-light">
                 Пока руки заняты старыми обидами, проблемами и усталостью, хорошее просто некуда взять. Я лично иду в
                 древний храм в Пномпене, чтобы отпустить то, что вас вымотало, и открыть дорогу тому, о чём вы давно
                 мечтаете.
             </p>
 
-            <!-- COUNTDOWN TIMER -->
+            <!-- ELEGANT COUNTDOWN TIMER -->
             <div
-                class="mb-8 p-4 sm:p-6 rounded-2xl bg-cardBg/80 border border-goldAccent/25 max-w-lg mx-auto shadow-inner">
-                <div class="text-[11px] sm:text-xs font-bold text-goldAccent uppercase tracking-widest mb-3">
+                class="mb-9 p-5 sm:p-7 rounded-2xl bg-cardBg/90 border border-goldAccent/30 max-w-lg mx-auto backdrop-blur-md shadow-2xl relative">
+                <div class="text-[10px] sm:text-xs font-bold text-goldAccent uppercase tracking-[0.2em] mb-4">
                     До проведения практики осталось:
                 </div>
-                <div id="timer-container" class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
-                    <div class="p-2 sm:p-3 rounded-xl bg-priceBg border border-goldAccent/15">
-                        <span id="days" class="block font-bold text-lg sm:text-2xl text-white">00</span>
-                        <span class="text-[9px] sm:text-[10px] text-textMuted uppercase">Дней</span>
+                <div id="timer-container" class="grid grid-cols-4 gap-2.5 sm:gap-4 text-center">
+                    <div class="p-2.5 sm:p-3.5 rounded-xl bg-priceBg border border-goldAccent/20">
+                        <span id="days" class="block font-serif font-bold text-xl sm:text-3xl text-white">00</span>
+                        <span class="text-[8px] sm:text-[10px] text-textMuted uppercase tracking-widest">Дней</span>
                     </div>
-                    <div class="p-2 sm:p-3 rounded-xl bg-priceBg border border-goldAccent/15">
-                        <span id="hours" class="block font-bold text-lg sm:text-2xl text-white">00</span>
-                        <span class="text-[9px] sm:text-[10px] text-textMuted uppercase">Часов</span>
+                    <div class="p-2.5 sm:p-3.5 rounded-xl bg-priceBg border border-goldAccent/20">
+                        <span id="hours" class="block font-serif font-bold text-xl sm:text-3xl text-white">00</span>
+                        <span class="text-[8px] sm:text-[10px] text-textMuted uppercase tracking-widest">Часов</span>
                     </div>
-                    <div class="p-2 sm:p-3 rounded-xl bg-priceBg border border-goldAccent/15">
-                        <span id="minutes" class="block font-bold text-lg sm:text-2xl text-white">00</span>
-                        <span class="text-[9px] sm:text-[10px] text-textMuted uppercase">Минут</span>
+                    <div class="p-2.5 sm:p-3.5 rounded-xl bg-priceBg border border-goldAccent/20">
+                        <span id="minutes" class="block font-serif font-bold text-xl sm:text-3xl text-white">00</span>
+                        <span class="text-[8px] sm:text-[10px] text-textMuted uppercase tracking-widest">Минут</span>
                     </div>
-                    <div class="p-2 sm:p-3 rounded-xl bg-priceBg border border-goldAccent/15">
-                        <span id="seconds" class="block font-bold text-lg sm:text-2xl text-goldAccent">00</span>
-                        <span class="text-[9px] sm:text-[10px] text-textMuted uppercase">Секунд</span>
+                    <div class="p-2.5 sm:p-3.5 rounded-xl bg-priceBg border border-goldAccent/20">
+                        <span id="seconds"
+                            class="block font-serif font-bold text-xl sm:text-3xl text-goldAccent">00</span>
+                        <span class="text-[8px] sm:text-[10px] text-textMuted uppercase tracking-widest">Секунд</span>
                     </div>
                 </div>
             </div>
 
             <a href="#payment-section"
-                class="inline-block w-full sm:w-auto px-8 py-4 rounded-xl bg-goldAccent text-black font-bold text-sm sm:text-base hover:scale-105 active:scale-95 transition-all shadow-lg">
+                class="gold-btn-shimmer inline-block w-full sm:w-auto px-10 py-4 sm:py-4.5 rounded-xl text-black font-bold text-xs sm:text-sm tracking-wider uppercase shadow-xl">
                 [ Принять участие ]
             </a>
         </section>
 
         <!-- BLOCK 2: HOW IT WORKS -->
-        <section class="glass-panel p-6 sm:p-8 rounded-3xl mb-12">
-            <h3 class="text-xl sm:text-2xl font-serif font-bold gold-gradient-text mb-4 text-center">
+        <section class="glass-panel-luxury p-6 sm:p-9 rounded-[2rem] mb-14">
+            <h3 class="text-xl sm:text-3xl font-serif font-bold gold-gradient-text mb-6 text-center tracking-wide">
                 Зачем эта практика и как она работает
             </h3>
-            <div class="space-y-4 text-xs sm:text-sm text-beigeText/90 leading-relaxed">
-                <p>
+            <div class="space-y-4 text-xs sm:text-sm text-beigeText/90 leading-relaxed font-light">
+                <p class="text-center max-w-2xl mx-auto">
                     Бывает чувство, будто вы застряли и ходите по кругу: отношения выматывают, сил ни на что нет, деньги
                     утекают сквозь пальцы, а внутри — постоянная фоновая тяжесть.
                 </p>
-                <p>
-                    Причина простая: <strong class="text-goldAccent">нельзя налить свежую воду в чашку, которая уже
-                        заполнена до краёв.</strong> Пока внутри всё забито старыми переживаниями, страхами и прошлым
-                    опытом, новому счастью просто некуда прийти.
-                </p>
+                <div class="p-4 sm:p-5 rounded-2xl bg-priceBg/70 border border-goldAccent/20 text-center my-6">
+                    <p class="text-xs sm:text-sm text-beigeText font-medium">
+                        Причина простая: <span class="text-goldAccent font-bold">нельзя налить свежую воду в чашку,
+                            которая уже заполнена до краёв.</span> Пока внутри всё забито старыми переживаниями и
+                        страхами, новому счастью просто некуда прийти.
+                    </p>
+                </div>
                 <div class="grid sm:grid-cols-2 gap-4 mt-6">
-                    <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/15">
-                        <span class="block text-goldAccent font-bold text-base mb-1">1. Сначала убираем старое</span>
-                        <p class="text-textMuted text-xs">Снимаем груз, который годами тянет назад, жрёт силы и
-                            блокирует энергию.</p>
+                    <div
+                        class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/40 transition-all">
+                        <span class="block text-goldAccent font-serif font-bold text-sm sm:text-base mb-2">1. Сначала
+                            убираем старое</span>
+                        <p class="text-textMuted text-xs leading-relaxed">Снимаем груз, который годами тянет назад, жрёт
+                            силы и блокирует жизненную энергию.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/15">
-                        <span class="block text-goldAccent font-bold text-base mb-1">2. И сразу зовём новое</span>
-                        <p class="text-textMuted text-xs">На освободившееся чистое место приглашаем то, чего вы
-                            по-настоящему хотите — любовь, достаток, здоровье и спокойствие.</p>
+                    <div
+                        class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/40 transition-all">
+                        <span class="block text-goldAccent font-serif font-bold text-sm sm:text-base mb-2">2. И сразу
+                            зовём новое</span>
+                        <p class="text-textMuted text-xs leading-relaxed">На освободившееся чистое место приглашаем
+                            любовь, достаток, здоровье и умиротворение.</p>
                     </div>
                 </div>
-                <p class="text-center italic text-goldAccent/90 mt-4">
+                <p class="text-center italic text-goldAccent/90 mt-6 pt-2 font-serif text-sm sm:text-base">
                     «Я делаю всю работу в храме за вас. От вас нужно только выбрать сферу и дать два честных ответа: от
                     чего вы устали и чего хотите вместо этого.»
                 </p>
@@ -265,136 +305,174 @@
         </section>
 
         <!-- BLOCK 3: 4 SPHERES -->
-        <section class="mb-12">
-            <h3 class="text-xl sm:text-2xl font-serif font-bold text-center text-white mb-2">
+        <section class="mb-14">
+            <h3 class="text-xl sm:text-3xl font-serif font-bold text-center text-white mb-2 tracking-wide">
                 4 сферы, где мы наведем порядок
             </h3>
-            <p class="text-xs sm:text-sm text-textMuted text-center mb-6">Вам не нужно копаться в себе часами. Мы снимем
-                тяжесть с той сферы, где сейчас опускаются руки</p>
+            <p class="text-xs sm:text-sm text-textMuted text-center mb-8 font-light">
+                Вам не нужно копаться в себе часами. Мы снимем тяжесть с той сферы, где сейчас опускаются руки
+            </p>
 
-            <div class="grid sm:grid-cols-2 gap-4">
+            <div class="grid sm:grid-cols-2 gap-5">
                 <!-- Sphere 1 -->
                 <div
-                    class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 transition-all">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <i class="fa-solid fa-heart text-red-400 text-lg" aria-hidden="true"></i>
-                        <h4 class="font-bold text-white text-base">Отношения</h4>
+                    class="p-6 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-rose-500/10 border border-rose-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-heart text-rose-400 text-xs" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-white text-base tracking-wide">Отношения</h4>
                     </div>
-                    <ul class="text-xs text-beigeText/80 space-y-1.5 pl-2">
-                        <li><strong class="text-rose-300">Снимаем:</strong> мысли о бывших, обиды, привычку всё тянуть
-                            на себе и страх открыться мужчине.</li>
-                        <li><strong class="text-emerald-300">Впускаем:</strong> спокойные, тёплые отношения со своим
-                            человеком, заботу, верность и безопасность.</li>
-                    </ul>
+                    <div class="space-y-2 text-xs text-beigeText/85 leading-relaxed">
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-rose-500/15">
+                            <strong class="text-rose-300 block text-[11px] mb-0.5">Снимаем:</strong>
+                            мысли о бывших, обиды, привычку всё тянуть на себе и страх открыться мужчине.
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-emerald-500/15">
+                            <strong class="text-emerald-300 block text-[11px] mb-0.5">Впускаем:</strong>
+                            спокойные, тёплые отношения со своим человеком, заботу, верность и безопасность.
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Sphere 2 -->
                 <div
-                    class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 transition-all">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <i class="fa-solid fa-coins text-goldAccent text-lg" aria-hidden="true"></i>
-                        <h4 class="font-bold text-white text-base">Деньги</h4>
+                    class="p-6 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-coins text-goldAccent text-xs" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-white text-base tracking-wide">Деньги</h4>
                     </div>
-                    <ul class="text-xs text-beigeText/80 space-y-1.5 pl-2">
-                        <li><strong class="text-rose-300">Снимаем:</strong> вечную тревогу за завтрашний день, долги и
-                            ощущение «пашу на износ, а денег нет».</li>
-                        <li><strong class="text-emerald-300">Впускаем:</strong> спокойный достаток, лёгкие деньги, новые
-                            источники дохода и финансовую уверенность.</li>
-                    </ul>
+                    <div class="space-y-2 text-xs text-beigeText/85 leading-relaxed">
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-rose-500/15">
+                            <strong class="text-rose-300 block text-[11px] mb-0.5">Снимаем:</strong>
+                            вечную тревогу за завтрашний день, долги и ощущение «пашу на износ, а денег нет».
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-emerald-500/15">
+                            <strong class="text-emerald-300 block text-[11px] mb-0.5">Впускаем:</strong>
+                            спокойный достаток, лёгкие деньги, новые источники дохода и финансовую уверенность.
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Sphere 3 -->
                 <div
-                    class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 transition-all">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <i class="fa-solid fa-leaf text-emerald-400 text-lg" aria-hidden="true"></i>
-                        <h4 class="font-bold text-white text-base">Тело и здоровье</h4>
+                    class="p-6 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-leaf text-emerald-400 text-xs" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-white text-base tracking-wide">Тело и здоровье</h4>
                     </div>
-                    <ul class="text-xs text-beigeText/80 space-y-1.5 pl-2">
-                        <li><strong class="text-rose-300">Снимаем:</strong> хроническую усталость, бессонницу,
-                            психосоматические зажимы и бессилие.</li>
-                        <li><strong class="text-emerald-300">Впускаем:</strong> бодрость, глубокий спокойный сон,
-                            здоровье и лёгкость в теле.</li>
-                    </ul>
+                    <div class="space-y-2 text-xs text-beigeText/85 leading-relaxed">
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-rose-500/15">
+                            <strong class="text-rose-300 block text-[11px] mb-0.5">Снимаем:</strong>
+                            хроническую усталость, бессонницу, психосоматические зажимы и бессилие.
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-emerald-500/15">
+                            <strong class="text-emerald-300 block text-[11px] mb-0.5">Впускаем:</strong>
+                            бодрость, глубокий спокойный сон, здоровье и лёгкость в теле.
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Sphere 4 -->
                 <div
-                    class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 transition-all">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <i class="fa-solid fa-sun text-amber-300 text-lg" aria-hidden="true"></i>
-                        <h4 class="font-bold text-white text-base">Вы сами</h4>
+                    class="p-6 rounded-2xl bg-cardBg border border-goldAccent/20 hover:border-goldAccent/50 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-sun text-yellow-300 text-xs" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-white text-base tracking-wide">Вы сами</h4>
                     </div>
-                    <ul class="text-xs text-beigeText/80 space-y-1.5 pl-2">
-                        <li><strong class="text-rose-300">Снимаем:</strong> привычку быть удобной, чувство вины,
-                            самоедство и страх сказать «нет».</li>
-                        <li><strong class="text-emerald-300">Впускаем:</strong> непоколебимую любовь к себе, внутреннюю
-                            опору и право жить так, как хочется вам.</li>
-                    </ul>
+                    <div class="space-y-2 text-xs text-beigeText/85 leading-relaxed">
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-rose-500/15">
+                            <strong class="text-rose-300 block text-[11px] mb-0.5">Снимаем:</strong>
+                            привычку быть удобной, чувство вины, самоедство и страх сказать «нет».
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-priceBg/60 border border-emerald-500/15">
+                            <strong class="text-emerald-300 block text-[11px] mb-0.5">Впускаем:</strong>
+                            непоколебимую любовь к себе, внутреннюю опору и право жить так, как хочется вам.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- BLOCK 4: RULES -->
-        <section class="glass-panel p-6 sm:p-8 rounded-3xl mb-12">
-            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 text-center">
+        <section class="glass-panel-luxury p-6 sm:p-9 rounded-[2rem] mb-14">
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white mb-3 text-center">
                 Важное правило: <span class="gold-gradient-text">одна практика — одна сфера</span>
             </h3>
-            <p class="text-xs sm:text-sm text-beigeText/90 text-center max-w-xl mx-auto mb-6">
+            <p class="text-xs sm:text-sm text-beigeText/80 text-center max-w-xl mx-auto mb-7 font-light">
                 Невозможно выстрелить сразу по четырём мишеням и попасть во все. Энергия требует точного фокуса: чем
                 концентрированнее луч, тем мощнее результат.
             </p>
-            <div class="bg-priceBg/60 p-4 rounded-2xl border border-goldAccent/15 space-y-3 text-xs sm:text-sm">
-                <div class="font-semibold text-goldAccent">От вас потребуется всего 2 честных пункта в анкете:</div>
-                <ol class="list-decimal list-inside space-y-2 text-beigeText/90">
-                    <li><strong>От чего вы освобождаетесь навсегда:</strong> (например: <em>«Устала жить в вечной
-                            тревоге за деньги»</em>)</li>
-                    <li><strong>Что вы привлекаете на чистое место:</strong> пишем в настоящем времени (например: <em>«Я
-                            зарабатываю легко и в радость от 300 000 ₽ в месяц»</em>)</li>
+            <div class="bg-priceBg/70 p-5 rounded-2xl border border-goldAccent/20 space-y-3 text-xs sm:text-sm">
+                <div class="font-semibold text-goldAccent uppercase tracking-wider text-[11px]">От вас потребуется всего
+                    2 честных пункта в анкете:</div>
+                <ol class="list-decimal list-inside space-y-2.5 text-beigeText/90 leading-relaxed font-light">
+                    <li><strong class="text-white font-medium">От чего вы освобождаетесь навсегда:</strong> (например:
+                        <em>«Устала жить в вечной тревоге за деньги»</em>)</li>
+                    <li><strong class="text-white font-medium">Что вы привлекаете на чистое место:</strong> пишем в
+                        настоящем времени (например: <em>«Я зарабатываю легко и в радость от 300 000 ₽ в месяц»</em>)
+                    </li>
                 </ol>
             </div>
         </section>
 
         <!-- BLOCK 5: DETAILS -->
-        <section class="mb-12">
-            <h3 class="text-xl sm:text-2xl font-serif font-bold text-center text-white mb-6">Как проходит практика</h3>
-            <div class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/20">
-                    <strong class="block text-goldAccent mb-1">Священное место</strong>
-                    <p class="text-textMuted">Буддийский монастырь Ват Пном в самом сердце Пномпеня — древняя святыня с
-                        вековой историей и сильной энергетикой.</p>
+        <section class="mb-14">
+            <h3 class="text-xl sm:text-3xl font-serif font-bold text-center text-white mb-8 tracking-wide">Как проходит
+                практика</h3>
+            <div class="grid sm:grid-cols-2 gap-5 text-xs sm:text-sm">
+                <div class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="block text-goldAccent font-serif text-sm mb-1.5">Священное место</strong>
+                    <p class="text-textMuted leading-relaxed font-light">Буддийский монастырь Ват Пном в самом сердце
+                        Пномпеня — древняя святыня с вековой историей и сильной энергетикой.</p>
                 </div>
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/20">
-                    <strong class="block text-goldAccent mb-1">Личная работа за каждого</strong>
-                    <p class="text-textMuted">Я приношу подношения монахам, зажигаю огонь и провожу практику для каждого
-                        человека строго по списку — называя ваше имя и закладывая ваши запросы.</p>
+                <div class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="block text-goldAccent font-serif text-sm mb-1.5">Личная работа за каждого</strong>
+                    <p class="text-textMuted leading-relaxed font-light">Я приношу подношения монахам, зажигаю огонь и
+                        провожу практику для каждого человека строго по списку — называя ваше имя и закладывая ваши
+                        запросы.</p>
                 </div>
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/20">
-                    <strong class="block text-goldAccent mb-1">Эффект полного присутствия</strong>
-                    <p class="text-textMuted">Вам не нужно подстраиваться под время, бросать дела или сидеть в
-                        медитации. Вы просто занимаетесь своей жизнью.</p>
+                <div class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="block text-goldAccent font-serif text-sm mb-1.5">Эффект полного присутствия</strong>
+                    <p class="text-textMuted leading-relaxed font-light">Вам не нужно подстраиваться под время, бросать
+                        дела или сидеть в медитации. Вы просто занимаетесь своей жизнью.</p>
                 </div>
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/20">
-                    <strong class="block text-goldAccent mb-1">Видеоотчёт в закрытой группе</strong>
-                    <p class="text-textMuted">Я подробно сниму весь процесс в храме и выложу в закрытую Telegram-группу.
-                        Вы увидите огонь, подношения и само действо.</p>
+                <div class="p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="block text-goldAccent font-serif text-sm mb-1.5">Видеоотчёт в закрытой
+                        группе</strong>
+                    <p class="text-textMuted leading-relaxed font-light">Я подробно сниму весь процесс в храме и выложу
+                        в закрытую Telegram-группу. Вы увидите огонь, подношения и само действо.</p>
                 </div>
             </div>
         </section>
 
         <!-- BLOCK 6: PAYMENT -->
-        <section id="payment-section" class="glass-panel p-6 sm:p-10 rounded-3xl mb-12 text-center">
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">Стоимость и способы оплаты</h3>
-            <div class="text-3xl sm:text-4xl font-bold text-goldAccent mb-6">4 990 ₽</div>
+        <section id="payment-section" class="glass-panel-luxury p-7 sm:p-12 rounded-[2rem] mb-14 text-center">
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2 tracking-wide">Стоимость и способы
+                оплаты</h3>
+            <div class="text-3xl sm:text-5xl font-serif font-bold gold-gradient-text mb-8">4 990 ₽</div>
 
             <div class="max-w-md mx-auto space-y-4">
-                <div class="text-xs font-semibold text-textMuted uppercase tracking-wider text-left">Оплата картами РФ и
-                    СНГ:</div>
+                <div class="text-[10px] sm:text-xs font-semibold text-textMuted uppercase tracking-widest text-left">
+                    Оплата картами РФ и СНГ:</div>
 
                 <a href="https://stukserdza.getcourse.ru/1111" target="_blank"
-                    class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-graduation-cap text-blue-400" aria-hidden="true"></i>
+                    class="flex items-center justify-between p-4 rounded-xl bg-priceBg border border-goldAccent/25 hover:border-goldAccent transition-all duration-300 group shadow-md">
+                    <div class="flex items-center space-x-3.5">
+                        <i class="fa-solid fa-graduation-cap text-blue-400 text-base" aria-hidden="true"></i>
                         <div class="text-left">
                             <span
-                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent">GetCourse</span>
+                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent transition-colors">GetCourse</span>
                             <small class="block text-[10px] text-textMuted">Карты РФ, СБП</small>
                         </div>
                     </div>
@@ -403,12 +481,12 @@
                 </a>
 
                 <a href="https://boosty.to/stukserdza" target="_blank"
-                    class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-solid fa-bolt text-orange-400" aria-hidden="true"></i>
+                    class="flex items-center justify-between p-4 rounded-xl bg-priceBg border border-goldAccent/25 hover:border-goldAccent transition-all duration-300 group shadow-md">
+                    <div class="flex items-center space-x-3.5">
+                        <i class="fa-solid fa-bolt text-orange-400 text-base" aria-hidden="true"></i>
                         <div class="text-left">
                             <span
-                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent">Boosty</span>
+                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent transition-colors">Boosty</span>
                             <small class="block text-[10px] text-textMuted">Карты РФ, ЮMoney</small>
                         </div>
                     </div>
@@ -416,16 +494,17 @@
                             aria-hidden="true">➔</span></span>
                 </a>
 
-                <div class="text-xs font-semibold text-textMuted uppercase tracking-wider text-left pt-3">Оплата
-                    зарубежными картами (весь мир):</div>
+                <div
+                    class="text-[10px] sm:text-xs font-semibold text-textMuted uppercase tracking-widest text-left pt-4">
+                    Оплата зарубежными картами (весь мир):</div>
 
                 <a href="https://patreon.com/stukserdza" target="_blank"
-                    class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-brands fa-patreon text-rose-400" aria-hidden="true"></i>
+                    class="flex items-center justify-between p-4 rounded-xl bg-priceBg border border-goldAccent/25 hover:border-goldAccent transition-all duration-300 group shadow-md">
+                    <div class="flex items-center space-x-3.5">
+                        <i class="fa-brands fa-patreon text-rose-400 text-base" aria-hidden="true"></i>
                         <div class="text-left">
                             <span
-                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent">Patreon</span>
+                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent transition-colors">Patreon</span>
                             <small class="block text-[10px] text-textMuted">International Cards / Apple Pay</small>
                         </div>
                     </div>
@@ -434,12 +513,12 @@
                 </a>
 
                 <a href="https://paypal.me/stukserdza" target="_blank"
-                    class="flex items-center justify-between p-3.5 rounded-xl bg-priceBg border border-goldAccent/20 hover:border-goldAccent transition-all group">
-                    <div class="flex items-center space-x-3">
-                        <i class="fa-brands fa-paypal text-blue-500" aria-hidden="true"></i>
+                    class="flex items-center justify-between p-4 rounded-xl bg-priceBg border border-goldAccent/25 hover:border-goldAccent transition-all duration-300 group shadow-md">
+                    <div class="flex items-center space-x-3.5">
+                        <i class="fa-brands fa-paypal text-blue-500 text-base" aria-hidden="true"></i>
                         <div class="text-left">
                             <span
-                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent">PayPal</span>
+                                class="block font-semibold beigeText text-xs group-hover:text-goldAccent transition-colors">PayPal</span>
                             <small class="block text-[10px] text-textMuted">PayPal Balance / Credit Card</small>
                         </div>
                     </div>
@@ -450,26 +529,26 @@
         </section>
 
         <!-- BLOCK 7: AFTER PAYMENT -->
-        <section class="glass-panel p-6 sm:p-8 rounded-3xl text-center mb-8">
-            <h3 class="text-lg sm:text-xl font-serif font-bold text-white mb-4">Как вы попадаете в практику после оплаты
-            </h3>
+        <section class="glass-panel-luxury p-7 sm:p-9 rounded-[2rem] text-center mb-8">
+            <h3 class="text-lg sm:text-2xl font-serif font-bold text-white mb-5">Как вы попадаете в практику после
+                оплаты</h3>
             <div class="grid sm:grid-cols-2 gap-4 text-left text-xs sm:text-sm mb-6">
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/15">
-                    <strong class="text-goldAccent block mb-1">Шаг 1</strong>
-                    <p class="text-textMuted">Сразу после перевода откроется короткая анкета на 2 минуты, где вы
-                        напишете своё имя и запрос для храма.</p>
+                <div class="p-4 sm:p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="text-goldAccent font-serif block mb-1.5">Шаг 1</strong>
+                    <p class="text-textMuted font-light leading-relaxed">Сразу после перевода откроется короткая анкета
+                        на 2 минуты, где вы напишете своё имя и запрос для храма.</p>
                 </div>
-                <div class="p-4 rounded-xl bg-cardBg border border-goldAccent/15">
-                    <strong class="text-goldAccent block mb-1">Шаг 2</strong>
-                    <p class="text-textMuted">После отправки анкеты появится прямая ссылка на закрытую группу в Telegram
-                        — вы вступаете туда в один клик.</p>
+                <div class="p-4 sm:p-5 rounded-2xl bg-cardBg border border-goldAccent/20">
+                    <strong class="text-goldAccent font-serif block mb-1.5">Шаг 2</strong>
+                    <p class="text-textMuted font-light leading-relaxed">После отправки анкеты появится прямая ссылка на
+                        закрытую группу в Telegram — вы вступаете туда в один клик.</p>
                 </div>
             </div>
 
-            <div class="pt-4 border-t border-goldAccent/10">
-                <p class="text-xs text-textMuted mb-3">Возникли сложности с оплатой или вопрос по участию?</p>
+            <div class="pt-5 border-t border-goldAccent/15">
+                <p class="text-xs text-textMuted mb-3.5">Возникли сложности с оплатой или вопрос по участию?</p>
                 <a href="https://t.me/sofia_stukserdza" target="_blank"
-                    class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-priceBg border border-goldAccent/30 text-goldAccent text-xs font-semibold hover:bg-goldAccent hover:text-black transition-all">
+                    class="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-priceBg border border-goldAccent/40 text-goldAccent text-xs font-semibold hover:bg-goldAccent hover:text-black transition-all duration-300 shadow-md">
                     <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
                     <span>Написать Софии в Telegram</span>
                 </a>
@@ -479,12 +558,12 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="pt-8 border-t border-borderMuted site-footer w-full mt-auto">
-        <div class="container footer-grid">
+    <footer class="pt-10 border-t border-borderMuted site-footer w-full mt-auto bg-siteBg">
+        <div class="container footer-grid max-w-7xl mx-auto px-4">
             <div class="footer-left">
-                <h2 class="section-title footer-title">Присоединяйтесь<br>в моих пространствах</h2>
+                <h2 class="section-title footer-title font-serif">Присоединяйтесь<br>в моих пространствах</h2>
 
-                <p class="footer-text">
+                <p class="footer-text font-light">
                     Я делюсь лайфхаками, практиками, мини-медитациями и поддержкой для тех,
                     кто проходит сложные периоды и ищет выход
                 </p>
@@ -608,7 +687,7 @@
                 document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
             } else {
                 document.getElementById('timer-container').innerHTML = `
-                    <div class="col-span-4 py-2 font-bold text-goldAccent text-sm sm:text-base">
+                    <div class="col-span-4 py-2 font-serif font-bold text-goldAccent text-sm sm:text-base tracking-wider">
                         ✨ Практика началась! Приём заявок закрывается.
                     </div>
                 `;
