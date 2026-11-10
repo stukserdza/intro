@@ -761,21 +761,17 @@
                 class="bg-[#100c0c] rounded-3xl p-8 md:p-12 shadow-luxury border border-temple-border relative overflow-hidden">
 
                 <div class="text-center mb-10 pb-8 border-b border-temple-border">
-                    <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">Единая стоимость
-                        участия</span>
-                    <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-cream tracking-tight">
+                    <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">
+                        Сбор участников закрыт
+                    </span>
+                    <!-- <div class="font-serif text-4xl sm:text-5xl font-semibold text-temple-cream tracking-tight">
                         1 111 ₽ <span class="text-lg font-sans font-normal text-temple-text-muted">/ $13.60</span>
-                    </div>
-                    <!-- <span
-                        class="inline-block mt-2 text-xs text-emerald-300 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-800/60">
-                        Включает все храмовые подношения и персональный ритуал
-                    </span> -->
+                    </div> -->
                 </div>
-
-                <!-- Payment Region Tabs -->
+                <!-- 
                 <div class="space-y-8">
 
-                    <!-- Region 1: RU & CIS -->
+
                     <div>
                         <div
                             class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-cream mb-4">
@@ -785,7 +781,7 @@
 
                         <div class="grid sm:grid-cols-2 gap-4">
 
-                            <!-- Boosty Button -->
+
                             <button onclick="openPaymentSphereModal('boosty', 'Boosty')"
                                 class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
                                 <div class="flex items-center gap-3">
@@ -803,7 +799,7 @@
                                 <i data-lucide="chevron-right"
                                     class="w-4 h-4 text-temple-text-muted group-hover:translate-x-1 transition-transform"></i>
                             </button>
-                            <!-- GetCourse Button -->
+
                             <button onclick="openPaymentSphereModal('getcourse', 'GetCourse')"
                                 class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
                                 <div class="flex items-center gap-3">
@@ -824,7 +820,6 @@
                         </div>
                     </div>
 
-                    <!-- Region 2: Global Cards -->
                     <div>
                         <div
                             class="flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-temple-cream mb-4">
@@ -833,7 +828,7 @@
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <!-- Patreon Button -->
+
                             <button onclick="openPaymentSphereModal('patreon', 'Patreon')"
                                 class="p-4 rounded-xl border border-temple-border hover:border-temple-gold bg-temple-coffee-bean/80 hover:bg-temple-coffee-bean transition-all duration-300 flex items-center justify-between group w-full text-left">
                                 <div class="flex items-center gap-3">
@@ -855,8 +850,10 @@
                         </div>
                     </div>
 
-                </div>
-
+                </div> -->
+                <span class="text-xs text-temple-text-muted uppercase tracking-widest block mb-2">
+                    Спасибо большое Вам за доверие и участие в практике! 🙏
+                </span>
             </div>
 
         </div>
@@ -1377,7 +1374,7 @@
 
         // Countdown Timer Logic (Target: 11.11.2026, 23:00 ICT / Cambodia Time, UTC+7)
         (function initTimer() {
-            const targetDate = new Date("2026-11-11T23:00:00+07:00").getTime();
+            const targetDate = new Date("2026-10-11T23:00:00+07:00").getTime();
 
             function updateTimer() {
                 const now = new Date().getTime();
@@ -1387,8 +1384,8 @@
                 const timerFinished = document.getElementById('timerFinished');
 
                 if (difference <= 0) {
-                    if (timerDisplay) timerDisplay.classList.add('hidden');
-                    if (timerFinished) timerFinished.classList.remove('hidden');
+                    // if (timerDisplay) timerDisplay.classList.add('hidden');
+                    // if (timerFinished) timerFinished.classList.remove('hidden');
                     return;
                 }
 
