@@ -108,102 +108,178 @@
     <!-- External & Preloaded Styles -->
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Page Specific Styles -->
-    <style>
-        body {
-            background-color: #110205;
-            color: #edded2;
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
+    <!-- Schema.org Structured Data (JSON-LD) for Subscriptions -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Тарифы подписки «Стук сердца»",
+            "url": "https://stukserdza.com/subs.html",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Product",
+                        "name": "Подписка Старт",
+                        "image": "https://res.cloudinary.com/dcstupoud/image/upload/q_auto/f_auto/v1776270770/0dd133bfda99713675ab12d828f6051e_memhlc.jpg",
+                        "description": "Доступ к подкастам, аудио-ресетам и практикам.",
+                        "sku": "sub-start",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Стук сердца"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "490",
+                            "priceCurrency": "RUB",
+                            "availability": "https://schema.org/InStock",
+                            "url": "https://stukserdza.com/subs.html",
+                            "hasMerchantReturnPolicy": {
+                                "@type": "MerchantReturnPolicy",
+                                "applicableCountry": "RU",
+                                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                            },
+                            "shippingDetails": {
+                                "@type": "OfferShippingDetails",
+                                "shippingRate": {
+                                    "@type": "MonetaryAmount",
+                                    "value": 0,
+                                    "currency": "RUB"
+                                },
+                                "shippingDestination": {
+                                    "@type": "DefinedRegion",
+                                    "addressCountry": "RU"
+                                },
+                                "deliveryTime": {
+                                    "@type": "ShippingDeliveryTime",
+                                    "handlingTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    },
+                                    "transitTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Product",
+                        "name": "Подписка База",
+                        "image": "https://res.cloudinary.com/dcstupoud/image/upload/q_auto/f_auto/v1776270770/0dd133bfda99713675ab12d828f6051e_memhlc.jpg",
+                        "description": "Основной пакет нейромедитаций и аудио-настроек.",
+                        "sku": "sub-baza",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Стук сердца"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "990",
+                            "priceCurrency": "RUB",
+                            "availability": "https://schema.org/InStock",
+                            "url": "https://stukserdza.com/subs.html",
+                            "hasMerchantReturnPolicy": {
+                                "@type": "MerchantReturnPolicy",
+                                "applicableCountry": "RU",
+                                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                            },
+                            "shippingDetails": {
+                                "@type": "OfferShippingDetails",
+                                "shippingRate": {
+                                    "@type": "MonetaryAmount",
+                                    "value": 0,
+                                    "currency": "RUB"
+                                },
+                                "shippingDestination": {
+                                    "@type": "DefinedRegion",
+                                    "addressCountry": "RU"
+                                },
+                                "deliveryTime": {
+                                    "@type": "ShippingDeliveryTime",
+                                    "handlingTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    },
+                                    "transitTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Product",
+                        "name": "Подписка Максимум",
+                        "image": "https://res.cloudinary.com/dcstupoud/image/upload/q_auto/f_auto/v1776270770/0dd133bfda99713675ab12d828f6051e_memhlc.jpg",
+                        "description": "Полный доступ ко всей библиотеке практик и нейромедитаций.",
+                        "sku": "sub-maximum",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Стук сердца"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "2490",
+                            "priceCurrency": "RUB",
+                            "availability": "https://schema.org/InStock",
+                            "url": "https://stukserdza.com/subs.html",
+                            "hasMerchantReturnPolicy": {
+                                "@type": "MerchantReturnPolicy",
+                                "applicableCountry": "RU",
+                                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                            },
+                            "shippingDetails": {
+                                "@type": "OfferShippingDetails",
+                                "shippingRate": {
+                                    "@type": "MonetaryAmount",
+                                    "value": 0,
+                                    "currency": "RUB"
+                                },
+                                "shippingDestination": {
+                                    "@type": "DefinedRegion",
+                                    "addressCountry": "RU"
+                                },
+                                "deliveryTime": {
+                                    "@type": "ShippingDeliveryTime",
+                                    "handlingTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    },
+                                    "transitTime": {
+                                        "@type": "QuantitativeValue",
+                                        "minValue": 0,
+                                        "maxValue": 0,
+                                        "unitCode": "DAY"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
         }
-
-        /* Luxury Glassmorphism Container */
-        .glass-panel {
-            background: linear-gradient(145deg, rgba(24, 7, 13, 0.88) 0%, rgba(12, 4, 7, 0.95) 100%);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.22);
-        }
-
-        .glass-panel:hover {
-            border-color: rgba(212, 175, 55, 0.45);
-        }
-
-        /* Gold Gradient Text Utility */
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #fde885 0%, #f4dd6b 40%, #d4af37 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Gold Italic Heading Style */
-        .gold-italic-heading {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            color: #f2ca52;
-            font-weight: 500;
-        }
-
-        /* Custom Card Frame */
-        .tariff-card {
-            background-color: #1b070d;
-            border: 1px solid rgba(242, 202, 82, 0.15);
-            border-radius: 1.5rem;
-        }
-
-        .tariff-card-popular {
-            background-color: #1b070d;
-            border: 2px solid #f2ca52;
-            border-radius: 1.5rem;
-            box-shadow: 0 0 25px rgba(242, 202, 82, 0.22);
-        }
-
-        /* Equalizer Bar Animation */
-        .eq-bar {
-            width: 3px;
-            background: #f2ca52;
-            border-radius: 3px;
-            height: 4px;
-            transition: height 0.15s ease;
-        }
-
-        .playing .eq-bar {
-            animation: eqPulse 1.2s infinite ease-in-out alternate;
-        }
-
-        @keyframes eqPulse {
-            0% {
-                height: 4px;
-            }
-
-            50% {
-                height: 24px;
-            }
-
-            100% {
-                height: 8px;
-            }
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0d0406;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #270a13;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #f2ca52;
-        }
-    </style>
+    </script>
 
     <!-- Schema.org Structured Data (JSON-LD) for Subscriptions -->
     <script type="application/ld+json">
